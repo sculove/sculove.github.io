@@ -6,6 +6,7 @@
 .bigsize {
 	font-size:1.5em !important;
 }
+.underline { text-decoration: underline !important; }
 
 strong { color: #FF5E99; }
 em {
