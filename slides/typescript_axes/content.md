@@ -91,12 +91,14 @@
 
 -----
 
-<strong>동일 형태. 동일 역할</strong>이지만 구현체만 다르게 하면 되겠네.<br>
-상속은 커플링이 커지니깐 인터페이스로 하면...
+<strong>동일 형태. 동일 역할</strong>이지만 <strong class="yellow">구현체만 다르게</strong> 하면 되겠네.<br>
+상속은 커플링이 커지니깐 <strong class="blue bigsize">인터페이스</strong>로 하면...
 
-### 자바의 <span class="yellow">interface</span>가 그립네.
+##### 자바스크립트에는 없는데...
 
 -----
+
+뭐 없어도 지금까지 잘썼는데<br>
 
 그냥. <strong>자바스크립트</strong>로 구현 열심히 하고 
 ## <span class="yellow">문서화</span> 잘해야겠다
@@ -104,7 +106,7 @@
 -----
 
 ### 아! 또 있었지.
-<span class="underline">x,y 축</span><span class="yellow">만</span>...
+<span class="underline">x, y 축</span><span class="yellow">만</span>...
 
 -----
 
@@ -134,7 +136,7 @@
 
 -----
 
-테스트 코드가 충분하지만...<br>
+테스트 코드 충분!!!<br>
 <strong class="bigsize">Coverage 93%</strong>
 
 ![](./image/movablecoord-test.png)
@@ -194,6 +196,8 @@ Axes와는 <strong>Loosely coupling</strong> 관계
 
 -----
 
+### 1. 코드의 명세화
+
 interface로 <strong>설계 의도가 코드에 명확히 보임</strong>
 
 
@@ -208,13 +212,17 @@ class <mark>PanInput implements IInputType</mark> {
 }
 </code></pre>
 
+<p class="fragment">더군다나... <strong class="yellow">definition 파일</strong>까지 자동으로 만들어 줌</p>
+
 -----
+
+### 2. 안정성
 
 구현 해야할 것을 안했다면... <strong>멤메</strong>
 
 ![](./image/memme.png)
 
-<p class="fragment">더군다나...툴을 쓰면 <storng class="yellow">구현체 형태</strong>까지 만들어 줌</p>
+<p class="fragment">더군다나...툴을 쓰면 <strong class="yellow">구현체 형태</strong>까지 만들어 줌</p>
 
 -----
 
@@ -242,6 +250,7 @@ const axes = new Axes({
 -----
 
 
+### 3. 편의성
 <strong>점(.)</strong>의 Code Assist 와
 
 ![](./image/dot-assist.png)
@@ -311,12 +320,54 @@ data이지만 같은 data가 아님
 
 -----
 
+### 3. 데이터 흐름 추적 (안정성)
+
 데이터를 <strong class="yellow">전달</strong>하거나 <strong class="yellow">변형</strong>하는 경우에는 
 <strong class="bigsize">Great!!!</strong>
 
 <div class="fragment">
   <h4><span class="underline">lodash</span>나 <span class="underline">rxjs</span>와 같은 류의 라이브러리와 캐미가 좋음</h4>
 </div>
+
+-----
+
+#### eg.Axes의 브라우저 지원 범위
+|IE|Chrome|Firefox|Safari|iOS|Android|
+|---|---|---|---|---|---|
+|<strong>10+</strong>|Latest|Latest|Latest|7+|2.3+|
+
+-----
+
+#### eg.Axes의 브라우저 지원 범위
+with [hammerjs-compatible](https://github.com/naver/hammerjs-compatible)
+
+|IE|Chrome|Firefox|Safari|iOS|Android|
+|---|---|---|---|---|---|
+|<strong>8+</strong>|Latest|Latest|Latest|7+|2.3+|
+
+
+-----
+
+#### IE의 <strong>ES5</strong> 지원여부
+
+![](./image/es5.png)
+
+-----
+
+### 4. 생성 코드의 폭넓은 지원 범위
+Typescript는 공식적으로 <strong>ES3</strong>을 지원
+
+<pre><code data-trim>
+{
+  "compilerOptions": {
+    <mark>"target": "es3"</mark>,
+    // ...
+  }
+}
+</code></pre>
+
+<small class="underline">Babel은 공식적으로 ES3을 지원하지 않습니다.</small>
+<small>babel에서 ES3을 지원하기 위해서는... 많은 작업을 해야합니다 ㅠㅠ</small>
 
 -----
 
@@ -327,16 +378,272 @@ The Bad Parts
 
 -----
 
-- 환경설정 문제
-- 3'rd party 사용 문제
-- import 문제
-- 타입변환 문제
-- 과한 사용은 오히려 독! 자존감 붕괴
+
+![](./image/first.png)
+
+
+-----
+
+![](./image/angular-cli.jpeg)
+
+-----
+
+### Typescript 너무 좋아
+![](./image/jjang.jpg)
+
+-----
+
+### 막상 내가 해보니...
+
+![](./image/haa.jpg)
+
+-----
+
+### 1. 3'rd party 라이브러리 사용 시
+Axes는 <em>Hammerjs</em>를 사용함.
+
+-----
+
+#### 어라? Hammer를 왜 가져올 수가 없지?
+
+<pre><code data-trim>
+import Hammer from "hammerjs";
+
+</code></pre>
+
+- TypeScript에서는 <strong>undefined</strong>
+- Babel에서는 <strong class="blue">Hammer</strong>
+
+
+-----
+
+#### 야호 된다!
+
+<pre><code data-trim>
+import * as Hammer from "hammerjs";
+
+</code></pre>
+
+- TypeScript에서는 <strong class="blue">Hammer</strong>
+- Babel에서는 <strong class="blue">Hammer</strong>
+
+-----
+
+#### 이런 상황이 왜 발생하는가?
+
+##### ES6 Module spec
+
+<pre><code data-trim>
+// foo.js
+export var bar = 'bar'  
+export default 'foo';
+
+// app.js
+import foo from './foo';  
+<mark class="fragment">// foo => 'foo'</mark>
+import * as fooModule from './foo';  
+<mark class="fragment">// fooModule => { bar: 'bar', default: 'foo' }</mark>
+</code></pre>
 
 -----
 
 
+hammerjs는 <strong>UMD</strong> 형태로 지원.
+
+하지만, <span class="underline">ES6 Module</span>로 호출시 <span class="yellow">CommonJS 형식으로 인식</span>
+
+<pre><code data-trim>
+if (typeof define === 'function' && define.amd) {
+    define(function() {
+        return Hammer;
+    });
+} else if (typeof module != 'undefined' && module.exports) {
+    <mark>module.exports = Hammer;</mark>
+} else {
+    window[exportName] = Hammer;
+}
+</code></pre>
+
 -----
+
+CommonJS 방식으로 개발
+```js
+// commonjs로 모듈을 반환
+module.exports = Hammer;  // (babel)
+export = Hammer;  // (typescript)
+```
+
+ES6 Module 방식으로 사용
+<pre><code data-trim>
+// ES6 module방식으로 사용
+import Hammer from "hammerjs";
+<mark class="fragment">// Hammer는 default 없이 객체를 넘겼으니...'undefined'</mark>
+import * as HammerModule from "hammerjs";
+<mark class="fragment">// HammerModule은 넘김 객체를 가리키는 것이니... 'Hammer'</mark>
+</code></pre>
+
+-----
+
+### TypeScript가 <strong>정상</strong> 이네...
+
+근데 Babel은 왜 되었지?
+
+-----
+
+<em>transform-es2015-modules-commonjs</em>을<br>
+기본 preset에서 제공함.
+
+![](./image/babel.png)
+
+-----
+
+<pre><code data-trim>
+function _interopRequireDefault(obj) { 
+  return <mark>obj && obj.__esModule ? obj : { default: obj };</mark>
+}
+var _hammerjs = __webpack_require__(9);
+var _hammerjs2 = <mark>_interopRequireDefault(_hammerjs);</mark>
+// _hammerjs2를 사용.
+</code></pre>
+
+-----
+
+So, <strong class="yellow">CommonJS</strong> 방식으로 만들어진 모듈을 가져올 때는...
+
+
+```js
+import * as Hammer from "hammerjs";
+
+import Hammer = require("hammerjs");
+```
+
+-----
+
+#### 하지만, 문제는 여기서 그치지 않습니다.
+
+<small>Typescript가 자동으로 만든 type definition의 경우 다음과 같은 형태</small>
+<pre><code data-trim>
+// definition file
+declear class Hammer {}
+
+</code></pre>
+<pre><code data-trim>// use service
+import * as Hammer from "hammerjs";
+
+<mark class="fragment">Hammer.blabla;</mark>
+</code></pre>
+
+
+<strong class="fragment">Type 에러!</strong>
+
+-----
+
+
+Hammer를 <strong>namespace</strong>로 인식하죠.
+
+<div class="fragment" >
+  <pre><code data-trim>
+  declare namespace Hammer {}
+  </code></pre>
+  <img src="./image/uuu.jpg"><br>
+  <small class="grey">hammerjs의 타입 정의 파일은 모두 namespace 로 선언되어 있습니다.</small>
+<div>
+
+-----
+
+### 2. 3'rd party 라이브러리 @types 사용 시
+
+-----
+
+<pre><code data-trim>interface HammerOptions {
+  <mark>cssProps?:CssProps;</mark>
+  recognizers?:RecognizerTuple[];
+  // ...
+}
+</code></pre>
+
+<div class="fragment">
+<p>정작 CssProps 내부 속성은 다 <strong>필수</strong></p>
+<pre><code data-trim>interface CssProps {
+  contentZooming:string;
+  tapHighlightColor:string;
+  touchCallout:string;
+  touchSelect:string;
+  userDrag:string;
+  userSelect:string;
+}
+</code></pre>
+</div>
+
+-----
+
+3'rd party 라이브러리의 <strong>@types</strong>가 많이 있지만...
+
+<div  class="fragment">
+<h4>결국. 다시 정의 ㅠㅠ</h4>
+<img src="./image/no.jpg" height="300px">
+</div>
+
+-----
+
+### 3. 타입 변환 문제
+
+형변환으로 처리 가능하다.
+  - 변환할변수 as 타입
+  - <타입>변환할변수
+
+
+-----
+
+### 4. 과한 사용은 오히려 독!
+
+- 과한 사용은 오히려 독! 자존감 붕괴. 개발경력 14년 코드한줄 못읽음.
+
+
+```js
+function arrayMap<T, U>(f: (x: T) => U): (a: T[]) => U[] {
+    return a => a.map(f);
+}
+
+const lengths: (a: string[]) => number[] = arrayMap(s => s.length);
+
+const lengths: (a: string[]) => number[] // 선언
+ = arrayMap(s => s.length); // 값 할당.
+
+// T는 string
+// U는 number
+```
+
+```js
+// generic에 type을 적용하는 것은 좀 아닌듯. 너무 가독성이 떨어짐.
+type A = <T, U>(x: T, y: U) => [T, U];
+type B = <S>(x: S, y: S) => [S, S];
+
+function f(a: A, b: B) {
+    a = b;  // Error
+    b = a;  // Ok
+}
+```
+
+```js
+interface Mappable<T> {
+    map<U>(f: (x: T) => U): Mappable<U>;
+}
+
+declare let a: Mappable<number>;
+declare let b: Mappable<string | number>;
+
+a = b; // should fail, now does.
+b = a; // should succeed, continues to do so.
+```
+
+-----
+
+
+## 정리
+
+-----
+
 
 ### 그럼 다음에 기회가 된다면 
 
