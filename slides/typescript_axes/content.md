@@ -47,7 +47,7 @@
 
 ## 뭘 개선하려는데?
 
-<span class="underline">마우스하고 키보드</span><span class="yellow">만</span>...<br>
+<span class="underline">마우스하고 터치</span><span class="yellow">만</span>...<br>
 <span class="underline">x,y 축</span><span class="yellow">만</span>...
 
 ![](./image/mouse-touch.gif)
@@ -91,8 +91,8 @@
 
 -----
 
-동일 형태. 동일 기능이지만 구현체만 다르게 하면 되겠네.<br>
-상속은 커플링이 커지니깐... 
+<strong>동일 형태. 동일 역할</strong>이지만 구현체만 다르게 하면 되겠네.<br>
+상속은 커플링이 커지니깐 인터페이스로 하면...
 
 ### 자바의 <span class="yellow">interface</span>가 그립네.
 
@@ -156,8 +156,7 @@
 -----
 
 ### 다양한 입력 타입은
-InputType <strong>인터페이스</strong>를 적용
-
+IInputType <strong>인터페이스</strong>를 적용
 
 ```ts
 interface IInputType {
@@ -184,6 +183,10 @@ Axes와는 <strong>Loosely coupling</strong> 관계
 
 -----
 
+<iframe style="background-color:white; border-radius:10px; padding:10px" width="100%" height="530px" src="https://naver.github.io/egjs-axes/assets/html/axes.html"></iframe>
+
+-----
+
 <!-- .slide:data-background="#e7ad52" data-transition="zoom" -->
 ## Typescript로 얻은 것!
 
@@ -193,8 +196,9 @@ Axes와는 <strong>Loosely coupling</strong> 관계
 
 interface로 <strong>설계 의도가 코드에 명확히 보임</strong>
 
-```ts
-class PanInput implements IInputType {
+
+<pre><code data-trim data-noescape>
+class <mark>PanInput implements IInputType</mark> {
   connect(observer: IInputTypeObserver): IInputType {
     // ...
   }
@@ -202,7 +206,7 @@ class PanInput implements IInputType {
     // ...
   }
 }
-```
+</code></pre>
 
 -----
 
@@ -238,7 +242,7 @@ const axes = new Axes({
 -----
 
 
-<strong>점(.)</strong>의 Code Assist
+<strong>점(.)</strong>의 Code Assist 와
 
 ![](./image/dot-assist.png)
 
@@ -325,23 +329,22 @@ The Bad Parts
 
 - 환경설정 문제
 - 3'rd party 사용 문제
-- 타입변환 문제
 - import 문제
+- 타입변환 문제
 - 과한 사용은 오히려 독! 자존감 붕괴
+
+-----
+
 
 -----
 
 ### 그럼 다음에 기회가 된다면 
 
-## <strong class="yellow">Typescript를 쓰겠어요? 안쓰겠어요?</strong>
+## <strong class="yellow">Typescript 쓰겠어요? 안쓰겠어요?</strong>
 
 -----
 
 # YES!
 
------
-
-여기에서 이야기한 자세한 설명은  
-다음 사이트에서 보실수 있습니다.
 
 
