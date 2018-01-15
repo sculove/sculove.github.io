@@ -196,7 +196,7 @@ Axes와는 <strong>Loosely coupling</strong> 관계
 
 -----
 
-### 1. 코드의 명세화
+### 1. 코드의 명확성과 명세화 
 
 interface로 <strong>설계 의도가 코드에 명확히 보임</strong>
 
@@ -508,7 +508,7 @@ var _hammerjs2 = <mark>_interopRequireDefault(_hammerjs);</mark>
 
 -----
 
-So, <strong class="yellow">CommonJS</strong> 방식으로 만들어진 모듈을 가져올 때는...
+So, <strong class="yellow">CommonJS</strong>, UMD 방식으로 만들어진 모듈을 가져올 때는...
 
 
 ```js
@@ -586,15 +586,6 @@ Hammer를 <strong>namespace</strong>로 인식하죠.
 
 -----
 
-### 3. 타입 변환 문제
-
-형변환으로 처리 가능하다.
-  - 변환할변수 as 타입
-  - <타입>변환할변수
-
-
------
-
 ### 4. 과한 사용은 오히려 독!
 
 - 과한 사용은 오히려 독! 자존감 붕괴. 개발경력 14년 코드한줄 못읽음.
@@ -641,6 +632,25 @@ b = a; // should succeed, continues to do so.
 
 
 ## 정리
+
+-----
+
+### 좋은 점
+- 코드의 명확성과 명세화가 좋다. 
+- 안정성
+ - 데이터 전달과 변화가 빈번한 경우 더 좋다.
+- 편의성
+- 생성된 코드가 ES3으로 손쉽게 변환
+
+-----
+
+### 나쁜 점
+- 외부 모듈 사용이 불편하다
+  - UMD나 CommonJS 형태의 모듈 사용시 번거롭다
+  - 외부 type definition 파일이 완벽하지는 않다.
+- 과하게 쓰면 오히려 가독성을 급격히 떨어뜨린다.
+  - 특히, Generics는 간단하게만 쓰자.
+
 
 -----
 
