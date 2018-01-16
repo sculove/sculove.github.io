@@ -196,7 +196,7 @@ Axes와는 <strong>Loosely coupling</strong> 관계
 
 -----
 
-### 1. 코드의 명확성과 명세화 
+### 1. 코드 의도가 분명해짐
 
 interface로 <strong>설계 의도가 코드에 명확히 보임</strong>
 
@@ -212,7 +212,29 @@ class <mark>PanInput implements IInputType</mark> {
 }
 </code></pre>
 
-<p class="fragment">더군다나... <strong class="yellow">definition 파일</strong>까지 자동으로 만들어 줌</p>
+-----
+
+<strong class="yellow">definition 파일</strong>까지 자동으로 만들어 줌
+
+PanInput.d.ts 파일 생성
+```js
+export declare class PanInput implements IInputType {
+    hammer: any;
+    element: HTMLElement;
+    static getDirectionByAngle(angle: number, thresholdAngle: number): DIRECTION;
+    static useDirection(checkType: DIRECTION, direction: DIRECTION, userDirection?: DIRECTION): boolean;
+    constructor(el: string | HTMLElement, options?: PanInputOption);
+    connect(observer: IInputTypeObserver): IInputType;
+    disconnect(): this;
+    destroy(): void;
+    private onHammerInput(event);
+    private onPanmove(event);
+    private onPanend(event);
+    //...
+}
+```
+
+
 
 -----
 
@@ -331,6 +353,7 @@ data이지만 같은 data가 아님
 
 -----
 
+<!-- .slide: data-transition="fade-in" data-background-transition="fade-in"-->
 #### eg.Axes의 브라우저 지원 범위
 |IE|Chrome|Firefox|Safari|iOS|Android|
 |---|---|---|---|---|---|
@@ -338,6 +361,7 @@ data이지만 같은 data가 아님
 
 -----
 
+<!-- .slide: data-transition="fade-in" data-background-transition="fade-in"-->
 #### eg.Axes의 브라우저 지원 범위
 with [hammerjs-compatible](https://github.com/naver/hammerjs-compatible)
 
@@ -354,7 +378,7 @@ with [hammerjs-compatible](https://github.com/naver/hammerjs-compatible)
 
 -----
 
-### 4. 생성 코드의 폭넓은 지원 범위
+### 4. 결과 코드의 폭넓은 지원 범위
 Typescript는 공식적으로 <strong>ES3</strong>을 지원
 
 <pre><code data-trim>
@@ -588,69 +612,75 @@ Hammer를 <strong>namespace</strong>로 인식하죠.
 
 ### 4. 과한 사용은 오히려 독!
 
-- 과한 사용은 오히려 독! 자존감 붕괴. 개발경력 14년 코드한줄 못읽음.
+함수에 Generic을 쓰고, 파라미터와 반환값 모두 함수인 arrayMap
 
-
-```js
+<pre><code data-trim>
 function arrayMap<T, U>(f: (x: T) => U): (a: T[]) => U[] {
-    return a => a.map(f);
+  return a => a.map(f);
 }
 
-const lengths: (a: string[]) => number[] = arrayMap(s => s.length);
+<mark class="fragment">arrayMap((x: string) => x.length);</mark>
 
-const lengths: (a: string[]) => number[] // 선언
- = arrayMap(s => s.length); // 값 할당.
-
-// T는 string
-// U는 number
-```
-
-```js
-// generic에 type을 적용하는 것은 좀 아닌듯. 너무 가독성이 떨어짐.
-type A = <T, U>(x: T, y: U) => [T, U];
-type B = <S>(x: S, y: S) => [S, S];
-
-function f(a: A, b: B) {
-    a = b;  // Error
-    b = a;  // Ok
-}
-```
-
-```js
-interface Mappable<T> {
-    map<U>(f: (x: T) => U): Mappable<U>;
-}
-
-declare let a: Mappable<number>;
-declare let b: Mappable<string | number>;
-
-a = b; // should fail, now does.
-b = a; // should succeed, continues to do so.
-```
+<mark class="fragment">// T는 string. U는 number</mark>
+<mark class="fragment">// string 배열을 파라미터로 받고 number 배열을 반환하는 함수</mark>
+</code></pre>
 
 -----
 
+<pre><code data-trim>
+let lengths: (a: string[]) => number[] = arrayMap(s => s.length);
 
-## 정리
+</code></pre>
+
+<pre class="fragment"><code data-trim>
+<mark>// 변수 정의</mark>
+let lengths: (a: string[]) => number[];
+
+</code></pre> 
+ 
+<pre class="fragment"><code data-trim>
+<mark>// 값 할당</mark>
+lengths = arrayMap(s => s.length);
+
+</code></pre> 
+
+-----
+
+개발경력 13년 
+### 코드 한 줄도 못 읽음.
+
+자존감 붕괴
+
+![](./image/mental-drop.jpg)
+
+-----
+
+<!-- .slide:data-background="#1A3819" -->
+## 정리 한번 해보죠.
 
 -----
 
 ### 좋은 점
-- 코드의 명확성과 명세화가 좋다. 
-- 안정성
- - 데이터 전달과 변화가 빈번한 경우 더 좋다.
-- 편의성
-- 생성된 코드가 ES3으로 손쉽게 변환
+<ul>
+  <li class="fragment"><strong class="yellow">코드가 명확</strong>해지고, 별도 주석을 안달아도 <span class="underline">명세화</span>가 가능하다</li>
+  <li class="fragment"><strong>안전성</strong>. 구현의 실수를 개발중 잡아준다.<br>특히, <span class="underline">데이터 전달과 변환</span>이 많은 곳에서는 <strong>Great!</strong></li>
+  <li class="fragment"><strong class="blue">편의성</strong>. 툴 사용의 극대화!!!</li>
+  <li class="fragment"><strong class="grey">ES3</strong>까지 손쉽게 지원</li>
+</ul>
 
 -----
 
 ### 나쁜 점
-- 외부 모듈 사용이 불편하다
-  - UMD나 CommonJS 형태의 모듈 사용시 번거롭다
-  - 외부 type definition 파일이 완벽하지는 않다.
-- 과하게 쓰면 오히려 가독성을 급격히 떨어뜨린다.
-  - 특히, Generics는 간단하게만 쓰자.
-
+<ul>
+  <li class="fragment">
+    <strong class="yellow">외부 모듈 사용</strong>이 불편하다
+    <ul >
+      <li class="fragment"><p>UMD나 CommonJS 형태의 <span class="underline">기존 모듈 사용시 번거롭다</span></p></li>
+      <li class="fragment"><p><span class="underline">외부 type definition 파일</span>이 완벽하지는 않다.</p></li>
+    </ul>
+  </li>
+  <li class="fragment">과하게 쓰면 오히려 <strong class="blue">가독성을 떨어뜨린다.</strong></li>
+</ul>
 
 -----
 
@@ -661,7 +691,11 @@ b = a; // should succeed, continues to do so.
 
 -----
 
-# YES!
+# <strong class="bigsize">YES!</strong>
 
+<div class="fragment">
+  <h2>Why?</h2>
+  <p>단점의 핵심은 <span class="underline">"외부와의 접전"</span>, <span class="underline">"낮은 이해도"</span>, <span class="underline">"過猶不及"</span></p>
+</div>
 
-
+-----
