@@ -679,7 +679,7 @@ lengths = arrayMap(s => s.length);
       <li class="fragment"><p><span class="underline">외부 type definition 파일</span>이 완벽하지는 않다.</p></li>
     </ul>
   </li>
-  <li class="fragment">과하게 쓰면 오히려 <strong class="blue">가독성을 떨어뜨린다.</strong></li>
+  <li class="fragment">과하게 쓰면 오히려 <strong class="blue">가독성을 떨어뜨린다.</strong> 떨어지는 자존감 ㅜㅜ</li>
 </ul>
 
 -----
