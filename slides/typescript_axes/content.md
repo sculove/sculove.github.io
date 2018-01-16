@@ -575,6 +575,23 @@ Hammer를 <strong>namespace</strong>로 인식하죠.
 
 -----
 
+다행인 것은 
+
+요즘 모듈들은 <span class="yellow">UMD</span> 뿐만 아니라 <strong>ES6 Module</strong> 용도 함께 배포
+
+
+package.json에서 지원
+ <pre><code data-trim>
+{
+  "main": "dist/axes.js", // umd or commonjs 형태 [번들링 된 것]
+  <mark>"module": "outjs/index.js", // es6 module 형태</mark>
+}
+</code></pre>
+
+#### <em>For Tree-shaking</em>
+
+-----
+
 ### 2. 3'rd party 라이브러리 @types 사용 시
 
 -----
@@ -610,7 +627,7 @@ Hammer를 <strong>namespace</strong>로 인식하죠.
 
 -----
 
-### 4. 과한 사용은 오히려 독!
+### 3. 과한 사용은 오히려 독!
 
 함수에 Generic을 쓰고, 파라미터와 반환값 모두 함수인 arrayMap
 
