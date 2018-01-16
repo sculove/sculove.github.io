@@ -660,7 +660,7 @@ lengths = arrayMap(s => s.length);
 
 -----
 
-### 좋은 점
+### 좋은 점 (얻은 것)
 <ul>
   <li class="fragment"><strong class="yellow">코드가 명확</strong>해지고, 별도 주석을 안달아도 <span class="underline">명세화</span>가 가능하다</li>
   <li class="fragment"><strong>안전성</strong>. 구현의 실수를 개발중 잡아준다.<br>특히, <span class="underline">데이터 전달과 변환</span>이 많은 곳에서는 <strong>Great!</strong></li>
@@ -670,7 +670,7 @@ lengths = arrayMap(s => s.length);
 
 -----
 
-### 나쁜 점
+### 나쁜 점 (잃은 것)
 <ul>
   <li class="fragment">
     <strong class="yellow">외부 모듈 사용</strong>이 불편하다
