@@ -695,7 +695,6 @@ lengths = arrayMap(s => s.length);
 
 <div class="fragment">
   <h2>Why?</h2>
-  <p>단점의 핵심은 <span class="underline">"외부와의 접전"</span>, <span class="underline">"낮은 이해도"</span>, <span class="underline">"過猶不及"</span></p>
+  <p>단점의 핵심은 <strong class="yellow">기존 시스템과의 이질감</strong>, <span class="underline">"過猶不及"</span></p>
 </div>
 
------
