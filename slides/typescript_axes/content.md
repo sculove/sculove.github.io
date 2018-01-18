@@ -587,6 +587,9 @@ package.json에서 지원
   <mark>"module": "outjs/index.js", // es6 module 형태</mark>
 }
 </code></pre>
+```js
+import Axes from "egjs/axes"; // module에서 명시한 파일을 찾음.
+```
 
 #### <em>For Tree-shaking</em>
 
