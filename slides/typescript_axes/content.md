@@ -185,7 +185,7 @@ Axes와는 <strong>Loosely coupling</strong> 관계
 
 -----
 
-<iframe style="background-color:white; border-radius:10px; padding:10px" width="100%" height="530px" src="https://naver.github.io/egjs-axes/assets/html/axes.html"></iframe>
+<iframe style="background-color:white; border-radius:10px; padding:10px" width="100%" height="570px" src="https://naver.github.io/egjs-axes/assets/html/axes.html"></iframe>
 
 -----
 
