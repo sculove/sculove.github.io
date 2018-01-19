@@ -185,7 +185,7 @@ Axes와는 <strong>Loosely coupling</strong> 관계
 
 -----
 
-<iframe style="background-color:white; border-radius:10px; padding:10px" width="100%" height="530px" src="https://naver.github.io/egjs-axes/assets/html/axes.html"></iframe>
+<iframe style="background-color:white; border-radius:10px; padding:10px" width="100%" height="570px" src="https://naver.github.io/egjs-axes/assets/html/axes.html"></iframe>
 
 -----
 
@@ -587,6 +587,9 @@ package.json에서 지원
   <mark>"module": "outjs/index.js", // es6 module 형태</mark>
 }
 </code></pre>
+```js
+import Axes from "egjs/axes"; // module에서 명시한 파일을 찾음.
+```
 
 #### <em>For Tree-shaking</em>
 
