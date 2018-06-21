@@ -1,16 +1,131 @@
 
 ## rxjs?
 
-rxjs란?
-- 목적: 배우고 싶게 밑밥을 깐다.
-- 현재 트랜드 위주로 rxjs의 성장과 역사에 대해 이야기한다.
+역사
+트랜드....
 
+한번도 안쓴 사람은 있어서 써본사람은 계속써.
+
+
+-----
+
+rxjs란 무엇인가?
+
+RxJS is~~~
+
+하지만 필자는 이렇게 이야기하고 싶다.
+"범용적 데이터 솔루션"
+
+-----
+
+왜?
+웹프로그램 절라 복잡해졌다.
+따라서 웹애플리케이션은 "상태머신"이다.
+
+-----
+
+상태머신은 이러하단. 입력, 상태 변경, 출력
+
+상태머신 동작 방식 vs 레이어 토글링 기능 예제
+
+-----
+
+근데 언제 오류가 나느냐?
+
+블라블라
+
+-----
+
+입력오류
+상태오류 (의존관계, 호출 순서 관계)
+로직오류
+ - for문, 분기문, 변수(누군가에 의해 변경될수 있다)
+
+-----
+
+rxjs는 이런거야...
 rxjs를 제대로 쓰려면 함수형 프로그래밍, 반응형 프로그래밍에 대한 이해가 필요하다.
 단, 필요한 것만. 깊게보면 헤어나질 못합니다.
 
 -----
 
+## 입력오류
+입력 데이터의 사례 줄줄줄
+
+- 아 동기와 비동기가 절라 섞여있네 (입력 데이터의 전달 시점이 다양하네)
+- 왜이런데... 동기는 순차적이라 작업이 단순해 근데 느려
+- 비동기는 이벤트나 콜백으로 받아야해. 속도 빨라 근데 아 복잡해
+- 내 코드 분만아니라, 브라우저에서 비동기로 주는것도 있고 동기로 주는 경우도 있네 결국같이 해야하내.
+
+-----
+
+## 입력 오류 - RxJS는 어케했니?
+
+- 와 대박 동기든 비동기는 시간을 축으로 갖는 데이터 컬렉션이라고 봤네.
+- 그래서 동일객체인 Observable을 맹글었어. 와우~!
+
+-----
+
+## 상태오류
+System -> User
+- User 변경에 대한 영향도가 크다. (인터페이스)
+- User 상태를 확인하기 위해서는 User의 상태 메소드를 정하고 뭘해야해
+- User 가 변경될때 System 들에게 User의 변경상태를 어케 알려주지?
+
+-----
+
+## 아하
+Observer 패턴
+- loosly coupling
+- 자동상태 전파 (push 방식): Subject가 변경될때 관찰하는 다수의 Observer에게 상태를 알려준다.
+- 인터페이스 단일화
+
+-----
+
+<< 실습1 - Observer 패턴 만들기. 또는 활용하기>>
+
+-----
+
+## 상태 오류 - RxJS는 어케했니?
+
+- 기존 Observer 패턴을 개선
+  - 상태 종료 (complete)
+  - 에러 나면 어쩔껴 (error)
+  - Observer가 Subject의 상태를 변경하는 경우에는? (read-only, 단방향 데이터 흐름)
+
+-----
+
+##  Obsevable은 리액티브하다
+반응형 프로그래밍이야기를 해보자.
+
+## 반응형 프로그래밍
+https://www.reactivemanifesto.org
+- 뭐래? 왜케 어려워?
+
+데이터 흐름과 자동전파
+
+엑셀의예.
+
+------
+
+## 로직오류
+
+ - for문, 분기문, 변수(누군가에 의해 변경될수 있다)
+
+-----
+
+## rxjs는 함수형 프로그래밍 패러다임을 지향한다.
+  - operator는 순수함수를 전달 받는 고차함수
+  - Observable은 불변객체 
+
+-----
+
 ## 함수형 프로그래밍
+
+함수형 프로그래밍 책을 보면... 
+forEach, map, filter, ...이런 함수들 이야기를 한다.
+
+-----
 
 > 함수형 프로그래밍은 자료 처리를 수학적 함수의 계산으로 취급하고 상태 변경과 가변 데이터를 피하려는 프로그래밍 패러다임의 하나이다. 
 In computer science, functional programming is a programming paradigm—a style of building the structure and elements of computer programs—that treats computation as the evaluation of mathematical functions and avoids changing-state and mutable data. 
@@ -24,12 +139,22 @@ In computer science, functional programming is a programming paradigm—a style 
 
 -----
 
-### 공통의 관심사
+### 1. 수학적 함수의 계산
 
+- 복잡한 문제를 푸는 것에 대한 관심.
+- 대표적인 것 high order function 
 
 -----
 
-### 부원인과 부작용
+#### High Order Function 
+
+- HOF: 일반적인 문제를 쉽게 해결하는 함수의 방식
+
+-----
+
+### 2. 상태 변경과 가변 데이터를 피하려는 방법
+
+-----
 
 ```js
 function getCurrentValue(value) {
@@ -38,16 +163,18 @@ function getCurrentValue(value) {
 ```
 
 - 입력값은 value?  
-- 또 다른 입력값 `new Date().getTime()` => 부원인(side cause)
+- 또 다른 입력값 `new Date().getTime()` => 부작용이 존재하는 경우
 
 -----
 
-- 부원인(side cause): 함수에 드러나지 않는 입력값.
+#### a. 부원인과 부작용
+
+- 부원인(side cause): 함수에 드러나지 않는 입력값과 출력값.
 - 부작용(side effect): 부원인에 의해 발생한 결과 부작용.
 
 -----
 
-### 부원인과 부작용을 이용하는 프로그래밍
+출력값이 부정확한 경우 => 부작용이 존재하는 경우
 
 ```js
 const param = {
@@ -68,20 +195,18 @@ const result = refFunction(2, param);
 
 -----
 
-함수형 프로그램에서는 부원인과 부작용 지양한다
-
-How to?
+함수형 프로그램에서는 부원인과 부작용을 지양한다.
 
 -----
 
-### MUTABLE vs IMMUTABLE
+#### b. MUTABLE vs IMMUTABLE
 
-#### 가변 객체(MUTABLE Object)
+##### 가변 객체(MUTABLE Object)
 생성 후에 상태를 변경할 수 있는 객체
 Array, Object
 
 
-#### 불변객체(IMMUTABLE Object)
+##### 불변객체(IMMUTABLE Object)
 생성 후 그 상태를 바꿀수 없는 객체
 그 외 number, boolean, string
 
@@ -91,20 +216,7 @@ Array, Object
 
 -----
 
-### 불변객체로 처리하기
-
-Array.prototype.slice
-```js
-const animals = ['ant', 'bison', 'camel', 'duck', 'elephant'];
-
-console.log(animals.slice(2));
-// ["camel", "duck", "elephant"]
-// animals => ['ant', 'bison', 'camel', 'duck', 'elephant'];
-```
-
------
-
-### 가변객체로 처리하기
+#### 가변객체로 처리하기
 
 Array.prototype.splice
 ```js
@@ -117,8 +229,21 @@ console.log(animals.splice(2));
 
 -----
 
+
+#### 불변객체로 처리하기
+
+Array.prototype.slice
+```js
+const animals = ['ant', 'bison', 'camel', 'duck', 'elephant'];
+
+console.log(animals.slice(2));
+// ["camel", "duck", "elephant"]
+// animals => ['ant', 'bison', 'camel', 'duck', 'elephant'];
+```
+
+-----
+
 함수형 프로그램에서는 불변객체(IMMUTABLE)을 지향한다.
-> 함수형 프로그래밍 책을 보면... forEach, map, filter, ...이런 함수들 이야기를 한다.
 
 Why? 상태 변화에 영향을 받지 않기 위해서.
 불변객체 === 생성 후 그 상태를 바꿀수 없는 객체
@@ -137,45 +262,32 @@ Why? 상태 변화에 영향을 받지 않기 위해서.
 
 ### 함수형 프로그래밍의 장점은?
 
-순수함수이기 때문에... 즉, 외부의 상태에 영향을 받지 않고 오직 입력값에 따라 결정된다.
-
-- 테스트가 용이하다.
-- 상태가 없기 때문에 동시성 처리가 좋다.
-- <strong>수학적</strong> 함수의 계산
-- 상태 변경과 가변 데이터를 피하려는
- => 
+### 상태 변경과 가변 데이터를 피하려는
+- 외부의 영향을 받지 않는 것에 대한 관심
+- 순수함수이기 때문에... 즉, 외부의 상태에 영향을 받지 않고 오직 입력값에 따라 결정된다.
+  - 테스트가 용이하다.
+  - 상태가 없기 때문에 동시성 처리가 좋다.
 
 ----
 
-## 반응형 프로그래밍
-https://www.reactivemanifesto.org
-- 뭐래? 왜케 어려워?
-- Observer 패턴
-- 상태 머신의 결과값이 입력값으로
-- <<실습>>
-
-함수에 대한 이야기 (operator)
-- HOF: 일반적인 문제를 쉽게 해결하는 함수의 방식
-- Compose
-- <<실습>>
 
 ——————————————————————
-rxjs는 무엇인가? (개요)
+rxjs 시작하기 
+- 비동기 예제 (fromEvent, interval)
+- 동기 예제 (of, range )
+- 합치는 예제
+
 - 6대 개념
+<Observable>
+<Oberver>
+<Operator>
+<Subscription>
+------------
+<Subject>
+<Scheduler>
 
-안정적인 프로그래밍 관점에서 rxjs는 모냐?
-- 상태머신 이야기
-- 입력방식 이슈
-- 상태 이슈
-- 논리 이슈
+<<실습 2번>>
 
-——————————————————————
-Observable 생성하기 (from, of, fromEvent)
-Observable의 특징
- - 함수 vs Promise vs Observable
-<< 실습 >>
-——————————————————————
-Marble Digram 설명
 RxJs 개발 플로우
 - 0. 요구사항 파악시 흐름을 이해한다.
 - 첫째. 데이터 소스를 Observable로 변경한다.
@@ -183,6 +295,15 @@ RxJs 개발 플로우
 - 셋째. 원하는 데이터를 받아 처리하는 Observer를 만든다.
 - 넷째. Observable의 subscribe를 통해 Observer를 등록한다.
 - 다섯째. Observable 구독을 정지하고 자원을 해지한다.
+
+——————————————————————
+Observable의 특징
+ - 함수 vs Promise vs Observable
+
+<< 실습 3번 >>
+——————————————————————
+Marble Digram 설명
+
 ——————————————————————
 자동완성 만들기 <따라하는 실습>
 플리킹 만들기 <따라하는 실습>
