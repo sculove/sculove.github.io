@@ -749,7 +749,69 @@ Why? 구독 시점에 따라 예전 데이터를 못 얻으니깐...
 -----
 
 <!-- .slide:data-background="#e7ad52" -->
+# Scheduler와 
 # 애니메이션 만들기
+
+-----
+
+## Scheduler
+스케줄러의 사전적 의미.   
+<strong class="yellow">앞으로 해야 할 모든 일들을 조절하는 사람</strong>
+
+-----
+
+## RxJS의 Scheduler는?
+
+Observable가 전달되는 데이터나 Observer가 받는   
+<strong class="yellow">데이터 처리 시점을 조절</strong>하는 일
+
+자바스크립트의 스케줄러가 하는 일을  
+<em>RxJS에서 효과적으로 처리하기 위해서 만든 가상의 스케줄러</em>
+
+
+-----
+
+## JavaScript 스케쥴러는?
+
+- setTimeout/setInterval: <strong class="yellow">Task queue</strong>에서 처리
+- promise : <strong class="yellow">microtask queue</strong>에서 처리
+- requestAnimationFrame : <strong class="yellow">AnimationFrame</strong> 에서 처리
+
+-----
+
+![](./image/browser-structure.png)
+
+-----
+
+### 다양한 RxJS Scheduler
+
+- asyncScheduler: <strong class="yellow">task</strong>에 등록하는 스케줄러
+- asapScheduler: <strong class="yellow">microtask</strong>에 등록하는 스케줄러
+- animationFrameScheduler : <strong class="yellow">requestAnimation</strong>과 동일. animation frame에 등록하는 스케쥴러
+- null: 스택에 등록하는 스케줄러. <strong>동기식</strong> <strong class="yellow">기본 스케쥴러</strong>
+
+-----
+
+### 사실은 지금까지 쓰고 있었던 스케줄러
+Observable 생성 함수에서
+```js
+from(ish: ObservableInput<T>, scheduler: Scheduler)
+of(values: ...T, scheduler: Scheduler)
+interval(period: number, scheduler: Scheduler)
+throwError(error: any, scheduler: Scheduler)
+...
+```
+
+-----
+
+
+### subscribeOn, observeOn
+operator에서 
+
+- <a href="http://reactivex.io/rxjs/class/es6/Observable.js~Observable.html#instance-method-subscribeOn" target="_blank">subscribeOn</a>
+<small>https://github.com/sculove/rxjs-book/blob/master/part2/04.carousel/asyncScheduler-1.html</small>
+- <a href="http://reactivex.io/rxjs/class/es6/Observable.js~Observable.html#instance-method-observeOn" target="_blank">observeOn</a>
+<small>https://github.com/sculove/rxjs-book/blob/master/part2/04.carousel/asyncScheduler-2.html</small>
 
 -----
 
@@ -761,15 +823,6 @@ Why? 구독 시점에 따라 예전 데이터를 못 얻으니깐...
 
 -----
 
-## Scheduler
-스케줄러의 사전적 의미. "앞으로 해야 할 모든 일들을 조절하는 사람"
-
-RxJS의 Scheduler는?
-Observable가 전달되는 데이터나 Observer가 받는 데이터 처리 시점을 조절하는 일
-
------
-
-
 ## Animation Observable 만들기
 
 ```js
@@ -777,6 +830,109 @@ const { animationFrame, interval } = rxjs;
 
 const scheduler = animationFrame;
 const animation$ = interval(0, scheduler);
+```
+<small>https://github.com/sculove/rxjs-book/blob/master/part2/05.carousel/animation.html</small>
+
+-----
+
+### 애니메이션 구하는 공식
+- 이동거리 비율 구하기: 경과시간/총 애니메이션 이동시간
+- = (현재 시간 - 애니메이션 시작 시간) / 총 애니메이션 이동시간
+
+-----
+
+```js
+const { animationFrameScheduler, interval } = rxjs;
+const { map } = rxjs.operators;
+
+const scheduler = animationFrameScheduler;
+const start = scheduler.now();  // 시작하는 가상의 시간을 구할수 있음
+const DURATION = 300;
+const animation$ = interval(0, scheduler)
+.pipe(
+  map(() => (scheduler.now() - start) / DURATION)
+);
+
+animation$.subscribe(rate => console.log("animation$", rate));
+```
+
+-----
+
+- takeWhile로 0 ~ 1 사이의 값 구하기. (rate <= 1)
+- concat으로 1 합치기
+- 위치 구하기: 현재위치 + (현재위치로부터 이동한 거리 * 이동거리의 비율) 
+
+<small>takeWhile: <a href="http://reactivex.io/rxjs/class/es6/Observable.js~Observable.html#instance-method-takeWhile" target="_blank">V5.x</a>, <a href="https://rxjs-dev.firebaseapp.com/api/operators/takeWhile" target="_blank">V6.x</a>, <a href="http://rxmarbles.com/#takeWhile" target="_blank">rxmarble</a>, </small>
+<small>concat: <a href="http://reactivex.io/rxjs/class/es6/Observable.js~Observable.html#static-method-concat" target="_blank">V5.x</a>, <a href="https://rxjs-dev.firebaseapp.com/api/index/concat" target="_blank">V6.x</a>, <a href="http://rxmarbles.com/#concat" target="_blank">rxmarble</a></small>
+
+-----
+
+```js
+function animation(from, to, duration) {
+  const scheduler = animationFrameScheduler;
+  const start = scheduler.now();
+  const interval$ = interval(0, scheduler)
+      .pipe( 
+          map(() => (scheduler.now() - start) / duration),
+          takeWhile(rate => rate < 1) 
+      );
+  return concat(interval$, of(1))
+      .pipe(
+          map(rate => from + (to - from) * rate)
+      );
+}
+// 애니메이션 데이터 호출 
+const animation$ = animation(100, 500, 300);
+animation$.subscribe(v => console.log(v));
+```
+
+-----
+
+```js
+// 애니메이션 데이터 호출 
+const animation$ = animation(100, 500, 300);
+
+setTimeout(() => {
+  animation$.subscribe(v => console.log(v));
+}, 500);
+```
+
+- defer로 animation$ 선언부와 subscribe 분리하기.
+- 박스에 애니메이션 적용하기 ($box.style.y)
+
+<small>defer: <a href="http://reactivex.io/rxjs/class/es6/Observable.js~Observable.html#static-method-defer" target="_blank">V5.x</a>, <a href="https://rxjs-dev.firebaseapp.com/api/index/defer" target="_blank">V6.x</a></small>
+
+-----
+
+```js
+const $box = document.getElementById("box");
+const { 
+  animationFrameScheduler, 
+  interval, 
+  defer, 
+  concat, 
+  of 
+} = rxjs;
+const { map, takeWhile } = rxjs.operators;
+
+function animation(from, to, duration) {
+    return defer(() => {
+    const scheduler = animationFrameScheduler;
+    const start = scheduler.now();
+    const interval$ = interval(0, scheduler)
+        .pipe( 
+            map(() => (scheduler.now() - start) / duration),
+            takeWhile(rate => rate < 1) 
+        );
+    return concat(interval$, of(1))
+        .pipe(
+            map(rate => from + (to - from) * rate)
+        );
+    });
+}
+
+const animation$ = animation(100, 500, 3000);
+animation$.subscribe(y => $box.style.top = `${y}px`);
 ```
 
 -----
