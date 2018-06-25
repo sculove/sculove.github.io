@@ -420,16 +420,16 @@ promise.then(
 #### Lazy 한 것 처럼 보이지만... 아니다.
 정의부가 딱 1번 호출된다.
 
-- Promise https://github.com/sculove/rxjs-book/blob/master/part2/03.observable/04.promise-lazy.html
-- Observable https://github.com/sculove/rxjs-book/blob/master/part2/03.observable/05.observable-lazy.html
+- Promise   <small>https://github.com/sculove/rxjs-book/blob/master/part2/03.observable/04.promise-lazy.html</small>
+- Observable <small>https://github.com/sculove/rxjs-book/blob/master/part2/03.observable/05.observable-lazy.html</small>
 
 -----
 
 #### Cancellation
 Promise는 취소에 대한 인터페이스가 없다.
 
-- Promise https://github.com/sculove/rxjs-book/blob/master/part2/03.observable/06.promise-cancel.html
-- Observable https://github.com/sculove/rxjs-book/blob/master/part2/03.observable/07.observable-cancel.html
+- Promise <small>https://github.com/sculove/rxjs-book/blob/master/part2/03.observable/06.promise-cancel.html</small>
+- Observable <small>https://github.com/sculove/rxjs-book/blob/master/part2/03.observable/07.observable-cancel.html</small>
 
 -----
 
