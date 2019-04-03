@@ -70,7 +70,9 @@
 
 -----
 
-### 1. 브라우저 구조의 이해 
+## 1. 브라우저의 이해 
+
+-----
 
 ![](./image/browser.png) <!-- .element: style="height:400px" -->
 <small><a href="https://blog.sessionstack.com/how-javascript-works-the-rendering-engine-and-tips-to-optimize-its-performance-7b95553baeda">How JavaScript works: the rendering engine and tips to optimize its performance</a></small>
@@ -79,7 +81,7 @@ Rendering Engine (Netwoking, JavaScript Engine) <!-- .element: class="fragment y
 
 -----
 
-#### 로딩과정의 이해
+### 1) 페이지 로딩 과정
 
 <video src="./loadingprocess.mov" controls/>
 
@@ -96,16 +98,14 @@ Rendering Engine (Netwoking, JavaScript Engine) <!-- .element: class="fragment y
 
 -----
 
-### 2. Network (HTTP2)
+### 2) 브라우저에서의 Reqeust 
+
+![](./image/request.png) <!-- .element: style="height:500px" -->
 
 -----
 
-1. Stalled -> Browser Waiting
-2. DNS Lookup
-3. Initial Connection
-4. Request sent
-5. **Time to First Byte (TTFB)** -> Server Time
-6. Content Download
+1. Initial Connection
+2. **Time to First Byte (TTFB)**
 
 -----
 
