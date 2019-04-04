@@ -36,7 +36,8 @@
 
 ### 서버 성능분석가의 관심사는?
 <p class="fragment">서버가 얼마나 <strong>많은 요청을 처리</strong>할 수 있니?</p>
-<strong class="fragment yellow">TPS (Transition Per Seconds)</strong>
+
+<h3><strong class="fragment yellow">TPS (Transition Per Seconds)</strong></h3>
 
 -----
 
@@ -96,29 +97,31 @@
 
 ### 3. 언제까지? 
 
-- <!-- .element: class="fragment" --> 목표에 도달할때 까지.
+<!-- .element: class="fragment" --> <strong class="yellow">목표</strong>에 도달할 때 까지.
 
 <!-- .element: class="fragment" --> 그럼 목표는?
 
-초기 로딩 속도 3초(?)
+<!-- .element: class="fragment" --> 초기 로딩 속도 <strong class="blue">3초(?)</strong>
 
 -----
 
-그럼 네이버는?
+성격 급한 한국인이 많이 쓰는...
+### 네이버는?
 
-로딩속도 지표
-- <!-- .element: class="fragment" --> 모바일: 1.5초
-- <!-- .element: class="fragment" --> PC: 2초 
+<p>초기 로딩 속도</p>
+<ul class="fragment">
+  <li>모바일: 1.5초</li>
+  <li>PC: 2초</li>
+</ul>
 
 -----
 
-구글은? 
-
-<strong>RAIL</span> Performance Model
+### 구글은? 
 						
-![](./image/rail.png)
-
-<small>developers.google.com <a href="http://goo.gl/axNG6r">http://goo.gl/axNG6r</a></small>
+<div class="fragment">
+  <img src="./image/rail.png"/>
+  <small>developers.google.com <a href="http://goo.gl/axNG6r">http://goo.gl/axNG6r</a></small>
+</div>
 
 -----
 
