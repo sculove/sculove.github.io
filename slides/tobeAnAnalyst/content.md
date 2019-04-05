@@ -374,7 +374,6 @@ pictures, source, srcset 태그를 사용
 
 -----
 
-### How to
 #### async, defer
 
 ![](./image/async-defer.png)
@@ -428,7 +427,7 @@ HTML과 함께 <strong class="yellow">JS, CSS, 이미지</strong>가 로딩
 ![](./image/paint.png)
 
 - First Paint(FP): <strong class="yellow">HEAD 태그</strong> 종료 후
-- First Meaningful Paint: <strong>Hero 엘리먼트</strong>가 보이는 시기
+- First Meaningful Paint(FMP): <strong>Hero 엘리먼트</strong>가 보이는 시기
 
 -----
 
@@ -489,7 +488,7 @@ HTML과 함께 <strong class="yellow">JS, CSS, 이미지</strong>가 로딩
 2. <!-- .element: class="fragment" --> Style recalculate: DOM의 <strong class="yellow">최종 스타일을 계산</strong>
 3. <!-- .element: class="fragment" --> Layout: DOM의 <strong class="yellow">배치와 크기 계산</strong>
 4. <!-- .element: class="fragment" --> Paint: 화면에 그리기
-5. <!-- .element: class="fragment" --> Composite: 레이어 조합하기 <strong>(GPU Help)</strong>
+5. <!-- .element: class="fragment" --> Composite: 레이어 조합하기 <strong>(Help me GPU!)</strong>
 
 -----
 
@@ -558,14 +557,25 @@ GPU의 도움을 받기 위해
 
 -----
 
-랜더링 파이프가 계속해서 발생하는 경우
+#### 랜더링 파이프가 계속해서 발생하는 경우
 
 1 Frame 은 <strong class="yellow">16ms 내에 완료</strong>되어야한다
 
--  <strong>애니메이션</strong>을 위해서는 requestAnimationFrame을 사용
-- DOM을 건드리지 않는 JS 코드 실행 시간도 동일
+-----
+
+<strong>애니메이션</strong>을 위해서는 
+
+<strong class="yellow">requestAnimationFrame</strong>으로 16ms 주기를 보장
 
 ![](./image/timer.png)
+
+-----
+
+DOM을 건드리지 않는 JS 코드 실행 시간도 동일
+
+서비스 Biz 로직이 대다수...
+
+<strong class="big yellow fragment">서비스 개발자가 가장 잘 고칠 수 있다</strong>
 
 -----
 
@@ -601,8 +611,8 @@ GPU의 도움을 받기 위해
   <p class="grey fragment" data-fragment-index="2">(성능개선사항을 누구 보다 잘아는 사람은 서비스를 개발한 담당자이다. 성능 전문가는 찾을 수는 있지만 개선할수는 없다.)</p>
 </li>
 <li>
-  <p class="fragment red" data-fragment-index="3">서비스 성능 개선은 전문성을 갖춘 영역이기에 아무나 할수 없다.</p>
-  <p class="grey fragment" data-fragment-index="3">(오늘 강의만으로도 여러분은 충분히 할 수 있다.)</p>
+  <p class="fragment red" data-fragment-index="3">서비스 성능 개선은 전문성을 갖춘 영역이기에 아무나 할 수 없다.</p>
+  <p class="grey fragment" data-fragment-index="3">(오늘 강의만으로도 여러분은 충분히 할 수 있다. 노력이 중요하다.)</p>
 </li>
 </ul>
 
