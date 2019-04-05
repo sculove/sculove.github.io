@@ -612,7 +612,7 @@ DOM을 건드리지 않는 JS 코드 실행 시간도 동일
 </li>
 <li>
   <p class="fragment red" data-fragment-index="3">서비스 성능 개선은 전문성을 갖춘 영역이기에 아무나 할 수 없다.</p>
-  <p class="grey fragment" data-fragment-index="3">(오늘 강의만으로도 여러분은 충분히 할 수 있다. 노력이 중요하다.)</p>
+  <p class="grey fragment" data-fragment-index="3">(오늘 강의만으로도 여러분은 충분히 할 수 있다. 노력과 관심이 중요하다.)</p>
 </li>
 </ul>
 
