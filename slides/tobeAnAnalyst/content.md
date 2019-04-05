@@ -318,7 +318,7 @@ Decode 비용
 
 -----
 
-pictures, source 태그를 사용
+pictures, source, srcset 태그를 사용
 
 ```
 <picture>
