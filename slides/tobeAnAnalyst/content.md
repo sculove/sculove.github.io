@@ -157,7 +157,7 @@
 ### 로딩 속도 측정/분석 하기
 핵심은 <strong class="yellow">Waterfall 차트</strong>
 
-![](./image/waterfallchart.png)
+![](./image/waterfallchart.png) <!-- .element: style="height:400px" -->
 
 -----
 
@@ -344,7 +344,7 @@ pictures, source, srcset 태그를 사용
 
 -----
 
-![](./image/rendering.png)
+![](./image/rendering.png) <!-- .element: style="width:600px" -->
 
 1. <!-- .element: class="fragment" --> 서버로 부터 <strong class="yellow">HTML 문자열</strong>을 <strong>Stream</strong>으로 받음
 2. <!-- .element: class="fragment" --> `<head>` 태그에 포함된 자원을 <strong>병렬</strong>로 다운로드
@@ -355,7 +355,7 @@ pictures, source, srcset 태그를 사용
 
 -----
 
-![](./image/html.png)  <!-- .element: style="height:450px" -->
+![](./image/html.png)  <!-- .element: style="height:400px" -->
 
 - <!-- .element: class="fragment" --> A. head 안의 모든 자원 <strong class="yellow">병렬 로딩</strong>
 - <!-- .element: class="fragment" --> B. JS, CSS 실행시 페이지 <strong>랜더링 Block</strong>
@@ -424,7 +424,7 @@ HTML과 함께 <strong class="yellow">JS, CSS, 이미지</strong>가 로딩
 
 #### 체감 속도 높이기
 
-![](./image/paint.png)
+![](./image/paint.png) <!-- .element: style="height:400px" -->
 
 - First Paint(FP): <strong class="yellow">HEAD 태그</strong> 종료 후
 - First Meaningful Paint(FMP): <strong>Hero 엘리먼트</strong>가 보이는 시기
