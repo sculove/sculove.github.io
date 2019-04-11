@@ -283,7 +283,7 @@ Content Download가 오래 걸린다면
 
 #### minify, obfuscation, gzip
 
-![](./image/minify.png)
+![](./image/minify.png) <!-- .element: style="height:380px" -->
 
 <small>gzip 적용(`content-encoding: gzip`)시  <strong>전체 데이터량의 30% 정도 감소</strong></small>
 
@@ -291,11 +291,9 @@ Content Download가 오래 걸린다면
 
 역시나 가장 효과적인 것은 뭐니뭐니 해도
 
-#### 이미지
+#### 큰 이미지 줄이기
 
-큰 이미지 줄이기
-
-![](./image/bigimage.png)
+![](./image/bigimage.png) <!-- .element: style="height:380px" -->
 
 <small class="fragment">이미지 포맷(png, webP, jpeg, ...), 이미지 메타정보 날리기 </small>
 
@@ -318,7 +316,7 @@ Decode 비용
 
 -----
 
-pictures, source, srcset 태그를 사용
+picture, source, srcset 태그를 사용
 
 ```
 <picture>
@@ -348,7 +346,7 @@ pictures, source, srcset 태그를 사용
 
 1. <!-- .element: class="fragment" --> 서버로 부터 <strong class="yellow">HTML 문자열</strong>을 <strong>Stream</strong>으로 받음
 2. <!-- .element: class="fragment" --> `<head>` 태그에 포함된 자원을 <strong>병렬</strong>로 다운로드
-3. <!-- .element: class="fragment" --> `<head>` 태그에 포함된 자원을 <strong>모두 실행</strong> <br><p class="grep">(DOM, CSSOM, Render Tree, ... 구성)</p>
+3. <!-- .element: class="fragment" --> `<head>` 태그에 포함된 자원을 <strong>모두 실행</strong>
 4. <!-- .element: class="fragment" --> `<body>` 태그부터 <strong>화면을 그리기 시작</strong>
 5. <!-- .element: class="fragment" --> DOM 구성이 완료되면 <strong class="yellow">DOMContentLoaded</strong> 이벤트 발생
 6. <!-- .element: class="fragment" --> <strong class="blue">모든 자원의 로딩 완료</strong>되면 <strong class="yellow">load</strong> 이벤트 발생
@@ -571,7 +569,7 @@ GPU의 도움을 받기 위해
 
 -----
 
-DOM을 건드리지 않는 JS 코드 실행 시간도 동일
+<strong class="blue">DOM을 건드리지 않는 JS 코드 실행 시간도 동일</strong>
 
 서비스 Biz 로직이 대다수...
 
