@@ -586,15 +586,15 @@ DOM을 건드리지 않는 JS 코드 실행 시간도 동일
 
 <ul>
 <li>
-  <p class="fragment red" data-fragment-index="1">성능 개선은 빠르면 빠를 수록 좋다.</p>
+  <p class="fragment red" data-fragment-index="1">성능 개선은 <strong class="blue">빠르면 빠를 수록 좋다.</strong> </p>
   <p class="grey fragment" data-fragment-index="1">(목표를 정해야한다)</p>
 </li>
 <li>
-  <p class="fragment red" data-fragment-index="2">로딩속도는 수치적으로 빠르면 빠를 수록 좋다.</p>
+  <p class="fragment red" data-fragment-index="2">로딩속도는 <strong class="blue">수치적으로</strong> 빠르면 빠를 수록 좋다.</p>
   <p class="grey fragment" data-fragment-index="2">(수치가 높은 것보다는 사용자에게 보여줄 Hero 컨텐츠를 빠르게 보여주는게 더 좋다)</p>
 </li>
 <li>
-  <p class="fragment red" data-fragment-index="3">특정 부분의 성능을 개선하면 개선한 만큼 성능 향상이 된다.</p>
+  <p class="fragment red" data-fragment-index="3">특정 부분의 성능을 개선하면 <strong class="blue">개선한 만큼 성능 향상이 된다.</strong></p>
   <p class="grey fragment" data-fragment-index="3">(전체 관점에서 가장 많이 사용하는 페이지를 살펴보아야한다. 워터풀 차트의 경우 전체 폭이 줄어줄수 있도록 필요한 부분을 개선해야한다.)</p>
 </li>
 </ul>
@@ -603,15 +603,15 @@ DOM을 건드리지 않는 JS 코드 실행 시간도 동일
 
 <ul>
 <li>
-  <p class="fragment red" data-fragment-index="1">서비스 성능이슈는 개발자의 무지에서 나온다.</p>
+  <p class="fragment red" data-fragment-index="1">서비스 성능이슈는 <strong class="blue">개발자의 무지</strong>에서 나온다.</p>
   <p class="grey fragment" data-fragment-index="1">(사실 바빠서 신경을 못써서 나온다. 무지는 다른 이야기이다.)</p>
 </li>
 <li>
-  <p class="fragment red" data-fragment-index="2">성능 전문가는 서비스의 성능 개선 포인트를 찾고 개선할 수 있다.</p>
+  <p class="fragment red" data-fragment-index="2">성능 전문가는 서비스의 성능개선 포인트를 <strong class="blue">찾고 개선할 수 있다.</strong></p>
   <p class="grey fragment" data-fragment-index="2">(성능개선사항을 누구 보다 잘아는 사람은 서비스를 개발한 담당자이다. 성능 전문가는 찾을 수는 있지만 개선할수는 없다.)</p>
 </li>
 <li>
-  <p class="fragment red" data-fragment-index="3">서비스 성능 개선은 전문성을 갖춘 영역이기에 아무나 할 수 없다.</p>
+  <p class="fragment red" data-fragment-index="3">서비스 성능 개선은 전문성을 갖춘 영역이기에 <strong class="blue">아무나 할 수 없다.</strong></p>
   <p class="grey fragment" data-fragment-index="3">(오늘 강의만으로도 여러분은 충분히 할 수 있다. 노력과 관심이 중요하다.)</p>
 </li>
 </ul>
