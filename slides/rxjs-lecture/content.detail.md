@@ -11,7 +11,10 @@ RxJS is a library for composing asynchronous and event-based programs by using o
 
 ### 실습 Playground
 
+CodeSandbox.io
+https://codesandbox.io/s/rk2zo054q
 
+Github
 https://github.com/sculove/rxjs-book/blob/master/part2/01.rxjs/example.html
 
 -----
@@ -20,14 +23,14 @@ https://github.com/sculove/rxjs-book/blob/master/part2/01.rxjs/example.html
 
 
 ```js
-const { fromEvent } = rxjs;
-const { map } = rxjs.operators;
+import { fromEvent } from rxjs;
+import { map } from rxjs.operators;
 // 1. observable 생성
 const currentTarget$ = fromEvent(document, "click");
 
 // 2. pipe 연결
 .pipe( 
-  map(event => event.currentTarget) // 3. operator 적용
+  map(event => event.currentTarget) // 3. operator 적용 (map or pluck)
 );
 
 // 4. observer 생성
@@ -46,8 +49,8 @@ currentTarget$.subscribe(observer); // 5. Observable subscribe 하기
 ### 동기 예제
 
 ```js
-const { from } = rxjs;
-const { filter } = rxjs.operators;
+import { from } from rxjs;
+import { filter } from rxjs.operators;
 // 1. observable 생성
 const users$ = from(users);
 
@@ -70,8 +73,8 @@ users$.subscribe(observer); // 5. Observable subscribe 하기
 ### 합치는 예제
 
 ```js
-const { fromEvent, from, merge } = rxjs;
-const { map, filter } = rxjs.operators;
+import { fromEvent, from, merge } from rxjs;
+import { map, filter } from rxjs.operators;
 
 // ...
 const observer = merged => {
@@ -190,6 +193,8 @@ sub2.unsubscribe();
 
 <!-- .slide:data-background="#e7ad52" -->
 ## Observable 만들기 <<실습>>
+
+https://codesandbox.io/s/kkwn1zq2kr
 
 -----
 
@@ -452,6 +457,8 @@ Promise는 취소에 대한 인터페이스가 없다.
 <!-- .slide:data-background="#e7ad52" -->
 # 자동완성 만들기
 
+https://codesandbox.io/s/znrlxn6knx
+
 -----
 
 ![](./image/autocomplete.png)
@@ -529,6 +536,36 @@ Promise는 취소에 대한 인터페이스가 없다.
 ### 검색결과 표현하기
 
 - drawLayer(items);
+
+-----
+
+### 주의. Github API 정책
+
+- 기본 1분당 10회
+- 인증된 Request의 경우에는 1분당 30회
+
+![](./image/github-image.png)
+
+<small>https://developer.github.com/v3/search/#rate-limit</small>
+<small><a href="https://github.com/settings/tokens">github token</a></small>
+
+-----
+
+### github 인증 분당 30분으로
+
+
+- ajax.getJSON => <strong>ajax + map(ajax => ajax.response)</strong>
+<small><a href="https://rxjs-dev.firebaseapp.com/api/ajax/ajax">https://rxjs-dev.firebaseapp.com/api/ajax/ajax</small>
+
+```js
+ajax({
+  url: `https://api.github.com/search/users?q=${query}`,
+  method: "GET",
+  headers: {
+    Authorization: "token GITHUB인증"
+  }
+})
+```
 
 -----
 
@@ -855,7 +892,7 @@ const animation$ = interval(0, scheduler)
 
 animation$.subscribe(rate => console.log("animation$", rate));
 ```
-
+ 
 -----
 
 - takeWhile로 0 ~ 1 사이의 값 구하기. (rate <= 1)
