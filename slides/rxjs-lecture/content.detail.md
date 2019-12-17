@@ -892,7 +892,7 @@ const animation$ = interval(0, scheduler)
 
 animation$.subscribe(rate => console.log("animation$", rate));
 ```
- 
+
 -----
 
 - takeWhile로 0 ~ 1 사이의 값 구하기. (rate <= 1)

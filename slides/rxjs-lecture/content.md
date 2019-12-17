@@ -51,7 +51,7 @@ Microsoft가 만든 ReactiveX의 JavaScript 버전 라이브러리
 - Async/Await <!-- .element: class="fragment yellow" --> 
 
 <h2 class="fragment">심지어 <strong>표준</strong>인데</h2>
-<h4 class="fragment"><small>2018년 6월 기준 Observable은 stage 1단계</small></h4>
+<h4 class="fragment"><small><a href="https://github.com/tc39/proposals/blob/master/stage-1-proposals.md">2019년 12월 기준 Observable은 stage 1단계</a></small></h4>
 
 -----
 
