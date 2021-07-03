@@ -110,7 +110,14 @@ module.exports = {
         },
       },
     },
-    'gatsby-plugin-robots-txt',
+    {
+      resolve: 'gatsby-plugin-robots-txt',
+      options: {
+        host: meta.siteUrl,
+        sitemap: meta.siteUrl + 'sitemap.xml',
+        policy: [{ userAgent: '*', allow: '/' }]
+      }
+    },
     `gatsby-plugin-sitemap`,
     `gatsby-plugin-feed`,
     `gatsby-plugin-sharp`,
