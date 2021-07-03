@@ -9,7 +9,7 @@
     "start": "gatsby develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "deploy": "npm run build && gh-pages -d public -b gh-page"
+    "deploy": "npm run build && rm -rf node_modules/.cache/gh-pages && gh-pages -a -d public"
   },
   "dependencies": {
     "babel-plugin-styled-components": "^1.13.1",
