@@ -56,8 +56,15 @@ React는 상위컴포넌트에서 하위컴포넌트로 데이터를 prop를 통
 
 ```jsx
 <InfiniteGrid
-  layout={{ class: GridLayout, options: { margin: 10 } }}
-  options={{ isOverflowScroll: true }}
+  layout={ 
+    { 
+      class: GridLayout, 
+      options: { margin: 10 } 
+    } 
+  }
+  options={ 
+    { isOverflowScroll: true } 
+  }
   onAppend={this.onAppend.bind(this)}
   append={this.state.items}
   // ...
