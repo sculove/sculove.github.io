@@ -1,20 +1,21 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
 import useSiteMetadata from 'hooks/useSiteMetadata';
-import defaultOpenGraphImage from '../images/og-default.png';
+import defaultOpenGraphImage from '../images/sculove.jpeg';
 
-const SEO = ({ description = '', meta = [], image = null, title }) => {
+const SEO = ({ description = '', meta = [], image = null, title}) => {
   const site = useSiteMetadata();
   const metaDescription = description || site.siteMetadata.description;
   const ogImageUrl =
     site.siteMetadata.siteUrl + (image || defaultOpenGraphImage);
+  const ogTitle = `${site.title} | ${title}`;
 
   return (
     <Helmet
       htmlAttributes={{
         lang: site.siteMetadata.lang,
       }}
-      title={title}
+      title={ogTitle}
       titleTemplate={`%s | ${site.siteMetadata.title}`}
       meta={[
         {
@@ -23,7 +24,7 @@ const SEO = ({ description = '', meta = [], image = null, title }) => {
         },
         {
           property: 'og:title',
-          content: title,
+          content: ogTitle,
         },
         {
           property: 'og:description',
@@ -43,7 +44,7 @@ const SEO = ({ description = '', meta = [], image = null, title }) => {
         },
         {
           name: 'twitter:title',
-          content: title,
+          content: ogTitle,
         },
         {
           name: 'twitter:description',
