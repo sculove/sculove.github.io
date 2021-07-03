@@ -1,0 +1,545 @@
+<!DOCTYPE html><html lang="ko"><head><meta charSet="utf-8"/><meta http-equiv="x-ua-compatible" content="ie=edge"/><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/><style id="typography.js">html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,details,figcaption,figure,footer,header,main,menu,nav,section,summary{display:block}audio,canvas,progress,video{display:inline-block}audio:not([controls]){display:none;height:0}progress{vertical-align:baseline}[hidden],template{display:none}a{background-color:transparent;}a:active,a:hover{outline-width:0}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}b,strong{font-weight:inherit;font-weight:bolder}dfn{font-style:italic}h1{font-size:2em;margin:.67em 0}mark{background-color:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}img{border-style:none}svg:not(:root){overflow:hidden}code,kbd,pre,samp{font-family:monospace,monospace;font-size:1em}figure{margin:1em 40px}hr{box-sizing:content-box;height:0;overflow:visible}button,input,optgroup,select,textarea{font:inherit;margin:0}optgroup{font-weight:700}button,input{overflow:visible}button,select{text-transform:none}[type=reset],[type=submit],button,html [type=button]{-webkit-appearance:button}[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner,button::-moz-focus-inner{border-style:none;padding:0}[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring,button:-moz-focusring{outline:1px dotted ButtonText}fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em}legend{box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal}textarea{overflow:auto}[type=checkbox],[type=radio]{box-sizing:border-box;padding:0}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-cancel-button,[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-input-placeholder{color:inherit;opacity:.54}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}html{font:100%/1.45 'georgia',serif;box-sizing:border-box;overflow-y:scroll;}*{box-sizing:inherit;}*:before{box-sizing:inherit;}*:after{box-sizing:inherit;}body{color:hsla(0,0%,0%,0.8);font-family:'georgia',serif;font-weight:normal;word-wrap:break-word;font-kerning:normal;-moz-font-feature-settings:"kern", "liga", "clig", "calt";-ms-font-feature-settings:"kern", "liga", "clig", "calt";-webkit-font-feature-settings:"kern", "liga", "clig", "calt";font-feature-settings:"kern", "liga", "clig", "calt";}img{max-width:100%;margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.45rem;}h1{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.45rem;color:inherit;font-family:-apple-system,'BlinkMacSystemFont','Segoe UI','Roboto','Oxygen','Ubuntu','Cantarell','Fira Sans','Droid Sans','Helvetica Neue',sans-serif;font-weight:bold;text-rendering:optimizeLegibility;font-size:2rem;line-height:1.1;}h2{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.45rem;color:inherit;font-family:-apple-system,'BlinkMacSystemFont','Segoe UI','Roboto','Oxygen','Ubuntu','Cantarell','Fira Sans','Droid Sans','Helvetica Neue',sans-serif;font-weight:bold;text-rendering:optimizeLegibility;font-size:1.51572rem;line-height:1.1;}h3{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.45rem;color:inherit;font-family:-apple-system,'BlinkMacSystemFont','Segoe UI','Roboto','Oxygen','Ubuntu','Cantarell','Fira Sans','Droid Sans','Helvetica Neue',sans-serif;font-weight:bold;text-rendering:optimizeLegibility;font-size:1.31951rem;line-height:1.1;}h4{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.45rem;color:inherit;font-family:-apple-system,'BlinkMacSystemFont','Segoe UI','Roboto','Oxygen','Ubuntu','Cantarell','Fira Sans','Droid Sans','Helvetica Neue',sans-serif;font-weight:bold;text-rendering:optimizeLegibility;font-size:1rem;line-height:1.1;}h5{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.45rem;color:inherit;font-family:-apple-system,'BlinkMacSystemFont','Segoe UI','Roboto','Oxygen','Ubuntu','Cantarell','Fira Sans','Droid Sans','Helvetica Neue',sans-serif;font-weight:bold;text-rendering:optimizeLegibility;font-size:0.87055rem;line-height:1.1;}h6{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.45rem;color:inherit;font-family:-apple-system,'BlinkMacSystemFont','Segoe UI','Roboto','Oxygen','Ubuntu','Cantarell','Fira Sans','Droid Sans','Helvetica Neue',sans-serif;font-weight:bold;text-rendering:optimizeLegibility;font-size:0.81225rem;line-height:1.1;}hgroup{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.45rem;}ul{margin-left:1.45rem;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.45rem;list-style-position:outside;list-style-image:none;}ol{margin-left:1.45rem;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.45rem;list-style-position:outside;list-style-image:none;}dl{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.45rem;}dd{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.45rem;}p{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.45rem;}figure{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.45rem;}pre{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.45rem;font-size:0.85rem;line-height:1.45rem;}table{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.45rem;font-size:1rem;line-height:1.45rem;border-collapse:collapse;width:100%;}fieldset{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.45rem;}blockquote{margin-left:1.45rem;margin-right:1.45rem;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.45rem;}form{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.45rem;}noscript{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.45rem;}iframe{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.45rem;}hr{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:calc(1.45rem - 1px);background:hsla(0,0%,0%,0.2);border:none;height:1px;}address{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.45rem;}b{font-weight:bold;}strong{font-weight:bold;}dt{font-weight:bold;}th{font-weight:bold;}li{margin-bottom:calc(1.45rem / 2);}ol li{padding-left:0;}ul li{padding-left:0;}li > ol{margin-left:1.45rem;margin-bottom:calc(1.45rem / 2);margin-top:calc(1.45rem / 2);}li > ul{margin-left:1.45rem;margin-bottom:calc(1.45rem / 2);margin-top:calc(1.45rem / 2);}blockquote *:last-child{margin-bottom:0;}li *:last-child{margin-bottom:0;}p *:last-child{margin-bottom:0;}li > p{margin-bottom:calc(1.45rem / 2);}code{font-size:0.85rem;line-height:1.45rem;}kbd{font-size:0.85rem;line-height:1.45rem;}samp{font-size:0.85rem;line-height:1.45rem;}abbr{border-bottom:1px dotted hsla(0,0%,0%,0.5);cursor:help;}acronym{border-bottom:1px dotted hsla(0,0%,0%,0.5);cursor:help;}abbr[title]{border-bottom:1px dotted hsla(0,0%,0%,0.5);cursor:help;text-decoration:none;}thead{text-align:left;}td,th{text-align:left;border-bottom:1px solid hsla(0,0%,0%,0.12);font-feature-settings:"tnum";-moz-font-feature-settings:"tnum";-ms-font-feature-settings:"tnum";-webkit-font-feature-settings:"tnum";padding-left:0.96667rem;padding-right:0.96667rem;padding-top:0.725rem;padding-bottom:calc(0.725rem - 1px);}th:first-child,td:first-child{padding-left:0;}th:last-child,td:last-child{padding-right:0;}</style><meta name="generator" content="Gatsby 2.32.13"/><link rel="preconnect" href="https://www.google-analytics.com"/><link rel="dns-prefetch" href="https://www.google-analytics.com"/><script>
+  
+  function gaOptout(){document.cookie=disableStr+'=true; expires=Thu, 31 Dec 2099 23:59:59 UTC;path=/',window[disableStr]=!0}var gaProperty='UA-37362821-12',disableStr='ga-disable-'+gaProperty;document.cookie.indexOf(disableStr+'=true')>-1&&(window[disableStr]=!0);
+  if(true) {
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  }
+  if (typeof ga === "function") {
+    ga('create', 'UA-37362821-12', 'auto', {});
+      ga('set', 'anonymizeIp', true);
+      
+      
+      
+      
+      }</script><style type="text/css">
+    .anchor-header.before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      transform: translateX(-100%);
+      padding-right: 4px;
+    }
+    .anchor-header.after {
+      display: inline-block;
+      padding-left: 4px;
+    }
+    h1 .anchor-header svg,
+    h2 .anchor-header svg,
+    h3 .anchor-header svg,
+    h4 .anchor-header svg,
+    h5 .anchor-header svg,
+    h6 .anchor-header svg {
+      visibility: hidden;
+    }
+    h1:hover .anchor-header svg,
+    h2:hover .anchor-header svg,
+    h3:hover .anchor-header svg,
+    h4:hover .anchor-header svg,
+    h5:hover .anchor-header svg,
+    h6:hover .anchor-header svg,
+    h1 .anchor-header:focus svg,
+    h2 .anchor-header:focus svg,
+    h3 .anchor-header:focus svg,
+    h4 .anchor-header:focus svg,
+    h5 .anchor-header:focus svg,
+    h6 .anchor-header:focus svg {
+      visibility: visible;
+    }
+  </style><script>
+    document.addEventListener("DOMContentLoaded", function(event) {
+      var hash = window.decodeURI(location.hash.replace('#', ''))
+      if (hash !== '') {
+        var element = document.getElementById(hash)
+        if (element) {
+          var scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop
+          var clientTop = document.documentElement.clientTop || document.body.clientTop || 0
+          var offset = element.getBoundingClientRect().top + scrollTop - clientTop
+          // Wait for the browser to finish rendering before scrolling.
+          setTimeout((function() {
+            window.scrollTo(0, offset - 0)
+          }), 0)
+        }
+      }
+    })
+  </script><link rel="icon" href="/favicon-32x32.png?v=027c606616dd92fab65e4c2c54293520" type="image/png"/><link rel="manifest" href="/manifest.webmanifest" crossorigin="anonymous"/><meta name="theme-color" content="#ffffff"/><link rel="apple-touch-icon" sizes="48x48" href="/icons/icon-48x48.png?v=027c606616dd92fab65e4c2c54293520"/><link rel="apple-touch-icon" sizes="72x72" href="/icons/icon-72x72.png?v=027c606616dd92fab65e4c2c54293520"/><link rel="apple-touch-icon" sizes="96x96" href="/icons/icon-96x96.png?v=027c606616dd92fab65e4c2c54293520"/><link rel="apple-touch-icon" sizes="144x144" href="/icons/icon-144x144.png?v=027c606616dd92fab65e4c2c54293520"/><link rel="apple-touch-icon" sizes="192x192" href="/icons/icon-192x192.png?v=027c606616dd92fab65e4c2c54293520"/><link rel="apple-touch-icon" sizes="256x256" href="/icons/icon-256x256.png?v=027c606616dd92fab65e4c2c54293520"/><link rel="apple-touch-icon" sizes="384x384" href="/icons/icon-384x384.png?v=027c606616dd92fab65e4c2c54293520"/><link rel="apple-touch-icon" sizes="512x512" href="/icons/icon-512x512.png?v=027c606616dd92fab65e4c2c54293520"/><link rel="sitemap" type="application/xml" href="/sitemap.xml"/><link rel="alternate" type="application/rss+xml" href="/rss.xml"/><style data-styled="" data-styled-version="5.3.0">.fCPqmH{position:absolute;top:0;left:0;width:100%;height:100%;z-index:1;-webkit-backdrop-filter:saturate(180%) blur(20px);backdrop-filter:saturate(180%) blur(20px);background-color:var(--color-nav-bar);border-bottom:1px solid var(--color-nav-border);}/*!sc*/
+data-styled.g1[id="background__Background-sc-1i3ow7k-0"]{content:"fCPqmH,"}/*!sc*/
+.pSXDE{width:1.125rem;height:1.125rem;fill:var(--color-icon);-webkit-transform:translateY(-1px);-ms-transform:translateY(-1px);transform:translateY(-1px);}/*!sc*/
+@media (max-width:767px){.pSXDE{width:0;height:1rem;-webkit-transition:width 0.3s ease;transition:width 0.3s ease;}}/*!sc*/
+data-styled.g2[id="themeToggleButton__Icon-sc-apwumc-0"]{content:"pSXDE,"}/*!sc*/
+.gMIvqq{border:none;background-color:var(--color-floating-button);border-radius:var(--border-radius-lg);box-shadow:0 3px 15px var(--color-floating-button-shadow);}/*!sc*/
+@media (max-width:767px){.gMIvqq{visibility:hidden;background-color:transparent;border-radius:0;box-shadow:none;}}/*!sc*/
+data-styled.g3[id="themeToggleButton__ButtonBackground-sc-apwumc-1"]{content:"gMIvqq,"}/*!sc*/
+.dPAAhX{z-index:2;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;background-color:transparent;}/*!sc*/
+data-styled.g4[id="themeToggleButton__Content-sc-apwumc-2"]{content:"dPAAhX,"}/*!sc*/
+.eXFbrd{color:var(--color-floating-button-text);margin-left:6px;}/*!sc*/
+@media (max-width:767px){.eXFbrd{color:var(--color-text);margin-left:0;font-weight:var(--font-weight-medium);border-radius:50%;}}/*!sc*/
+data-styled.g5[id="themeToggleButton__Text-sc-apwumc-3"]{content:"eXFbrd,"}/*!sc*/
+.hqBYYe{cursor:pointer;box-sizing:border-box;position:fixed;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;background-color:transparent;z-index:100;right:var(--sizing-md);bottom:var(--sizing-md);padding:var(--sizing-base);padding-right:20px;border:1px solid var(--color-floating-button-border);border-radius:var(--border-radius-lg);font-weight:var(--font-weight-medium);}/*!sc*/
+@media (min-width:767px){.hqBYYe:hover{outline:none;border:1px solid var(--color-floating-button-border-hover);}.hqBYYe:hover .themeToggleButton__Icon-sc-apwumc-0,.hqBYYe:hover .themeToggleButton__Text-sc-apwumc-3{color:var(--color-floating-button-text-hover);fill:var(--color-floating-button-text-hover);}.hqBYYe:hover .themeToggleButton__ButtonBackground-sc-apwumc-1{background-color:var(--color-floating-button-hover);box-shadow:0 3px 15px var(--color-floating-button-shadow-hover);}}/*!sc*/
+@media (max-width:767px){.hqBYYe{-webkit-box-pack:start;-webkit-justify-content:start;-ms-flex-pack:start;justify-content:start;position:static;border-radius:0;border:none;width:100%;padding:0.5rem 0;}.hqBYYe:hover .themeToggleButton__Icon-sc-apwumc-0,.hqBYYe:hover .themeToggleButton__Text-sc-apwumc-3{fill:var(--color-blue);color:var(--color-blue);}.hqBYYe:hover .themeToggleButton__Icon-sc-apwumc-0{width:1rem;margin-right:4px;}.hqBYYe:focus-visible .themeToggleButton__Icon-sc-apwumc-0,.hqBYYe:focus-visible .themeToggleButton__Text-sc-apwumc-3{fill:var(--color-blue);color:var(--color-blue);}.hqBYYe:focus-visible .themeToggleButton__Icon-sc-apwumc-0{width:1rem;margin-right:4px;}}/*!sc*/
+data-styled.g6[id="themeToggleButton__Button-sc-apwumc-4"]{content:"hqBYYe,"}/*!sc*/
+.bzmFsi{top:22px;}/*!sc*/
+data-styled.g7[id="menuIcon__MenuIconBreadTop-sc-hrw9pa-0"]{content:"bzmFsi,"}/*!sc*/
+.ccgtTX{bottom:22px;}/*!sc*/
+data-styled.g8[id="menuIcon__MenuIconBreadBottom-sc-hrw9pa-1"]{content:"ccgtTX,"}/*!sc*/
+.hRCHiY{z-index:9999;display:none;}/*!sc*/
+@media (max-width:767px){.hRCHiY{position:relative;margin-left:auto;display:block;cursor:pointer;width:var(--nav-height);height:var(--nav-height);border:none;background-color:transparent;}.hRCHiY > div{position:absolute;width:18px;height:1px;right:var(--padding-sm);opacity:0.8;-webkit-transition:opacity 0.3s ease,-webkit-transform 0.2s ease 0.1s;-webkit-transition:opacity 0.3s ease,transform 0.2s ease 0.1s;transition:opacity 0.3s ease,transform 0.2s ease 0.1s;}.hRCHiY > div > div{width:100%;height:100%;background-color:var(--color-text);-webkit-transition:-webkit-transform 0.1s ease;-webkit-transition:transform 0.1s ease;transition:transform 0.1s ease;}.hRCHiY .menuIcon__MenuIconBreadTop-sc-hrw9pa-0{-webkit-transform:none;-ms-transform:none;transform:none;}.hRCHiY .menuIcon__MenuIconBreadTop-sc-hrw9pa-0 div{-webkit-transform:none;-ms-transform:none;transform:none;}.hRCHiY .menuIcon__MenuIconBreadBottom-sc-hrw9pa-1{-webkit-transform:none;-ms-transform:none;transform:none;}.hRCHiY .menuIcon__MenuIconBreadBottom-sc-hrw9pa-1 div{-webkit-transform:none;-ms-transform:none;transform:none;}.hRCHiY:hover > div{opacity:1;}}/*!sc*/
+data-styled.g9[id="menuIcon__MenuIconButton-sc-hrw9pa-2"]{content:"hRCHiY,"}/*!sc*/
+.hSoGuq{min-width:var(--min-width);position:-webkit-sticky;position:sticky;top:0;left:0;width:100%;height:var(--nav-height);z-index:10;}/*!sc*/
+.hSoGuq a:hover{-webkit-text-decoration:none;text-decoration:none;}/*!sc*/
+data-styled.g10[id="navBar__Nav-sc-1a092ea-0"]{content:"hSoGuq,"}/*!sc*/
+.fnYViU{box-sizing:content-box;position:relative;margin:0 auto;max-width:var(--width);padding:0 var(--padding-lg);height:100%;z-index:2;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:justify;-webkit-justify-content:space-between;-ms-flex-pack:justify;justify-content:space-between;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;}/*!sc*/
+.fnYViU li{margin:0;list-style-type:none;}/*!sc*/
+@media (max-width:767px){.fnYViU{padding:0 var(--padding-sm);}}/*!sc*/
+data-styled.g11[id="navBar__Content-sc-1a092ea-1"]{content:"fnYViU,"}/*!sc*/
+.hfNWK{z-index:9999;padding:0;border:none;font-size:var(--text-title);font-weight:var(--font-weight-semi-bold);color:var(--color-text);}/*!sc*/
+.hfNWK a{color:inherit;}/*!sc*/
+@media (max-width:767px){.hfNWK{font-size:var(--text-md);}}/*!sc*/
+data-styled.g12[id="navBar__Title-sc-1a092ea-2"]{content:"hfNWK,"}/*!sc*/
+.hTmIWd{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;}/*!sc*/
+.hTmIWd a{font-weight:var(--font-weight-regular);}/*!sc*/
+.hTmIWd a:hover,.hTmIWd a:focus{color:var(--color-blue);}/*!sc*/
+.hTmIWd li{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;margin-left:32px;}/*!sc*/
+.hTmIWd li:first-child,.hTmIWd li:last-child{margin-left:0;}/*!sc*/
+@media (max-width:767px){.hTmIWd{pointer-events:none;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;padding:0 var(--sizing-lg);}.hTmIWd li:nth-child(0){-webkit-transition-property:-webkit-transform,opacity;-webkit-transition-property:transform,opacity;transition-property:transform,opacity;-webkit-transition-duration:0.5s,0.3s;transition-duration:0.5s,0.3s;-webkit-transition-delay:0.25s;transition-delay:0.25s;-webkit-transition-timing-function:ease-in,ease-out;transition-timing-function:ease-in,ease-out;}.hTmIWd li:nth-child(1){-webkit-transition-property:-webkit-transform,opacity;-webkit-transition-property:transform,opacity;transition-property:transform,opacity;-webkit-transition-duration:0.5s,0.3s;transition-duration:0.5s,0.3s;-webkit-transition-delay:0.19s;transition-delay:0.19s;-webkit-transition-timing-function:ease-in,ease-out;transition-timing-function:ease-in,ease-out;}.hTmIWd li:nth-child(2){-webkit-transition-property:-webkit-transform,opacity;-webkit-transition-property:transform,opacity;transition-property:transform,opacity;-webkit-transition-duration:0.5s,0.3s;transition-duration:0.5s,0.3s;-webkit-transition-delay:0.13s;transition-delay:0.13s;-webkit-transition-timing-function:ease-in,ease-out;transition-timing-function:ease-in,ease-out;}.hTmIWd li:nth-child(3){-webkit-transition-property:-webkit-transform,opacity;-webkit-transition-property:transform,opacity;transition-property:transform,opacity;-webkit-transition-duration:0.5s,0.3s;transition-duration:0.5s,0.3s;-webkit-transition-delay:0.07s;transition-delay:0.07s;-webkit-transition-timing-function:ease-in,ease-out;transition-timing-function:ease-in,ease-out;}.hTmIWd li:nth-child(4){-webkit-transition-property:-webkit-transform,opacity;-webkit-transition-property:transform,opacity;transition-property:transform,opacity;-webkit-transition-duration:0.5s,0.3s;transition-duration:0.5s,0.3s;-webkit-transition-delay:0.010000000000000009s;transition-delay:0.010000000000000009s;-webkit-transition-timing-function:ease-in,ease-out;transition-timing-function:ease-in,ease-out;}.hTmIWd li:nth-child(5){-webkit-transition-property:-webkit-transform,opacity;-webkit-transition-property:transform,opacity;transition-property:transform,opacity;-webkit-transition-duration:0.5s,0.3s;transition-duration:0.5s,0.3s;-webkit-transition-delay:-0.04999999999999999s;transition-delay:-0.04999999999999999s;-webkit-transition-timing-function:ease-in,ease-out;transition-timing-function:ease-in,ease-out;}.hTmIWd li:nth-child(6){-webkit-transition-property:-webkit-transform,opacity;-webkit-transition-property:transform,opacity;transition-property:transform,opacity;-webkit-transition-duration:0.5s,0.3s;transition-duration:0.5s,0.3s;-webkit-transition-delay:-0.10999999999999999s;transition-delay:-0.10999999999999999s;-webkit-transition-timing-function:ease-in,ease-out;transition-timing-function:ease-in,ease-out;}.hTmIWd li:nth-child(7){-webkit-transition-property:-webkit-transform,opacity;-webkit-transition-property:transform,opacity;transition-property:transform,opacity;-webkit-transition-duration:0.5s,0.3s;transition-duration:0.5s,0.3s;-webkit-transition-delay:-0.16999999999999998s;transition-delay:-0.16999999999999998s;-webkit-transition-timing-function:ease-in,ease-out;transition-timing-function:ease-in,ease-out;}.hTmIWd li:nth-child(8){-webkit-transition-property:-webkit-transform,opacity;-webkit-transition-property:transform,opacity;transition-property:transform,opacity;-webkit-transition-duration:0.5s,0.3s;transition-duration:0.5s,0.3s;-webkit-transition-delay:-0.22999999999999998s;transition-delay:-0.22999999999999998s;-webkit-transition-timing-function:ease-in,ease-out;transition-timing-function:ease-in,ease-out;}.hTmIWd li:nth-child(9){-webkit-transition-property:-webkit-transform,opacity;-webkit-transition-property:transform,opacity;transition-property:transform,opacity;-webkit-transition-duration:0.5s,0.3s;transition-duration:0.5s,0.3s;-webkit-transition-delay:-0.29000000000000004s;transition-delay:-0.29000000000000004s;-webkit-transition-timing-function:ease-in,ease-out;transition-timing-function:ease-in,ease-out;}.hTmIWd li{display:block;margin-left:0;font-size:var(--text-md);-webkit-transform:translateY(0);-ms-transform:translateY(0);transform:translateY(0);opacity:0;}.hTmIWd a{display:block;height:100%;padding:0.5rem 0;font-weight:var(--font-weight-medium);}.hTmIWd li + li::before{content:'';display:block;position:absolute;width:calc(100vw - var(--sizing-lg) * 2);height:1px;-webkit-transform:translateY(-2px);-ms-transform:translateY(-2px);transform:translateY(-2px);background-color:var(--color-divider);}}/*!sc*/
+data-styled.g13[id="navBar__LinkUl-sc-1a092ea-3"]{content:"hTmIWd,"}/*!sc*/
+@media (max-width:767px){.cjWPJE::after{-webkit-transition:opacity 0.4s ease-in-out 0.48s;transition:opacity 0.4s ease-in-out 0.48s;opacity:0;content:'';display:block;position:absolute;top:0;left:0;width:100%;height:100%;background-color:var(--color-post-background);}}/*!sc*/
+data-styled.g14[id="navBar__NavBackground-sc-1a092ea-4"]{content:"cjWPJE,"}/*!sc*/
+.kHWTVj{display:none;}/*!sc*/
+@media (max-width:767px){.kHWTVj{-webkit-transition:-webkit-transform 0.6s cubic-bezier(0.41,0.06,0.05,1) 0.1s;-webkit-transition:transform 0.6s cubic-bezier(0.41,0.06,0.05,1) 0.1s;transition:transform 0.6s cubic-bezier(0.41,0.06,0.05,1) 0.1s;-webkit-transform:scaleY(0);-ms-transform:scaleY(0);transform:scaleY(0);-webkit-transform-origin:top;-ms-transform-origin:top;transform-origin:top;display:block;position:fixed;top:calc(var(--nav-height) - 1px);left:0;width:100%;height:calc(100% - var(--nav-height) + 1px);background-color:var(--color-post-background);}}/*!sc*/
+data-styled.g15[id="navBar__Curtain-sc-1a092ea-5"]{content:"kHWTVj,"}/*!sc*/
+@media (max-width:767px){.ljkedD{width:100%;z-index:200;}}/*!sc*/
+data-styled.g16[id="navBar__LinkContent-sc-1a092ea-6"]{content:"ljkedD,"}/*!sc*/
+.bqqIA-D{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;}/*!sc*/
+@media (max-width:767px){.bqqIA-D{position:absolute;top:0;left:0;width:100%;height:var(--nav-height);}}/*!sc*/
+data-styled.g17[id="navBar__LinkWrap-sc-1a092ea-7"]{content:"bqqIA-D,"}/*!sc*/
+:root{font-size:100%;--width:980px;--min-width:320px;--post-width:650px;--nav-height:54px;--footer-height:60px;--grid-gap-sm:10px;--grid-gap-lg:24px;--grid-gap-xl:36px;--padding-sm:16px;--padding-lg:22px;--border-radius-sm:6px;--border-radius-base:8px;--border-radius-lg:28px;--sizing-xs:4px;--sizing-sm:8px;--sizing-base:16px;--sizing-md:24px;--sizing-lg:40px;--sizing-xl:64px;--text-xs:0.625rem;--text-sm:0.75rem;--text-base:1rem;--text-md:1.125rem;--text-title:1.25rem;--text-lg:1.5rem;--text-xl:3rem;--device-xs-max-width:419px;--device-sm-max-width:767px;--device-md-max-width:1023px;--device-lg-max-width:1441px;--device-xs-max-width-query:(max-width:419px);--device-sm-max-width-query:(max-width:767px);--device-md-max-width-query:(max-width:1023px);--device-lg-max-width-query:(max-width:1441px);--font-weight-regular:400;--font-weight-medium:500;--font-weight-semi-bold:600;--font-weight-bold:700;--font-weight-extra-bold:800;--color-outline:rgba(0,125,250,0.6);}/*!sc*/
+:root body.light{--color-text:#1d1d1d;--color-text-2:#1d1d1d;--color-text-3:#696969;--color-white:#ffffff;--color-black:#000;--color-nav-bar:rgba(255,255,255,0.7);--color-nav-border:rgba(200,200,200,0.7);--color-category-button:#f2f2f2;--color-background:#f2f2f2;--color-post-background:#ffffff;--color-card:#ffffff;--color-code:#f2f2f2;--color-code-block:#fafafa;--color-code-highlight:rgba(0,0,0,0.05);--color-code-highlight-border:rgba(0,0,0,0.2);--color-gray-1:#f2f2f2;--color-gray-2:#e0e0e0;--color-gray-3:#d1d1d1;--color-gray-4:#868686;--color-gray-5:#6e6e6e;--color-gray-6:#696969;--color-divider:rgba(0,0,0,0.15);--color-dimmed:rgba(0,0,0,0.15);--color-floating-button:rgba(255,255,255,0.7);--color-floating-button-hover:rgba(50,50,50,0.7);--color-floating-button-border:rgba(230,230,230,0.7);--color-floating-button-border-hover:rgba(255,255,255,0.2);--color-floating-button-text:#202020;--color-floating-button-text-hover:#f2f2f2;--color-floating-button-shadow:rgba(0,0,0,0.2);--color-floating-button-shadow-hover:rgba(0,0,0,0.4);--color-blue:#0066cc;--color-icon:#2c2c2c;}/*!sc*/
+:root body.dark{--color-text:#e6e6e6;--color-text-2:#d1d1d1;--color-text-3:#8c8c8c;--color-white:#e6e6e6;--color-black:#000;--color-nav-bar:rgba(29,29,29,0.7);--color-nav-border:rgba(255,255,255,0.2);--color-category-button:#484848;--color-background:#1c1c1c;--color-post-background:#1c1c1c;--color-card:#2c2c2c;--color-code:#3a3a3a;--color-code-block:#242424;--color-code-highlight:rgba(255,255,255,0.05);--color-code-highlight-border:rgba(255,255,255,0.2);--color-gray-1:#1c1c1c;--color-gray-2:#2c2c2c;--color-gray-3:#3a3a3a;--color-gray-4:#484848;--color-gray-5:#646464;--color-gray-6:#868686;--color-divider:rgba(255,255,255,0.15);--color-dimmed:rgba(0,0,0,0.15);--color-floating-button:rgba(50,50,50,0.7);--color-floating-button-hover:rgba(255,255,255,0.7);--color-floating-button-border:rgba(255,255,255,0.2);--color-floating-button-border-hover:rgba(230,230,230,0.7);--color-floating-button-text:#d1d1d1;--color-floating-button-text-hover:#202020;--color-floating-button-shadow:rgba(0,0,0,0.4);--color-floating-button-shadow-hover:rgba(0,0,0,0.4);--color-blue:#0a84ff;--color-icon:#d1d1d1;}/*!sc*/
+html{-webkit-scroll-behavior:smooth;-moz-scroll-behavior:smooth;-ms-scroll-behavior:smooth;scroll-behavior:smooth;}/*!sc*/
+h1,h2,h3{-webkit-scroll-margin-top:70px;-moz-scroll-margin-top:70px;-ms-scroll-margin-top:70px;scroll-margin-top:70px;}/*!sc*/
+html,body,#___gatsby,#gatsby-focus-wrapper{min-height:100%;}/*!sc*/
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen-Sans,Ubuntu,Cantarell,'Helvetica Neue',sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol','Noto Color Emoji';background-color:var(--color-post-background);-webkit-font-smoothing:antialiased;}/*!sc*/
+body *{color:var(--color-text);}/*!sc*/
+:lang(ko){word-break:keep-all;}/*!sc*/
+ul,ol,li,dl,dt,dd,h1,h2,h3,h4,h5,h6,hgroup,p,blockquote,figure,form,fieldset,input,legend,pre,abbr,button{margin:0;padding:0;}/*!sc*/
+h1 a,li a{-webkit-text-decoration:none;text-decoration:none;}/*!sc*/
+a{-webkit-text-decoration:none;text-decoration:none;}/*!sc*/
+*:focus:not(:focus-visible){outline:none;}/*!sc*/
+:focus-visible{outline:4px solid var(--color-outline);outline-offset:1px;}/*!sc*/
+.js-focus-visible :focus:not(.focus-visible){outline:none;}/*!sc*/
+.visually-hidden{position:absolute;width:1px;height:1px;overflow:hidden;-webkit-clip:rect(1px,1px,1px,1px);clip:rect(1px,1px,1px,1px);white-space:no-wrap;}/*!sc*/
+data-styled.g18[id="sc-global-JEJHb1"]{content:"sc-global-JEJHb1,"}/*!sc*/
+.bbzoHI{width:100%;height:100%;min-height:calc(100vh - var(--footer-height));background-color:var(--color-post-background);}/*!sc*/
+data-styled.g19[id="layout__Container-sc-ms4dza-0"]{content:"bbzoHI,"}/*!sc*/
+.dtjXxz{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;text-align:center;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;height:var(--footer-height);background-color:var(--color-gray-1);}/*!sc*/
+data-styled.g20[id="layout__Footer-sc-ms4dza-1"]{content:"dtjXxz,"}/*!sc*/
+.jCaufY{font-size:var(--text-sm);font-weight:var(--font-weight-regular);color:var(--color-gray-6);}/*!sc*/
+data-styled.g21[id="layout__Copyright-sc-ms4dza-2"]{content:"jCaufY,"}/*!sc*/
+.cxwnQc{color:var(--color-blue);}/*!sc*/
+.cxwnQc:hover{-webkit-text-decoration:underline;text-decoration:underline;}/*!sc*/
+data-styled.g22[id="layout__RepoLink-sc-ms4dza-3"]{content:"cxwnQc,"}/*!sc*/
+.hOboGL h1,.hOboGL h2,.hOboGL h3,.hOboGL h4,.hOboGL h5,.hOboGL h6{font-weight:var(--font-weight-bold);}/*!sc*/
+.hOboGL td,.hOboGL th{border-bottom:1px solid var(--color-gray-3);}/*!sc*/
+.hOboGL strong{font-weight:var(--font-weight-semi-bold);}/*!sc*/
+.hOboGL a,.hOboGL p{font-weight:var(--font-weight-regular);}/*!sc*/
+.hOboGL a{-webkit-text-decoration:none;text-decoration:none;color:var(--color-blue) !important;}/*!sc*/
+.hOboGL a *{color:var(--color-blue) !important;}/*!sc*/
+.hOboGL a:hover,.hOboGL a:active{-webkit-text-decoration:underline;text-decoration:underline;}/*!sc*/
+.hOboGL > *:first-child{margin-top:0;}/*!sc*/
+.hOboGL h1{font-size:2.5rem;}/*!sc*/
+@media (max-width:767px){.hOboGL h1{font-size:2rem;}}/*!sc*/
+.hOboGL h2{font-size:1.75rem;line-height:1.3;margin-bottom:1.45rem;margin-top:3.2625rem;}/*!sc*/
+@media (max-width:767px){.hOboGL h2{font-size:1.3125rem;}}/*!sc*/
+.hOboGL h3{font-size:1.31951rem;line-height:1.3;margin-bottom:1.45rem;margin-top:2.175rem;}/*!sc*/
+@media (max-width:767px){.hOboGL h3{font-size:1.1875rem;}}/*!sc*/
+.hOboGL h4,.hOboGL h5,.hOboGL h6{margin-bottom:0.725rem;margin-top:1.45rem;}/*!sc*/
+.hOboGL ul,.hOboGL ol{margin-top:1.45rem;margin-bottom:1.45rem;margin-left:1.8125rem;}/*!sc*/
+.hOboGL li > ul,.hOboGL li > ol{margin-top:0;margin-bottom:0;}/*!sc*/
+.hOboGL li > p{margin-bottom:0;}/*!sc*/
+.hOboGL li > ol,.hOboGL li > ul{margin-left:1.8125rem;}/*!sc*/
+.hOboGL li{margin-bottom:0.435rem;}/*!sc*/
+.hOboGL p,.hOboGL li,.hOboGL blockquote{font-size:1.0625rem;}/*!sc*/
+.hOboGL p{line-height:1.68;text-align:left;margin-bottom:var(--sizing-md);}/*!sc*/
+.hOboGL hr{margin:var(--sizing-lg) 0;background:var(--color-gray-3);}/*!sc*/
+.hOboGL blockquote{border-left:0.25rem solid var(--color-gray-2);padding-left:var(--sizing-base);margin:var(--sizing-md) 0;}/*!sc*/
+.hOboGL blockquote *{color:var(--color-gray-6);}/*!sc*/
+.hOboGL img{display:block;}/*!sc*/
+.hOboGL pre,.hOboGL code{font-family:SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;background-color:var(--color-code-block);}/*!sc*/
+.hOboGL pre{border:1px solid var(--color-gray-3);}/*!sc*/
+.hOboGL pre.grvsc-container{margin:var(--sizing-md) 0;}/*!sc*/
+.hOboGL .grvsc-line-highlighted::before{background-color:var(--color-code-highlight) !important;box-shadow:inset 4px 0 0 0 var(--color-code-highlight-border) !important;}/*!sc*/
+.hOboGL *:not(pre) > code{background-color:var(--color-code);padding:0.2rem 0.4rem;margin:0;font-size:85%;border-radius:3px;}/*!sc*/
+data-styled.g29[id="markdown__Markdown-sc-19j7sil-0"]{content:"hOboGL,"}/*!sc*/
+.cBGQyo{display:block;font-size:0.875rem;font-weight:var(--font-weight-semi-bold);color:var(--color-text-3);}/*!sc*/
+data-styled.g33[id="category__Category-sc-nfzltz-0"]{content:"cBGQyo,"}/*!sc*/
+.buAbTA{margin-top:12px;font-size:0.875rem;font-weight:var(--font-weight-regular);color:var(--color-text-3);}/*!sc*/
+data-styled.g34[id="dateTime__DateTime-sc-q4w6d0-0"]{content:"buAbTA,"}/*!sc*/
+.dUtLpd{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;-webkit-align-items:flex-start;-webkit-box-align:flex-start;-ms-flex-align:flex-start;align-items:flex-start;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;position:fixed;width:300px;margin-top:20px;right:5px;border-left-width:5px;border-left-style:solid;padding-left:10px;font-size:14px;}/*!sc*/
+.dUtLpd a.toc_current{color:var(--color-text);font-weight:bold;}/*!sc*/
+.dUtLpd ul{cursor:pointer;list-style-type:none;}/*!sc*/
+.dUtLpd ul li{margin-bottom:10px;}/*!sc*/
+.dUtLpd ul li a{color:var(--color-text-3);margin-bottom:0;}/*!sc*/
+@media (max-width:1300px){.dUtLpd{display:none;}}/*!sc*/
+data-styled.g49[id="tableOfContents__Toc-sc-1nj5a1d-0"]{content:"dUtLpd,"}/*!sc*/
+.kMVNqs{margin-bottom:var(--sizing-md);}/*!sc*/
+data-styled.g50[id="post__Info-sc-1hd457a-0"]{content:"kMVNqs,"}/*!sc*/
+.fPapLX{font-size:1.5rem;font-weight:var(--font-weight-semi-bold);}/*!sc*/
+.fPapLX a{color:var(--color-blue) !important;}/*!sc*/
+data-styled.g51[id="post__PostCategory-sc-1hd457a-1"]{content:"fPapLX,"}/*!sc*/
+.juGKCl{display:block;margin-top:var(--sizing-xs);}/*!sc*/
+data-styled.g52[id="post__Time-sc-1hd457a-2"]{content:"juGKCl,"}/*!sc*/
+.kbZkyP{width:100%;height:1px;background-color:var(--color-gray-3);margin-top:var(--sizing-lg);margin-bottom:var(--sizing-lg);}/*!sc*/
+data-styled.g54[id="post__Divider-sc-1hd457a-4"]{content:"kbZkyP,"}/*!sc*/
+.bjszmD{font-weight:var(--font-weight-bold);line-height:1.1875;font-size:var(--text-xl);}/*!sc*/
+@media (max-width:1023px){.bjszmD{line-height:1.21875;font-size:2.5rem;}}/*!sc*/
+@media (max-width:767px){.bjszmD{line-height:1.21875;font-size:2rem;}}/*!sc*/
+data-styled.g55[id="post__Title-sc-1hd457a-5"]{content:"bjszmD,"}/*!sc*/
+.GzhZc{text-align:center;margin-bottom:20px;}/*!sc*/
+.GzhZc a{display:inline-block;padding:0px 7px;width:140px;height:33px;-webkit-text-decoration:none;text-decoration:none;background-color:#f7d501;border:1px solid transparent;border-radius:6px;-webkit-letter-spacing:-0.08px;-moz-letter-spacing:-0.08px;-ms-letter-spacing:-0.08px;letter-spacing:-0.08px;box-sizing:border-box;font-size:12px;font-weight:bold;line-height:30px;text-align:left;}/*!sc*/
+.GzhZc a img{width:20px;margin-bottom:1px;box-shadow:none;border:none;vertical-align:middle;}/*!sc*/
+.GzhZc a span{color:var(--color-black);margin-left:6px;}/*!sc*/
+data-styled.g56[id="sponsorButton__SponsorWrapper-sc-bdk008-0"]{content:"GzhZc,"}/*!sc*/
+.eZcnGc{cursor:pointer;display:inline-block;margin:0 5px 10px 5px;background-color:var(--color-category-button);padding:var(--sizing-sm) var(--sizing-base);border-radius:var(--border-radius-base);font-size:0.875rem;font-weight:var(--font-weight-semi-bold);}/*!sc*/
+.eZcnGc:focus{outline:none;}/*!sc*/
+.eZcnGc:hover{color:var(--color-white);background-color:var(--color-blue);}/*!sc*/
+.eZcnGc:focus-visible{color:var(--color-white);background-color:var(--color-blue);}/*!sc*/
+data-styled.g57[id="tags__TagButton-sc-1u3nisj-0"]{content:"eZcnGc,"}/*!sc*/
+.gHcfuM{margin-top:var(--sizing-xl);}/*!sc*/
+@media (max-width:767px){.gHcfuM{margin-top:var(--sizing-lg);}}/*!sc*/
+data-styled.g58[id="blogPost__OuterWrapper-sc-1679ooj-0"]{content:"gHcfuM,"}/*!sc*/
+.cRVeHS{width:var(--post-width);margin:0 auto;padding-bottom:var(--sizing-lg);}/*!sc*/
+@media (max-width:767px){.cRVeHS{width:87.5%;}}/*!sc*/
+data-styled.g59[id="blogPost__InnerWrapper-sc-1679ooj-1"]{content:"cRVeHS,"}/*!sc*/
+.kwEcuz{width:100%;padding:0 var(--padding-sm);margin:0 auto;margin-bottom:var(--sizing-xl);}/*!sc*/
+@media (max-width:767px){.kwEcuz{width:auto;}}/*!sc*/
+data-styled.g60[id="blogPost__CommentWrap-sc-1679ooj-2"]{content:"kwEcuz,"}/*!sc*/
+</style><title data-react-helmet="true">VSCODE extension 만든 삽질기 | 아내와 아들 그리고 딸밖에 모르는 남편</title><meta data-react-helmet="true" name="description" content="아내와 아들 그리고 딸밖에 모르는 남편"/><meta data-react-helmet="true" property="og:title" content="VSCODE extension 만든 삽질기"/><meta data-react-helmet="true" property="og:description" content="아내와 아들 그리고 딸밖에 모르는 남편"/><meta data-react-helmet="true" property="og:type" content="website"/><meta data-react-helmet="true" name="twitter:card" content="summary"/><meta data-react-helmet="true" name="twitter:creator" content="손찬욱"/><meta data-react-helmet="true" name="twitter:title" content="VSCODE extension 만든 삽질기"/><meta data-react-helmet="true" name="twitter:description" content="아내와 아들 그리고 딸밖에 모르는 남편"/><meta data-react-helmet="true" property="image" content="https://sculove.github.io/static/194549110cdf70b8f177f5d6d3cb88a1/62915/translator.png"/><meta data-react-helmet="true" property="og:image" content="https://sculove.github.io/static/194549110cdf70b8f177f5d6d3cb88a1/62915/translator.png"/><meta data-react-helmet="true" property="twitter:image" content="https://sculove.github.io/static/194549110cdf70b8f177f5d6d3cb88a1/62915/translator.png"/><link as="script" rel="preload" href="/webpack-runtime-7b523f1067fe9b54115e.js"/><link as="script" rel="preload" href="/framework-66de6f443629588fba4e.js"/><link as="script" rel="preload" href="/app-6ef6f224acdf5273b2fc.js"/><link as="script" rel="preload" href="/54b5e9c514f22b177f32fa5e893e87989371d592-c3ea0d8a72359c0e6d4b.js"/><link as="script" rel="preload" href="/6082d1df49fc9b78ea2e2ee7cbace9a784ba13b1-711e5751b845d400ec3d.js"/><link as="script" rel="preload" href="/e5f5b259f3bc5bd31060582de6626886320e23cc-416abd96c20b60d9af0b.js"/><link as="script" rel="preload" href="/component---src-templates-blog-post-js-809454dcaab6df0ee29e.js"/><link as="fetch" rel="preload" href="/page-data/blog/createvsextension/page-data.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/page-data/sq/d/1990743003.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/page-data/app-data.json" crossorigin="anonymous"/></head><body><script>
+          (() => {    
+            window.__onThemeChange = function() {};      
+
+            function setTheme(newTheme) {                  
+              window.__theme = newTheme;                  
+              preferredTheme = newTheme;                  
+              document.body.className = newTheme;
+              document.body.dataset.theme = newTheme;                 
+              window.__onThemeChange(newTheme);                
+            }
+
+            let preferredTheme
+
+            try {
+              preferredTheme = localStorage.getItem('theme')
+            } catch (err) {}
+
+            window.__setPreferredTheme = newTheme => {
+              setTheme(newTheme)
+
+              try {
+                localStorage.setItem('theme', newTheme)
+              } catch (err) {}
+            }
+
+            let darkQuery = window.matchMedia('(prefers-color-scheme: dark)')
+
+            darkQuery.addEventListener('change', e => {
+              window.__setPreferredTheme(e.matches ? 'dark' : 'light')
+            })
+
+            setTheme(preferredTheme || (darkQuery.matches ? 'dark' : 'light'))
+          })()
+        </script><div id="___gatsby"><div style="outline:none" tabindex="-1" id="gatsby-focus-wrapper"><div class="layout__Container-sc-ms4dza-0 bbzoHI"><nav aria-label="Global Navigation" class="navBar__Nav-sc-1a092ea-0 hSoGuq"><div class="background__Background-sc-1i3ow7k-0 navBar__NavBackground-sc-1a092ea-4 fCPqmH cjWPJE"></div><div class="navBar__Content-sc-1a092ea-1 fnYViU"><h1 class="navBar__Title-sc-1a092ea-2 hfNWK"><a href="/">아내와 아들 그리고 딸밖에 모르는 남편</a></h1><div class="navBar__LinkWrap-sc-1a092ea-7 bqqIA-D"><div class="navBar__Curtain-sc-1a092ea-5 kHWTVj"></div><div class="navBar__LinkContent-sc-1a092ea-6 ljkedD"><button aria-label="Menu" class="menuIcon__MenuIconButton-sc-hrw9pa-2 hRCHiY"><div class="menuIcon__MenuIconBreadTop-sc-hrw9pa-0 bzmFsi"><div></div></div><div class="menuIcon__MenuIconBreadBottom-sc-hrw9pa-1 ccgtTX"><div></div></div></button><ul class="navBar__LinkUl-sc-1a092ea-3 hTmIWd"><li><a href="/">Home</a></li><li><a href="/about/">About</a></li><li><a target="__blank" rel="noreferrer" href="https://github.com/sculove">Github</a></li><li><button class="themeToggleButton__Button-sc-apwumc-4 hqBYYe"><div class="background__Background-sc-1i3ow7k-0 themeToggleButton__ButtonBackground-sc-apwumc-1 fCPqmH gMIvqq"></div><div class="themeToggleButton__Content-sc-apwumc-2 dPAAhX"><svg version="1.1" x="0px" y="0px" viewBox="0 0 24 24" class="themeToggleButton__Icon-sc-apwumc-0 pSXDE"><path d="M16.3,15.2c-4.1-1.2-7.2-4.8-7.5-9.1C8.8,4.8,8.9,3.5,9.3,2.4C4.8,3.6,1.5,8,2.1,13.1c0.5,4.6,4.2,8.3,8.7,8.8 c4.9,0.6,9.2-2.4,10.6-6.7C19.9,15.7,18.1,15.8,16.3,15.2z"></path></svg><span class="themeToggleButton__Text-sc-apwumc-3 eXFbrd">Dark theme</span></div></button></li></ul></div></div></div></nav><main><article><div class="blogPost__OuterWrapper-sc-1679ooj-0 gHcfuM"><div class="blogPost__InnerWrapper-sc-1679ooj-1 cRVeHS"><div><div class="tableOfContents__Toc-sc-1nj5a1d-0 dUtLpd"><div><ul>
+<li><a href="/blog/createvsextension/#%EC%99%9C-%EB%A7%8C%EB%93%A4%EC%97%88%EB%82%98">왜 만들었나?</a></li>
+<li><a href="/blog/createvsextension/#vscode-extention-%EA%B5%AC%EC%A1%B0%EC%97%90-%EB%8C%80%ED%95%9C-%ED%9A%8C%EA%B3%A0">VSCode Extention 구조에 대한 회고</a></li>
+<li>
+<p><a href="/blog/createvsextension/#%EB%A7%8C%EB%93%A4%EB%A9%B4%EC%84%9C-%EB%82%B4%EA%B0%80-%ED%95%9C-%EC%82%BD%EC%A7%88%EC%9D%80">만들면서 내가 한 삽질은?</a></p>
+<ul>
+<li><a href="/blog/createvsextension/#%EC%95%84%EC%89%AC%EC%9A%B4-%EC%A0%90%EC%9D%80-api%EB%AC%B8%EC%84%9C%EA%B0%80-%EC%A2%80-%EB%B9%88%EC%95%BD%ED%96%88%EB%8B%A4">아쉬운 점은 API문서가 좀 빈약했다.</a></li>
+<li><a href="/blog/createvsextension/#vscode%EB%8A%94-%EB%85%B8%EB%93%9C%EC%9E%85%EB%8B%88%EB%8B%A4">vscode는... 노드입니다.</a></li>
+<li><a href="/blog/createvsextension/#%EC%95%84-typescript">아~ typescript</a></li>
+</ul>
+</li>
+<li><a href="/blog/createvsextension/#%EC%86%8C%EA%B0%90">소감?</a></li>
+<li><a href="/blog/createvsextension/#%EC%B0%B8%EA%B3%A0%ED%95%9C-%EC%98%88%EC%A0%9C">참고한 예제</a></li>
+</ul></div></div><header><div class="post__Info-sc-1hd457a-0 kMVNqs"><span class="category__Category-sc-nfzltz-0 post__PostCategory-sc-1hd457a-1 cBGQyo fPapLX"><a href="/category/tech/">Tech</a></span><time dateTime="2017-12-27" class="dateTime__DateTime-sc-q4w6d0-0 post__Time-sc-1hd457a-2 buAbTA juGKCl">2017-12-27</time></div><h1 class="post__Title-sc-1hd457a-5 bjszmD">VSCODE extension 만든 삽질기</h1></header><div class="post__Divider-sc-1hd457a-4 kbZkyP"></div><article class="markdown__Markdown-sc-19j7sil-0 hOboGL"><p>MS에 기여한게 없어서 뭔가 해봐야겠다는 생각에
+그동안 만들고 싶었던 vscode extentions을 만들어 봤다.</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 128px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 100%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAACXBIWXMAABcSAAAXEgFnn9JSAAAELElEQVQ4y3VU/U+TVxTu/oX9DdtvS7b9sOAQBIV+gGYG3cyWxWkchfLVAuVri6CDOCU4xeBiamEuUCi8/eBD7QArFi2CoBiKKyKwJRQYQ2SrgqLAfXbu7fvOxmxvcnLvbe55+pznPPeo3o19+608SX3S5NCsGB0a5Dt1jPaM702RM/j+P4IpQffm8trU2SWe3SoVB8t3aVHoTkGBW8ey2nYg36WhcyqMTjWy2uLFmd/5n2B8NTk1INCDKtqsmCgxvSVmM9OegPqBGlbo2ssO2z5EcXsaavu+IZYpIiHfGUmUg8nB9684qFFSB4hhEko79jHX6M/oGrOzrS0w32QPWu9a0DR4Hk+eraDI/SlMLrXMSEeVUDW0cnYKcARQ81SVK+1iZR370THSzLyBLjb0aAj9wV60jzTCNnAeoSe/I705ATnSDsEs15GEzNY4ZEuJAlwBlQH/VvEmZNPl8stfsvHQPYxMD2NyPohzfSWoupqOtfUX6Aw0oeqXI0Ln8isHUH/7GKqvZSCb9CadmaIjAYZVXJ/0lo8wPncfEwT0ufU9SCMW/LW2hlPdJgJ8Dv9EP451HYLn15/Av43NV2IdnfXx5jEZVAZ06MAZ1nmPYmZxBoO/+TG7PI+2O1ZU9+Rh+dljpNt2UpnbieVX8E25cHGgglhWCND+KTfLsMcyzl4Ack9xkfUt21DvOwv3sA1VlzOgb47FGW8RQo8XYXanCevkSDtByULLg43vozvYhNX1MDMTS+4U8qMCmEoXY/BoMYjGoTocuPQODKSPwZ6EQukzYeToDhe6d8PQGo9b0514ubH+JqBamFjfEoPg/BjCpF1gbhTBhQeY+CNA2o6h0nOY2CUoXRVxqOkDXPSXoytgZYbWOFYQXbIQlOxwvPNrnO0uxbneb1HbU4YaTwHOdJehhEo2OpMFIGfCGdqGa6lkCRduVRA7HeOSGB1RgDxyyFsGemr0alDa+Qk1wInijj1CO25kHpn2OHJBA2aXQui4a8PWJpjVf5JxCajBrwHF06IEs6xP453vRRdP9erJzLsEmPK+zY40XLhxAs1DFqy+WGft9y8xbnbytABUHjdR11JiingJDbePC8BKsoq+5WO6rIHevo0YxsM/3YvJhYckzXdYCi8xxz1rBNDxBuC/jicWRe2pCD9fxp9PQzh9PQtXxhvIo1fFgJgmv84sPYTl5gmAgXnG7eTF7RGGpgggi5ogojz+Vquv6QlwFsq3srqIH28Wo8z1BfoeeJh90MKsN35gdd5KluNIJNtoBeCCzHAjeiwJ0LZEoe/p6wbUeDNEp83EPI8cQcbnrESpdO+lPL4GVDQUjZGGvB6WSnBvmcgOfOhGBq9WnEWD2lPEsKAgD+oik6g1WaM66tvLQY8Q+hStfOoyOaCESdKKiP4t6h6j3JFce7KW/lD1DwxBEt42Zrw2AAAAAElFTkSuQmCC'); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="translator"
+        title="translator"
+        src="/static/194549110cdf70b8f177f5d6d3cb88a1/750d2/translator.png"
+        srcset="/static/194549110cdf70b8f177f5d6d3cb88a1/750d2/translator.png 128w"
+        sizes="(max-width: 128px) 100vw, 128px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+      />
+    </span></p>
+<p><a href="https://marketplace.visualstudio.com/items?itemName=sculove.translator">https://marketplace.visualstudio.com/items?itemName=sculove.translator</a></p>
+<p>한글을 번역할 때는 번역된 텍스트에 적용할 수 있는 접두사가 적용된 메서드의 이름을 보여주는 기능도 넣었다.</p>
+<p><img src="/9c5d6fd77611ee640daa037d5e3c5334/korToEn.gif"></p>
+<h2 id="왜-만들었나" style="position:relative;"><a href="#%EC%99%9C-%EB%A7%8C%EB%93%A4%EC%97%88%EB%82%98" aria-label="왜 만들었나 permalink" class="anchor-header before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>왜 만들었나?</h2>
+<p>김지한(laziel)군과 윤종문(문)군이 이런거 있으면 좋겠다고 이야기해서 만들기 시작하긴 했는데...
+따지고 보니 내가 더 필요한 것 같았다.</p>
+<p>우리가 개발할 때 항상 켜놓고 보는게 사전과 번역기다.
+change와 update, alter등 우리말로는 다 <code>변화하다</code>라는 의미인데 실제 영어는 각각이 의미하는 바가 다르다. 따라서 매번 변수명, 메소드명 짓는데 시간을 낭비한다.
+그때 기분에 따라 또는 떠오르는 것에 따라 정하다보니 나중에 코드를 보면 의미가 불명확해서 내가 봐도 헷갈리게 된다.
+더군다나 같이 개발하는 사람들또한 헷갈리다보니 나중에 가서는 더.더.더. 헷갈린다.</p>
+<p>그래서 사전을 보거나 번역을 하는데. 이게 의외로 시간이 좀 걸린다.</p>
+<h2 id="vscode-extention-구조에-대한-회고" style="position:relative;"><a href="#vscode-extention-%EA%B5%AC%EC%A1%B0%EC%97%90-%EB%8C%80%ED%95%9C-%ED%9A%8C%EA%B3%A0" aria-label="vscode extention 구조에 대한 회고 permalink" class="anchor-header before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>VSCode Extention 구조에 대한 회고</h2>
+<p>사실 만든 코드는 많지 않지만, 우선은 vscode extentions에 대한 학습이 필요했기에 틈틈히 관련 내용을 살펴봤었다.</p>
+<p>MS가 문서화 하나는 정말 잘해 놓은것 같아서 사실 보기에는 꽤 편했다.
+내가 참조한 문서는 여기 <a href="https://code.visualstudio.com/docs/extensions/overview">overview</a> 문서를 시작으로 <a href="https://code.visualstudio.com/docs/extensionAPI/vscode-api">vsdoe namespace API</a> 문서까지 봤다.
+예상대로 vscode의 extension은 command 패턴으로 되어 있어서 커멘트 단위로 짜서 등록을 하고 쓰는 식이 었다.</p>
+<p>약간 특이한 점은 <a href="https://code.visualstudio.com/docs/extensionAPI/extension-points">contribute points</a>가 있어서 <code>템플릿 메타 프로그래밍</code>이 가능하다. 정의된 항목에 정의된 정보를 입력하면 코딩이 된다. 이것도 MS가 예전부터 지향했던 방식 중의 하나라 개발하기에는 편했다. 개인적으로는 메타 프로그래밍과 의 적정한 수준을 유지한게 좋았다.</p>
+<p>다음으로 특이한점은 Language Server가 있었다.
+처음에는 Language Server라 길래 언어작업을 할때 쓰는 것인가로 생각했는데 알고보니 <code>비용이 많이 발생하는 작업을 서버에서 처리 후 VSCode Language Protocol로 전달하는 형태</code>였다.
+이건 좀 괜찮은 방식인것 같다. 내가 만들 extention과는 관련이 없지만 나중에 좀 복잡한 것 만들때는 한번 만들어봐야겠다.
+<span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 650px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 61.963190184049076%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAMCAYAAABiDJ37AAAACXBIWXMAAAsTAAALEwEAmpwYAAACj0lEQVQoz42Ty08TURTGZ6sLF+rSx87wF+BKjQnBmLj1EaJGEgmKYaHGla5d+AoYUUMMutHEBxUIghILCRToY9oZsU9tYVpKO0MrpQqltjP9OZ0SJcrCk3w5ufee891zTr4jsMF0XSefz2NUKta5sLZGJpNBVVU0TSOXy1ExjBrWY6p+452gahn8gRDxRJL5ZIpgMIyaSpFd1FjUVJaXl62PWCeoWrFUNmOTJOJx0qk0P1ZXf78J4VCIsQ/vEKcm8Esikuhh3Clhn5IZcXiRA19MLsMKXlFTrGgmUkmM4hrVL8rlUu1eXaD4LYvgCyd4MDhD15CfnmEfNrvIDdtXrttipo9i98bMEegonZ24GxvwNBxGvtLOdzN5Na3y+XQTrkMHcB9tJDHQizAkKpzqDnDxxRxtT2Vuv5qm9XmUyy+jND/5xEdXgLViAWd9PVO7djOxZSuTRxr4rpdIDg1hFwQc23dYfmGwH8HpV7j5RuLuQIBHgzJvR2Xu2ILc6TWr7pMJR6JWu8mOB3xtv0rkfBva697aLBPzhM6cxX/8BJHWC5TyywhxRWHG6+az5CUoSzhEB92TD+kYvcUz133EyLSVXDKWKBQUs9oEOkWosKkJc3MKXo8H0edlVg5xbewxu9+fY9/IBQ4ONzPpt2OOELn/JM6eOhzde5mXuqxkw2y7Ui7/QVU2sdgsbqcTt8dFzBfg0kgH2/qb2DPcwv6+FuQZkZ+lCj7bMaaf1jH+cCdx8V6N0CjVdLgOq8KlpRzJ5AILpvbUlEogEWN0VmJsTsKnRFjK5tBN0RbyCnnNZ+FnIftb1P+0zH+YJey/bDMyi3BjyVUYpoh1E1WfyWatlauuXjqdsjZHN+eGFbs56S8vqEsPXCbSAgAAAABJRU5ErkJggg=='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="extensibility architecture"
+        title="extensibility architecture"
+        src="/static/e9a159ae10e044891adb4c017f024369/a6d36/extensibility-architecture.png"
+        srcset="/static/e9a159ae10e044891adb4c017f024369/222b7/extensibility-architecture.png 163w,
+/static/e9a159ae10e044891adb4c017f024369/ff46a/extensibility-architecture.png 325w,
+/static/e9a159ae10e044891adb4c017f024369/a6d36/extensibility-architecture.png 650w,
+/static/e9a159ae10e044891adb4c017f024369/96658/extensibility-architecture.png 881w"
+        sizes="(max-width: 650px) 100vw, 650px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+      />
+    </span></p>
+<h2 id="만들면서-내가-한-삽질은" style="position:relative;"><a href="#%EB%A7%8C%EB%93%A4%EB%A9%B4%EC%84%9C-%EB%82%B4%EA%B0%80-%ED%95%9C-%EC%82%BD%EC%A7%88%EC%9D%80" aria-label="만들면서 내가 한 삽질은 permalink" class="anchor-header before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>만들면서 내가 한 삽질은?</h2>
+<h3 id="아쉬운-점은-api문서가-좀-빈약했다" style="position:relative;"><a href="#%EC%95%84%EC%89%AC%EC%9A%B4-%EC%A0%90%EC%9D%80-api%EB%AC%B8%EC%84%9C%EA%B0%80-%EC%A2%80-%EB%B9%88%EC%95%BD%ED%96%88%EB%8B%A4" aria-label="아쉬운 점은 api문서가 좀 빈약했다 permalink" class="anchor-header before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>아쉬운 점은 API문서가 좀 빈약했다.</h3>
+<p>아마도 typescript를 이용해서 타입 정의와 설명 정도를 뽑았던것 같다.
+사실 이 정도도 훌륭하지만 간단한 예제코드가 있었으면 더 좋았을것 같다.
+결국 직접 코딩을 해보면서 확인해 보거나, 그것이 안된다면 github 검색을 이용해서 찾아봤다.
+github가 의외로 좋은 코드조각들을 보여줬다.</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 650px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 79.75460122699387%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAQCAYAAAAWGF8bAAAACXBIWXMAAAsTAAALEwEAmpwYAAACXElEQVQ4y4VTyW4UMRDtnwSxJWRIZhIFkIJA8B/cET/CCQ5IOSARiUMkgiKS2Xp3t3d396Ps7skCM6Gkknvs8XO9V6+io9dv8fzlEV69eYfxwQuMxgfY2z/E7uQQO7v7Yd0ejfH02XjYm9D3BPcePMH9h1thfbS9h63RBI93RoiM68Bki6btsAqhBOIkRrxcgpUM/wshFbKihHUNorIowLgKB03TQBkNmUpkmUDJNbg0lBbGWrRti67rQvrvm6mUgtYaUS0dKuEIriPAFpoATa4RxwwXiwyLpETOOLgQsAS6ArydgKNinHOIGIFx1YQD5wG1gSffOYM8TcEq8Q/FdaCriIxtQnU3w1fqXxNCYjafgrGUHpKkkbt1ed1DUVxIfP0xw8lvgZMLolr19OtaoMgK5HmKNDkH5znppAcdsYE6Af5canz8HOPDlwLvP6U4Pqv7KunipiruyqhtHLSoVmTRNQbMWEwzjmkqsMwF8kpDaRtcgEGgv4krrUNG3g41ddDTsNbBmL6Tsq4hkgRFkmM2+4nF9BRJVoKRRGXGILgINrHG0B1zXaH/IaW88qEbhA9JzbGOPKbpsuHBNsY4NGSt1tkA5PfsDY9GHsBvrAB9fP92jNNfl0Rb4TKuscip24lAxjSK2qEkq10N1tB1b+xA2YP0dugb0dI/te5dr+sKWXqOND0jCcowMVYKtKS5VCQPMWs4g6Xua9Mzi6Ru4M3t10r6lwe6QwEsyzBfzGlyUiznOcqyDlpv9OG6A1+1T69LRc3xyTknb9bXnd5km3Uj5Kt0G6biLlP7/APHyb+hUttMvAAAAABJRU5ErkJggg=='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="github code"
+        title="github code"
+        src="/static/03e2edd99b22a76b5681d57fd850adf2/a6d36/github-code.png"
+        srcset="/static/03e2edd99b22a76b5681d57fd850adf2/222b7/github-code.png 163w,
+/static/03e2edd99b22a76b5681d57fd850adf2/ff46a/github-code.png 325w,
+/static/03e2edd99b22a76b5681d57fd850adf2/a6d36/github-code.png 650w,
+/static/03e2edd99b22a76b5681d57fd850adf2/e548f/github-code.png 975w,
+/static/03e2edd99b22a76b5681d57fd850adf2/1ac29/github-code.png 1022w"
+        sizes="(max-width: 650px) 100vw, 650px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+      />
+    </span></p>
+<h3 id="vscode는-노드입니다" style="position:relative;"><a href="#vscode%EB%8A%94-%EB%85%B8%EB%93%9C%EC%9E%85%EB%8B%88%EB%8B%A4" aria-label="vscode는 노드입니다 permalink" class="anchor-header before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>vscode는... 노드입니다.</h3>
+<p>vscode가 electron에서 돌다보니 우선 기본적으로 node 환경이다.
+브라우저 개발에 익숙하다보니 그냥 브라우저인가 보다 하고 작업하다가 나중에 깨닫게(?) 되서 약간 어이가 없는 삽질을 했다. (Document를 너무 설렁 설렁봤다 ㅠㅠ)
+사실 이렇게 헷갈린 이유는 extentions이 돌아가는 곳에서 devTool를 볼수 있기 때문이다.</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 650px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 49.69325153374233%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAKCAYAAAC0VX7mAAAACXBIWXMAAAsTAAALEwEAmpwYAAABSUlEQVQoz61S2W6DMBD0//9gE6UKV8BgbgjGOSeeTZ1GldqnIo1md7F39rDS+w/EWYQ0ipEdDoiTFJ/7BHvvR1GELMuEkyQRW2uNuq7fYGACVwVUU2jM04yp71CZ2v9skRcFCh/nZeNjWpeoqgpt2wmstVjXVWDtCuecxJxbobq+R+8xThMGz/Psk3t7HEcB/fl4fMWJZVnEJ0+eea7vBy/WQlm7iNE0jTDRffmEiPkLrOZ0crhcLvj53e934fP5DHW9Xl/qv3HAd+KTtEkmGGO1t9sNipe22y02mw12u53g4JdDFH6WeZ7LLGlzKWTOsyxLsYlhGAQsTjF7mqZymEm4ObZtjJF2qXz0M+TQ32fHWKj2vXXF0vks4jh+PYugHCqkUKiUIhRk+6Hl54bds2WqcfgcaEA4+JfP5TAB2yRoS4XhPf3Hx4QPSGn8kND4tIkAAAAASUVORK5CYII='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="devtool"
+        title="devtool"
+        src="/static/58c469288d7572a4826cc2ddad885a4c/a6d36/devtool.png"
+        srcset="/static/58c469288d7572a4826cc2ddad885a4c/222b7/devtool.png 163w,
+/static/58c469288d7572a4826cc2ddad885a4c/ff46a/devtool.png 325w,
+/static/58c469288d7572a4826cc2ddad885a4c/a6d36/devtool.png 650w,
+/static/58c469288d7572a4826cc2ddad885a4c/e548f/devtool.png 975w,
+/static/58c469288d7572a4826cc2ddad885a4c/121b3/devtool.png 1070w"
+        sizes="(max-width: 650px) 100vw, 650px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+      />
+    </span></p>
+<p>암튼 이로 인해 브라우저 환경으로 착각하고 fetch API를 써봤지만 안되서 삽질을 좀 했다.
+devtool에서는 분명 fetch API를 사용할 수 있는데 정작 코드에서는 에러가 나서 난감했다.</p>
+<p>환경이 node라는 것을 알았으나, 처음에 fetch를 사용하고자 했던 마음을 접을 수가 없어서 결국 <a href="https://github.com/matthew-andrews/isomorphic-fetch">isomorphic-fetch</a>을 사용했다.
+나중에 알게된 거지만 <a href="https://www.npmjs.com/package/electron-fetch">electron-fetch</a>를 썼으면 더 좋았을 뻔 했다.
+<a href="https://developer.mozilla.org/ko/docs/Web/API/FormData">FormData</a>도 있고 여러가지 쓸 수 있어서 좋아보였다.
+담에 코드 수정할때 함 바꿔봐야겠다.</p>
+<h3 id="아-typescript" style="position:relative;"><a href="#%EC%95%84-typescript" aria-label="아 typescript permalink" class="anchor-header before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>아~ typescript</h3>
+<p>typscript 설정에서 좀 해멨던것 같다. 어떻게 보면 이것도 node 환경을 인지못해서 난 불상사지만 아니었다고 해도 좀 헤멜수는 있다.
+vscode가 만들어 주는 tsconfig.ts는 <code>target</code>이 es6이고, <code>lib</code>도 es6만 명시되어있다.</p>
+<pre class="grvsc-container github-light-theme grvsc-ps-t4tStz" data-language="ts" data-index="0"><code class="grvsc-code"><span class="grvsc-line"><span class="grvsc-source"><span class="grvsc-tiszgT-1 grvsc-t4tStz-1">{</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="grvsc-tiszgT-1 grvsc-t4tStz-1">    </span><span class="grvsc-tiszgT-8 grvsc-t4tStz-10">&quot;compilerOptions&quot;</span><span class="grvsc-tiszgT-1 grvsc-t4tStz-1">: {</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="grvsc-tiszgT-1 grvsc-t4tStz-1">        </span><span class="grvsc-tiszgT-8 grvsc-t4tStz-10">&quot;module&quot;</span><span class="grvsc-tiszgT-1 grvsc-t4tStz-1">: </span><span class="grvsc-tiszgT-8 grvsc-t4tStz-10">&quot;commonjs&quot;</span><span class="grvsc-tiszgT-1 grvsc-t4tStz-1">,</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="grvsc-tiszgT-1 grvsc-t4tStz-1">        </span><span class="grvsc-tiszgT-8 grvsc-t4tStz-10">&quot;target&quot;</span><span class="grvsc-tiszgT-1 grvsc-t4tStz-1">: </span><span class="grvsc-tiszgT-8 grvsc-t4tStz-10">&quot;es6&quot;</span><span class="grvsc-tiszgT-1 grvsc-t4tStz-1">,</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="grvsc-tiszgT-1 grvsc-t4tStz-1">        </span><span class="grvsc-tiszgT-8 grvsc-t4tStz-10">&quot;outDir&quot;</span><span class="grvsc-tiszgT-1 grvsc-t4tStz-1">: </span><span class="grvsc-tiszgT-8 grvsc-t4tStz-10">&quot;out&quot;</span><span class="grvsc-tiszgT-1 grvsc-t4tStz-1">,</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="grvsc-tiszgT-1 grvsc-t4tStz-1">        </span><span class="grvsc-tiszgT-8 grvsc-t4tStz-10">&quot;lib&quot;</span><span class="grvsc-tiszgT-1 grvsc-t4tStz-1">: [</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="grvsc-tiszgT-1 grvsc-t4tStz-1">            </span><span class="grvsc-tiszgT-8 grvsc-t4tStz-10">&quot;es6&quot;</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="grvsc-tiszgT-1 grvsc-t4tStz-1">        ],</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="grvsc-tiszgT-1 grvsc-t4tStz-1">        </span><span class="grvsc-tiszgT-8 grvsc-t4tStz-10">&quot;sourceMap&quot;</span><span class="grvsc-tiszgT-1 grvsc-t4tStz-1">: </span><span class="grvsc-tiszgT-7 grvsc-t4tStz-3">true</span><span class="grvsc-tiszgT-1 grvsc-t4tStz-1">,</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="grvsc-tiszgT-1 grvsc-t4tStz-1">        </span><span class="grvsc-tiszgT-8 grvsc-t4tStz-10">&quot;rootDir&quot;</span><span class="grvsc-tiszgT-1 grvsc-t4tStz-1">: </span><span class="grvsc-tiszgT-8 grvsc-t4tStz-10">&quot;src&quot;</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="grvsc-tiszgT-1 grvsc-t4tStz-1">    },</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="grvsc-tiszgT-1 grvsc-t4tStz-1">    </span><span class="grvsc-tiszgT-8 grvsc-t4tStz-10">&quot;exclude&quot;</span><span class="grvsc-tiszgT-1 grvsc-t4tStz-1">: [</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="grvsc-tiszgT-1 grvsc-t4tStz-1">        </span><span class="grvsc-tiszgT-8 grvsc-t4tStz-10">&quot;node_modules&quot;</span><span class="grvsc-tiszgT-1 grvsc-t4tStz-1">,</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="grvsc-tiszgT-1 grvsc-t4tStz-1">        </span><span class="grvsc-tiszgT-8 grvsc-t4tStz-10">&quot;.vscode-test&quot;</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="grvsc-tiszgT-1 grvsc-t4tStz-1">    ]</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="grvsc-tiszgT-1 grvsc-t4tStz-1">}</span></span></span></code></pre>
+<p>이렇게 직접적으로 <code>lib를 지정하면 문제는 딱 지정한 그것만 포함된다.</code>
+lib가 지정되어 있지 않으면 타겟에 따라 기본적으로 추가되는 lib가 다르다.</p>
+<blockquote>
+<p><a href="https://www.typescriptlang.org/docs/handbook/compiler-options.html">https://www.typescriptlang.org/docs/handbook/compiler-options.html</a></p>
+<ul>
+<li>target ES5인 경우 <code>DOM,ES5,ScriptHost</code>이 자동 추가</li>
+<li>target ES6인 경우 <code>DOM,ES6,DOM.Iterable,ScriptHost</code>이 자동 추가</li>
+</ul>
+</blockquote>
+<p>따라서 DOM 관련된 API를 사용하면 타입 에러가 난다.</p>
+<p>그런데 문제는 fetch API를 쓰려고 DOM을 추가하면 vscode가 바로 반영이 안된다. 자꾸 타입에러가 난다.
+이때 결론은 <code>vscode를 껐다가 다시 부르면 된다.</code>
+아~ 이것 때문에 잘못 설정한줄 알고 삽질을 많이함 ㅠㅠ</p>
+<h2 id="소감" style="position:relative;"><a href="#%EC%86%8C%EA%B0%90" aria-label="소감 permalink" class="anchor-header before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>소감?</h2>
+<p>개발자가 만들기에는 꽤 괜찮은 vscode extentions.<br>
+생각보다 쉽게 만들수 있었다.
+좀 아쉬운 점은 custom UI를 만들수가 없다. 그냥 간단한 view를 보여주고 싶은데 사실 관련 API를 찾지 못했다.
+아마도 정형화된 UI를 제공하기 위한 포석일수도 있을것 같다.
+그래고 좀 뷰만 잘되는 UI라도 하나 있으면 좋겠다.</p>
+<p>다름에 또 아이디어가 있으면 한번 더 만들어보고 싶다.</p>
+<h2 id="참고한-예제" style="position:relative;"><a href="#%EC%B0%B8%EA%B3%A0%ED%95%9C-%EC%98%88%EC%A0%9C" aria-label="참고한 예제 permalink" class="anchor-header before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>참고한 예제</h2>
+<ul>
+<li><a href="https://code.visualstudio.com/docs/extensions/example-word-count">https://code.visualstudio.com/docs/extensions/example-word-count</a></li>
+<li><a href="https://github.com/Microsoft/vscode-MDTools">https://github.com/Microsoft/vscode-MDTools</a> : vscode.window.showQuickPick, QuickPickItem, TextEditor 사용 예</li>
+<li><a href="https://github.com/Microsoft/vscode-extension-samples">https://github.com/Microsoft/vscode-extension-samples</a></li>
+</ul>
+<style class="grvsc-styles">
+  .grvsc-container {
+    overflow: auto;
+    position: relative;
+    -webkit-overflow-scrolling: touch;
+    padding-top: 1rem;
+    padding-top: var(--grvsc-padding-top, var(--grvsc-padding-v, 1rem));
+    padding-bottom: 1rem;
+    padding-bottom: var(--grvsc-padding-bottom, var(--grvsc-padding-v, 1rem));
+    border-radius: 8px;
+    border-radius: var(--grvsc-border-radius, 8px);
+    font-feature-settings: normal;
+    line-height: 1.4;
+  }
+  
+  .grvsc-code {
+    display: table;
+  }
+  
+  .grvsc-line {
+    display: table-row;
+    box-sizing: border-box;
+    width: 100%;
+    position: relative;
+  }
+  
+  .grvsc-line > * {
+    position: relative;
+  }
+  
+  .grvsc-gutter-pad {
+    display: table-cell;
+    padding-left: 0.75rem;
+    padding-left: calc(var(--grvsc-padding-left, var(--grvsc-padding-h, 1.5rem)) / 2);
+  }
+  
+  .grvsc-gutter {
+    display: table-cell;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+  }
+  
+  .grvsc-gutter::before {
+    content: attr(data-content);
+  }
+  
+  .grvsc-source {
+    display: table-cell;
+    padding-left: 1.5rem;
+    padding-left: var(--grvsc-padding-left, var(--grvsc-padding-h, 1.5rem));
+    padding-right: 1.5rem;
+    padding-right: var(--grvsc-padding-right, var(--grvsc-padding-h, 1.5rem));
+  }
+  
+  .grvsc-source:empty::after {
+    content: ' ';
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+  }
+  
+  .grvsc-gutter + .grvsc-source {
+    padding-left: 0.75rem;
+    padding-left: calc(var(--grvsc-padding-left, var(--grvsc-padding-h, 1.5rem)) / 2);
+  }
+  
+  /* Line transformer styles */
+  
+  .grvsc-has-line-highlighting > .grvsc-code > .grvsc-line::before {
+    content: ' ';
+    position: absolute;
+    width: 100%;
+  }
+  
+  .grvsc-line-diff-add::before {
+    background-color: var(--grvsc-line-diff-add-background-color, rgba(0, 255, 60, 0.2));
+  }
+  
+  .grvsc-line-diff-del::before {
+    background-color: var(--grvsc-line-diff-del-background-color, rgba(255, 0, 20, 0.2));
+  }
+  
+  .grvsc-line-number {
+    padding: 0 2px;
+    text-align: right;
+    opacity: 0.7;
+  }
+  
+  .github-light-theme {
+    background-color: #ffffff;
+    color: #000000;
+  }
+  .github-light-theme .grvsc-tiszgT-1 { color: #000000; }
+  .github-light-theme .grvsc-tiszgT-8 { color: #032F62; }
+  .github-light-theme .grvsc-tiszgT-7 { color: #005CC5; }
+  .github-light-theme .grvsc-line-highlighted::before {
+    background-color: var(--grvsc-line-highlighted-background-color, rgba(0, 0, 0, 0.05));
+    box-shadow: inset var(--grvsc-line-highlighted-border-width, 4px) 0 0 0 var(--grvsc-line-highlighted-border-color, rgba(0, 0, 0, 0.2));
+  }
+  body[data-theme=dark] .grvsc-ps-t4tStz { color: #ffffff; }
+  body[data-theme=dark] .grvsc-ps-t4tStz .grvsc-t4tStz-1 { color: #FFFFFF; }
+  body[data-theme=dark] .grvsc-ps-t4tStz .grvsc-t4tStz-10 { color: #9DCDF5; }
+  body[data-theme=dark] .grvsc-ps-t4tStz .grvsc-t4tStz-3 { color: #66B5F6; }
+  body[data-theme=dark] .grvsc-ps-t4tStz .grvsc-line-highlighted::before {
+    background-color: var(--grvsc-line-highlighted-background-color, rgba(0, 0, 0, 0.05));
+    box-shadow: inset var(--grvsc-line-highlighted-border-width, 4px) 0 0 0 var(--grvsc-line-highlighted-border-color, rgba(0, 0, 0, 0.2));
+  }
+</style></article></div><div><a class="tags__TagButton-sc-1u3nisj-0 eZcnGc" href="/tag/vscode">vscode</a><a class="tags__TagButton-sc-1u3nisj-0 eZcnGc" href="/tag/extension">extension</a></div></div></div></article><div class="sponsorButton__SponsorWrapper-sc-bdk008-0 GzhZc"><a target="_blank" rel="noopener noreferrer" href="https://www.buymeacoffee.com/Tob0c39"><img src="https://www.buymeacoffee.com/assets/img/BMC-btn-logo.svg" alt="Buy me a coffee"/><span>Buy me a coffee</span></a></div><div class="post__Divider-sc-1hd457a-4 kbZkyP"></div><section class="blogPost__CommentWrap-sc-1679ooj-2 kwEcuz"><div></div></section></main></div><footer role="contentinfo" class="layout__Footer-sc-ms4dza-1 dtjXxz"><span aria-label="Copyright" class="layout__Copyright-sc-ms4dza-2 jCaufY">Copyright © 손찬욱. Built with <a href="https://github.com/sungik-choi/gatsby-starter-apple" target="__blank" class="layout__RepoLink-sc-ms4dza-3 cxwnQc">gatsby-starter-apple</a></span></footer></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/blog/createvsextension/";/*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping={"polyfill":["/polyfill-c5f50f2ad13861331c8a.js"],"app":["/app-6ef6f224acdf5273b2fc.js"],"component---cache-caches-gatsby-plugin-offline-app-shell-js":["/component---cache-caches-gatsby-plugin-offline-app-shell-js-241020a1cf7d0f317bbe.js"],"component---src-pages-404-js":["/component---src-pages-404-js-5756fd4e355ffafd2928.js"],"component---src-pages-about-js":["/component---src-pages-about-js-eb1bf6e9f8e2e01f198e.js"],"component---src-pages-index-js":["/component---src-pages-index-js-14119a16655768fb08fb.js"],"component---src-templates-blog-post-js":["/component---src-templates-blog-post-js-809454dcaab6df0ee29e.js"],"component---src-templates-blog-tag-js":["/component---src-templates-blog-tag-js-ff3d39a81280baeae06e.js"]};/*]]>*/</script><script src="/polyfill-c5f50f2ad13861331c8a.js" nomodule=""></script><script src="/component---src-templates-blog-post-js-809454dcaab6df0ee29e.js" async=""></script><script src="/e5f5b259f3bc5bd31060582de6626886320e23cc-416abd96c20b60d9af0b.js" async=""></script><script src="/6082d1df49fc9b78ea2e2ee7cbace9a784ba13b1-711e5751b845d400ec3d.js" async=""></script><script src="/54b5e9c514f22b177f32fa5e893e87989371d592-c3ea0d8a72359c0e6d4b.js" async=""></script><script src="/app-6ef6f224acdf5273b2fc.js" async=""></script><script src="/framework-66de6f443629588fba4e.js" async=""></script><script src="/webpack-runtime-7b523f1067fe9b54115e.js" async=""></script></body></html>

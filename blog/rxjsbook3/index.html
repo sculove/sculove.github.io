@@ -1,0 +1,831 @@
+<!DOCTYPE html><html lang="ko"><head><meta charSet="utf-8"/><meta http-equiv="x-ua-compatible" content="ie=edge"/><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/><style id="typography.js">html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,details,figcaption,figure,footer,header,main,menu,nav,section,summary{display:block}audio,canvas,progress,video{display:inline-block}audio:not([controls]){display:none;height:0}progress{vertical-align:baseline}[hidden],template{display:none}a{background-color:transparent;}a:active,a:hover{outline-width:0}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}b,strong{font-weight:inherit;font-weight:bolder}dfn{font-style:italic}h1{font-size:2em;margin:.67em 0}mark{background-color:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}img{border-style:none}svg:not(:root){overflow:hidden}code,kbd,pre,samp{font-family:monospace,monospace;font-size:1em}figure{margin:1em 40px}hr{box-sizing:content-box;height:0;overflow:visible}button,input,optgroup,select,textarea{font:inherit;margin:0}optgroup{font-weight:700}button,input{overflow:visible}button,select{text-transform:none}[type=reset],[type=submit],button,html [type=button]{-webkit-appearance:button}[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner,button::-moz-focus-inner{border-style:none;padding:0}[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring,button:-moz-focusring{outline:1px dotted ButtonText}fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em}legend{box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal}textarea{overflow:auto}[type=checkbox],[type=radio]{box-sizing:border-box;padding:0}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-cancel-button,[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-input-placeholder{color:inherit;opacity:.54}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}html{font:100%/1.45 'georgia',serif;box-sizing:border-box;overflow-y:scroll;}*{box-sizing:inherit;}*:before{box-sizing:inherit;}*:after{box-sizing:inherit;}body{color:hsla(0,0%,0%,0.8);font-family:'georgia',serif;font-weight:normal;word-wrap:break-word;font-kerning:normal;-moz-font-feature-settings:"kern", "liga", "clig", "calt";-ms-font-feature-settings:"kern", "liga", "clig", "calt";-webkit-font-feature-settings:"kern", "liga", "clig", "calt";font-feature-settings:"kern", "liga", "clig", "calt";}img{max-width:100%;margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.45rem;}h1{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.45rem;color:inherit;font-family:-apple-system,'BlinkMacSystemFont','Segoe UI','Roboto','Oxygen','Ubuntu','Cantarell','Fira Sans','Droid Sans','Helvetica Neue',sans-serif;font-weight:bold;text-rendering:optimizeLegibility;font-size:2rem;line-height:1.1;}h2{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.45rem;color:inherit;font-family:-apple-system,'BlinkMacSystemFont','Segoe UI','Roboto','Oxygen','Ubuntu','Cantarell','Fira Sans','Droid Sans','Helvetica Neue',sans-serif;font-weight:bold;text-rendering:optimizeLegibility;font-size:1.51572rem;line-height:1.1;}h3{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.45rem;color:inherit;font-family:-apple-system,'BlinkMacSystemFont','Segoe UI','Roboto','Oxygen','Ubuntu','Cantarell','Fira Sans','Droid Sans','Helvetica Neue',sans-serif;font-weight:bold;text-rendering:optimizeLegibility;font-size:1.31951rem;line-height:1.1;}h4{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.45rem;color:inherit;font-family:-apple-system,'BlinkMacSystemFont','Segoe UI','Roboto','Oxygen','Ubuntu','Cantarell','Fira Sans','Droid Sans','Helvetica Neue',sans-serif;font-weight:bold;text-rendering:optimizeLegibility;font-size:1rem;line-height:1.1;}h5{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.45rem;color:inherit;font-family:-apple-system,'BlinkMacSystemFont','Segoe UI','Roboto','Oxygen','Ubuntu','Cantarell','Fira Sans','Droid Sans','Helvetica Neue',sans-serif;font-weight:bold;text-rendering:optimizeLegibility;font-size:0.87055rem;line-height:1.1;}h6{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.45rem;color:inherit;font-family:-apple-system,'BlinkMacSystemFont','Segoe UI','Roboto','Oxygen','Ubuntu','Cantarell','Fira Sans','Droid Sans','Helvetica Neue',sans-serif;font-weight:bold;text-rendering:optimizeLegibility;font-size:0.81225rem;line-height:1.1;}hgroup{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.45rem;}ul{margin-left:1.45rem;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.45rem;list-style-position:outside;list-style-image:none;}ol{margin-left:1.45rem;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.45rem;list-style-position:outside;list-style-image:none;}dl{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.45rem;}dd{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.45rem;}p{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.45rem;}figure{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.45rem;}pre{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.45rem;font-size:0.85rem;line-height:1.45rem;}table{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.45rem;font-size:1rem;line-height:1.45rem;border-collapse:collapse;width:100%;}fieldset{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.45rem;}blockquote{margin-left:1.45rem;margin-right:1.45rem;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.45rem;}form{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.45rem;}noscript{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.45rem;}iframe{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.45rem;}hr{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:calc(1.45rem - 1px);background:hsla(0,0%,0%,0.2);border:none;height:1px;}address{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.45rem;}b{font-weight:bold;}strong{font-weight:bold;}dt{font-weight:bold;}th{font-weight:bold;}li{margin-bottom:calc(1.45rem / 2);}ol li{padding-left:0;}ul li{padding-left:0;}li > ol{margin-left:1.45rem;margin-bottom:calc(1.45rem / 2);margin-top:calc(1.45rem / 2);}li > ul{margin-left:1.45rem;margin-bottom:calc(1.45rem / 2);margin-top:calc(1.45rem / 2);}blockquote *:last-child{margin-bottom:0;}li *:last-child{margin-bottom:0;}p *:last-child{margin-bottom:0;}li > p{margin-bottom:calc(1.45rem / 2);}code{font-size:0.85rem;line-height:1.45rem;}kbd{font-size:0.85rem;line-height:1.45rem;}samp{font-size:0.85rem;line-height:1.45rem;}abbr{border-bottom:1px dotted hsla(0,0%,0%,0.5);cursor:help;}acronym{border-bottom:1px dotted hsla(0,0%,0%,0.5);cursor:help;}abbr[title]{border-bottom:1px dotted hsla(0,0%,0%,0.5);cursor:help;text-decoration:none;}thead{text-align:left;}td,th{text-align:left;border-bottom:1px solid hsla(0,0%,0%,0.12);font-feature-settings:"tnum";-moz-font-feature-settings:"tnum";-ms-font-feature-settings:"tnum";-webkit-font-feature-settings:"tnum";padding-left:0.96667rem;padding-right:0.96667rem;padding-top:0.725rem;padding-bottom:calc(0.725rem - 1px);}th:first-child,td:first-child{padding-left:0;}th:last-child,td:last-child{padding-right:0;}</style><meta name="generator" content="Gatsby 2.32.13"/><link rel="preconnect" href="https://www.google-analytics.com"/><link rel="dns-prefetch" href="https://www.google-analytics.com"/><script>
+  
+  function gaOptout(){document.cookie=disableStr+'=true; expires=Thu, 31 Dec 2099 23:59:59 UTC;path=/',window[disableStr]=!0}var gaProperty='UA-37362821-12',disableStr='ga-disable-'+gaProperty;document.cookie.indexOf(disableStr+'=true')>-1&&(window[disableStr]=!0);
+  if(true) {
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  }
+  if (typeof ga === "function") {
+    ga('create', 'UA-37362821-12', 'auto', {});
+      ga('set', 'anonymizeIp', true);
+      
+      
+      
+      
+      }</script><style type="text/css">
+    .anchor-header.before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      transform: translateX(-100%);
+      padding-right: 4px;
+    }
+    .anchor-header.after {
+      display: inline-block;
+      padding-left: 4px;
+    }
+    h1 .anchor-header svg,
+    h2 .anchor-header svg,
+    h3 .anchor-header svg,
+    h4 .anchor-header svg,
+    h5 .anchor-header svg,
+    h6 .anchor-header svg {
+      visibility: hidden;
+    }
+    h1:hover .anchor-header svg,
+    h2:hover .anchor-header svg,
+    h3:hover .anchor-header svg,
+    h4:hover .anchor-header svg,
+    h5:hover .anchor-header svg,
+    h6:hover .anchor-header svg,
+    h1 .anchor-header:focus svg,
+    h2 .anchor-header:focus svg,
+    h3 .anchor-header:focus svg,
+    h4 .anchor-header:focus svg,
+    h5 .anchor-header:focus svg,
+    h6 .anchor-header:focus svg {
+      visibility: visible;
+    }
+  </style><script>
+    document.addEventListener("DOMContentLoaded", function(event) {
+      var hash = window.decodeURI(location.hash.replace('#', ''))
+      if (hash !== '') {
+        var element = document.getElementById(hash)
+        if (element) {
+          var scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop
+          var clientTop = document.documentElement.clientTop || document.body.clientTop || 0
+          var offset = element.getBoundingClientRect().top + scrollTop - clientTop
+          // Wait for the browser to finish rendering before scrolling.
+          setTimeout((function() {
+            window.scrollTo(0, offset - 0)
+          }), 0)
+        }
+      }
+    })
+  </script><link rel="icon" href="/favicon-32x32.png?v=027c606616dd92fab65e4c2c54293520" type="image/png"/><link rel="manifest" href="/manifest.webmanifest" crossorigin="anonymous"/><meta name="theme-color" content="#ffffff"/><link rel="apple-touch-icon" sizes="48x48" href="/icons/icon-48x48.png?v=027c606616dd92fab65e4c2c54293520"/><link rel="apple-touch-icon" sizes="72x72" href="/icons/icon-72x72.png?v=027c606616dd92fab65e4c2c54293520"/><link rel="apple-touch-icon" sizes="96x96" href="/icons/icon-96x96.png?v=027c606616dd92fab65e4c2c54293520"/><link rel="apple-touch-icon" sizes="144x144" href="/icons/icon-144x144.png?v=027c606616dd92fab65e4c2c54293520"/><link rel="apple-touch-icon" sizes="192x192" href="/icons/icon-192x192.png?v=027c606616dd92fab65e4c2c54293520"/><link rel="apple-touch-icon" sizes="256x256" href="/icons/icon-256x256.png?v=027c606616dd92fab65e4c2c54293520"/><link rel="apple-touch-icon" sizes="384x384" href="/icons/icon-384x384.png?v=027c606616dd92fab65e4c2c54293520"/><link rel="apple-touch-icon" sizes="512x512" href="/icons/icon-512x512.png?v=027c606616dd92fab65e4c2c54293520"/><link rel="sitemap" type="application/xml" href="/sitemap.xml"/><link rel="alternate" type="application/rss+xml" href="/rss.xml"/><style data-styled="" data-styled-version="5.3.0">.fCPqmH{position:absolute;top:0;left:0;width:100%;height:100%;z-index:1;-webkit-backdrop-filter:saturate(180%) blur(20px);backdrop-filter:saturate(180%) blur(20px);background-color:var(--color-nav-bar);border-bottom:1px solid var(--color-nav-border);}/*!sc*/
+data-styled.g1[id="background__Background-sc-1i3ow7k-0"]{content:"fCPqmH,"}/*!sc*/
+.pSXDE{width:1.125rem;height:1.125rem;fill:var(--color-icon);-webkit-transform:translateY(-1px);-ms-transform:translateY(-1px);transform:translateY(-1px);}/*!sc*/
+@media (max-width:767px){.pSXDE{width:0;height:1rem;-webkit-transition:width 0.3s ease;transition:width 0.3s ease;}}/*!sc*/
+data-styled.g2[id="themeToggleButton__Icon-sc-apwumc-0"]{content:"pSXDE,"}/*!sc*/
+.gMIvqq{border:none;background-color:var(--color-floating-button);border-radius:var(--border-radius-lg);box-shadow:0 3px 15px var(--color-floating-button-shadow);}/*!sc*/
+@media (max-width:767px){.gMIvqq{visibility:hidden;background-color:transparent;border-radius:0;box-shadow:none;}}/*!sc*/
+data-styled.g3[id="themeToggleButton__ButtonBackground-sc-apwumc-1"]{content:"gMIvqq,"}/*!sc*/
+.dPAAhX{z-index:2;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;background-color:transparent;}/*!sc*/
+data-styled.g4[id="themeToggleButton__Content-sc-apwumc-2"]{content:"dPAAhX,"}/*!sc*/
+.eXFbrd{color:var(--color-floating-button-text);margin-left:6px;}/*!sc*/
+@media (max-width:767px){.eXFbrd{color:var(--color-text);margin-left:0;font-weight:var(--font-weight-medium);border-radius:50%;}}/*!sc*/
+data-styled.g5[id="themeToggleButton__Text-sc-apwumc-3"]{content:"eXFbrd,"}/*!sc*/
+.hqBYYe{cursor:pointer;box-sizing:border-box;position:fixed;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;background-color:transparent;z-index:100;right:var(--sizing-md);bottom:var(--sizing-md);padding:var(--sizing-base);padding-right:20px;border:1px solid var(--color-floating-button-border);border-radius:var(--border-radius-lg);font-weight:var(--font-weight-medium);}/*!sc*/
+@media (min-width:767px){.hqBYYe:hover{outline:none;border:1px solid var(--color-floating-button-border-hover);}.hqBYYe:hover .themeToggleButton__Icon-sc-apwumc-0,.hqBYYe:hover .themeToggleButton__Text-sc-apwumc-3{color:var(--color-floating-button-text-hover);fill:var(--color-floating-button-text-hover);}.hqBYYe:hover .themeToggleButton__ButtonBackground-sc-apwumc-1{background-color:var(--color-floating-button-hover);box-shadow:0 3px 15px var(--color-floating-button-shadow-hover);}}/*!sc*/
+@media (max-width:767px){.hqBYYe{-webkit-box-pack:start;-webkit-justify-content:start;-ms-flex-pack:start;justify-content:start;position:static;border-radius:0;border:none;width:100%;padding:0.5rem 0;}.hqBYYe:hover .themeToggleButton__Icon-sc-apwumc-0,.hqBYYe:hover .themeToggleButton__Text-sc-apwumc-3{fill:var(--color-blue);color:var(--color-blue);}.hqBYYe:hover .themeToggleButton__Icon-sc-apwumc-0{width:1rem;margin-right:4px;}.hqBYYe:focus-visible .themeToggleButton__Icon-sc-apwumc-0,.hqBYYe:focus-visible .themeToggleButton__Text-sc-apwumc-3{fill:var(--color-blue);color:var(--color-blue);}.hqBYYe:focus-visible .themeToggleButton__Icon-sc-apwumc-0{width:1rem;margin-right:4px;}}/*!sc*/
+data-styled.g6[id="themeToggleButton__Button-sc-apwumc-4"]{content:"hqBYYe,"}/*!sc*/
+.bzmFsi{top:22px;}/*!sc*/
+data-styled.g7[id="menuIcon__MenuIconBreadTop-sc-hrw9pa-0"]{content:"bzmFsi,"}/*!sc*/
+.ccgtTX{bottom:22px;}/*!sc*/
+data-styled.g8[id="menuIcon__MenuIconBreadBottom-sc-hrw9pa-1"]{content:"ccgtTX,"}/*!sc*/
+.hRCHiY{z-index:9999;display:none;}/*!sc*/
+@media (max-width:767px){.hRCHiY{position:relative;margin-left:auto;display:block;cursor:pointer;width:var(--nav-height);height:var(--nav-height);border:none;background-color:transparent;}.hRCHiY > div{position:absolute;width:18px;height:1px;right:var(--padding-sm);opacity:0.8;-webkit-transition:opacity 0.3s ease,-webkit-transform 0.2s ease 0.1s;-webkit-transition:opacity 0.3s ease,transform 0.2s ease 0.1s;transition:opacity 0.3s ease,transform 0.2s ease 0.1s;}.hRCHiY > div > div{width:100%;height:100%;background-color:var(--color-text);-webkit-transition:-webkit-transform 0.1s ease;-webkit-transition:transform 0.1s ease;transition:transform 0.1s ease;}.hRCHiY .menuIcon__MenuIconBreadTop-sc-hrw9pa-0{-webkit-transform:none;-ms-transform:none;transform:none;}.hRCHiY .menuIcon__MenuIconBreadTop-sc-hrw9pa-0 div{-webkit-transform:none;-ms-transform:none;transform:none;}.hRCHiY .menuIcon__MenuIconBreadBottom-sc-hrw9pa-1{-webkit-transform:none;-ms-transform:none;transform:none;}.hRCHiY .menuIcon__MenuIconBreadBottom-sc-hrw9pa-1 div{-webkit-transform:none;-ms-transform:none;transform:none;}.hRCHiY:hover > div{opacity:1;}}/*!sc*/
+data-styled.g9[id="menuIcon__MenuIconButton-sc-hrw9pa-2"]{content:"hRCHiY,"}/*!sc*/
+.hSoGuq{min-width:var(--min-width);position:-webkit-sticky;position:sticky;top:0;left:0;width:100%;height:var(--nav-height);z-index:10;}/*!sc*/
+.hSoGuq a:hover{-webkit-text-decoration:none;text-decoration:none;}/*!sc*/
+data-styled.g10[id="navBar__Nav-sc-1a092ea-0"]{content:"hSoGuq,"}/*!sc*/
+.fnYViU{box-sizing:content-box;position:relative;margin:0 auto;max-width:var(--width);padding:0 var(--padding-lg);height:100%;z-index:2;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:justify;-webkit-justify-content:space-between;-ms-flex-pack:justify;justify-content:space-between;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;}/*!sc*/
+.fnYViU li{margin:0;list-style-type:none;}/*!sc*/
+@media (max-width:767px){.fnYViU{padding:0 var(--padding-sm);}}/*!sc*/
+data-styled.g11[id="navBar__Content-sc-1a092ea-1"]{content:"fnYViU,"}/*!sc*/
+.hfNWK{z-index:9999;padding:0;border:none;font-size:var(--text-title);font-weight:var(--font-weight-semi-bold);color:var(--color-text);}/*!sc*/
+.hfNWK a{color:inherit;}/*!sc*/
+@media (max-width:767px){.hfNWK{font-size:var(--text-md);}}/*!sc*/
+data-styled.g12[id="navBar__Title-sc-1a092ea-2"]{content:"hfNWK,"}/*!sc*/
+.hTmIWd{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;}/*!sc*/
+.hTmIWd a{font-weight:var(--font-weight-regular);}/*!sc*/
+.hTmIWd a:hover,.hTmIWd a:focus{color:var(--color-blue);}/*!sc*/
+.hTmIWd li{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;margin-left:32px;}/*!sc*/
+.hTmIWd li:first-child,.hTmIWd li:last-child{margin-left:0;}/*!sc*/
+@media (max-width:767px){.hTmIWd{pointer-events:none;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;padding:0 var(--sizing-lg);}.hTmIWd li:nth-child(0){-webkit-transition-property:-webkit-transform,opacity;-webkit-transition-property:transform,opacity;transition-property:transform,opacity;-webkit-transition-duration:0.5s,0.3s;transition-duration:0.5s,0.3s;-webkit-transition-delay:0.25s;transition-delay:0.25s;-webkit-transition-timing-function:ease-in,ease-out;transition-timing-function:ease-in,ease-out;}.hTmIWd li:nth-child(1){-webkit-transition-property:-webkit-transform,opacity;-webkit-transition-property:transform,opacity;transition-property:transform,opacity;-webkit-transition-duration:0.5s,0.3s;transition-duration:0.5s,0.3s;-webkit-transition-delay:0.19s;transition-delay:0.19s;-webkit-transition-timing-function:ease-in,ease-out;transition-timing-function:ease-in,ease-out;}.hTmIWd li:nth-child(2){-webkit-transition-property:-webkit-transform,opacity;-webkit-transition-property:transform,opacity;transition-property:transform,opacity;-webkit-transition-duration:0.5s,0.3s;transition-duration:0.5s,0.3s;-webkit-transition-delay:0.13s;transition-delay:0.13s;-webkit-transition-timing-function:ease-in,ease-out;transition-timing-function:ease-in,ease-out;}.hTmIWd li:nth-child(3){-webkit-transition-property:-webkit-transform,opacity;-webkit-transition-property:transform,opacity;transition-property:transform,opacity;-webkit-transition-duration:0.5s,0.3s;transition-duration:0.5s,0.3s;-webkit-transition-delay:0.07s;transition-delay:0.07s;-webkit-transition-timing-function:ease-in,ease-out;transition-timing-function:ease-in,ease-out;}.hTmIWd li:nth-child(4){-webkit-transition-property:-webkit-transform,opacity;-webkit-transition-property:transform,opacity;transition-property:transform,opacity;-webkit-transition-duration:0.5s,0.3s;transition-duration:0.5s,0.3s;-webkit-transition-delay:0.010000000000000009s;transition-delay:0.010000000000000009s;-webkit-transition-timing-function:ease-in,ease-out;transition-timing-function:ease-in,ease-out;}.hTmIWd li:nth-child(5){-webkit-transition-property:-webkit-transform,opacity;-webkit-transition-property:transform,opacity;transition-property:transform,opacity;-webkit-transition-duration:0.5s,0.3s;transition-duration:0.5s,0.3s;-webkit-transition-delay:-0.04999999999999999s;transition-delay:-0.04999999999999999s;-webkit-transition-timing-function:ease-in,ease-out;transition-timing-function:ease-in,ease-out;}.hTmIWd li:nth-child(6){-webkit-transition-property:-webkit-transform,opacity;-webkit-transition-property:transform,opacity;transition-property:transform,opacity;-webkit-transition-duration:0.5s,0.3s;transition-duration:0.5s,0.3s;-webkit-transition-delay:-0.10999999999999999s;transition-delay:-0.10999999999999999s;-webkit-transition-timing-function:ease-in,ease-out;transition-timing-function:ease-in,ease-out;}.hTmIWd li:nth-child(7){-webkit-transition-property:-webkit-transform,opacity;-webkit-transition-property:transform,opacity;transition-property:transform,opacity;-webkit-transition-duration:0.5s,0.3s;transition-duration:0.5s,0.3s;-webkit-transition-delay:-0.16999999999999998s;transition-delay:-0.16999999999999998s;-webkit-transition-timing-function:ease-in,ease-out;transition-timing-function:ease-in,ease-out;}.hTmIWd li:nth-child(8){-webkit-transition-property:-webkit-transform,opacity;-webkit-transition-property:transform,opacity;transition-property:transform,opacity;-webkit-transition-duration:0.5s,0.3s;transition-duration:0.5s,0.3s;-webkit-transition-delay:-0.22999999999999998s;transition-delay:-0.22999999999999998s;-webkit-transition-timing-function:ease-in,ease-out;transition-timing-function:ease-in,ease-out;}.hTmIWd li:nth-child(9){-webkit-transition-property:-webkit-transform,opacity;-webkit-transition-property:transform,opacity;transition-property:transform,opacity;-webkit-transition-duration:0.5s,0.3s;transition-duration:0.5s,0.3s;-webkit-transition-delay:-0.29000000000000004s;transition-delay:-0.29000000000000004s;-webkit-transition-timing-function:ease-in,ease-out;transition-timing-function:ease-in,ease-out;}.hTmIWd li{display:block;margin-left:0;font-size:var(--text-md);-webkit-transform:translateY(0);-ms-transform:translateY(0);transform:translateY(0);opacity:0;}.hTmIWd a{display:block;height:100%;padding:0.5rem 0;font-weight:var(--font-weight-medium);}.hTmIWd li + li::before{content:'';display:block;position:absolute;width:calc(100vw - var(--sizing-lg) * 2);height:1px;-webkit-transform:translateY(-2px);-ms-transform:translateY(-2px);transform:translateY(-2px);background-color:var(--color-divider);}}/*!sc*/
+data-styled.g13[id="navBar__LinkUl-sc-1a092ea-3"]{content:"hTmIWd,"}/*!sc*/
+@media (max-width:767px){.cjWPJE::after{-webkit-transition:opacity 0.4s ease-in-out 0.48s;transition:opacity 0.4s ease-in-out 0.48s;opacity:0;content:'';display:block;position:absolute;top:0;left:0;width:100%;height:100%;background-color:var(--color-post-background);}}/*!sc*/
+data-styled.g14[id="navBar__NavBackground-sc-1a092ea-4"]{content:"cjWPJE,"}/*!sc*/
+.kHWTVj{display:none;}/*!sc*/
+@media (max-width:767px){.kHWTVj{-webkit-transition:-webkit-transform 0.6s cubic-bezier(0.41,0.06,0.05,1) 0.1s;-webkit-transition:transform 0.6s cubic-bezier(0.41,0.06,0.05,1) 0.1s;transition:transform 0.6s cubic-bezier(0.41,0.06,0.05,1) 0.1s;-webkit-transform:scaleY(0);-ms-transform:scaleY(0);transform:scaleY(0);-webkit-transform-origin:top;-ms-transform-origin:top;transform-origin:top;display:block;position:fixed;top:calc(var(--nav-height) - 1px);left:0;width:100%;height:calc(100% - var(--nav-height) + 1px);background-color:var(--color-post-background);}}/*!sc*/
+data-styled.g15[id="navBar__Curtain-sc-1a092ea-5"]{content:"kHWTVj,"}/*!sc*/
+@media (max-width:767px){.ljkedD{width:100%;z-index:200;}}/*!sc*/
+data-styled.g16[id="navBar__LinkContent-sc-1a092ea-6"]{content:"ljkedD,"}/*!sc*/
+.bqqIA-D{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;}/*!sc*/
+@media (max-width:767px){.bqqIA-D{position:absolute;top:0;left:0;width:100%;height:var(--nav-height);}}/*!sc*/
+data-styled.g17[id="navBar__LinkWrap-sc-1a092ea-7"]{content:"bqqIA-D,"}/*!sc*/
+:root{font-size:100%;--width:980px;--min-width:320px;--post-width:650px;--nav-height:54px;--footer-height:60px;--grid-gap-sm:10px;--grid-gap-lg:24px;--grid-gap-xl:36px;--padding-sm:16px;--padding-lg:22px;--border-radius-sm:6px;--border-radius-base:8px;--border-radius-lg:28px;--sizing-xs:4px;--sizing-sm:8px;--sizing-base:16px;--sizing-md:24px;--sizing-lg:40px;--sizing-xl:64px;--text-xs:0.625rem;--text-sm:0.75rem;--text-base:1rem;--text-md:1.125rem;--text-title:1.25rem;--text-lg:1.5rem;--text-xl:3rem;--device-xs-max-width:419px;--device-sm-max-width:767px;--device-md-max-width:1023px;--device-lg-max-width:1441px;--device-xs-max-width-query:(max-width:419px);--device-sm-max-width-query:(max-width:767px);--device-md-max-width-query:(max-width:1023px);--device-lg-max-width-query:(max-width:1441px);--font-weight-regular:400;--font-weight-medium:500;--font-weight-semi-bold:600;--font-weight-bold:700;--font-weight-extra-bold:800;--color-outline:rgba(0,125,250,0.6);}/*!sc*/
+:root body.light{--color-text:#1d1d1d;--color-text-2:#1d1d1d;--color-text-3:#696969;--color-white:#ffffff;--color-black:#000;--color-nav-bar:rgba(255,255,255,0.7);--color-nav-border:rgba(200,200,200,0.7);--color-category-button:#f2f2f2;--color-background:#f2f2f2;--color-post-background:#ffffff;--color-card:#ffffff;--color-code:#f2f2f2;--color-code-block:#fafafa;--color-code-highlight:rgba(0,0,0,0.05);--color-code-highlight-border:rgba(0,0,0,0.2);--color-gray-1:#f2f2f2;--color-gray-2:#e0e0e0;--color-gray-3:#d1d1d1;--color-gray-4:#868686;--color-gray-5:#6e6e6e;--color-gray-6:#696969;--color-divider:rgba(0,0,0,0.15);--color-dimmed:rgba(0,0,0,0.15);--color-floating-button:rgba(255,255,255,0.7);--color-floating-button-hover:rgba(50,50,50,0.7);--color-floating-button-border:rgba(230,230,230,0.7);--color-floating-button-border-hover:rgba(255,255,255,0.2);--color-floating-button-text:#202020;--color-floating-button-text-hover:#f2f2f2;--color-floating-button-shadow:rgba(0,0,0,0.2);--color-floating-button-shadow-hover:rgba(0,0,0,0.4);--color-blue:#0066cc;--color-icon:#2c2c2c;}/*!sc*/
+:root body.dark{--color-text:#e6e6e6;--color-text-2:#d1d1d1;--color-text-3:#8c8c8c;--color-white:#e6e6e6;--color-black:#000;--color-nav-bar:rgba(29,29,29,0.7);--color-nav-border:rgba(255,255,255,0.2);--color-category-button:#484848;--color-background:#1c1c1c;--color-post-background:#1c1c1c;--color-card:#2c2c2c;--color-code:#3a3a3a;--color-code-block:#242424;--color-code-highlight:rgba(255,255,255,0.05);--color-code-highlight-border:rgba(255,255,255,0.2);--color-gray-1:#1c1c1c;--color-gray-2:#2c2c2c;--color-gray-3:#3a3a3a;--color-gray-4:#484848;--color-gray-5:#646464;--color-gray-6:#868686;--color-divider:rgba(255,255,255,0.15);--color-dimmed:rgba(0,0,0,0.15);--color-floating-button:rgba(50,50,50,0.7);--color-floating-button-hover:rgba(255,255,255,0.7);--color-floating-button-border:rgba(255,255,255,0.2);--color-floating-button-border-hover:rgba(230,230,230,0.7);--color-floating-button-text:#d1d1d1;--color-floating-button-text-hover:#202020;--color-floating-button-shadow:rgba(0,0,0,0.4);--color-floating-button-shadow-hover:rgba(0,0,0,0.4);--color-blue:#0a84ff;--color-icon:#d1d1d1;}/*!sc*/
+html{-webkit-scroll-behavior:smooth;-moz-scroll-behavior:smooth;-ms-scroll-behavior:smooth;scroll-behavior:smooth;}/*!sc*/
+h1,h2,h3{-webkit-scroll-margin-top:70px;-moz-scroll-margin-top:70px;-ms-scroll-margin-top:70px;scroll-margin-top:70px;}/*!sc*/
+html,body,#___gatsby,#gatsby-focus-wrapper{min-height:100%;}/*!sc*/
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen-Sans,Ubuntu,Cantarell,'Helvetica Neue',sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol','Noto Color Emoji';background-color:var(--color-post-background);-webkit-font-smoothing:antialiased;}/*!sc*/
+body *{color:var(--color-text);}/*!sc*/
+:lang(ko){word-break:keep-all;}/*!sc*/
+ul,ol,li,dl,dt,dd,h1,h2,h3,h4,h5,h6,hgroup,p,blockquote,figure,form,fieldset,input,legend,pre,abbr,button{margin:0;padding:0;}/*!sc*/
+h1 a,li a{-webkit-text-decoration:none;text-decoration:none;}/*!sc*/
+a{-webkit-text-decoration:none;text-decoration:none;}/*!sc*/
+*:focus:not(:focus-visible){outline:none;}/*!sc*/
+:focus-visible{outline:4px solid var(--color-outline);outline-offset:1px;}/*!sc*/
+.js-focus-visible :focus:not(.focus-visible){outline:none;}/*!sc*/
+.visually-hidden{position:absolute;width:1px;height:1px;overflow:hidden;-webkit-clip:rect(1px,1px,1px,1px);clip:rect(1px,1px,1px,1px);white-space:no-wrap;}/*!sc*/
+data-styled.g18[id="sc-global-JEJHb1"]{content:"sc-global-JEJHb1,"}/*!sc*/
+.bbzoHI{width:100%;height:100%;min-height:calc(100vh - var(--footer-height));background-color:var(--color-post-background);}/*!sc*/
+data-styled.g19[id="layout__Container-sc-ms4dza-0"]{content:"bbzoHI,"}/*!sc*/
+.dtjXxz{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;text-align:center;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;height:var(--footer-height);background-color:var(--color-gray-1);}/*!sc*/
+data-styled.g20[id="layout__Footer-sc-ms4dza-1"]{content:"dtjXxz,"}/*!sc*/
+.jCaufY{font-size:var(--text-sm);font-weight:var(--font-weight-regular);color:var(--color-gray-6);}/*!sc*/
+data-styled.g21[id="layout__Copyright-sc-ms4dza-2"]{content:"jCaufY,"}/*!sc*/
+.cxwnQc{color:var(--color-blue);}/*!sc*/
+.cxwnQc:hover{-webkit-text-decoration:underline;text-decoration:underline;}/*!sc*/
+data-styled.g22[id="layout__RepoLink-sc-ms4dza-3"]{content:"cxwnQc,"}/*!sc*/
+.hOboGL h1,.hOboGL h2,.hOboGL h3,.hOboGL h4,.hOboGL h5,.hOboGL h6{font-weight:var(--font-weight-bold);}/*!sc*/
+.hOboGL td,.hOboGL th{border-bottom:1px solid var(--color-gray-3);}/*!sc*/
+.hOboGL strong{font-weight:var(--font-weight-semi-bold);}/*!sc*/
+.hOboGL a,.hOboGL p{font-weight:var(--font-weight-regular);}/*!sc*/
+.hOboGL a{-webkit-text-decoration:none;text-decoration:none;color:var(--color-blue) !important;}/*!sc*/
+.hOboGL a *{color:var(--color-blue) !important;}/*!sc*/
+.hOboGL a:hover,.hOboGL a:active{-webkit-text-decoration:underline;text-decoration:underline;}/*!sc*/
+.hOboGL > *:first-child{margin-top:0;}/*!sc*/
+.hOboGL h1{font-size:2.5rem;}/*!sc*/
+@media (max-width:767px){.hOboGL h1{font-size:2rem;}}/*!sc*/
+.hOboGL h2{font-size:1.75rem;line-height:1.3;margin-bottom:1.45rem;margin-top:3.2625rem;}/*!sc*/
+@media (max-width:767px){.hOboGL h2{font-size:1.3125rem;}}/*!sc*/
+.hOboGL h3{font-size:1.31951rem;line-height:1.3;margin-bottom:1.45rem;margin-top:2.175rem;}/*!sc*/
+@media (max-width:767px){.hOboGL h3{font-size:1.1875rem;}}/*!sc*/
+.hOboGL h4,.hOboGL h5,.hOboGL h6{margin-bottom:0.725rem;margin-top:1.45rem;}/*!sc*/
+.hOboGL ul,.hOboGL ol{margin-top:1.45rem;margin-bottom:1.45rem;margin-left:1.8125rem;}/*!sc*/
+.hOboGL li > ul,.hOboGL li > ol{margin-top:0;margin-bottom:0;}/*!sc*/
+.hOboGL li > p{margin-bottom:0;}/*!sc*/
+.hOboGL li > ol,.hOboGL li > ul{margin-left:1.8125rem;}/*!sc*/
+.hOboGL li{margin-bottom:0.435rem;}/*!sc*/
+.hOboGL p,.hOboGL li,.hOboGL blockquote{font-size:1.0625rem;}/*!sc*/
+.hOboGL p{line-height:1.68;text-align:left;margin-bottom:var(--sizing-md);}/*!sc*/
+.hOboGL hr{margin:var(--sizing-lg) 0;background:var(--color-gray-3);}/*!sc*/
+.hOboGL blockquote{border-left:0.25rem solid var(--color-gray-2);padding-left:var(--sizing-base);margin:var(--sizing-md) 0;}/*!sc*/
+.hOboGL blockquote *{color:var(--color-gray-6);}/*!sc*/
+.hOboGL img{display:block;}/*!sc*/
+.hOboGL pre,.hOboGL code{font-family:SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;background-color:var(--color-code-block);}/*!sc*/
+.hOboGL pre{border:1px solid var(--color-gray-3);}/*!sc*/
+.hOboGL pre.grvsc-container{margin:var(--sizing-md) 0;}/*!sc*/
+.hOboGL .grvsc-line-highlighted::before{background-color:var(--color-code-highlight) !important;box-shadow:inset 4px 0 0 0 var(--color-code-highlight-border) !important;}/*!sc*/
+.hOboGL *:not(pre) > code{background-color:var(--color-code);padding:0.2rem 0.4rem;margin:0;font-size:85%;border-radius:3px;}/*!sc*/
+data-styled.g29[id="markdown__Markdown-sc-19j7sil-0"]{content:"hOboGL,"}/*!sc*/
+.cBGQyo{display:block;font-size:0.875rem;font-weight:var(--font-weight-semi-bold);color:var(--color-text-3);}/*!sc*/
+data-styled.g33[id="category__Category-sc-nfzltz-0"]{content:"cBGQyo,"}/*!sc*/
+.buAbTA{margin-top:12px;font-size:0.875rem;font-weight:var(--font-weight-regular);color:var(--color-text-3);}/*!sc*/
+data-styled.g34[id="dateTime__DateTime-sc-q4w6d0-0"]{content:"buAbTA,"}/*!sc*/
+.dUtLpd{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;-webkit-align-items:flex-start;-webkit-box-align:flex-start;-ms-flex-align:flex-start;align-items:flex-start;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;position:fixed;width:300px;margin-top:20px;right:5px;border-left-width:5px;border-left-style:solid;padding-left:10px;font-size:14px;}/*!sc*/
+.dUtLpd a.toc_current{color:var(--color-text);font-weight:bold;}/*!sc*/
+.dUtLpd ul{cursor:pointer;list-style-type:none;}/*!sc*/
+.dUtLpd ul li{margin-bottom:10px;}/*!sc*/
+.dUtLpd ul li a{color:var(--color-text-3);margin-bottom:0;}/*!sc*/
+@media (max-width:1300px){.dUtLpd{display:none;}}/*!sc*/
+data-styled.g49[id="tableOfContents__Toc-sc-1nj5a1d-0"]{content:"dUtLpd,"}/*!sc*/
+.kMVNqs{margin-bottom:var(--sizing-md);}/*!sc*/
+data-styled.g50[id="post__Info-sc-1hd457a-0"]{content:"kMVNqs,"}/*!sc*/
+.fPapLX{font-size:1.5rem;font-weight:var(--font-weight-semi-bold);}/*!sc*/
+.fPapLX a{color:var(--color-blue) !important;}/*!sc*/
+data-styled.g51[id="post__PostCategory-sc-1hd457a-1"]{content:"fPapLX,"}/*!sc*/
+.juGKCl{display:block;margin-top:var(--sizing-xs);}/*!sc*/
+data-styled.g52[id="post__Time-sc-1hd457a-2"]{content:"juGKCl,"}/*!sc*/
+.kbZkyP{width:100%;height:1px;background-color:var(--color-gray-3);margin-top:var(--sizing-lg);margin-bottom:var(--sizing-lg);}/*!sc*/
+data-styled.g54[id="post__Divider-sc-1hd457a-4"]{content:"kbZkyP,"}/*!sc*/
+.bjszmD{font-weight:var(--font-weight-bold);line-height:1.1875;font-size:var(--text-xl);}/*!sc*/
+@media (max-width:1023px){.bjszmD{line-height:1.21875;font-size:2.5rem;}}/*!sc*/
+@media (max-width:767px){.bjszmD{line-height:1.21875;font-size:2rem;}}/*!sc*/
+data-styled.g55[id="post__Title-sc-1hd457a-5"]{content:"bjszmD,"}/*!sc*/
+.GzhZc{text-align:center;margin-bottom:20px;}/*!sc*/
+.GzhZc a{display:inline-block;padding:0px 7px;width:140px;height:33px;-webkit-text-decoration:none;text-decoration:none;background-color:#f7d501;border:1px solid transparent;border-radius:6px;-webkit-letter-spacing:-0.08px;-moz-letter-spacing:-0.08px;-ms-letter-spacing:-0.08px;letter-spacing:-0.08px;box-sizing:border-box;font-size:12px;font-weight:bold;line-height:30px;text-align:left;}/*!sc*/
+.GzhZc a img{width:20px;margin-bottom:1px;box-shadow:none;border:none;vertical-align:middle;}/*!sc*/
+.GzhZc a span{color:var(--color-black);margin-left:6px;}/*!sc*/
+data-styled.g56[id="sponsorButton__SponsorWrapper-sc-bdk008-0"]{content:"GzhZc,"}/*!sc*/
+.eZcnGc{cursor:pointer;display:inline-block;margin:0 5px 10px 5px;background-color:var(--color-category-button);padding:var(--sizing-sm) var(--sizing-base);border-radius:var(--border-radius-base);font-size:0.875rem;font-weight:var(--font-weight-semi-bold);}/*!sc*/
+.eZcnGc:focus{outline:none;}/*!sc*/
+.eZcnGc:hover{color:var(--color-white);background-color:var(--color-blue);}/*!sc*/
+.eZcnGc:focus-visible{color:var(--color-white);background-color:var(--color-blue);}/*!sc*/
+data-styled.g57[id="tags__TagButton-sc-1u3nisj-0"]{content:"eZcnGc,"}/*!sc*/
+.gHcfuM{margin-top:var(--sizing-xl);}/*!sc*/
+@media (max-width:767px){.gHcfuM{margin-top:var(--sizing-lg);}}/*!sc*/
+data-styled.g58[id="blogPost__OuterWrapper-sc-1679ooj-0"]{content:"gHcfuM,"}/*!sc*/
+.cRVeHS{width:var(--post-width);margin:0 auto;padding-bottom:var(--sizing-lg);}/*!sc*/
+@media (max-width:767px){.cRVeHS{width:87.5%;}}/*!sc*/
+data-styled.g59[id="blogPost__InnerWrapper-sc-1679ooj-1"]{content:"cRVeHS,"}/*!sc*/
+.kwEcuz{width:100%;padding:0 var(--padding-sm);margin:0 auto;margin-bottom:var(--sizing-xl);}/*!sc*/
+@media (max-width:767px){.kwEcuz{width:auto;}}/*!sc*/
+data-styled.g60[id="blogPost__CommentWrap-sc-1679ooj-2"]{content:"kwEcuz,"}/*!sc*/
+</style><title data-react-helmet="true">RxJS가 해결하려고했던 문제3 - 로직 처리의 오류 | 아내와 아들 그리고 딸밖에 모르는 남편</title><meta data-react-helmet="true" name="description" content="아내와 아들 그리고 딸밖에 모르는 남편"/><meta data-react-helmet="true" property="og:title" content="RxJS가 해결하려고했던 문제3 - 로직 처리의 오류"/><meta data-react-helmet="true" property="og:description" content="아내와 아들 그리고 딸밖에 모르는 남편"/><meta data-react-helmet="true" property="og:type" content="website"/><meta data-react-helmet="true" name="twitter:card" content="summary"/><meta data-react-helmet="true" name="twitter:creator" content="손찬욱"/><meta data-react-helmet="true" name="twitter:title" content="RxJS가 해결하려고했던 문제3 - 로직 처리의 오류"/><meta data-react-helmet="true" name="twitter:description" content="아내와 아들 그리고 딸밖에 모르는 남편"/><meta data-react-helmet="true" property="image" content="https://sculove.github.io/static/5328a80a9973de409d00f735d26ab319/497c6/rx_process.png"/><meta data-react-helmet="true" property="og:image" content="https://sculove.github.io/static/5328a80a9973de409d00f735d26ab319/497c6/rx_process.png"/><meta data-react-helmet="true" property="twitter:image" content="https://sculove.github.io/static/5328a80a9973de409d00f735d26ab319/497c6/rx_process.png"/><link as="script" rel="preload" href="/webpack-runtime-7b523f1067fe9b54115e.js"/><link as="script" rel="preload" href="/framework-66de6f443629588fba4e.js"/><link as="script" rel="preload" href="/app-6ef6f224acdf5273b2fc.js"/><link as="script" rel="preload" href="/54b5e9c514f22b177f32fa5e893e87989371d592-c3ea0d8a72359c0e6d4b.js"/><link as="script" rel="preload" href="/6082d1df49fc9b78ea2e2ee7cbace9a784ba13b1-711e5751b845d400ec3d.js"/><link as="script" rel="preload" href="/e5f5b259f3bc5bd31060582de6626886320e23cc-416abd96c20b60d9af0b.js"/><link as="script" rel="preload" href="/component---src-templates-blog-post-js-809454dcaab6df0ee29e.js"/><link as="fetch" rel="preload" href="/page-data/blog/rxjsbook3/page-data.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/page-data/sq/d/1990743003.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/page-data/app-data.json" crossorigin="anonymous"/></head><body><script>
+          (() => {    
+            window.__onThemeChange = function() {};      
+
+            function setTheme(newTheme) {                  
+              window.__theme = newTheme;                  
+              preferredTheme = newTheme;                  
+              document.body.className = newTheme;
+              document.body.dataset.theme = newTheme;                 
+              window.__onThemeChange(newTheme);                
+            }
+
+            let preferredTheme
+
+            try {
+              preferredTheme = localStorage.getItem('theme')
+            } catch (err) {}
+
+            window.__setPreferredTheme = newTheme => {
+              setTheme(newTheme)
+
+              try {
+                localStorage.setItem('theme', newTheme)
+              } catch (err) {}
+            }
+
+            let darkQuery = window.matchMedia('(prefers-color-scheme: dark)')
+
+            darkQuery.addEventListener('change', e => {
+              window.__setPreferredTheme(e.matches ? 'dark' : 'light')
+            })
+
+            setTheme(preferredTheme || (darkQuery.matches ? 'dark' : 'light'))
+          })()
+        </script><div id="___gatsby"><div style="outline:none" tabindex="-1" id="gatsby-focus-wrapper"><div class="layout__Container-sc-ms4dza-0 bbzoHI"><nav aria-label="Global Navigation" class="navBar__Nav-sc-1a092ea-0 hSoGuq"><div class="background__Background-sc-1i3ow7k-0 navBar__NavBackground-sc-1a092ea-4 fCPqmH cjWPJE"></div><div class="navBar__Content-sc-1a092ea-1 fnYViU"><h1 class="navBar__Title-sc-1a092ea-2 hfNWK"><a href="/">아내와 아들 그리고 딸밖에 모르는 남편</a></h1><div class="navBar__LinkWrap-sc-1a092ea-7 bqqIA-D"><div class="navBar__Curtain-sc-1a092ea-5 kHWTVj"></div><div class="navBar__LinkContent-sc-1a092ea-6 ljkedD"><button aria-label="Menu" class="menuIcon__MenuIconButton-sc-hrw9pa-2 hRCHiY"><div class="menuIcon__MenuIconBreadTop-sc-hrw9pa-0 bzmFsi"><div></div></div><div class="menuIcon__MenuIconBreadBottom-sc-hrw9pa-1 ccgtTX"><div></div></div></button><ul class="navBar__LinkUl-sc-1a092ea-3 hTmIWd"><li><a href="/">Home</a></li><li><a href="/about/">About</a></li><li><a target="__blank" rel="noreferrer" href="https://github.com/sculove">Github</a></li><li><button class="themeToggleButton__Button-sc-apwumc-4 hqBYYe"><div class="background__Background-sc-1i3ow7k-0 themeToggleButton__ButtonBackground-sc-apwumc-1 fCPqmH gMIvqq"></div><div class="themeToggleButton__Content-sc-apwumc-2 dPAAhX"><svg version="1.1" x="0px" y="0px" viewBox="0 0 24 24" class="themeToggleButton__Icon-sc-apwumc-0 pSXDE"><path d="M16.3,15.2c-4.1-1.2-7.2-4.8-7.5-9.1C8.8,4.8,8.9,3.5,9.3,2.4C4.8,3.6,1.5,8,2.1,13.1c0.5,4.6,4.2,8.3,8.7,8.8 c4.9,0.6,9.2-2.4,10.6-6.7C19.9,15.7,18.1,15.8,16.3,15.2z"></path></svg><span class="themeToggleButton__Text-sc-apwumc-3 eXFbrd">Dark theme</span></div></button></li></ul></div></div></div></nav><main><article><div class="blogPost__OuterWrapper-sc-1679ooj-0 gHcfuM"><div class="blogPost__InnerWrapper-sc-1679ooj-1 cRVeHS"><div><div class="tableOfContents__Toc-sc-1nj5a1d-0 dUtLpd"><div><ul>
+<li><a href="/blog/rxjsbook3/#%EC%9B%B9%EC%96%B4%ED%94%8C%EB%A6%AC%EC%BC%80%EC%9D%B4%EC%85%98%EC%9D%98-%EB%A1%9C%EC%A7%81">웹어플리케이션의 로직</a></li>
+<li>
+<p><a href="/blog/rxjsbook3/#%EB%A1%9C%EC%A7%81%EC%9D%98-%EB%B3%B5%EC%9E%A1%EC%84%B1-%EA%B7%B8%EB%A6%AC%EA%B3%A0-%EC%98%A4%EB%A5%98">로직의 복잡성 그리고 오류</a></p>
+<ul>
+<li><a href="/blog/rxjsbook3/#%EB%B0%98%EB%B3%B5%EB%AC%B8%EA%B3%BC-%EB%B6%84%EA%B8%B0%EB%AC%B8">반복문과 분기문</a></li>
+<li><a href="/blog/rxjsbook3/#%EB%B3%80%EC%88%98%EB%8A%94-%EC%98%A4%EB%A5%98%EC%9D%98-%EC%8B%9C%EC%9E%91">변수는 오류의 시작</a></li>
+</ul>
+</li>
+<li>
+<p><a href="/blog/rxjsbook3/#%EC%9E%90%EB%B0%94%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%EC%9D%98-%EC%86%94%EB%A3%A8%EC%85%98">자바스크립트의 솔루션</a></p>
+<ul>
+<li><a href="/blog/rxjsbook3/#%EB%B0%98%EB%B3%B5%EB%AC%B8-%EB%B6%84%EA%B8%B0%EB%AC%B8-%EA%B7%B8%EB%A6%AC%EA%B3%A0-%EB%B3%80%EC%88%98%EC%99%80%EC%9D%98-%EC%9D%B4%EB%B3%84">반복문, 분기문, 그리고 변수와의 이별</a></li>
+</ul>
+</li>
+<li>
+<p><a href="/blog/rxjsbook3/#rxjs%EB%8A%94-%EC%96%B4%EB%96%BB%EA%B2%8C-%EA%B0%9C%EC%84%A0%ED%95%98%EC%98%80%EB%82%98">RxJS는 어떻게 개선하였나?</a></p>
+<ul>
+<li><a href="/blog/rxjsbook3/#immutable-%EA%B0%9D%EC%B2%B4-observable">Immutable 객체 Observable</a></li>
+</ul>
+</li>
+<li><a href="/blog/rxjsbook3/#rxjs%EA%B0%80-%EC%A0%9C%EA%B3%B5%ED%95%98%EB%8A%94-operator">RxJS가 제공하는 Operator</a></li>
+<li><a href="/blog/rxjsbook3/#%EC%A0%95%EB%A6%AC">정리</a></li>
+</ul></div></div><header><div class="post__Info-sc-1hd457a-0 kMVNqs"><span class="category__Category-sc-nfzltz-0 post__PostCategory-sc-1hd457a-1 cBGQyo fPapLX"><a href="/category/tech/">Tech</a></span><time dateTime="2017-07-26" class="dateTime__DateTime-sc-q4w6d0-0 post__Time-sc-1hd457a-2 buAbTA juGKCl">2017-07-26</time></div><h1 class="post__Title-sc-1hd457a-5 bjszmD">RxJS가 해결하려고했던 문제3 - 로직 처리의 오류</h1></header><div class="post__Divider-sc-1hd457a-4 kbZkyP"></div><article class="markdown__Markdown-sc-19j7sil-0 hOboGL"><p>오늘 소개할 부분은
+웹어플리케이션 개발시 발생할 수 있는 <code>로직 오류에 대한 문제</code>를 RxJS는 어떻게 접근했는지에 대한 이야기이다.</p>
+<hr>
+<h2 id="웹어플리케이션의-로직" style="position:relative;"><a href="#%EC%9B%B9%EC%96%B4%ED%94%8C%EB%A6%AC%EC%BC%80%EC%9D%B4%EC%85%98%EC%9D%98-%EB%A1%9C%EC%A7%81" aria-label="웹어플리케이션의 로직 permalink" class="anchor-header before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>웹어플리케이션의 로직</h2>
+<p>웹어플리케이션은 로직에 근거하여 전달받은 입력값을 이용하여 새로운 결과를 반환하거나 표현한다.
+여기서 로직은 산술적인 로직이 될 수 있고 비즈니스적인 로직이 될수 있다. 또는 if문과 같이 간단한 프로그램의 흐름을 담당하는 부분일 수도 있다.</p>
+<p>화면에 사용자 정보를 표현하는 UI 작성하는 예를 생각해보자. (예제에서 사용하는 API는 스타워즈 등장인물을 조회한다)<br>
+DB로부터 조회한 사용자 목록 데이터가 입력값이라면 이 값을 바탕으로 우리는 다양한 처리를 한다.</p>
+<ul>
+<li>성별이 "남"과 "여"인 사용자만 추출한다 (스타워즈 등장인물은 로봇과 같이 성별이 없는 사용자도 있다)</li>
+<li>사용자의 이름, 키, 몸무게를 표시한다.</li>
+<li>사용자의 성별에 맞게 아이콘을 화면에 표시한다.</li>
+<li>
+<p>사용자의 표준 체중을 계산하여 표시한다.</p>
+<blockquote>
+<p>BROCA 방식</p>
+<ul>
+<li>남자 표준체중 = (키 - 100) × 0.9</li>
+<li>여자 표준체중 = (키 - 105) × 0.9</li>
+</ul>
+<p>BMI 방식</p>
+<ul>
+<li>남자 표준체중 = 키/100 _ 키/100 _ 22</li>
+<li>여자 표준체중 = 키/100 _ 키/100 _ 21</li>
+</ul>
+</blockquote>
+</li>
+</ul>
+<pre class="grvsc-container github-light-theme grvsc-ps-t4tStz" data-language="js" data-index="0"><code class="grvsc-code"><span class="grvsc-line"><span class="grvsc-source"><span class="grvsc-tiszgT-5 grvsc-t4tStz-9">const</span><span class="grvsc-tiszgT-1 grvsc-t4tStz-1"> </span><span class="grvsc-tiszgT-7 grvsc-t4tStz-1">xhr</span><span class="grvsc-tiszgT-1 grvsc-t4tStz-1"> </span><span class="grvsc-tiszgT-1 grvsc-t4tStz-9">=</span><span class="grvsc-tiszgT-1 grvsc-t4tStz-1"> </span><span class="grvsc-tiszgT-1 grvsc-t4tStz-9">new</span><span class="grvsc-tiszgT-1 grvsc-t4tStz-1"> </span><span class="grvsc-tiszgT-10 grvsc-t4tStz-1">XMLHttpRequest</span><span class="grvsc-tiszgT-1 grvsc-t4tStz-1">();</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="grvsc-tiszgT-1 grvsc-t4tStz-1">xhr.</span><span class="grvsc-tiszgT-10 grvsc-t4tStz-5">onreadystatechange</span><span class="grvsc-tiszgT-1 grvsc-t4tStz-1"> </span><span class="grvsc-tiszgT-1 grvsc-t4tStz-9">=</span><span class="grvsc-tiszgT-1 grvsc-t4tStz-1"> </span><span class="grvsc-tiszgT-5 grvsc-t4tStz-9">function</span><span class="grvsc-tiszgT-1 grvsc-t4tStz-1"> () {</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="grvsc-tiszgT-1 grvsc-t4tStz-1">  </span><span class="grvsc-tiszgT-5 grvsc-t4tStz-9">if</span><span class="grvsc-tiszgT-1 grvsc-t4tStz-1"> (xhr.readyState </span><span class="grvsc-tiszgT-1 grvsc-t4tStz-9">==</span><span class="grvsc-tiszgT-1 grvsc-t4tStz-1"> </span><span class="grvsc-tiszgT-7 grvsc-t4tStz-3">4</span><span class="grvsc-tiszgT-1 grvsc-t4tStz-1"> </span><span class="grvsc-tiszgT-1 grvsc-t4tStz-9">&amp;&amp;</span><span class="grvsc-tiszgT-1 grvsc-t4tStz-1"> xhr.status </span><span class="grvsc-tiszgT-1 grvsc-t4tStz-9">==</span><span class="grvsc-tiszgT-1 grvsc-t4tStz-1"> </span><span class="grvsc-tiszgT-7 grvsc-t4tStz-3">200</span><span class="grvsc-tiszgT-1 grvsc-t4tStz-1">) {</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="grvsc-tiszgT-1 grvsc-t4tStz-1">    </span><span class="grvsc-tiszgT-5 grvsc-t4tStz-9">const</span><span class="grvsc-tiszgT-1 grvsc-t4tStz-1"> </span><span class="grvsc-tiszgT-7 grvsc-t4tStz-1">jsonData</span><span class="grvsc-tiszgT-1 grvsc-t4tStz-1"> </span><span class="grvsc-tiszgT-1 grvsc-t4tStz-9">=</span><span class="grvsc-tiszgT-1 grvsc-t4tStz-1"> </span><span class="grvsc-tiszgT-7 grvsc-t4tStz-3">JSON</span><span class="grvsc-tiszgT-1 grvsc-t4tStz-1">.</span><span class="grvsc-tiszgT-7 grvsc-t4tStz-1">parse</span><span class="grvsc-tiszgT-1 grvsc-t4tStz-1">(xhr.responseText);</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="grvsc-tiszgT-1 grvsc-t4tStz-1">    document.</span><span class="grvsc-tiszgT-7 grvsc-t4tStz-5">getElementById</span><span class="grvsc-tiszgT-1 grvsc-t4tStz-1">(</span><span class="grvsc-tiszgT-8 grvsc-t4tStz-10">&#39;users&#39;</span><span class="grvsc-tiszgT-1 grvsc-t4tStz-1">).innerHTML </span><span class="grvsc-tiszgT-1 grvsc-t4tStz-9">=</span><span class="grvsc-tiszgT-1 grvsc-t4tStz-1"> </span><span class="grvsc-tiszgT-7 grvsc-t4tStz-1">process</span><span class="grvsc-tiszgT-1 grvsc-t4tStz-1">(jsonData);</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="grvsc-tiszgT-1 grvsc-t4tStz-1">  }</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="grvsc-tiszgT-1 grvsc-t4tStz-1">};</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="grvsc-tiszgT-1 grvsc-t4tStz-1">xhr.</span><span class="grvsc-tiszgT-7 grvsc-t4tStz-5">open</span><span class="grvsc-tiszgT-1 grvsc-t4tStz-1">(</span><span class="grvsc-tiszgT-8 grvsc-t4tStz-10">&#39;GET&#39;</span><span class="grvsc-tiszgT-1 grvsc-t4tStz-1">, </span><span class="grvsc-tiszgT-8 grvsc-t4tStz-10">&#39;http://swapi.co/api/people/&#39;</span><span class="grvsc-tiszgT-1 grvsc-t4tStz-1">);</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="grvsc-tiszgT-1 grvsc-t4tStz-1">xhr.</span><span class="grvsc-tiszgT-7 grvsc-t4tStz-5">send</span><span class="grvsc-tiszgT-1 grvsc-t4tStz-1">();</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="grvsc-tiszgT-6 grvsc-t4tStz-2">// 데이터를 처리하는 함수</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="grvsc-tiszgT-5 grvsc-t4tStz-9">function</span><span class="grvsc-tiszgT-1 grvsc-t4tStz-1"> </span><span class="grvsc-tiszgT-10 grvsc-t4tStz-5">process</span><span class="grvsc-tiszgT-1 grvsc-t4tStz-1">(</span><span class="grvsc-tiszgT-11 grvsc-t4tStz-6">people</span><span class="grvsc-tiszgT-1 grvsc-t4tStz-1">) {</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="grvsc-tiszgT-1 grvsc-t4tStz-1">  </span><span class="grvsc-tiszgT-5 grvsc-t4tStz-9">const</span><span class="grvsc-tiszgT-1 grvsc-t4tStz-1"> </span><span class="grvsc-tiszgT-7 grvsc-t4tStz-1">html</span><span class="grvsc-tiszgT-1 grvsc-t4tStz-1"> </span><span class="grvsc-tiszgT-1 grvsc-t4tStz-9">=</span><span class="grvsc-tiszgT-1 grvsc-t4tStz-1"> [];</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="grvsc-tiszgT-1 grvsc-t4tStz-1">  </span><span class="grvsc-tiszgT-5 grvsc-t4tStz-9">for</span><span class="grvsc-tiszgT-1 grvsc-t4tStz-1"> (</span><span class="grvsc-tiszgT-5 grvsc-t4tStz-9">const</span><span class="grvsc-tiszgT-1 grvsc-t4tStz-1"> </span><span class="grvsc-tiszgT-7 grvsc-t4tStz-1">user</span><span class="grvsc-tiszgT-1 grvsc-t4tStz-1"> </span><span class="grvsc-tiszgT-1 grvsc-t4tStz-9">of</span><span class="grvsc-tiszgT-1 grvsc-t4tStz-1"> people.results) {</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="grvsc-tiszgT-1 grvsc-t4tStz-1">    </span><span class="grvsc-tiszgT-5 grvsc-t4tStz-9">if</span><span class="grvsc-tiszgT-1 grvsc-t4tStz-1"> (</span><span class="grvsc-tiszgT-8 grvsc-t4tStz-10">/male</span><span class="grvsc-tiszgT-1 grvsc-t4tStz-10">|</span><span class="grvsc-tiszgT-8 grvsc-t4tStz-10">female/</span><span class="grvsc-tiszgT-1 grvsc-t4tStz-1">.</span><span class="grvsc-tiszgT-7 grvsc-t4tStz-5">test</span><span class="grvsc-tiszgT-1 grvsc-t4tStz-1">(user.gender)) {</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="grvsc-tiszgT-1 grvsc-t4tStz-1">      </span><span class="grvsc-tiszgT-5 grvsc-t4tStz-9">let</span><span class="grvsc-tiszgT-1 grvsc-t4tStz-1"> broca;</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="grvsc-tiszgT-1 grvsc-t4tStz-1">      </span><span class="grvsc-tiszgT-5 grvsc-t4tStz-9">let</span><span class="grvsc-tiszgT-1 grvsc-t4tStz-1"> bmi;</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="grvsc-tiszgT-1 grvsc-t4tStz-1">      </span><span class="grvsc-tiszgT-5 grvsc-t4tStz-9">if</span><span class="grvsc-tiszgT-1 grvsc-t4tStz-1"> (user.gender </span><span class="grvsc-tiszgT-1 grvsc-t4tStz-9">==</span><span class="grvsc-tiszgT-1 grvsc-t4tStz-1"> </span><span class="grvsc-tiszgT-8 grvsc-t4tStz-10">&#39;male&#39;</span><span class="grvsc-tiszgT-1 grvsc-t4tStz-1">) {</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="grvsc-tiszgT-1 grvsc-t4tStz-1">        broca </span><span class="grvsc-tiszgT-1 grvsc-t4tStz-9">=</span><span class="grvsc-tiszgT-1 grvsc-t4tStz-1"> (user.height </span><span class="grvsc-tiszgT-1 grvsc-t4tStz-9">-</span><span class="grvsc-tiszgT-1 grvsc-t4tStz-1"> </span><span class="grvsc-tiszgT-7 grvsc-t4tStz-3">100</span><span class="grvsc-tiszgT-1 grvsc-t4tStz-1"> </span><span class="grvsc-tiszgT-1 grvsc-t4tStz-9">*</span><span class="grvsc-tiszgT-1 grvsc-t4tStz-1"> </span><span class="grvsc-tiszgT-7 grvsc-t4tStz-3">0.9</span><span class="grvsc-tiszgT-1 grvsc-t4tStz-1">).</span><span class="grvsc-tiszgT-7 grvsc-t4tStz-5">toFixed</span><span class="grvsc-tiszgT-1 grvsc-t4tStz-1">(</span><span class="grvsc-tiszgT-7 grvsc-t4tStz-3">2</span><span class="grvsc-tiszgT-1 grvsc-t4tStz-1">);</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="grvsc-tiszgT-1 grvsc-t4tStz-1">        bmi </span><span class="grvsc-tiszgT-1 grvsc-t4tStz-9">=</span><span class="grvsc-tiszgT-1 grvsc-t4tStz-1"> ((((user.height </span><span class="grvsc-tiszgT-1 grvsc-t4tStz-9">/</span><span class="grvsc-tiszgT-1 grvsc-t4tStz-1"> </span><span class="grvsc-tiszgT-7 grvsc-t4tStz-3">100</span><span class="grvsc-tiszgT-1 grvsc-t4tStz-1">) </span><span class="grvsc-tiszgT-1 grvsc-t4tStz-9">*</span><span class="grvsc-tiszgT-1 grvsc-t4tStz-1"> user.height) </span><span class="grvsc-tiszgT-1 grvsc-t4tStz-9">/</span><span class="grvsc-tiszgT-1 grvsc-t4tStz-1"> </span><span class="grvsc-tiszgT-7 grvsc-t4tStz-3">100</span><span class="grvsc-tiszgT-1 grvsc-t4tStz-1">) </span><span class="grvsc-tiszgT-1 grvsc-t4tStz-9">*</span><span class="grvsc-tiszgT-1 grvsc-t4tStz-1"> </span><span class="grvsc-tiszgT-7 grvsc-t4tStz-3">22</span><span class="grvsc-tiszgT-1 grvsc-t4tStz-1">).</span><span class="grvsc-tiszgT-7 grvsc-t4tStz-5">toFixed</span><span class="grvsc-tiszgT-1 grvsc-t4tStz-1">(</span><span class="grvsc-tiszgT-7 grvsc-t4tStz-3">2</span><span class="grvsc-tiszgT-1 grvsc-t4tStz-1">);</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="grvsc-tiszgT-1 grvsc-t4tStz-1">      } </span><span class="grvsc-tiszgT-5 grvsc-t4tStz-9">else</span><span class="grvsc-tiszgT-1 grvsc-t4tStz-1"> {</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="grvsc-tiszgT-1 grvsc-t4tStz-1">        broca </span><span class="grvsc-tiszgT-1 grvsc-t4tStz-9">=</span><span class="grvsc-tiszgT-1 grvsc-t4tStz-1"> (user.height </span><span class="grvsc-tiszgT-1 grvsc-t4tStz-9">-</span><span class="grvsc-tiszgT-1 grvsc-t4tStz-1"> </span><span class="grvsc-tiszgT-7 grvsc-t4tStz-3">100</span><span class="grvsc-tiszgT-1 grvsc-t4tStz-1"> </span><span class="grvsc-tiszgT-1 grvsc-t4tStz-9">*</span><span class="grvsc-tiszgT-1 grvsc-t4tStz-1"> </span><span class="grvsc-tiszgT-7 grvsc-t4tStz-3">0.9</span><span class="grvsc-tiszgT-1 grvsc-t4tStz-1">).</span><span class="grvsc-tiszgT-7 grvsc-t4tStz-5">toFixed</span><span class="grvsc-tiszgT-1 grvsc-t4tStz-1">(</span><span class="grvsc-tiszgT-7 grvsc-t4tStz-3">2</span><span class="grvsc-tiszgT-1 grvsc-t4tStz-1">);</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="grvsc-tiszgT-1 grvsc-t4tStz-1">        bmi </span><span class="grvsc-tiszgT-1 grvsc-t4tStz-9">=</span><span class="grvsc-tiszgT-1 grvsc-t4tStz-1"> ((((user.height </span><span class="grvsc-tiszgT-1 grvsc-t4tStz-9">/</span><span class="grvsc-tiszgT-1 grvsc-t4tStz-1"> </span><span class="grvsc-tiszgT-7 grvsc-t4tStz-3">100</span><span class="grvsc-tiszgT-1 grvsc-t4tStz-1">) </span><span class="grvsc-tiszgT-1 grvsc-t4tStz-9">*</span><span class="grvsc-tiszgT-1 grvsc-t4tStz-1"> user.height) </span><span class="grvsc-tiszgT-1 grvsc-t4tStz-9">/</span><span class="grvsc-tiszgT-1 grvsc-t4tStz-1"> </span><span class="grvsc-tiszgT-7 grvsc-t4tStz-3">100</span><span class="grvsc-tiszgT-1 grvsc-t4tStz-1">) </span><span class="grvsc-tiszgT-1 grvsc-t4tStz-9">*</span><span class="grvsc-tiszgT-1 grvsc-t4tStz-1"> </span><span class="grvsc-tiszgT-7 grvsc-t4tStz-3">21</span><span class="grvsc-tiszgT-1 grvsc-t4tStz-1">).</span><span class="grvsc-tiszgT-7 grvsc-t4tStz-5">toFixed</span><span class="grvsc-tiszgT-1 grvsc-t4tStz-1">(</span><span class="grvsc-tiszgT-7 grvsc-t4tStz-3">2</span><span class="grvsc-tiszgT-1 grvsc-t4tStz-1">);</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="grvsc-tiszgT-1 grvsc-t4tStz-1">      }</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="grvsc-tiszgT-1 grvsc-t4tStz-1">      </span><span class="grvsc-tiszgT-5 grvsc-t4tStz-9">const</span><span class="grvsc-tiszgT-1 grvsc-t4tStz-1"> </span><span class="grvsc-tiszgT-7 grvsc-t4tStz-1">obesityUsingBroca</span><span class="grvsc-tiszgT-1 grvsc-t4tStz-1"> </span><span class="grvsc-tiszgT-1 grvsc-t4tStz-9">=</span><span class="grvsc-tiszgT-1 grvsc-t4tStz-1"> (((user.mass </span><span class="grvsc-tiszgT-1 grvsc-t4tStz-9">-</span><span class="grvsc-tiszgT-1 grvsc-t4tStz-1"> broca) </span><span class="grvsc-tiszgT-1 grvsc-t4tStz-9">/</span><span class="grvsc-tiszgT-1 grvsc-t4tStz-1"> broca) </span><span class="grvsc-tiszgT-1 grvsc-t4tStz-9">*</span><span class="grvsc-tiszgT-1 grvsc-t4tStz-1"> </span><span class="grvsc-tiszgT-7 grvsc-t4tStz-3">100</span><span class="grvsc-tiszgT-1 grvsc-t4tStz-1">).</span><span class="grvsc-tiszgT-7 grvsc-t4tStz-5">toFixed</span><span class="grvsc-tiszgT-1 grvsc-t4tStz-1">(</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="grvsc-tiszgT-1 grvsc-t4tStz-1">        </span><span class="grvsc-tiszgT-7 grvsc-t4tStz-3">2</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="grvsc-tiszgT-1 grvsc-t4tStz-1">      );</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="grvsc-tiszgT-1 grvsc-t4tStz-1">      </span><span class="grvsc-tiszgT-5 grvsc-t4tStz-9">const</span><span class="grvsc-tiszgT-1 grvsc-t4tStz-1"> </span><span class="grvsc-tiszgT-7 grvsc-t4tStz-1">obesityUsingBmi</span><span class="grvsc-tiszgT-1 grvsc-t4tStz-1"> </span><span class="grvsc-tiszgT-1 grvsc-t4tStz-9">=</span><span class="grvsc-tiszgT-1 grvsc-t4tStz-1"> (((user.mass </span><span class="grvsc-tiszgT-1 grvsc-t4tStz-9">-</span><span class="grvsc-tiszgT-1 grvsc-t4tStz-1"> bmi) </span><span class="grvsc-tiszgT-1 grvsc-t4tStz-9">/</span><span class="grvsc-tiszgT-1 grvsc-t4tStz-1"> bmi) </span><span class="grvsc-tiszgT-1 grvsc-t4tStz-9">*</span><span class="grvsc-tiszgT-1 grvsc-t4tStz-1"> </span><span class="grvsc-tiszgT-7 grvsc-t4tStz-3">100</span><span class="grvsc-tiszgT-1 grvsc-t4tStz-1">).</span><span class="grvsc-tiszgT-7 grvsc-t4tStz-5">toFixed</span><span class="grvsc-tiszgT-1 grvsc-t4tStz-1">(</span><span class="grvsc-tiszgT-7 grvsc-t4tStz-3">2</span><span class="grvsc-tiszgT-1 grvsc-t4tStz-1">);</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="grvsc-tiszgT-1 grvsc-t4tStz-1">      html.</span><span class="grvsc-tiszgT-7 grvsc-t4tStz-5">push</span><span class="grvsc-tiszgT-1 grvsc-t4tStz-1">(</span><span class="grvsc-tiszgT-8 grvsc-t4tStz-10">`&lt;li class=&#39;card&#39;&gt;</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="grvsc-tiszgT-8 grvsc-t4tStz-10">			  &lt;dl&gt;</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="grvsc-tiszgT-8 grvsc-t4tStz-10">			      &lt;dt&gt;${</span><span class="grvsc-tiszgT-1 grvsc-t4tStz-10">user</span><span class="grvsc-tiszgT-8 grvsc-t4tStz-10">.</span><span class="grvsc-tiszgT-1 grvsc-t4tStz-10">name</span><span class="grvsc-tiszgT-8 grvsc-t4tStz-10">} &lt;i class=&quot;fa fa-${</span><span class="grvsc-tiszgT-1 grvsc-t4tStz-10">user</span><span class="grvsc-tiszgT-8 grvsc-t4tStz-10">.</span><span class="grvsc-tiszgT-1 grvsc-t4tStz-10">gender</span><span class="grvsc-tiszgT-8 grvsc-t4tStz-10">}&quot;&gt;&lt;/i&gt;&lt;/dt&gt;</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="grvsc-tiszgT-8 grvsc-t4tStz-10">			      &lt;dd&gt;&lt;span&gt;키 : &lt;/span&gt;&lt;span&gt;${</span><span class="grvsc-tiszgT-1 grvsc-t4tStz-10">user</span><span class="grvsc-tiszgT-8 grvsc-t4tStz-10">.</span><span class="grvsc-tiszgT-1 grvsc-t4tStz-10">height</span><span class="grvsc-tiszgT-8 grvsc-t4tStz-10">} cm&lt;/span&gt;&lt;/dd&gt;</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="grvsc-tiszgT-8 grvsc-t4tStz-10">			      &lt;dd&gt;&lt;span&gt;몸무게: &lt;/span&gt;&lt;span&gt;${</span><span class="grvsc-tiszgT-1 grvsc-t4tStz-10">user</span><span class="grvsc-tiszgT-8 grvsc-t4tStz-10">.</span><span class="grvsc-tiszgT-1 grvsc-t4tStz-10">mass</span><span class="grvsc-tiszgT-8 grvsc-t4tStz-10">} kg&lt;/span&gt;&lt;/dd&gt;</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="grvsc-tiszgT-8 grvsc-t4tStz-10">			      &lt;dd&gt;&lt;span&gt;BROCA 표준체중 : &lt;/span&gt;&lt;span&gt;${</span><span class="grvsc-tiszgT-1 grvsc-t4tStz-10">broca</span><span class="grvsc-tiszgT-8 grvsc-t4tStz-10">} kg&lt;/span&gt;&lt;/dd&gt;</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="grvsc-tiszgT-8 grvsc-t4tStz-10">			      &lt;dd&gt;&lt;span&gt;BROCA 비만도 : ${</span><span class="grvsc-tiszgT-1 grvsc-t4tStz-10">obesityUsingBroca</span><span class="grvsc-tiszgT-8 grvsc-t4tStz-10">}&lt;/span&gt;&lt;/dd&gt;</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="grvsc-tiszgT-8 grvsc-t4tStz-10">			      &lt;dd&gt;&lt;span&gt;BMI 표준체중 : &lt;/span&gt;&lt;span&gt;${</span><span class="grvsc-tiszgT-1 grvsc-t4tStz-10">bmi</span><span class="grvsc-tiszgT-8 grvsc-t4tStz-10">} kg&lt;/span&gt;&lt;/dd&gt;</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="grvsc-tiszgT-8 grvsc-t4tStz-10">			      &lt;dd&gt;&lt;span&gt;BMI 비만도 : ${</span><span class="grvsc-tiszgT-1 grvsc-t4tStz-10">obesityUsingBmi</span><span class="grvsc-tiszgT-8 grvsc-t4tStz-10">}&lt;/span&gt;&lt;/dd&gt;</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="grvsc-tiszgT-8 grvsc-t4tStz-10">			  &lt;/dl&gt;</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="grvsc-tiszgT-8 grvsc-t4tStz-10">		      &lt;/li&gt;`</span><span class="grvsc-tiszgT-1 grvsc-t4tStz-1">);</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="grvsc-tiszgT-1 grvsc-t4tStz-1">    }</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="grvsc-tiszgT-1 grvsc-t4tStz-1">  }</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="grvsc-tiszgT-1 grvsc-t4tStz-1">  </span><span class="grvsc-tiszgT-5 grvsc-t4tStz-9">return</span><span class="grvsc-tiszgT-1 grvsc-t4tStz-1"> html.</span><span class="grvsc-tiszgT-7 grvsc-t4tStz-5">join</span><span class="grvsc-tiszgT-1 grvsc-t4tStz-1">(</span><span class="grvsc-tiszgT-8 grvsc-t4tStz-10">&#39;&#39;</span><span class="grvsc-tiszgT-1 grvsc-t4tStz-1">);</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="grvsc-tiszgT-1 grvsc-t4tStz-1">}</span></span></span></code></pre>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 400px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 207.9754601226994%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAqCAYAAACz+XvQAAAACXBIWXMAABYlAAAWJQFJUiTwAAAFo0lEQVRIx51WSUxUWRStVXfv6N6YDr0DgU5aYqs4bBQHOkYUjQOgkejCRWPviFM0bozuTeidi3aDO9SirImpihqoApQCGWymGoByjiOaiJvT91x85BcUQ3px8t//7/377r3vnvOu7evXr/j8+TM+ffr0vzEzM6M2ZmdnYXvx4gVevnw5P/Hhwwd9Eh8/fpyH+ZYN/Pf169d49uwZbFz8z+3bqKysxKlTp3DmzBnUnDyJmpoanD59Wr/xyfds4PzRo0dRX1+vzthmv3xBbe1ZfPfD99i0YQPy1xageF0x1q//HeuL12Hjxo3IycmBzWZbFgcOHJgLme7evHkTO3bswP795di7dy/Ky8sV+/btU+zZswelpaVZsXv3bpSUlODatWsavo35S6fTeP78OaanpzE8NIyxsTEMDg5iSMbxeFxzzHnmm7COzRk8ffpUv6vByclJNZZMJNDa2ooOvx+BQAChUBhd0ajMpeWHtK7h5vyZz6mpKf3XPDMMckE8PgG73Y72tjZ09/Sgv78fTqdTjAcxOjqmno+MjGB4eBgjo6NIplKyydTSBicmJuB84ERLczM6w51ob29Hk70JdxvvorMzgnAohJaWFvE8pHNPnvyr3tIgkdVDr7cZPl87uru7EJSQvR4vYrE+jI+PIxQO49GjR3j16pWuZwpoyDyzGIzD7XKrd83ipdPpxp07DWowGAyiVVLR0iI57uiweDa9nMEJOJoc+kOzhOZyuvD48WPZIAy/v0NzmpK8MZc0Mv3Nu0UGuYgf+BwcGJQDGNXkD0npxOXkzUEwAhOqOV0Dviv13rx5o+7zheAG1voyNWfGZl02kM82qsT79++VhwrrWMA5K6xzC9eRdao21pMyOTHvVu+XA9dryLRaX/83yv4ow+HDh3HwYIXgoOLIkSPC4zLs2rVLOZsNZWVl2Lp1K65fvz7HZVWbs38h95dcVZbc3J9VaYp/W4fNm0tWVBmDioqKObWh1Vu3bumHqupqHDtWiaqqKlTLmDh+vDrjfSFOnDih0VCxVA/NiVJoeeJxoR9LINYb0/JJJlMyN4N3794tgvWgyB7NIQesPxohlz0et1KPgkCqBaTIBwYG5mvPKI55TyaT+j+xiCkJKdx79+7D43YjEokqQ1wuJ+z37wtjBpQhfX39ymduwkI31ZCdeuqhVzz0iTh0C938YtAtG3hUbUhDUrBHpC0swsF3hrmsQfK3TUQgGAyg3eeHQ+SLHsViMRHeDkSjEWUNDRmRXVIcGLLX40Gks1OV2y2eNTU1qSfUv66ubkQjEfWWBW9ymmGQh2JVGwpqoCOgodMYFSYq1wA3GBwa+rYukcGoDIMsGavaMPEJURhCx3KKHLMCeKJWdbGC/2rZvH37NuMWo8dMA2EdG1hvu4VgHSuXV1KR1aqNcpmWGQprimHx7uCT7xybojfFmw0ZIVMPb9y4gaJfi7Bt2zZs374dW7ZswSYRCnYTBQUFyMvLQ35+flYUFhZizZo1qKur0w7MNjv7BX/W1iLnpx9RVFSkBnaW7sTa/DxVn9WqzaFDh+bUhrE3NjbqDpcuXcL58+dx4cIFXLx4UXH58mVcuXJlSVy9ehXnzp1DQ0ODCsa82jChPCVeSIlEXOvviVxMk5NTKu1GXRYqzZJqk0rNqY3L5UKz16tq4xN2+IR+bDvMPZxOz6kNsaLakMt2YQoNURyoNg6HQ9TGrpc9Febhw4c6xyf7HcPnJcWBnYP2NsJnn6gNex16THGgYLS1cbMeVZxV9TbkMDuHiIiAXzjNTiLWJ73N2LjKWUhaEtan6StX7G0oX+xt3CKyDscDrYDe3l6EwyF0SagBMcqQTQ6XVRvKF9Wa7ZpfvGyV/mZkZFRPnIeUTE3O38FLqo21tzGnZqhElbGeolEWa0+zqLdZqDYLe5vVKg1tsI7/A2/6omztMWZTAAAAAElFTkSuQmCC'); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="userscreenshot"
+        title="userscreenshot"
+        src="/static/ebb673a452f41e844c693be90f1a11b0/e17e5/userscreenshot.png"
+        srcset="/static/ebb673a452f41e844c693be90f1a11b0/222b7/userscreenshot.png 163w,
+/static/ebb673a452f41e844c693be90f1a11b0/ff46a/userscreenshot.png 325w,
+/static/ebb673a452f41e844c693be90f1a11b0/e17e5/userscreenshot.png 400w"
+        sizes="(max-width: 400px) 100vw, 400px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+      />
+    </span></p>
+<p>원래 조회했던 데이터는 온데 간데 없고 그 데이터로부터 생산된 새로운 정보들을 사용하고 있다.
+위 예제는 사용자 체중과 키를 이용하여 성별에 따라 비만도 값을 계산하고 성별 아이콘을 화면에 표시한다.</p>
+<p>우리는 알게 모르게 데이터를 추출하고 변환하는 작업을 빈번하게 하고 있다.
+복수 데이터를 처리하기 위해서는 반복문을 사용하고, 상황에 따라 데이터를 추출하거나 접근하기 위해서 분기문을 사용한다.
+또한, 상황을 기억하거나 추출된 정보를 임시로 기억하기 위해서 변수를 사용한다.</p>
+<h2 id="로직의-복잡성-그리고-오류" style="position:relative;"><a href="#%EB%A1%9C%EC%A7%81%EC%9D%98-%EB%B3%B5%EC%9E%A1%EC%84%B1-%EA%B7%B8%EB%A6%AC%EA%B3%A0-%EC%98%A4%EB%A5%98" aria-label="로직의 복잡성 그리고 오류 permalink" class="anchor-header before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>로직의 복잡성 그리고 오류</h2>
+<p>반복문과 분기문 그리고 변수는 우리 코드를 복잡하게 만든다. 반복문은 우리 코드의 가독성을 떨어뜨리고 분기문은 우리가 확인해야할 프로그램의 흐름을 여러 개로 만든다. 더군다나 우리가 기억해 놓은 변수의 값은 누군가에 의해 변경될 수 있다. 변수의 값이 변하면 우리가 의도했던대로 흐름으로 프로그램이 동작하지 않을 수 있다.
+이렇게 반복문과 분기문 그리고 변수는 우리 코드의 복잡도를 높이고 가독성을 떨어뜨리고, 결국에는 오류의 발생 빈도를 높인다.</p>
+<h3 id="반복문과-분기문" style="position:relative;"><a href="#%EB%B0%98%EB%B3%B5%EB%AC%B8%EA%B3%BC-%EB%B6%84%EA%B8%B0%EB%AC%B8" aria-label="반복문과 분기문 permalink" class="anchor-header before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>반복문과 분기문</h3>
+<p>로직의 복잡성을 줄이는 가장 간단한 방법으로는 기능을 쪼개는 것이다. 기능별로 쪼갠다는게 단순히 구역별로 쪼개게 되면 기능의 의미를 명확하게 드러내지 못한다. 더불어 이런 코드는 재사용성을 떨어뜨린다.</p>
+<p>이렇게 기능을 쪼개는 일이 쉬운 일이 아닌 이유는 코드의 대다수는 다음과 같이 로직과 반복문, 분기문의 결합으로 구성되어 있기 때문이다.</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 500px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 85.88957055214723%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAARCAYAAADdRIy+AAAACXBIWXMAABYlAAAWJQFJUiTwAAADUElEQVQ4y32Uy29UVRzHJ3HlwoU73RF3GuPCRJaEPX9AY4wb48YVQVqaFEKBtmkzLRLREulDJVarpB0RaAr2QQWHliLTKWlt74ydmXaY6Z0H8+i85845H8+cO6VixZN87++8ft/zPb/f71yHrFWwknexEtPKzjQwq8ZTWPFJG/vWfsVKLyJ5vkkpcYjSNtW5lxEzDsRsA/X+3EvI+weQ828g5xxINS/v2GDagbXwtiYpFvIEg0GEEHrskGUTfn8VfnM8D/crcP81pPt1uNMgbJAypQjn39IEMTOKx+OhUqnYhPligoGJQ/T/8g4DN95jUOGr6+9y0fUmW8bnkJikGpvAik3aiN/CMm9STbo1wdbmJqFQiFwuZxOmi0k+vnqYj8YPc+xWE823m/jkxhGafjrIWjqkNwn2t934+f1+otHoHmGhvMPIwx6GZ44y7PqA4Wsfagy63sf0z0J8E2n6Edt+rKiPWh2RdWpx+zCfz4dpmuTzeZtQpcY+ausvxM/9iJtDMDFE0XWJja87iY068Q2dJTLSTfn6FxSuXaQw1kdp9nvttrb2p1aYzWYbSVHZqV+puvGI4ug5imM9lMa6yYx2YF5pJ/NDJ9vftpMd7cJyOSmPK/zYQXnqm2cxTCQSpNNpu2zqn7pGWcohUjFE2I1Y6sFa+oyqp0/Z87B8AUv1Sw+del54ehDGd5qwVrOwLItyudy4cqMgnwV7ZxXW20n/cRrf1KdE7rXydPEUT5QNzBzHnD9JbfU0bA7r/clkgkgkomNpX7lBJqWwlWa8yJU2MDpVChWMDnXAOdvqcSdy9RQyMKD9spkMsZiJYRh7CnVidgmzSqHhJLfcy9bdMyQWu8gvO4k/6CJ87yyxhS7kmlMpHNGuOztZneV6+fw3YXoJVlooe9tILTSTWWwh/6iVrLKZBy08nW9BPD4BgUt6f7FYIBwOv5iQ7IpSoFT4ziPWe5FGr7pqn7a1urKNCyoE3cjQFb2/Wq1oskAg8CKFXqXwpFLShv/2UZ7MNZNwtyp7nOD0MSqPz6h1FcONy9rVqlbxer0qjrH9hLqbU9kKfAmhQWRwQEMELmvU+zWVDBnoh8i4/SxVHadSKV06e4T/+J/tvlPJ/zf5r3Lb9f8bfTaqyTht14QAAAAASUVORK5CYII='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="logic"
+        title="logic"
+        src="/static/bb0a87811f7ca19d72f6f96c84456144/0b533/logic.png"
+        srcset="/static/bb0a87811f7ca19d72f6f96c84456144/222b7/logic.png 163w,
+/static/bb0a87811f7ca19d72f6f96c84456144/ff46a/logic.png 325w,
+/static/bb0a87811f7ca19d72f6f96c84456144/0b533/logic.png 500w"
+        sizes="(max-width: 500px) 100vw, 500px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+      />
+    </span></p>
+<p>코드에서 반복문과 분기문을 모두 제거한다는 것은 사실상 불가능하다. 하지만 기능 단위로 분리 할 수 있다면 기능을 추상화 할 수 있고, 이로 인해 로직의 복잡성을 줄일 수 있다.</p>
+<h3 id="변수는-오류의-시작" style="position:relative;"><a href="#%EB%B3%80%EC%88%98%EB%8A%94-%EC%98%A4%EB%A5%98%EC%9D%98-%EC%8B%9C%EC%9E%91" aria-label="변수는 오류의 시작 permalink" class="anchor-header before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>변수는 오류의 시작</h3>
+<p>변수를 사용한다는 의미는 오류를 발생시킬 수 있는 확률을 높일 수 있다. 변수는 변경될 수 있는 값이기 때문에 유용하다. 반면, 의도치 않게 이 값이 바뀔 경우에 우리는 오류에 직면하게 된다.
+브라우저 환경의 자바스크립트에서는 싱글 쓰레드 구조이기 때문에 Mutil Thread의 사용으로 인한 동시성 문제는 자주 발생하지 않는다. 하지만 DOM에 등록된 이벤트 핸들러로 인해 변수의 값이 변경되거나 비동기 행위로 인해 외부로 노출된 변수의 값들이 변경 될 수 있다.</p>
+<blockquote>
+<p>WebWorker와 같은 기술 스펙을 사용하면 Mutil Thread 기술을 사용할 수 있지만 브라우저는 기본적으로 하나의 메인 스레드에서 모든 작업이 이루어 진다.</p>
+</blockquote>
+<p>따라서, 우리는 변수의 노출 범위를 제한하거나 제거함으로써 변수의 값이 외부에 의해 변경되지 않고 개발자의 의도에 따라 정확하게 변경될 수 있도록 보장하여만 한다.</p>
+<h2 id="자바스크립트의-솔루션" style="position:relative;"><a href="#%EC%9E%90%EB%B0%94%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%EC%9D%98-%EC%86%94%EB%A3%A8%EC%85%98" aria-label="자바스크립트의 솔루션 permalink" class="anchor-header before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>자바스크립트의 솔루션</h2>
+<p>다행히도 자바스크립트는 이런 면에서는 꽤나 훌륭한 솔루션을 제공하고 있다.
+함수형 프로그래밍의 특성을 가진 자바스크립트 함수를 이용하면 실제 로직과 상관이 없는 반복문, 분기문을 분리할 수 있다. 더불어 변수 또한 제거해 나갈 수 있다.
+이렇게 함으로써 로직의 의미를 더욱 명확히 할 수 있으며 재사용성을 더욱 높일 수 있다.</p>
+<blockquote>
+<p>자바스크립트 함수는 일급객체이다.<br>
+일급 객체(First-class object)는 다음과 같은 특성을 가지고 있다.</p>
+<ul>
+<li>변수 혹은 데이터 구조에 저장할 수 있다</li>
+</ul>
+<pre class="grvsc-container github-light-theme grvsc-ps-t4tStz" data-language="js" data-index="1"><code class="grvsc-code"><span class="grvsc-line"><span class="grvsc-source"><span class="grvsc-tiszgT-5 grvsc-t4tStz-9">var</span><span class="grvsc-tiszgT-1 grvsc-t4tStz-1"> </span><span class="grvsc-tiszgT-10 grvsc-t4tStz-5">savedFunction</span><span class="grvsc-tiszgT-1 grvsc-t4tStz-1"> </span><span class="grvsc-tiszgT-1 grvsc-t4tStz-9">=</span><span class="grvsc-tiszgT-1 grvsc-t4tStz-1"> </span><span class="grvsc-tiszgT-5 grvsc-t4tStz-9">function</span><span class="grvsc-tiszgT-1 grvsc-t4tStz-1"> () {};</span></span></span></code></pre>
+</blockquote>
+<pre class="grvsc-container github-light-theme grvsc-ps-t4tStz" data-language="" data-index="2"><code class="grvsc-code"><span class="grvsc-line"><span class="grvsc-source">&gt;</span></span>
+<span class="grvsc-line"><span class="grvsc-source">&gt; - 파라미터로 전달할 수 있다.</span></span>
+<span class="grvsc-line"><span class="grvsc-source">&gt; ```js</span></span>
+<span class="grvsc-line"><span class="grvsc-source">function foo(f, value) {};</span></span>
+<span class="grvsc-line"><span class="grvsc-source"> foo(function() {</span></span>
+<span class="grvsc-line"><span class="grvsc-source">     console.log(&quot;함수를 파라미터로 전달 할 수 있다&quot;);</span></span>
+<span class="grvsc-line"><span class="grvsc-source"> }, &quot;값&quot;);</span></span></code></pre>
+<blockquote>
+<ul>
+<li>반환값으로 사용할 수 있다.</li>
+</ul>
+<pre class="grvsc-container github-light-theme grvsc-ps-t4tStz" data-language="js" data-index="3"><code class="grvsc-code"><span class="grvsc-line"><span class="grvsc-source"><span class="grvsc-tiszgT-5 grvsc-t4tStz-9">function</span><span class="grvsc-tiszgT-1 grvsc-t4tStz-1"> </span><span class="grvsc-tiszgT-10 grvsc-t4tStz-5">foo</span><span class="grvsc-tiszgT-1 grvsc-t4tStz-1">() {</span></span></span></code></pre>
+</blockquote>
+<pre class="grvsc-container github-light-theme grvsc-ps-t4tStz" data-language="" data-index="4"><code class="grvsc-code"><span class="grvsc-line"><span class="grvsc-source">return function() {</span></span>
+<span class="grvsc-line"><span class="grvsc-source">   console.log(&quot;함수를 반환할 수 있다&quot;);</span></span>
+<span class="grvsc-line"><span class="grvsc-source">};</span></span></code></pre>
+<p>}</p>
+<pre class="grvsc-container github-light-theme grvsc-ps-t4tStz" data-language="" data-index="5"><code class="grvsc-code"><span class="grvsc-line"><span class="grvsc-source">#### 로직의 분리</span></span>
+<span class="grvsc-line"><span class="grvsc-source">앞의 process 함수를 기능 단위의 로직과 반복문, 분기문으로 분리해보자.</span></span>
+<span class="grvsc-line"><span class="grvsc-source">process 함수는 다음과 같은 구조로 되어 있다.</span></span>
+<span class="grvsc-line"><span class="grvsc-source"></span></span>
+<span class="grvsc-line"><span class="grvsc-source">![](./images/rxjsbook3/advance_logic.png)</span></span>
+<span class="grvsc-line"><span class="grvsc-source"></span></span>
+<span class="grvsc-line"><span class="grvsc-source">여기에서 우리의 주요 관심사는 성별에 따라 비만도를 구하는 로직과 사용자별 HTML을 만드는 로직이다.</span></span>
+<span class="grvsc-line"><span class="grvsc-source">이 부분을 별도의 함수로 만들어보자.</span></span>
+<span class="grvsc-line"><span class="grvsc-source"></span></span>
+<span class="grvsc-line"><span class="grvsc-source">표준 체중과 비만도를 계산하는 함수는 height, mass, gender을 입력값으로 받아서 BROCA와 BMI 방식의 비만도와 표준 체중을 반환한다.</span></span>
+<span class="grvsc-line"><span class="grvsc-source">```js</span></span>
+<span class="grvsc-line"><span class="grvsc-source">// 표준 체중과 비만도를 계산하는 함수</span></span>
+<span class="grvsc-line"><span class="grvsc-source">function logic(height, mass, gender) {</span></span>
+<span class="grvsc-line"><span class="grvsc-source">	let broca = (height - (gender === &quot;male&quot; ? 100 : 105)) * 0.9;</span></span>
+<span class="grvsc-line"><span class="grvsc-source">	let bmi = height / 100 * height / 100 * (gender === &quot;male&quot; ? 22 : 21);</span></span>
+<span class="grvsc-line"><span class="grvsc-source">	if (gender == &quot;male&quot;) {</span></span>
+<span class="grvsc-line"><span class="grvsc-source">		broca = (height - 100 * 0.9).toFixed(2);</span></span>
+<span class="grvsc-line"><span class="grvsc-source">		bmi = (height / 100 * height / 100 * 22).toFixed(2);</span></span>
+<span class="grvsc-line"><span class="grvsc-source">	} else {</span></span>
+<span class="grvsc-line"><span class="grvsc-source">		broca = (height - 100 * 0.9).toFixed(2);</span></span>
+<span class="grvsc-line"><span class="grvsc-source">		bmi = (height / 100 * height / 100 * 21).toFixed(2);</span></span>
+<span class="grvsc-line"><span class="grvsc-source">	}</span></span>
+<span class="grvsc-line"><span class="grvsc-source">	const obesityUsingBroca = ((mass - broca) / broca * 100).toFixed(2);</span></span>
+<span class="grvsc-line"><span class="grvsc-source">	const obesityUsingBmi = ((mass - bmi) / bmi * 100).toFixed(2);</span></span>
+<span class="grvsc-line"><span class="grvsc-source">	return {</span></span>
+<span class="grvsc-line"><span class="grvsc-source">		broca,</span></span>
+<span class="grvsc-line"><span class="grvsc-source">		bmi,</span></span>
+<span class="grvsc-line"><span class="grvsc-source">		obesityUsingBroca,</span></span>
+<span class="grvsc-line"><span class="grvsc-source">		obesityUsingBmi</span></span>
+<span class="grvsc-line"><span class="grvsc-source">	};</span></span>
+<span class="grvsc-line"><span class="grvsc-source">}</span></span></code></pre>
+<p>사용자 정보별 HTML을 만드는 함수는 user 정보를 받아서 string 형태의 html을 반환한다.</p>
+<pre class="grvsc-container github-light-theme grvsc-ps-t4tStz" data-language="js" data-index="6"><code class="grvsc-code"><span class="grvsc-line"><span class="grvsc-source"><span class="grvsc-tiszgT-6 grvsc-t4tStz-2">// 사용자 정보를 표현하기 위해 HTML을 만드는 함수</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="grvsc-tiszgT-5 grvsc-t4tStz-9">function</span><span class="grvsc-tiszgT-1 grvsc-t4tStz-1"> </span><span class="grvsc-tiszgT-10 grvsc-t4tStz-5">makeHtml</span><span class="grvsc-tiszgT-1 grvsc-t4tStz-1">(</span><span class="grvsc-tiszgT-11 grvsc-t4tStz-6">user</span><span class="grvsc-tiszgT-1 grvsc-t4tStz-1">) {</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="grvsc-tiszgT-1 grvsc-t4tStz-1">  </span><span class="grvsc-tiszgT-5 grvsc-t4tStz-9">return</span><span class="grvsc-tiszgT-1 grvsc-t4tStz-1"> </span><span class="grvsc-tiszgT-8 grvsc-t4tStz-10">`&lt;li class=&#39;card&#39;&gt;</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="grvsc-tiszgT-8 grvsc-t4tStz-10">		&lt;dl&gt;</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="grvsc-tiszgT-8 grvsc-t4tStz-10">			&lt;dt&gt;${</span><span class="grvsc-tiszgT-1 grvsc-t4tStz-10">user</span><span class="grvsc-tiszgT-8 grvsc-t4tStz-10">.</span><span class="grvsc-tiszgT-1 grvsc-t4tStz-10">name</span><span class="grvsc-tiszgT-8 grvsc-t4tStz-10">} &lt;i class=&quot;fa fa-${</span><span class="grvsc-tiszgT-1 grvsc-t4tStz-10">user</span><span class="grvsc-tiszgT-8 grvsc-t4tStz-10">.</span><span class="grvsc-tiszgT-1 grvsc-t4tStz-10">gender</span><span class="grvsc-tiszgT-8 grvsc-t4tStz-10">}&quot;&gt;&lt;/i&gt;&lt;/dt&gt;</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="grvsc-tiszgT-8 grvsc-t4tStz-10">			&lt;dd&gt;&lt;span&gt;키 : &lt;/span&gt;&lt;span&gt;${</span><span class="grvsc-tiszgT-1 grvsc-t4tStz-10">user</span><span class="grvsc-tiszgT-8 grvsc-t4tStz-10">.</span><span class="grvsc-tiszgT-1 grvsc-t4tStz-10">height</span><span class="grvsc-tiszgT-8 grvsc-t4tStz-10">} cm&lt;/span&gt;&lt;/dd&gt;</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="grvsc-tiszgT-8 grvsc-t4tStz-10">			&lt;dd&gt;&lt;span&gt;몸무게: &lt;/span&gt;&lt;span&gt;${</span><span class="grvsc-tiszgT-1 grvsc-t4tStz-10">user</span><span class="grvsc-tiszgT-8 grvsc-t4tStz-10">.</span><span class="grvsc-tiszgT-1 grvsc-t4tStz-10">mass</span><span class="grvsc-tiszgT-8 grvsc-t4tStz-10">} kg&lt;/span&gt;&lt;/dd&gt;</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="grvsc-tiszgT-8 grvsc-t4tStz-10">			&lt;dd&gt;&lt;span&gt;BROCA 표준체중 : &lt;/span&gt;&lt;span&gt;${</span><span class="grvsc-tiszgT-1 grvsc-t4tStz-10">user</span><span class="grvsc-tiszgT-8 grvsc-t4tStz-10">.</span><span class="grvsc-tiszgT-1 grvsc-t4tStz-10">broca</span><span class="grvsc-tiszgT-8 grvsc-t4tStz-10">} kg&lt;/span&gt;&lt;/dd&gt;</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="grvsc-tiszgT-8 grvsc-t4tStz-10">			&lt;dd&gt;&lt;span&gt;BROCA 비만도 : ${</span><span class="grvsc-tiszgT-1 grvsc-t4tStz-10">user</span><span class="grvsc-tiszgT-8 grvsc-t4tStz-10">.</span><span class="grvsc-tiszgT-1 grvsc-t4tStz-10">obesityUsingBroca</span><span class="grvsc-tiszgT-8 grvsc-t4tStz-10">}&lt;/span&gt;&lt;/dd&gt;</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="grvsc-tiszgT-8 grvsc-t4tStz-10">			&lt;dd&gt;&lt;span&gt;BMI 표준체중 : &lt;/span&gt;&lt;span&gt;${</span><span class="grvsc-tiszgT-1 grvsc-t4tStz-10">user</span><span class="grvsc-tiszgT-8 grvsc-t4tStz-10">.</span><span class="grvsc-tiszgT-1 grvsc-t4tStz-10">bmi</span><span class="grvsc-tiszgT-8 grvsc-t4tStz-10">} kg&lt;/span&gt;&lt;/dd&gt;</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="grvsc-tiszgT-8 grvsc-t4tStz-10">			&lt;dd&gt;&lt;span&gt;BMI 비만도 : ${</span><span class="grvsc-tiszgT-1 grvsc-t4tStz-10">user</span><span class="grvsc-tiszgT-8 grvsc-t4tStz-10">.</span><span class="grvsc-tiszgT-1 grvsc-t4tStz-10">obesityUsingBmi</span><span class="grvsc-tiszgT-8 grvsc-t4tStz-10">}&lt;/span&gt;&lt;/dd&gt;</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="grvsc-tiszgT-8 grvsc-t4tStz-10">		&lt;/dl&gt;</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="grvsc-tiszgT-8 grvsc-t4tStz-10">	&lt;/li&gt;`</span><span class="grvsc-tiszgT-1 grvsc-t4tStz-1">;</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="grvsc-tiszgT-1 grvsc-t4tStz-1">}</span></span></span></code></pre>
+<p>logic, makeHtml함수를 이용하면 다음과 같이 process 함수를 작성할 수 있다.</p>
+<pre class="grvsc-container github-light-theme grvsc-ps-t4tStz" data-language="js" data-index="7"><code class="grvsc-code"><span class="grvsc-line"><span class="grvsc-source"><span class="grvsc-tiszgT-5 grvsc-t4tStz-9">function</span><span class="grvsc-tiszgT-1 grvsc-t4tStz-1"> </span><span class="grvsc-tiszgT-10 grvsc-t4tStz-5">process</span><span class="grvsc-tiszgT-1 grvsc-t4tStz-1">(</span><span class="grvsc-tiszgT-11 grvsc-t4tStz-6">people</span><span class="grvsc-tiszgT-1 grvsc-t4tStz-1">) {</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="grvsc-tiszgT-1 grvsc-t4tStz-1">  </span><span class="grvsc-tiszgT-5 grvsc-t4tStz-9">const</span><span class="grvsc-tiszgT-1 grvsc-t4tStz-1"> </span><span class="grvsc-tiszgT-7 grvsc-t4tStz-1">html</span><span class="grvsc-tiszgT-1 grvsc-t4tStz-1"> </span><span class="grvsc-tiszgT-1 grvsc-t4tStz-9">=</span><span class="grvsc-tiszgT-1 grvsc-t4tStz-1"> [];</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="grvsc-tiszgT-1 grvsc-t4tStz-1">  </span><span class="grvsc-tiszgT-5 grvsc-t4tStz-9">for</span><span class="grvsc-tiszgT-1 grvsc-t4tStz-1"> (</span><span class="grvsc-tiszgT-5 grvsc-t4tStz-9">const</span><span class="grvsc-tiszgT-1 grvsc-t4tStz-1"> </span><span class="grvsc-tiszgT-7 grvsc-t4tStz-1">user</span><span class="grvsc-tiszgT-1 grvsc-t4tStz-1"> </span><span class="grvsc-tiszgT-1 grvsc-t4tStz-9">of</span><span class="grvsc-tiszgT-1 grvsc-t4tStz-1"> people.results) {</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="grvsc-tiszgT-1 grvsc-t4tStz-1">    </span><span class="grvsc-tiszgT-5 grvsc-t4tStz-9">if</span><span class="grvsc-tiszgT-1 grvsc-t4tStz-1"> (</span><span class="grvsc-tiszgT-8 grvsc-t4tStz-10">/male</span><span class="grvsc-tiszgT-1 grvsc-t4tStz-10">|</span><span class="grvsc-tiszgT-8 grvsc-t4tStz-10">female/</span><span class="grvsc-tiszgT-1 grvsc-t4tStz-1">.</span><span class="grvsc-tiszgT-7 grvsc-t4tStz-5">test</span><span class="grvsc-tiszgT-1 grvsc-t4tStz-1">(user.gender)) {</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="grvsc-tiszgT-1 grvsc-t4tStz-1">      </span><span class="grvsc-tiszgT-5 grvsc-t4tStz-9">const</span><span class="grvsc-tiszgT-1 grvsc-t4tStz-1"> </span><span class="grvsc-tiszgT-7 grvsc-t4tStz-1">result</span><span class="grvsc-tiszgT-1 grvsc-t4tStz-1"> </span><span class="grvsc-tiszgT-1 grvsc-t4tStz-9">=</span><span class="grvsc-tiszgT-1 grvsc-t4tStz-1"> </span><span class="grvsc-tiszgT-7 grvsc-t4tStz-5">logic</span><span class="grvsc-tiszgT-1 grvsc-t4tStz-1">(user.height, user.mass, user.gender);</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="grvsc-tiszgT-1 grvsc-t4tStz-1">      </span><span class="grvsc-tiszgT-7 grvsc-t4tStz-3">Object</span><span class="grvsc-tiszgT-1 grvsc-t4tStz-1">.</span><span class="grvsc-tiszgT-7 grvsc-t4tStz-5">assign</span><span class="grvsc-tiszgT-1 grvsc-t4tStz-1">(user, result);</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="grvsc-tiszgT-1 grvsc-t4tStz-1">      html.</span><span class="grvsc-tiszgT-7 grvsc-t4tStz-5">push</span><span class="grvsc-tiszgT-1 grvsc-t4tStz-1">(</span><span class="grvsc-tiszgT-7 grvsc-t4tStz-5">makeHtml</span><span class="grvsc-tiszgT-1 grvsc-t4tStz-1">(user));</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="grvsc-tiszgT-1 grvsc-t4tStz-1">    }</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="grvsc-tiszgT-1 grvsc-t4tStz-1">  }</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="grvsc-tiszgT-1 grvsc-t4tStz-1">  </span><span class="grvsc-tiszgT-5 grvsc-t4tStz-9">return</span><span class="grvsc-tiszgT-1 grvsc-t4tStz-1"> html.</span><span class="grvsc-tiszgT-7 grvsc-t4tStz-5">join</span><span class="grvsc-tiszgT-1 grvsc-t4tStz-1">(</span><span class="grvsc-tiszgT-8 grvsc-t4tStz-10">&#39;&#39;</span><span class="grvsc-tiszgT-1 grvsc-t4tStz-1">);</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="grvsc-tiszgT-1 grvsc-t4tStz-1">}</span></span></span></code></pre>
+<p>logic, makeHtml 함수를 만듦으로서 우리는 핵심 로직을 작성는데 집중할 수 있게 되었다.
+더불어 logic, makeHtml 함수도 재사용 할 수 있는 단위 함수가 되었다.</p>
+<h3 id="반복문-분기문-그리고-변수와의-이별" style="position:relative;"><a href="#%EB%B0%98%EB%B3%B5%EB%AC%B8-%EB%B6%84%EA%B8%B0%EB%AC%B8-%EA%B7%B8%EB%A6%AC%EA%B3%A0-%EB%B3%80%EC%88%98%EC%99%80%EC%9D%98-%EC%9D%B4%EB%B3%84" aria-label="반복문 분기문 그리고 변수와의 이별 permalink" class="anchor-header before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>반복문, 분기문, 그리고 변수와의 이별</h3>
+<p>위에 개선한 process도 좋은 코드이다. 우리는 구현 로직에 더 집중할 수 있게 되었다.
+하지만, 흐름을 제어하는 반복문과 분기문은 여전히 process에 존재한다.
+코드가 크면 클수록 process에 존재하는 반복문과 조건문은 우리 코드의 가독성을 떨어뜨릴 것이다. 더불어 html, result 같은 변수가 여전히 존재하기 때문에 우리는 항상 오류에 노출될 것이다.</p>
+<p>이번에는 ES5에서 제공하는 Array의 filter, map, reduce와 같은 고차함수(High-order function)를 이용하여 process를 개선해 보자.</p>
+<blockquote>
+<p><strong>고차함수 (Higher-order function)</strong></p>
+<ul>
+<li>다른 함수를 인자로 받거나 그 결과로 함수를 반환하는 함수.
+출처: wikipedia <a href="https://en.wikipedia.org/wiki/Higher-order_function">https://en.wikipedia.org/wiki/Higher-order_function</a></li>
+<li>고차 함수는 변경되는 주요 부분을 함수로 제공함으로서 동일한 패턴 내에 존재하는 문제를 손쉽게 해결할 수 있는 고급 프로그래밍 기법이다.</li>
+<li>고차 함수를 이용하면 함수의 합성, 변형과 같은 작업을 손쉽게 할수 있다. 더불어 Currying, Memoization과 같은 기법도 사용할 수 있다.</li>
+</ul>
+<pre class="grvsc-container github-light-theme grvsc-ps-t4tStz" data-language="js" data-index="8"><code class="grvsc-code"><span class="grvsc-line"><span class="grvsc-source"><span class="grvsc-tiszgT-5 grvsc-t4tStz-9">const</span><span class="grvsc-tiszgT-1 grvsc-t4tStz-1"> </span><span class="grvsc-tiszgT-10 grvsc-t4tStz-5">twice</span><span class="grvsc-tiszgT-1 grvsc-t4tStz-1"> </span><span class="grvsc-tiszgT-1 grvsc-t4tStz-9">=</span><span class="grvsc-tiszgT-1 grvsc-t4tStz-1"> (</span><span class="grvsc-tiszgT-11 grvsc-t4tStz-6">f</span><span class="grvsc-tiszgT-1 grvsc-t4tStz-1">, </span><span class="grvsc-tiszgT-11 grvsc-t4tStz-6">v</span><span class="grvsc-tiszgT-1 grvsc-t4tStz-1">) </span><span class="grvsc-tiszgT-5 grvsc-t4tStz-9">=&gt;</span><span class="grvsc-tiszgT-1 grvsc-t4tStz-1"> </span><span class="grvsc-tiszgT-7 grvsc-t4tStz-5">f</span><span class="grvsc-tiszgT-1 grvsc-t4tStz-1">(</span><span class="grvsc-tiszgT-7 grvsc-t4tStz-5">f</span><span class="grvsc-tiszgT-1 grvsc-t4tStz-1">(v));</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="grvsc-tiszgT-5 grvsc-t4tStz-9">const</span><span class="grvsc-tiszgT-1 grvsc-t4tStz-1"> </span><span class="grvsc-tiszgT-10 grvsc-t4tStz-5">fn</span><span class="grvsc-tiszgT-1 grvsc-t4tStz-1"> </span><span class="grvsc-tiszgT-1 grvsc-t4tStz-9">=</span><span class="grvsc-tiszgT-1 grvsc-t4tStz-1"> (</span><span class="grvsc-tiszgT-11 grvsc-t4tStz-6">v</span><span class="grvsc-tiszgT-1 grvsc-t4tStz-1">) </span><span class="grvsc-tiszgT-5 grvsc-t4tStz-9">=&gt;</span><span class="grvsc-tiszgT-1 grvsc-t4tStz-1"> v </span><span class="grvsc-tiszgT-1 grvsc-t4tStz-9">+</span><span class="grvsc-tiszgT-1 grvsc-t4tStz-1"> </span><span class="grvsc-tiszgT-7 grvsc-t4tStz-3">3</span><span class="grvsc-tiszgT-1 grvsc-t4tStz-1">;</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="grvsc-tiszgT-7 grvsc-t4tStz-3">console</span><span class="grvsc-tiszgT-1 grvsc-t4tStz-1">.</span><span class="grvsc-tiszgT-7 grvsc-t4tStz-1">log</span><span class="grvsc-tiszgT-1 grvsc-t4tStz-1">(</span><span class="grvsc-tiszgT-7 grvsc-t4tStz-5">twice</span><span class="grvsc-tiszgT-1 grvsc-t4tStz-1">(fn, </span><span class="grvsc-tiszgT-7 grvsc-t4tStz-3">7</span><span class="grvsc-tiszgT-1 grvsc-t4tStz-1">)); </span><span class="grvsc-tiszgT-6 grvsc-t4tStz-2">// 13</span></span></span></code></pre>
+</blockquote>
+<pre class="grvsc-container github-light-theme grvsc-ps-t4tStz" data-language="" data-index="9"><code class="grvsc-code"><span class="grvsc-line"><span class="grvsc-source">```js</span></span>
+<span class="grvsc-line"><span class="grvsc-source">function process(people) {</span></span>
+<span class="grvsc-line"><span class="grvsc-source">  return people.results</span></span>
+<span class="grvsc-line"><span class="grvsc-source">	  .filter(user =&gt; /male|female/.test(user.gender))</span></span>
+<span class="grvsc-line"><span class="grvsc-source">		.map(user =&gt; Object.assign(</span></span>
+<span class="grvsc-line"><span class="grvsc-source">      user,</span></span>
+<span class="grvsc-line"><span class="grvsc-source">      logic(user.height, user.mass, user.gender)</span></span>
+<span class="grvsc-line"><span class="grvsc-source">		))</span></span>
+<span class="grvsc-line"><span class="grvsc-source">		.reduce((acc, user) =&gt; {</span></span>
+<span class="grvsc-line"><span class="grvsc-source">			acc.push(makeHtml(user));</span></span>
+<span class="grvsc-line"><span class="grvsc-source">			return acc;</span></span>
+<span class="grvsc-line"><span class="grvsc-source">		}, [])</span></span>
+<span class="grvsc-line"><span class="grvsc-source">		.join(&quot;&quot;);</span></span>
+<span class="grvsc-line"><span class="grvsc-source">}</span></span></code></pre>
+<p>if문은 filter로 변환하고, 값을 변환해야하는 경우에는 map을 이용하고, 축적된 데이터를 반환해야하는 경우에는 reduce를 이용하였다.
+각각의 고차함수에 전달되는 함수는 외부의 변수에 영향을 미치지도 않고, 영향을 받지도 않는 함수이다.
+전달된 함수는 항상 같은 입력이 주어지면, 항상 같은 출력을 반환한다.
+이런 함수를 함수형 프로그래밍에서는 <code>순수함수</code>라고 한다.</p>
+<blockquote>
+<p>순수함수와 함수형 프로그래밍에 대한 내용은 <code>부록. 함수형 프로그래밍 (Functional Programming)</code>을 참조하기 바란다.</p>
+</blockquote>
+<p>개선된 process에서는 반복문, 분기문, 변수가 존재하지 않는다.
+핵심 로직은 분리되었고 코드의 흐름은 단일화되었다. 더불어 변수를 사용하지 않음으로서 오류의 발생 빈도도 크게 줄었다.</p>
+<h2 id="rxjs는-어떻게-개선하였나" style="position:relative;"><a href="#rxjs%EB%8A%94-%EC%96%B4%EB%96%BB%EA%B2%8C-%EA%B0%9C%EC%84%A0%ED%95%98%EC%98%80%EB%82%98" aria-label="rxjs는 어떻게 개선하였나 permalink" class="anchor-header before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>RxJS는 어떻게 개선하였나?</h2>
+<p>RxJS 또한 ES5 Array의 고차 함수와 같은 <code>operator를 제공</code>함으로써 로직에 존재하는 분기문과 반복문, 그리고 변수를 제거하려고 하였다.</p>
+<h3 id="immutable-객체-observable" style="position:relative;"><a href="#immutable-%EA%B0%9D%EC%B2%B4-observable" aria-label="immutable 객체 observable permalink" class="anchor-header before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Immutable 객체 Observable</h3>
+<p>ES5 Array의 고차함수들이 반환값으로 새로운 Array 객체를 반환하여 각각에 영향을 미치지 않도록 하는 것과 같이 RxJS의 operator는 항상 새로운 Observable을 반환함으로써 Array의 고차함수와 같이 <code>불변 객체 (Immutable Object)</code>를 반환한다.
+불변 객체는 생성 후 그 상태를 바꿀 수 없는 객체이다. 불변 객체는 외부에서 값을 변경할 수 없기 때문에 불변 객체를 사용하는 것만으로도 프로그램의 복잡도가 줄어든다.</p>
+<pre class="grvsc-container github-light-theme grvsc-ps-t4tStz" data-language="js" data-index="10"><code class="grvsc-code"><span class="grvsc-line"><span class="grvsc-source"><span class="grvsc-tiszgT-5 grvsc-t4tStz-9">var</span><span class="grvsc-tiszgT-1 grvsc-t4tStz-1"> arr </span><span class="grvsc-tiszgT-1 grvsc-t4tStz-9">=</span><span class="grvsc-tiszgT-1 grvsc-t4tStz-1"> [</span><span class="grvsc-tiszgT-7 grvsc-t4tStz-3">1</span><span class="grvsc-tiszgT-1 grvsc-t4tStz-1">, </span><span class="grvsc-tiszgT-7 grvsc-t4tStz-3">2</span><span class="grvsc-tiszgT-1 grvsc-t4tStz-1">, </span><span class="grvsc-tiszgT-7 grvsc-t4tStz-3">3</span><span class="grvsc-tiszgT-1 grvsc-t4tStz-1">];</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="grvsc-tiszgT-5 grvsc-t4tStz-9">var</span><span class="grvsc-tiszgT-1 grvsc-t4tStz-1"> mappedArr </span><span class="grvsc-tiszgT-1 grvsc-t4tStz-9">=</span><span class="grvsc-tiszgT-1 grvsc-t4tStz-1"> arr.</span><span class="grvsc-tiszgT-7 grvsc-t4tStz-5">map</span><span class="grvsc-tiszgT-1 grvsc-t4tStz-1">((</span><span class="grvsc-tiszgT-11 grvsc-t4tStz-6">v</span><span class="grvsc-tiszgT-1 grvsc-t4tStz-1">) </span><span class="grvsc-tiszgT-5 grvsc-t4tStz-9">=&gt;</span><span class="grvsc-tiszgT-1 grvsc-t4tStz-1"> v);</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="grvsc-tiszgT-7 grvsc-t4tStz-3">console</span><span class="grvsc-tiszgT-1 grvsc-t4tStz-1">.</span><span class="grvsc-tiszgT-7 grvsc-t4tStz-1">log</span><span class="grvsc-tiszgT-1 grvsc-t4tStz-1">(arr </span><span class="grvsc-tiszgT-1 grvsc-t4tStz-9">===</span><span class="grvsc-tiszgT-1 grvsc-t4tStz-1"> mappedArr); </span><span class="grvsc-tiszgT-6 grvsc-t4tStz-2">// false</span></span></span></code></pre>
+<p>Array와 다른점이 있다면 Array의 경우는 새로운 Array 객체 생성 작업만 하지만 Observable은 새로운 Observable를 만들고, 그 Observable이 operator를 호출한 Observable을 내부적으로 subscribe 하는 형태를 유지한다. 즉, Linked list 형태로 기존 Observable 객체와 새롭게 만든 Observable 객체를 operator로 연결하고 있다.</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 650px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 19.631901840490798%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAECAYAAACOXx+WAAAACXBIWXMAABYlAAAWJQFJUiTwAAAA40lEQVQY01WO20rEMBRF+8WOiH6RD774Dzrj7W18UBEEB1qx0056S9J0mrTNMh0VdMM5B/aCw4r80DI2r4zlOtwXvKuRSlGUJYNVTOrtm9VPEFhrDKIQ7Pse9p/Y/AGb3eCKNQyKCHGFuD1huzwmXy1wySVKayqpcLsV4u6UNLBseYSLL9BGU1YF1nX0m/NDn14vKO7PQD6Gh37AdzGTfAazoWgkunN0vUPUCqtjvJrZe7ALz1SPtY5KdcjWBOs8mMbBrsED0bz+Zpw86TYjST4wpjt0/mfm1HVDnCTshPjHfvkXU2Ir0Hnbb0sAAAAASUVORK5CYII='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="linked observable"
+        title="linked observable"
+        src="/static/cb0f2947f3db1da754136d1956daafe9/a6d36/linked-observable.png"
+        srcset="/static/cb0f2947f3db1da754136d1956daafe9/222b7/linked-observable.png 163w,
+/static/cb0f2947f3db1da754136d1956daafe9/ff46a/linked-observable.png 325w,
+/static/cb0f2947f3db1da754136d1956daafe9/a6d36/linked-observable.png 650w,
+/static/cb0f2947f3db1da754136d1956daafe9/e548f/linked-observable.png 975w,
+/static/cb0f2947f3db1da754136d1956daafe9/3c492/linked-observable.png 1300w,
+/static/cb0f2947f3db1da754136d1956daafe9/ac307/linked-observable.png 2058w"
+        sizes="(max-width: 650px) 100vw, 650px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+      />
+    </span></p>
+<p>한 예로 Observable.map은 다음과 같이 구현되어 있다.</p>
+<pre class="grvsc-container github-light-theme grvsc-ps-t4tStz" data-language="js" data-index="11"><code class="grvsc-code"><span class="grvsc-line"><span class="grvsc-source"><span class="grvsc-tiszgT-7 grvsc-t4tStz-3">Observable</span><span class="grvsc-tiszgT-1 grvsc-t4tStz-1">.</span><span class="grvsc-tiszgT-7 grvsc-t4tStz-1">prototype</span><span class="grvsc-tiszgT-1 grvsc-t4tStz-1">.</span><span class="grvsc-tiszgT-10 grvsc-t4tStz-5">map</span><span class="grvsc-tiszgT-1 grvsc-t4tStz-1"> </span><span class="grvsc-tiszgT-1 grvsc-t4tStz-9">=</span><span class="grvsc-tiszgT-1 grvsc-t4tStz-1"> </span><span class="grvsc-tiszgT-5 grvsc-t4tStz-9">function</span><span class="grvsc-tiszgT-1 grvsc-t4tStz-1"> (</span><span class="grvsc-tiszgT-11 grvsc-t4tStz-6">transformationFn</span><span class="grvsc-tiszgT-1 grvsc-t4tStz-1">) {</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="grvsc-tiszgT-1 grvsc-t4tStz-1">  </span><span class="grvsc-tiszgT-5 grvsc-t4tStz-9">const</span><span class="grvsc-tiszgT-1 grvsc-t4tStz-1"> </span><span class="grvsc-tiszgT-7 grvsc-t4tStz-1">source</span><span class="grvsc-tiszgT-1 grvsc-t4tStz-1"> </span><span class="grvsc-tiszgT-1 grvsc-t4tStz-9">=</span><span class="grvsc-tiszgT-1 grvsc-t4tStz-1"> </span><span class="grvsc-tiszgT-7 grvsc-t4tStz-1">this</span><span class="grvsc-tiszgT-1 grvsc-t4tStz-1">;</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="grvsc-tiszgT-1 grvsc-t4tStz-1">  </span><span class="grvsc-tiszgT-5 grvsc-t4tStz-9">const</span><span class="grvsc-tiszgT-1 grvsc-t4tStz-1"> </span><span class="grvsc-tiszgT-7 grvsc-t4tStz-1">result</span><span class="grvsc-tiszgT-1 grvsc-t4tStz-1"> </span><span class="grvsc-tiszgT-1 grvsc-t4tStz-9">=</span><span class="grvsc-tiszgT-1 grvsc-t4tStz-1"> </span><span class="grvsc-tiszgT-1 grvsc-t4tStz-9">new</span><span class="grvsc-tiszgT-1 grvsc-t4tStz-1"> </span><span class="grvsc-tiszgT-10 grvsc-t4tStz-1">Rx</span><span class="grvsc-tiszgT-1 grvsc-t4tStz-1">.</span><span class="grvsc-tiszgT-10 grvsc-t4tStz-1">Observable</span><span class="grvsc-tiszgT-1 grvsc-t4tStz-1">((</span><span class="grvsc-tiszgT-11 grvsc-t4tStz-6">observer</span><span class="grvsc-tiszgT-1 grvsc-t4tStz-1">) </span><span class="grvsc-tiszgT-5 grvsc-t4tStz-9">=&gt;</span><span class="grvsc-tiszgT-1 grvsc-t4tStz-1"> {</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="grvsc-tiszgT-1 grvsc-t4tStz-1">    </span><span class="grvsc-tiszgT-6 grvsc-t4tStz-2">// 새로운 Observable은 현재의 Observable을 subscribe 한다.</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="grvsc-tiszgT-1 grvsc-t4tStz-1">    source.</span><span class="grvsc-tiszgT-7 grvsc-t4tStz-5">subscribe</span><span class="grvsc-tiszgT-1 grvsc-t4tStz-1">(</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="grvsc-tiszgT-1 grvsc-t4tStz-1">      </span><span class="grvsc-tiszgT-6 grvsc-t4tStz-2">// 현재의 Observable에서 전달된 데이터를 변경하여 전달한다.</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="grvsc-tiszgT-1 grvsc-t4tStz-1">      </span><span class="grvsc-tiszgT-5 grvsc-t4tStz-9">function</span><span class="grvsc-tiszgT-1 grvsc-t4tStz-1"> (</span><span class="grvsc-tiszgT-11 grvsc-t4tStz-6">x</span><span class="grvsc-tiszgT-1 grvsc-t4tStz-1">) {</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="grvsc-tiszgT-1 grvsc-t4tStz-1">        observer.</span><span class="grvsc-tiszgT-7 grvsc-t4tStz-5">next</span><span class="grvsc-tiszgT-1 grvsc-t4tStz-1">(</span><span class="grvsc-tiszgT-7 grvsc-t4tStz-5">transformationFn</span><span class="grvsc-tiszgT-1 grvsc-t4tStz-1">(x));</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="grvsc-tiszgT-1 grvsc-t4tStz-1">      },</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="grvsc-tiszgT-1 grvsc-t4tStz-1">      </span><span class="grvsc-tiszgT-5 grvsc-t4tStz-9">function</span><span class="grvsc-tiszgT-1 grvsc-t4tStz-1"> (</span><span class="grvsc-tiszgT-11 grvsc-t4tStz-6">err</span><span class="grvsc-tiszgT-1 grvsc-t4tStz-1">) {</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="grvsc-tiszgT-1 grvsc-t4tStz-1">        observer.</span><span class="grvsc-tiszgT-7 grvsc-t4tStz-5">error</span><span class="grvsc-tiszgT-1 grvsc-t4tStz-1">(err);</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="grvsc-tiszgT-1 grvsc-t4tStz-1">      },</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="grvsc-tiszgT-1 grvsc-t4tStz-1">      </span><span class="grvsc-tiszgT-5 grvsc-t4tStz-9">function</span><span class="grvsc-tiszgT-1 grvsc-t4tStz-1"> () {</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="grvsc-tiszgT-1 grvsc-t4tStz-1">        observer.</span><span class="grvsc-tiszgT-7 grvsc-t4tStz-5">complete</span><span class="grvsc-tiszgT-1 grvsc-t4tStz-1">();</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="grvsc-tiszgT-1 grvsc-t4tStz-1">      }</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="grvsc-tiszgT-1 grvsc-t4tStz-1">    );</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="grvsc-tiszgT-1 grvsc-t4tStz-1">  });</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="grvsc-tiszgT-1 grvsc-t4tStz-1">  </span><span class="grvsc-tiszgT-5 grvsc-t4tStz-9">return</span><span class="grvsc-tiszgT-1 grvsc-t4tStz-1"> result;</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="grvsc-tiszgT-1 grvsc-t4tStz-1">};</span></span></span></code></pre>
+<p>이런 구조를 취함으로서 <code>source부터 전달된 데이터, 에러, 종료여부가 Observable의 operator들을 통해 전달되거나 변경되어 구독한 Observer에게 전달할 수 있게 된다.</code></p>
+<p>앞에서 설명한 표준체중과 비만도 조회 예를 Observable로 변경해보자.</p>
+<pre class="grvsc-container github-light-theme grvsc-ps-t4tStz" data-language="js" data-index="12"><code class="grvsc-code"><span class="grvsc-line"><span class="grvsc-source"><span class="grvsc-tiszgT-5 grvsc-t4tStz-9">const</span><span class="grvsc-tiszgT-1 grvsc-t4tStz-1"> </span><span class="grvsc-tiszgT-7 grvsc-t4tStz-1">ajax$</span><span class="grvsc-tiszgT-1 grvsc-t4tStz-1"> </span><span class="grvsc-tiszgT-1 grvsc-t4tStz-9">=</span><span class="grvsc-tiszgT-1 grvsc-t4tStz-1"> </span><span class="grvsc-tiszgT-1 grvsc-t4tStz-9">new</span><span class="grvsc-tiszgT-1 grvsc-t4tStz-1"> </span><span class="grvsc-tiszgT-10 grvsc-t4tStz-1">Rx</span><span class="grvsc-tiszgT-1 grvsc-t4tStz-1">.</span><span class="grvsc-tiszgT-10 grvsc-t4tStz-1">Observable</span><span class="grvsc-tiszgT-1 grvsc-t4tStz-1">((</span><span class="grvsc-tiszgT-11 grvsc-t4tStz-6">observer</span><span class="grvsc-tiszgT-1 grvsc-t4tStz-1">) </span><span class="grvsc-tiszgT-5 grvsc-t4tStz-9">=&gt;</span><span class="grvsc-tiszgT-1 grvsc-t4tStz-1"> {</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="grvsc-tiszgT-1 grvsc-t4tStz-1">  </span><span class="grvsc-tiszgT-5 grvsc-t4tStz-9">const</span><span class="grvsc-tiszgT-1 grvsc-t4tStz-1"> </span><span class="grvsc-tiszgT-7 grvsc-t4tStz-1">xhr</span><span class="grvsc-tiszgT-1 grvsc-t4tStz-1"> </span><span class="grvsc-tiszgT-1 grvsc-t4tStz-9">=</span><span class="grvsc-tiszgT-1 grvsc-t4tStz-1"> </span><span class="grvsc-tiszgT-1 grvsc-t4tStz-9">new</span><span class="grvsc-tiszgT-1 grvsc-t4tStz-1"> </span><span class="grvsc-tiszgT-10 grvsc-t4tStz-1">XMLHttpRequest</span><span class="grvsc-tiszgT-1 grvsc-t4tStz-1">();</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="grvsc-tiszgT-1 grvsc-t4tStz-1">  xhr.</span><span class="grvsc-tiszgT-10 grvsc-t4tStz-5">onreadystatechange</span><span class="grvsc-tiszgT-1 grvsc-t4tStz-1"> </span><span class="grvsc-tiszgT-1 grvsc-t4tStz-9">=</span><span class="grvsc-tiszgT-1 grvsc-t4tStz-1"> </span><span class="grvsc-tiszgT-5 grvsc-t4tStz-9">function</span><span class="grvsc-tiszgT-1 grvsc-t4tStz-1"> () {</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="grvsc-tiszgT-1 grvsc-t4tStz-1">    </span><span class="grvsc-tiszgT-5 grvsc-t4tStz-9">if</span><span class="grvsc-tiszgT-1 grvsc-t4tStz-1"> (xhr.readyState </span><span class="grvsc-tiszgT-1 grvsc-t4tStz-9">==</span><span class="grvsc-tiszgT-1 grvsc-t4tStz-1"> </span><span class="grvsc-tiszgT-7 grvsc-t4tStz-3">4</span><span class="grvsc-tiszgT-1 grvsc-t4tStz-1"> </span><span class="grvsc-tiszgT-1 grvsc-t4tStz-9">&amp;&amp;</span><span class="grvsc-tiszgT-1 grvsc-t4tStz-1"> xhr.status </span><span class="grvsc-tiszgT-1 grvsc-t4tStz-9">==</span><span class="grvsc-tiszgT-1 grvsc-t4tStz-1"> </span><span class="grvsc-tiszgT-7 grvsc-t4tStz-3">200</span><span class="grvsc-tiszgT-1 grvsc-t4tStz-1">) {</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="grvsc-tiszgT-1 grvsc-t4tStz-1">      </span><span class="grvsc-tiszgT-5 grvsc-t4tStz-9">const</span><span class="grvsc-tiszgT-1 grvsc-t4tStz-1"> </span><span class="grvsc-tiszgT-7 grvsc-t4tStz-1">jsonData</span><span class="grvsc-tiszgT-1 grvsc-t4tStz-1"> </span><span class="grvsc-tiszgT-1 grvsc-t4tStz-9">=</span><span class="grvsc-tiszgT-1 grvsc-t4tStz-1"> </span><span class="grvsc-tiszgT-7 grvsc-t4tStz-3">JSON</span><span class="grvsc-tiszgT-1 grvsc-t4tStz-1">.</span><span class="grvsc-tiszgT-7 grvsc-t4tStz-1">parse</span><span class="grvsc-tiszgT-1 grvsc-t4tStz-1">(xhr.responseText);</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="grvsc-tiszgT-1 grvsc-t4tStz-1">      </span><span class="grvsc-tiszgT-6 grvsc-t4tStz-2">// user 데이터를 user 단위로 변환하여 전달</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="grvsc-tiszgT-1 grvsc-t4tStz-1">      jsonData.results.</span><span class="grvsc-tiszgT-7 grvsc-t4tStz-5">forEach</span><span class="grvsc-tiszgT-1 grvsc-t4tStz-1">((</span><span class="grvsc-tiszgT-11 grvsc-t4tStz-6">v</span><span class="grvsc-tiszgT-1 grvsc-t4tStz-1">) </span><span class="grvsc-tiszgT-5 grvsc-t4tStz-9">=&gt;</span><span class="grvsc-tiszgT-1 grvsc-t4tStz-1"> observer.</span><span class="grvsc-tiszgT-7 grvsc-t4tStz-5">next</span><span class="grvsc-tiszgT-1 grvsc-t4tStz-1">(v));</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="grvsc-tiszgT-1 grvsc-t4tStz-1">      observer.</span><span class="grvsc-tiszgT-7 grvsc-t4tStz-5">complete</span><span class="grvsc-tiszgT-1 grvsc-t4tStz-1">();</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="grvsc-tiszgT-1 grvsc-t4tStz-1">    }</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="grvsc-tiszgT-1 grvsc-t4tStz-1">  };</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="grvsc-tiszgT-1 grvsc-t4tStz-1">  xhr.</span><span class="grvsc-tiszgT-7 grvsc-t4tStz-5">open</span><span class="grvsc-tiszgT-1 grvsc-t4tStz-1">(</span><span class="grvsc-tiszgT-8 grvsc-t4tStz-10">&#39;GET&#39;</span><span class="grvsc-tiszgT-1 grvsc-t4tStz-1">, </span><span class="grvsc-tiszgT-8 grvsc-t4tStz-10">&#39;http://swapi.co/api/people/&#39;</span><span class="grvsc-tiszgT-1 grvsc-t4tStz-1">);</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="grvsc-tiszgT-1 grvsc-t4tStz-1">  xhr.</span><span class="grvsc-tiszgT-7 grvsc-t4tStz-5">send</span><span class="grvsc-tiszgT-1 grvsc-t4tStz-1">();</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="grvsc-tiszgT-1 grvsc-t4tStz-1">});</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="grvsc-tiszgT-1 grvsc-t4tStz-1">ajax$</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="grvsc-tiszgT-1 grvsc-t4tStz-1">  .</span><span class="grvsc-tiszgT-7 grvsc-t4tStz-5">filter</span><span class="grvsc-tiszgT-1 grvsc-t4tStz-1">((</span><span class="grvsc-tiszgT-11 grvsc-t4tStz-6">user</span><span class="grvsc-tiszgT-1 grvsc-t4tStz-1">) </span><span class="grvsc-tiszgT-5 grvsc-t4tStz-9">=&gt;</span><span class="grvsc-tiszgT-8 grvsc-t4tStz-10"> /male</span><span class="grvsc-tiszgT-1 grvsc-t4tStz-10">|</span><span class="grvsc-tiszgT-8 grvsc-t4tStz-10">female/</span><span class="grvsc-tiszgT-1 grvsc-t4tStz-1">.</span><span class="grvsc-tiszgT-7 grvsc-t4tStz-5">test</span><span class="grvsc-tiszgT-1 grvsc-t4tStz-1">(user.gender))</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="grvsc-tiszgT-1 grvsc-t4tStz-1">  .</span><span class="grvsc-tiszgT-7 grvsc-t4tStz-5">map</span><span class="grvsc-tiszgT-1 grvsc-t4tStz-1">((</span><span class="grvsc-tiszgT-11 grvsc-t4tStz-6">user</span><span class="grvsc-tiszgT-1 grvsc-t4tStz-1">) </span><span class="grvsc-tiszgT-5 grvsc-t4tStz-9">=&gt;</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="grvsc-tiszgT-1 grvsc-t4tStz-1">    </span><span class="grvsc-tiszgT-7 grvsc-t4tStz-3">Object</span><span class="grvsc-tiszgT-1 grvsc-t4tStz-1">.</span><span class="grvsc-tiszgT-7 grvsc-t4tStz-5">assign</span><span class="grvsc-tiszgT-1 grvsc-t4tStz-1">(user, </span><span class="grvsc-tiszgT-7 grvsc-t4tStz-5">logic</span><span class="grvsc-tiszgT-1 grvsc-t4tStz-1">(user.height, user.mass, user.gender))</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="grvsc-tiszgT-1 grvsc-t4tStz-1">  )</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="grvsc-tiszgT-1 grvsc-t4tStz-1">  .</span><span class="grvsc-tiszgT-7 grvsc-t4tStz-5">reduce</span><span class="grvsc-tiszgT-1 grvsc-t4tStz-1">((</span><span class="grvsc-tiszgT-11 grvsc-t4tStz-6">acc</span><span class="grvsc-tiszgT-1 grvsc-t4tStz-1">, </span><span class="grvsc-tiszgT-11 grvsc-t4tStz-6">user</span><span class="grvsc-tiszgT-1 grvsc-t4tStz-1">) </span><span class="grvsc-tiszgT-5 grvsc-t4tStz-9">=&gt;</span><span class="grvsc-tiszgT-1 grvsc-t4tStz-1"> {</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="grvsc-tiszgT-1 grvsc-t4tStz-1">    acc.</span><span class="grvsc-tiszgT-7 grvsc-t4tStz-5">push</span><span class="grvsc-tiszgT-1 grvsc-t4tStz-1">(</span><span class="grvsc-tiszgT-7 grvsc-t4tStz-5">makeHtml</span><span class="grvsc-tiszgT-1 grvsc-t4tStz-1">(user));</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="grvsc-tiszgT-1 grvsc-t4tStz-1">    </span><span class="grvsc-tiszgT-5 grvsc-t4tStz-9">return</span><span class="grvsc-tiszgT-1 grvsc-t4tStz-1"> acc;</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="grvsc-tiszgT-1 grvsc-t4tStz-1">  }, [])</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="grvsc-tiszgT-1 grvsc-t4tStz-1">  .</span><span class="grvsc-tiszgT-7 grvsc-t4tStz-5">subscribe</span><span class="grvsc-tiszgT-1 grvsc-t4tStz-1">((</span><span class="grvsc-tiszgT-11 grvsc-t4tStz-6">v</span><span class="grvsc-tiszgT-1 grvsc-t4tStz-1">) </span><span class="grvsc-tiszgT-5 grvsc-t4tStz-9">=&gt;</span><span class="grvsc-tiszgT-1 grvsc-t4tStz-1"> {</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="grvsc-tiszgT-1 grvsc-t4tStz-1">    document.</span><span class="grvsc-tiszgT-7 grvsc-t4tStz-5">getElementById</span><span class="grvsc-tiszgT-1 grvsc-t4tStz-1">(</span><span class="grvsc-tiszgT-8 grvsc-t4tStz-10">&#39;users&#39;</span><span class="grvsc-tiszgT-1 grvsc-t4tStz-1">).innerHTML </span><span class="grvsc-tiszgT-1 grvsc-t4tStz-9">=</span><span class="grvsc-tiszgT-1 grvsc-t4tStz-1"> v;</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="grvsc-tiszgT-1 grvsc-t4tStz-1">  });</span></span></span></code></pre>
+<p>이전 우리가 개선한 process 소스와 큰 차이가 없다.</p>
+<blockquote>
+<p>원리 설명을 위해 부득이하게 사용자 리스트를 사용자로 바꿔 전달하였다.
+일반적으로는 Ajax를 통해 전달 받은 정보를 바탕으로 operator를 적용한다.</p>
+</blockquote>
+<p>차이라면 다음과 같이 ajax$ Observable를 통해 전달 받은 데이터가 filter, map, reduce를 거쳐 observer에게 전달되는 구조로 되어있다는 것이다.</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 650px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 43.558282208588956%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAJCAYAAAAywQxIAAAACXBIWXMAABYlAAAWJQFJUiTwAAABSklEQVQoz6VS20oDMRTcH/MP9CP8Ap/9gILYN/FZ8F0RQRB8Eqrgbu0FkVJUKkhb617SJN3dtMkmY7pr2xWkoB4YAsPJYc6cce5fGa67BJk2mJcxxfvXcraPOtg6eEB3OMkJrbUduoApYT23EONcdVOctDim2b+ELYc6oHVg7AKiD8pjqGQI6buY+Xcw4h18kiJLR5CBl/NZ0gehHDLxoaKm7fOgk8FKYdCoYuRWoD5qmFmVMqyDNPcRNfaQRfWcU6QF0qrmnPJvkUoDETQxblcR3ldgwpuVh0IIxDH/1XppKmCs11QA3lOAhDMkllNKwZmvXqBs9s+ctknQOgNjLB/cJxHc5xfEjIJxe4fp1Hr49XsZl9W0AiXDpZQIoxATGuPxzcPuxSZ2zjZQ650XfdBzhebb2dddsNzLBcFl5xin7UMMaK+InI3QJ3GWsshecdvvAAAAAElFTkSuQmCC'); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="rx process"
+        title="rx process"
+        src="/static/5328a80a9973de409d00f735d26ab319/a6d36/rx_process.png"
+        srcset="/static/5328a80a9973de409d00f735d26ab319/222b7/rx_process.png 163w,
+/static/5328a80a9973de409d00f735d26ab319/ff46a/rx_process.png 325w,
+/static/5328a80a9973de409d00f735d26ab319/a6d36/rx_process.png 650w,
+/static/5328a80a9973de409d00f735d26ab319/e548f/rx_process.png 975w,
+/static/5328a80a9973de409d00f735d26ab319/3c492/rx_process.png 1300w,
+/static/5328a80a9973de409d00f735d26ab319/5bef7/rx_process.png 2746w"
+        sizes="(max-width: 650px) 100vw, 650px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+      />
+    </span></p>
+<h2 id="rxjs가-제공하는-operator" style="position:relative;"><a href="#rxjs%EA%B0%80-%EC%A0%9C%EA%B3%B5%ED%95%98%EB%8A%94-operator" aria-label="rxjs가 제공하는 operator permalink" class="anchor-header before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>RxJS가 제공하는 Operator</h2>
+<p>다음은 공식 홈페이지에서 제공하는 operator 목록이다.
+<a href="http://reactivex.io/rxjs/manual/overview.html#categories-of-operators">http://reactivex.io/rxjs/manual/overview.html#categories-of-operators</a></p>
+<table>
+<thead>
+<tr>
+<th>카테고리</th>
+<th>operator</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>생성 operator</td>
+<td>ajax, bindCallback, bindNodeCallback, create, defer, empty, from, fromEvent, fromEventPattern, fromPromise, generate, interval, never, of,repeat ,repeatWhen, range ,throw ,timer</td>
+</tr>
+<tr>
+<td>변환 operator</td>
+<td>buffer, bufferCount, bufferTime, bufferToggle, bufferWhen, concatMap, concatMapTo, exhaustMap, expand, groupBy, map, mapTo, mergeMap, mergeMapTo, mergeScan, pairwise, partition, pluck, scan, switchMap, switchMapTo, window, windowCount, windowTime, windowToggle, windowWhen</td>
+</tr>
+<tr>
+<td>추출 operator</td>
+<td>debounce, debounceTime, distinct, distinctKey, distinctUntilChanged, distinctUntilKeyChanged, elementAt, filter, first, ignoreElements, audit, auditTime, last, sample, sampleTime, single, skip, skipUntil, skipWhile, take, takeLast, takeUntil, takeWhile, throttle, throttleTime</td>
+</tr>
+<tr>
+<td>결합 operator</td>
+<td>combineAll, combineLatest, concat, concatAll, exhaust, forkJoin, merge, mergeAll, race, startWith, switch, withLatestFrom, zip, zipAll</td>
+</tr>
+<tr>
+<td>멀티캐스팅 operator</td>
+<td>cache, multicast, publish, publishBehavior, publishLast, publishReplay, share</td>
+</tr>
+<tr>
+<td>에러 처리 operator</td>
+<td>catch, retry, retryWhen</td>
+</tr>
+<tr>
+<td>유틸리티 operator</td>
+<td>do, delay, delayWhen, dematerialize, finally, let, materialize, observeOn, subscribeOn, timeInterval, timestamp, timeout, timeoutWith, toArray, toPromise</td>
+</tr>
+<tr>
+<td>조건.참거짓 operator</td>
+<td>defaultIfEmpty, every, find, findIndex, isEmpty</td>
+</tr>
+<tr>
+<td>수학,누적 operator</td>
+<td>count, max, min, reduce</td>
+</tr>
+</tbody>
+</table>
+<p>RxJS에서 제공하는 operator를 이용하면 Observable을 생성 할 수도 있고 전달된 데이터를 변환하거나 필요한 데이터만을 추출할 수 도 있다.
+더불어 여러 개의 Observable을 합성하기도 하고, 하나의 Observable을 다른 여러개의 Observable로 나눌 수도 있다.</p>
+<p>RxJS는 정말 많은 operator를 제공한다. operator의 의미에 대해 잘 아는 사람에게는 굉장히 편리하다. 반면 그 의미를 잘 알지 못하는 사람에게는 오히려 진입 장벽이 되기도 한다.
+이 operator의 기본적인 철학은 <code>함수형 프로그래밍</code>에 그 근간을 두고 있다.
+아마도 함수형 프로그래밍 언어를 배운 독자라면 꽤 익숙한 이름의 operator들이 있는 것 을 알 수 있다.</p>
+<p>RxJS의 operator는 어휘와 같다.
+내가 많은 단어와 문장을 알아서 사용하게 되면 나의 편의성이 증가하고 더불어 나의 품격도 높아질수 있다. 하지만, 다른 한편으로는 다른 사람이 내 말을 이해하기 어려워 할 수도 있다.
+반면 내가 알고 있는 단어와 문장이 적다고 하더라도 의사소통이 될 정도의 단어와 문장을 사용한다면 생활하는데 부족함이 없다. 마찬가지로 RxJS의 모든 operator를 다 알 필요는 없다.
+카테고리별로 자주쓰는 operator 몇 개를 잘 알고 적용할 수 있다면 충분히 RxJS의 장점을 극대화 할수 있다.
+따라서, 이 책에서도 RxJS의 모든 Operator를 다루지는 않는다. 주요 카테고리별로 꼭! 알아야하는 RxJS의 Operator를 몇 개를 기준으로 설명을 할 예정이다.
+자세한 내용은 다음 2부에서 진행하는 실제 프로젝트를 통해 조금씩 익혀나가 보자.</p>
+<h2 id="정리" style="position:relative;"><a href="#%EC%A0%95%EB%A6%AC" aria-label="정리 permalink" class="anchor-header before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>정리</h2>
+<p>웹어플리케이션의 로직은 반복문, 분기문, 변수에 의해 복잡도가 증가한다. 복잡도가 증가하게되면 이로 인해 코드의 가독성이 떨어지고 결국에는 오류에 직면하게 된다.
+ES5 Array의 고차함수를 이용하면 반복문, 분기문, 변수를 로직으로부터 분리하고 제거할수 있다. 마찬가지로 RxJS는 ES5 Array의 고차함수와 같은 operator를 제공한다.
+operator는 Immutable한 Observable를 항상 생성함으로써 외부나 내부에 영향을 미치지 않는다. 이런 구조는 오류의 발생 빈도를 낮추는 역할을 한다.</p>
+<style class="grvsc-styles">
+  .grvsc-container {
+    overflow: auto;
+    position: relative;
+    -webkit-overflow-scrolling: touch;
+    padding-top: 1rem;
+    padding-top: var(--grvsc-padding-top, var(--grvsc-padding-v, 1rem));
+    padding-bottom: 1rem;
+    padding-bottom: var(--grvsc-padding-bottom, var(--grvsc-padding-v, 1rem));
+    border-radius: 8px;
+    border-radius: var(--grvsc-border-radius, 8px);
+    font-feature-settings: normal;
+    line-height: 1.4;
+  }
+  
+  .grvsc-code {
+    display: table;
+  }
+  
+  .grvsc-line {
+    display: table-row;
+    box-sizing: border-box;
+    width: 100%;
+    position: relative;
+  }
+  
+  .grvsc-line > * {
+    position: relative;
+  }
+  
+  .grvsc-gutter-pad {
+    display: table-cell;
+    padding-left: 0.75rem;
+    padding-left: calc(var(--grvsc-padding-left, var(--grvsc-padding-h, 1.5rem)) / 2);
+  }
+  
+  .grvsc-gutter {
+    display: table-cell;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+  }
+  
+  .grvsc-gutter::before {
+    content: attr(data-content);
+  }
+  
+  .grvsc-source {
+    display: table-cell;
+    padding-left: 1.5rem;
+    padding-left: var(--grvsc-padding-left, var(--grvsc-padding-h, 1.5rem));
+    padding-right: 1.5rem;
+    padding-right: var(--grvsc-padding-right, var(--grvsc-padding-h, 1.5rem));
+  }
+  
+  .grvsc-source:empty::after {
+    content: ' ';
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+  }
+  
+  .grvsc-gutter + .grvsc-source {
+    padding-left: 0.75rem;
+    padding-left: calc(var(--grvsc-padding-left, var(--grvsc-padding-h, 1.5rem)) / 2);
+  }
+  
+  /* Line transformer styles */
+  
+  .grvsc-has-line-highlighting > .grvsc-code > .grvsc-line::before {
+    content: ' ';
+    position: absolute;
+    width: 100%;
+  }
+  
+  .grvsc-line-diff-add::before {
+    background-color: var(--grvsc-line-diff-add-background-color, rgba(0, 255, 60, 0.2));
+  }
+  
+  .grvsc-line-diff-del::before {
+    background-color: var(--grvsc-line-diff-del-background-color, rgba(255, 0, 20, 0.2));
+  }
+  
+  .grvsc-line-number {
+    padding: 0 2px;
+    text-align: right;
+    opacity: 0.7;
+  }
+  
+  .github-light-theme {
+    background-color: #ffffff;
+    color: #000000;
+  }
+  .github-light-theme .grvsc-tiszgT-5 { color: #D73A49; }
+  .github-light-theme .grvsc-tiszgT-1 { color: #000000; }
+  .github-light-theme .grvsc-tiszgT-7 { color: #005CC5; }
+  .github-light-theme .grvsc-tiszgT-10 { color: #6F42C1; }
+  .github-light-theme .grvsc-tiszgT-8 { color: #032F62; }
+  .github-light-theme .grvsc-tiszgT-6 { color: #6A737D; }
+  .github-light-theme .grvsc-tiszgT-11 { color: #E36209; }
+  .github-light-theme .grvsc-line-highlighted::before {
+    background-color: var(--grvsc-line-highlighted-background-color, rgba(0, 0, 0, 0.05));
+    box-shadow: inset var(--grvsc-line-highlighted-border-width, 4px) 0 0 0 var(--grvsc-line-highlighted-border-color, rgba(0, 0, 0, 0.2));
+  }
+  body[data-theme=dark] .grvsc-ps-t4tStz { color: #ffffff; }
+  body[data-theme=dark] .grvsc-ps-t4tStz .grvsc-t4tStz-9 { color: #EB7E81; }
+  body[data-theme=dark] .grvsc-ps-t4tStz .grvsc-t4tStz-1 { color: #FFFFFF; }
+  body[data-theme=dark] .grvsc-ps-t4tStz .grvsc-t4tStz-5 { color: #BB97E7; }
+  body[data-theme=dark] .grvsc-ps-t4tStz .grvsc-t4tStz-3 { color: #66B5F6; }
+  body[data-theme=dark] .grvsc-ps-t4tStz .grvsc-t4tStz-10 { color: #9DCDF5; }
+  body[data-theme=dark] .grvsc-ps-t4tStz .grvsc-t4tStz-2 { color: #A19B8F; }
+  body[data-theme=dark] .grvsc-ps-t4tStz .grvsc-t4tStz-6 { color: #F39961; }
+  body[data-theme=dark] .grvsc-ps-t4tStz .grvsc-line-highlighted::before {
+    background-color: var(--grvsc-line-highlighted-background-color, rgba(0, 0, 0, 0.05));
+    box-shadow: inset var(--grvsc-line-highlighted-border-width, 4px) 0 0 0 var(--grvsc-line-highlighted-border-color, rgba(0, 0, 0, 0.2));
+  }
+</style></article></div><div><a class="tags__TagButton-sc-1u3nisj-0 eZcnGc" href="/tag/rxjs">rxjs</a><a class="tags__TagButton-sc-1u3nisj-0 eZcnGc" href="/tag/book">book</a><a class="tags__TagButton-sc-1u3nisj-0 eZcnGc" href="/tag/high-order-function">high-order function</a><a class="tags__TagButton-sc-1u3nisj-0 eZcnGc" href="/tag/operator">operator</a><a class="tags__TagButton-sc-1u3nisj-0 eZcnGc" href="/tag/draft">draft</a></div></div></div></article><div class="sponsorButton__SponsorWrapper-sc-bdk008-0 GzhZc"><a target="_blank" rel="noopener noreferrer" href="https://www.buymeacoffee.com/Tob0c39"><img src="https://www.buymeacoffee.com/assets/img/BMC-btn-logo.svg" alt="Buy me a coffee"/><span>Buy me a coffee</span></a></div><div class="post__Divider-sc-1hd457a-4 kbZkyP"></div><section class="blogPost__CommentWrap-sc-1679ooj-2 kwEcuz"><div></div></section></main></div><footer role="contentinfo" class="layout__Footer-sc-ms4dza-1 dtjXxz"><span aria-label="Copyright" class="layout__Copyright-sc-ms4dza-2 jCaufY">Copyright © 손찬욱. Built with <a href="https://github.com/sungik-choi/gatsby-starter-apple" target="__blank" class="layout__RepoLink-sc-ms4dza-3 cxwnQc">gatsby-starter-apple</a></span></footer></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/blog/rxjsbook3/";/*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping={"polyfill":["/polyfill-c5f50f2ad13861331c8a.js"],"app":["/app-6ef6f224acdf5273b2fc.js"],"component---cache-caches-gatsby-plugin-offline-app-shell-js":["/component---cache-caches-gatsby-plugin-offline-app-shell-js-241020a1cf7d0f317bbe.js"],"component---src-pages-404-js":["/component---src-pages-404-js-5756fd4e355ffafd2928.js"],"component---src-pages-about-js":["/component---src-pages-about-js-eb1bf6e9f8e2e01f198e.js"],"component---src-pages-index-js":["/component---src-pages-index-js-14119a16655768fb08fb.js"],"component---src-templates-blog-post-js":["/component---src-templates-blog-post-js-809454dcaab6df0ee29e.js"],"component---src-templates-blog-tag-js":["/component---src-templates-blog-tag-js-ff3d39a81280baeae06e.js"]};/*]]>*/</script><script src="/polyfill-c5f50f2ad13861331c8a.js" nomodule=""></script><script src="/component---src-templates-blog-post-js-809454dcaab6df0ee29e.js" async=""></script><script src="/e5f5b259f3bc5bd31060582de6626886320e23cc-416abd96c20b60d9af0b.js" async=""></script><script src="/6082d1df49fc9b78ea2e2ee7cbace9a784ba13b1-711e5751b845d400ec3d.js" async=""></script><script src="/54b5e9c514f22b177f32fa5e893e87989371d592-c3ea0d8a72359c0e6d4b.js" async=""></script><script src="/app-6ef6f224acdf5273b2fc.js" async=""></script><script src="/framework-66de6f443629588fba4e.js" async=""></script><script src="/webpack-runtime-7b523f1067fe9b54115e.js" async=""></script></body></html>

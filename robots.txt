@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+Sitemap: https://sculove.github.io/sitemap.xml
+Host: https://sculove.github.io
