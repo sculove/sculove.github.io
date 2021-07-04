@@ -8,14 +8,14 @@ const SEO = ({ description = '', meta = [], image = null, title}) => {
   const metaDescription = description || site.siteMetadata.description;
   const ogImageUrl =
     site.siteMetadata.siteUrl + (image || defaultOpenGraphImage);
-  const ogTitle = `${site.title} | ${title}`;
+  const ogTitle = `${title} | ${site.siteMetadata.title}`;
 
   return (
     <Helmet
       htmlAttributes={{
         lang: site.siteMetadata.lang,
       }}
-      title={ogTitle}
+      title={title}
       titleTemplate={`%s | ${site.siteMetadata.title}`}
       meta={[
         {
