@@ -1,6 +1,7 @@
 ---
 title: 프로그래머 아빠가 가르치는 코딩 교육 2
 category: Life
+thumbnail: ./images/codingWithChild2/game-level.jpeg
 tags:
   - 교육
   - 코딩
