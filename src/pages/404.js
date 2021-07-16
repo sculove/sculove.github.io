@@ -3,6 +3,8 @@ import styled from 'styled-components';
 import SEO from 'components/seo';
 import Layout from 'layout/layout';
 import GlowParticle from 'utils/glowParticle';
+import { useLocation } from '@reach/router';
+import kebabCase from 'lodash/kebabCase';
 
 const COLORS = [
   { r: 255, g: 149, b: 0 }, // orange
@@ -12,13 +14,42 @@ const COLORS = [
   { r: 255, g: 204, b: 0 }, //yellow
 ];
 
+function getLastPath(pathname) {
+  return pathname[pathname.length-1] === "/" ? 
+  pathname.substring(0, pathname.length-1).split("/").pop() : 
+  pathname.split("/").pop(); 
+}
+
+function getPreviousPageUrl(pathname) {
+  let url = null;
+  if(/^\/blog/.test(pathname)) { // 블로그로 시작되면.. 
+    if(pathname === "/blog" || /^\/blog\/archives\//.test(pathname)) {
+      url = "/";
+    } else if (/^\/blog\/categories\//.test(pathname)) {
+      url = `/category/${kebabCase(getLastPath(pathname))}`;
+    } else if (/^\/blog\/tags\//.test(pathname)) {
+      url = `/tag/${kebabCase(getLastPath(pathname))}`;
+    } else {
+      url = `/post/${getLastPath(pathname)}/`; 
+    }
+  } 
+  return url;
+}
+
 const NotFound = () => {
   const canvasRef = useRef(null);
   const [particles, setParticles] = useState([]);
   const isCreated = useRef(false);
   const requestRef = useRef(null);
+  const location = useLocation();
+  const url = getPreviousPageUrl(location.pathname);
 
   useLayoutEffect(() => {
+    if(url && typeof window !== 'undefined' && typeof document !== 'undefined') {
+      window.location.href = url;
+      return null;
+    }
+
     const canvasObj = canvasRef.current;
     const ctx = canvasObj.getContext('2d');
     let stageWidth = document.body.clientWidth;
@@ -85,7 +116,7 @@ const NotFound = () => {
     };
   });
 
-  return (
+  return !url && (
     <Layout>
       <SEO title="Not found" />
       <Container>
