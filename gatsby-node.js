@@ -2,64 +2,26 @@ const path = require(`path`);
 const _ = require('lodash');
 const { createFilePath } = require(`gatsby-source-filesystem`);
 
-exports.onCreateNode = ({ node, getNode, actions }) => {
-  const { createNodeField } = actions;
-  if (node.internal.type === `MarkdownRemark`) {
-    const slug = createFilePath({ node, getNode, basePath: `content` });
-    createNodeField({
-      node,
-      name: `slug`,
-      value: slug,
-    });
-  }
-};
-
-exports.createPages = async ({ graphql, actions }) => {
-  const { createPage } = actions;
-  const categoryTemplate = path.resolve(`./src/pages/index.js`);
+function createPostPage(posts, createPage) {
   const postTemplate = path.resolve(`./src/templates/blogPost.js`);
-  const tagTemplate = path.resolve(`./src/templates/blogTag.js`);
-  const result = await graphql(`
-    {
-      postsRemark: allMarkdownRemark(
-        filter: { fileAbsolutePath: { regex: "/(content/post)/" } }
-        sort: { fields: frontmatter___date, order: DESC }
-        limit: 2000
-      ) {
-        edges {
-          node {
-            frontmatter {
-              tags
-            }
-            fields {
-              slug
-            }
-          }
-        }
-      }
-      categoriesGroup: allMarkdownRemark(limit: 2000) {
-        group(field: frontmatter___category) {
-          fieldValue
-          totalCount
-        }
-      }
-    }
-  `);
+  posts.forEach(({ node }, index) => {
+    const next = index === posts.length - 1 ? null : posts[index + 1].node;
+    const previous = index === 0 ? null : posts[index - 1].node;
 
-  const posts = result.data.postsRemark.edges;
-
-  posts.forEach(({ node }) => {
     createPage({
       path: node.fields.slug,
       component: postTemplate,
       context: {
         slug: node.fields.slug,
+        previous,
+        next,
       },
     });
   });
+}
 
-  const categories = result.data.categoriesGroup.group;
-
+function createCategoryPage(categories, createPage) {
+  const categoryTemplate = path.resolve(`./src/pages/index.js`);
   categories.forEach((category) => {
     createPage({
       path: `/category/${_.kebabCase(category.fieldValue)}/`,
@@ -69,11 +31,12 @@ exports.createPages = async ({ graphql, actions }) => {
       },
     });
   });
+}
 
+function createTagMap(posts) {
   const doubleTags = posts.reduce((acc, { node }) => {
     return acc.concat(node.frontmatter.tags || []);
   }, []);
-
   const tagsMap = doubleTags.reduce((acc, tag) => {
     if (acc.has(tag)) {
       acc.set(tag, {
@@ -88,10 +51,13 @@ exports.createPages = async ({ graphql, actions }) => {
     }
     return acc;
   }, new Map());
+  return tagsMap;
+}
 
-  const tags = Array.from(tagsMap.values()).sort(
-    (prev, cur) => cur.count - prev.count
-  );
+function createTagPage(posts, createPage) {
+  const tagTemplate = path.resolve(`./src/templates/blogTag.js`);
+  const tagsMap = createTagMap(posts);
+  const tags = Array.from(tagsMap.values()).sort((prev, cur) => cur.count - prev.count);
   tags.forEach((tag) => {
     createPage({
       path: `/tag/${_.kebabCase(tag.name)}/`,
@@ -102,4 +68,53 @@ exports.createPages = async ({ graphql, actions }) => {
       },
     });
   });
+}
+
+exports.onCreateNode = ({ node, getNode, actions }) => {
+  const { createNodeField } = actions;
+  if (node.internal.type === `MarkdownRemark`) {
+    const slug = createFilePath({ node, getNode, basePath: `content` });
+    createNodeField({
+      node,
+      name: `slug`,
+      value: slug,
+    });
+  }
+};
+
+exports.createPages = async ({ graphql, actions }) => {
+  const { createPage } = actions;
+  const result = await graphql(`
+    {
+      postsRemark: allMarkdownRemark(
+        filter: { fileAbsolutePath: { regex: "/(content/post)/" } }
+        sort: { fields: frontmatter___date, order: DESC }
+        limit: 2000
+      ) {
+        edges {
+          node {
+            fields {
+              slug
+            }
+            frontmatter {
+              tags
+              title
+              category
+            }
+          }
+        }
+      }
+      categoriesGroup: allMarkdownRemark(limit: 2000) {
+        group(field: frontmatter___category) {
+          fieldValue
+          totalCount
+        }
+      }
+    }
+  `);
+  const posts = result.data.postsRemark.edges;
+
+  createPostPage(posts, createPage);
+  createTagPage(posts, createPage);
+  createCategoryPage(result.data.categoriesGroup.group, createPage);
 };

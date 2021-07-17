@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 const SponsorWrapper = styled.div`
   text-align: center;
-  margin-bottom: 20px;
+  margin-top: 20px;
 
   & a {
     display: inline-block;
@@ -30,7 +30,7 @@ const SponsorWrapper = styled.div`
     }
 
     & span {
-      color: var(--color-black);
+      color: var(--color-text-3);
       margin-left: 6px;
     }
   }

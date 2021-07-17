@@ -13,9 +13,9 @@ import {
 import useSiteMetadata from 'hooks/useSiteMetadata';
 import useMenu from 'hooks/useMenu';
 
-const NavBar = ({ title, themeToggler }) => {
+const NavBar = ({ themeToggler }) => {
   const site = useSiteMetadata();
-  const { menuLinks } = site.siteMetadata;
+  const { title, menuLinks } = site.siteMetadata;
   const { device } = useContext(ThemeContext);
   const navRef = useRef(null);
   const curtainRef = useRef(null);

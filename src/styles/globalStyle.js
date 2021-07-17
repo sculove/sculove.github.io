@@ -25,8 +25,8 @@ const GlobalStyle = createGlobalStyle`
     --sizing-sm: 8px;
     --sizing-base: 16px;
     --sizing-md: 24px;
-    --sizing-lg: 40px;
-    --sizing-xl: 64px;
+    --sizing-lg: 30px;
+    --sizing-xl: 44px;
 
     --text-xs: 0.625rem;
     --text-sm: 0.75rem;

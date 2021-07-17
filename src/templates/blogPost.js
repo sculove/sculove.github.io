@@ -4,11 +4,10 @@ import styled from 'styled-components';
 import Layout from 'layout/layout';
 import SEO from 'components/seo';
 import Comment from 'components/comment';
-import Post, { Divider } from 'components/post';
-import SponsorButton from 'components/sponsorButton';
-import Tags from 'components/tags';
+import { Divider } from 'components/post';
+import Article from 'components/article';
 
-const BlogPost = ({ data }) => {
+const BlogPost = ({ data, pageContext }) => {
   const {
     markdownRemark: {
       frontmatter: {
@@ -24,32 +23,25 @@ const BlogPost = ({ data }) => {
       tableOfContents,
     },
   } = data;
-  const sponsor = data?.site?.siteMetadata?.sponsor || {};
+  const buyMeACoffeeId = data?.site?.siteMetadata?.sponsor?.buyMeACoffeeId || null;
   const ogImagePath = thumbnail && thumbnail.childImageSharp.fixed.src;
   return (
     <Layout>
       <SEO title={title} description={desc} image={ogImagePath} />
       <main>
-        <article>
-          <OuterWrapper>
-            <InnerWrapper>
-              <Post
-                title={title}
-                desc={desc}
-                date={date}
-                category={category}
-                tableOfContents={tableOfContents}
-                disableToc={disableToc}
-                html={html}
-              ></Post>
-              <Tags tags={tags} />
-            </InnerWrapper>
-          </OuterWrapper>
-        </article>
-        {!!sponsor?.buyMeACoffeeId && (
-          <SponsorButton sponsorId={sponsor.buyMeACoffeeId} />
-        )}
-        <Divider />
+        <Article
+          title={title}
+          desc={desc}
+          date={date}
+          category={category}
+          tableOfContents={tableOfContents}
+          disableToc={disableToc}
+          html={html}
+          tags={tags}
+          buyMeACoffeeId={buyMeACoffeeId}
+          previous={pageContext.previous}
+          next={pageContext.next}
+        ></Article>
         <CommentWrap>
           <Comment />
         </CommentWrap>
@@ -57,24 +49,6 @@ const BlogPost = ({ data }) => {
     </Layout>
   );
 };
-
-const OuterWrapper = styled.div`
-  margin-top: var(--sizing-xl);
-
-  @media (max-width: ${({ theme }) => theme.device.sm}) {
-    margin-top: var(--sizing-lg);
-  }
-`;
-
-const InnerWrapper = styled.div`
-  width: var(--post-width);
-  margin: 0 auto;
-  padding-bottom: var(--sizing-lg);
-
-  @media (max-width: ${({ theme }) => theme.device.sm}) {
-    width: 87.5%;
-  }
-`;
 
 const CommentWrap = styled.section`
   width: 100%;
@@ -117,5 +91,4 @@ export const query = graphql`
     }
   }
 `;
-
 export default BlogPost;
