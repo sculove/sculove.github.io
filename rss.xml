@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[아내와 아들 그리고 딸밖에 모르는 남편]]></title><description><![CDATA[FrontEnd 개발자. 아내와 아들 그리고 딸밖에 모르는 철부지 남편으로서 개발과 경제에 관심이 많은 평범한 직장인 개발자의 기술 경험 블로그]]></description><link>https://sculove.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Sat, 17 Jul 2021 06:57:05 GMT</lastBuildDate><item><title><![CDATA[No title]]></title><description><![CDATA[손찬욱 (warren) 아내와 아들 그리고 딸밖에 모르는 철부지 남편으로서 개발과 경제에 관심이 많은 평범한 직장인 개발자다. Linkedin: https://www.linkedin.com/in/chan-uk-son-8989ba56/ Github…]]></description><link>https://sculove.github.io/about/</link><guid isPermaLink="false">https://sculove.github.io/about/</guid><content:encoded>&lt;h1&gt;손찬욱 (warren)&lt;/h1&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[아내와 아들 그리고 딸밖에 모르는 남편]]></title><description><![CDATA[FrontEnd 개발자. 아내와 아들 그리고 딸밖에 모르는 철부지 남편으로서 개발과 경제에 관심이 많은 평범한 직장인 개발자의 기술 경험 블로그]]></description><link>https://sculove.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Sat, 17 Jul 2021 10:15:28 GMT</lastBuildDate><item><title><![CDATA[No title]]></title><description><![CDATA[손찬욱 (warren) 아내와 아들 그리고 딸밖에 모르는 철부지 남편으로서 개발과 경제에 관심이 많은 평범한 직장인 개발자다. Linkedin: https://www.linkedin.com/in/chan-uk-son-8989ba56/ Github…]]></description><link>https://sculove.github.io/about/</link><guid isPermaLink="false">https://sculove.github.io/about/</guid><content:encoded>&lt;h1&gt;손찬욱 (warren)&lt;/h1&gt;
 &lt;p&gt;아내와 아들 그리고 딸밖에 모르는 철부지 남편으로서 개발과 경제에 관심이 많은 평범한 직장인 개발자다.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Linkedin: &lt;a href=&quot;https://www.linkedin.com/in/chan-uk-son-8989ba56/&quot;&gt;https://www.linkedin.com/in/chan-uk-son-8989ba56/&lt;/a&gt;&lt;/li&gt;
@@ -36,6 +36,186 @@
 &lt;li&gt;&lt;a href=&quot;http://d2.naver.com/helloworld/211221&quot;&gt;[2012.11.23] JMC 스마트하게 사용하기&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;http://d2.naver.com/helloworld/89902&quot;&gt;[2012.07.05] JMC 스크롤 컴포넌트의 이해: jindo.m.Scroll&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
+&lt;style class=&quot;grvsc-styles&quot;&gt;
+  .grvsc-container {
+    overflow: auto;
+    position: relative;
+    -webkit-overflow-scrolling: touch;
+    padding-top: 1rem;
+    padding-top: var(--grvsc-padding-top, var(--grvsc-padding-v, 1rem));
+    padding-bottom: 1rem;
+    padding-bottom: var(--grvsc-padding-bottom, var(--grvsc-padding-v, 1rem));
+    border-radius: 8px;
+    border-radius: var(--grvsc-border-radius, 8px);
+    font-feature-settings: normal;
+    line-height: 1.4;
+  }
+  
+  .grvsc-code {
+    display: table;
+  }
+  
+  .grvsc-line {
+    display: table-row;
+    box-sizing: border-box;
+    width: 100%;
+    position: relative;
+  }
+  
+  .grvsc-line &gt; * {
+    position: relative;
+  }
+  
+  .grvsc-gutter-pad {
+    display: table-cell;
+    padding-left: 0.75rem;
+    padding-left: calc(var(--grvsc-padding-left, var(--grvsc-padding-h, 1.5rem)) / 2);
+  }
+  
+  .grvsc-gutter {
+    display: table-cell;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+  }
+  
+  .grvsc-gutter::before {
+    content: attr(data-content);
+  }
+  
+  .grvsc-source {
+    display: table-cell;
+    padding-left: 1.5rem;
+    padding-left: var(--grvsc-padding-left, var(--grvsc-padding-h, 1.5rem));
+    padding-right: 1.5rem;
+    padding-right: var(--grvsc-padding-right, var(--grvsc-padding-h, 1.5rem));
+  }
+  
+  .grvsc-source:empty::after {
+    content: &apos; &apos;;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+  }
+  
+  .grvsc-gutter + .grvsc-source {
+    padding-left: 0.75rem;
+    padding-left: calc(var(--grvsc-padding-left, var(--grvsc-padding-h, 1.5rem)) / 2);
+  }
+  
+  /* Line transformer styles */
+  
+  .grvsc-has-line-highlighting &gt; .grvsc-code &gt; .grvsc-line::before {
+    content: &apos; &apos;;
+    position: absolute;
+    width: 100%;
+  }
+  
+  .grvsc-line-diff-add::before {
+    background-color: var(--grvsc-line-diff-add-background-color, rgba(0, 255, 60, 0.2));
+  }
+  
+  .grvsc-line-diff-del::before {
+    background-color: var(--grvsc-line-diff-del-background-color, rgba(255, 0, 20, 0.2));
+  }
+  
+  .grvsc-line-number {
+    padding: 0 2px;
+    text-align: right;
+    opacity: 0.7;
+  }
+  
+&lt;/style&gt;</content:encoded></item><item><title><![CDATA[네이버 블로그에서 gatsby로 다시 이전]]></title><description><![CDATA[작년쯤에 Hexo로 만들어서 쓰던 블로그를 네이버 블로그로 옮겼었다. 이 블로그는 이제 사용하지 않습니다. 네이버 블로그로 이전합니다. Hexo 블로그 그 때 네이버 블로그로 옮긴 가장 큰 이유는 Hexo…]]></description><link>https://sculove.github.io/post/changeblog/</link><guid isPermaLink="false">https://sculove.github.io/post/changeblog/</guid><pubDate>Sat, 17 Jul 2021 08:41:31 GMT</pubDate><content:encoded>&lt;p&gt;작년쯤에 Hexo로 만들어서 쓰던 블로그를 &lt;a href=&quot;httsp://m.blog.naver.com/crazymonlong&quot;&gt;네이버 블로그&lt;/a&gt;로 옮겼었다.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;a href=&quot;./moveTo&quot;&gt;이 블로그는 이제 사용하지 않습니다. 네이버 블로그로 이전합니다.&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&quot;hexo-블로그&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#hexo-%EB%B8%94%EB%A1%9C%EA%B7%B8&quot; aria-label=&quot;hexo 블로그 permalink&quot; class=&quot;anchor-header before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Hexo 블로그&lt;/h2&gt;
+&lt;p&gt;그 때 네이버 블로그로 옮긴 가장 큰 이유는 &lt;code&gt;Hexo로 된 블로그의 유지보수 비용&lt;/code&gt; 때문이다.&lt;/p&gt;
+&lt;p&gt;내가 블로그를 자주 쓰는 사람은 아니지만 그래도 가끔은 내 생각을 정리하고&lt;br&gt;
+때로는 공부했던 내용 중 생각 정리가 필요한 부분에 대해서는 블로그를 사용하였다.&lt;/p&gt;
+&lt;p&gt;마음먹고 글을 쓰려는데 Hexo쪽 이슈 등으로 인해 번번이 시간을 많이 보내는 경우가 많아서 언젠가는 한번 뒤집어 엎어야겠다는 생각을 늘 마음 속에 품고 있었다.&lt;/p&gt;
+&lt;p&gt;물론 그때 React + GraphQL 기반의 Gatsby가 유행을 타고 있는 시기여서 Gatsby로 바꿀까도 생각했지만...&lt;br&gt;
+기존에 웹상에 퍼져있는 글들의 링크를 무시하고 갈아타기에는 내 시간과 열정이 많이 부족했었다.&lt;/p&gt;
+&lt;p&gt;그래서 차선책으로 가장 접근이 편한 네이버 블로그를 이용하였다.&lt;/p&gt;
+&lt;h2 id=&quot;네이버-블로그&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EB%84%A4%EC%9D%B4%EB%B2%84-%EB%B8%94%EB%A1%9C%EA%B7%B8&quot; aria-label=&quot;네이버 블로그 permalink&quot; class=&quot;anchor-header before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;네이버 블로그&lt;/h2&gt;
+&lt;p&gt;네이버 블로그의 에디터 기능은 사실 더할 나위 없이 편리하다.
+쉽게 앱이나 웹에서 작성해서 올릴 수 있었다.&lt;/p&gt;
+&lt;p&gt;특히, 나 같은 경우에는 글을 쓸 때 글의 내용과 연관성이 있는 내용의 사진을 고르는 데에만 많은 시간을 소비한다.
+네이버 에디터에서는 사진, 책과 같은 글감을 넣을 수 있어서 글을 쓰는데 많은 시간을 아낄 수 있었다.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 373px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 180.36809815950923%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAkCAYAAACJ8xqgAAAACXBIWXMAAAsTAAALEwEAmpwYAAAHeUlEQVRIx32WC1SN6RrH95qz1pwzM6xxjnNmzWAkTZTRkm6EVCMiyaWJSsmdkVy6S6gIKVQkl3E4lFtoGsrSYhBjjDENJo1LR+heona73b5Uv/N+n9lG5cy71rO+p/197//5P5f3/6Zoa2vjz0yv19Pa2iqbWteCTq+jVd9Kk6aZR03PKFGVUfzyv1SqaqEdFO3t7fw/k1ZjYyNNyiYELKWaKur1jfLvDS8b0Kt1sv+y7gXKBqXsK3jLMoBJ7Gpra6murqattY1i9RPq9A1o1BrKK8qprqlGq9NS+qRU+DWvAN+WpoGhlGZzczNqtZr2tnYaW1Vo23TotDpUKpX8u06nk7OQvxF7FJ2ZSYAtLS0yO61WK5u0SaPRoNe8qt/blvSNREAhbTaYIaLky091i8zQwLJZ3SwHMAR/s9ZyQEFCITmSSR9KmyRfWlK0Nzd1LoVkhhIZfJmhIS3JDEylVVZWRo0otCFQQ0PD69QlxlLdpKf03vBO+rsLQ0PaFRWVMqCUhhTkj1r+HljskU34mt996b3M0AAovZSiaFrUtIkB1mpaaGpSvS68lNafLbmGnQFVzWoePS2n4Kc7PC4r5/nzOjKOHuVqwTWe19ZxueA6GZknyS64SFbeWQ4dP8Y3+blc+flGR4ZSKlqthrqXjRw/c56YvVn8eP8Z94vvYmZtQ0hIJPfuFOG3YAlGViNwnOXLGM9pDHcfy8TgmSzZESOP1BuAr9peVvaUgqvfcb+khF8Kr3OzsJCQmE0kJSZTdPsOS9etpb+FLZPmB+C/MZJJsxfgE7mUkIRoMfDajoCS/7yujpzTWeTmnuPI8QwOncrkQPZF0nfu5pefbhEctZqRY8biMsVLMAtixAxvRrpPxnv5YhmjC2B9/Qv27dtH6o50kncdJOPUWU6f+4FDR/MoFHUNTVqP27K52H7hht3c6UyODMTSdRzua0NFDbUdmyI9lUolZ3LPc+JUDufyr3D5WiFFxSXc/vUhjx49IXj1KmxcXbBzHoNb0BxsBZiFgzMTZgWgFk1969jkX/yenNyLAuQBt24Xc6foIbnnC7h89Sbx6+MZM2kilo4uOPj74ODrhWvUIr4MXIZKqercZS11z+v5Nu8S9x+UomxUUVP7gpLH5Tx5VkVDvZKI5C2MWuiNo6cvfc2tsPIYz7hFvriJWraIQ9GhhtIcVVbVsDouhYjoLaxas5ntaQcJi04iPmkvRUWPCAwPFY2Ygr2LG33FOA32ECmPc8JjQQC6tk5jI7W9VgzvdN95DHMYi6W9I84uHjhNmIaZ5WjWxSeyPDSS3p8P5iMjE3oaGWNmb83HZubYT3VF07UpLeLQN5F/6QJ7tiaSFruJjds28+3+w+ScPMi9n++LETpNYGg48xYtZXlMFGv+nUBE/Dqi4mJljI6DrdNTXlWGz1xP/AXDaQMHEOfnRfKcQE54BHAtdB9xCVsZ7+rLocTt1B07zMMjV0nZ/gMhaw7LGtARUOjZ08elhC1YRtLKMDwtLUgdNpydQ8bhaW3KhphVuI33RKH4CyEOo8ib6UXaokRGOm1gqN1c0ZTmTjUUClNdVknGygj2xq1j5tTBJHl7ESFOhp/fGJJ3rGfK5Jm8/053jszxJ81zKjH+4Xi6x/CFy1IhfZ0ANeIsK4XChI6yYNZiN9wcBpMSvoSj26IJc/QgJ+Mg40SDnExtKdywhThXVxKDdjF2/HocHBeKOX4jZe3vs9jwop6sEwfYFreK9LUJnN+dTXbGYTKS11NSfJUJrtOY4exPXEA4kb4r+NJzA90/HsEQm0kdz/KrkyLkXaWk/MEtnvz2o5jLZqorS8VA1/B9fjbPSh6QfeQk+zdv42TKTvL2ZJK+5WvSE3azN2U/mje7LDMU921jfS05+2IpvH6WuzevsDt2Bdfz95C6xpW8rFR2Lg4m1NqOjYOciTW1Y7Hwgz4ZSrCVy9vURkd9XRW5B1dQWXKD4vyTXNoZzqFdE4iPHsq5b7aywy+QWBMLFn5qQay5PRGmVvj3MGG5+XC0XcVBpNzUQOVv56m4d4EbmamciA3g14Ij6GtLaFdWsMrdG6/3jdk4wJZ1AmztQCsW9hpMuM0oWVw6AEryoxZqo3tZSdnd7ziTmc7GqBBuXzmF/sVj9Kpq1rr5EN1nENEfDcH3QxMiP/ucgJ6fscBsmLj5uoiDVqhLPQHzw/EVXVwUFM949+n4z4tgyoxgNiWlcyEnl2MJqexPSGFvQjKHt6VxIGE7mWlfd2zK6zulvAIb6wn06jOU/uajsRuzEDObybzz3qesDI1nUkAQim7GdO8zhB69jPl773588K8+GA0ZJt/NXQCfif8YrKycMTKxoZ+pDRa2E7F38qHvgNFERm/F1fsrFO+aoviHNYq/mdC9R1/e7WZEb7MRHQf7j1uvAqOBDrz3YX969rLkgx7G9OltSbdPhuPjvxj32cH89Z/WjLJ2Z0vAFIabDxMBjDEZZCfEoaWrwFZXVREWtYllIr2vgiLk59Lla/CfvYQD/8lirGDoZONCZtgKjgYv48B8P6ZaWdFvoK0sf/8D0zfPy3CQZ3kAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;assets&quot;
+        title=&quot;assets&quot;
+        src=&quot;/static/0af02f3c72c796ec8024e0df5ad1234f/67a5d/assets.png&quot;
+        srcset=&quot;/static/0af02f3c72c796ec8024e0df5ad1234f/222b7/assets.png 163w,
+/static/0af02f3c72c796ec8024e0df5ad1234f/ff46a/assets.png 325w,
+/static/0af02f3c72c796ec8024e0df5ad1234f/67a5d/assets.png 373w&quot;
+        sizes=&quot;(max-width: 373px) 100vw, 373px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;더군다나 네이버를 통해 광고도 붙일 수 있고 네이버의 검색 트래픽도 받을 수 있으니 나쁘지 않은 선택으로 보였다.&lt;br&gt;
+예쁘지 않은 네이버 블로그의 PC는 내가 담당하고 있는 개발 영역이기도 하니 앞으로 더 나아지리라 생각되었다 ㅎ&lt;/p&gt;
+&lt;h2 id=&quot;네이버-블로그에서-gatsby로&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EB%84%A4%EC%9D%B4%EB%B2%84-%EB%B8%94%EB%A1%9C%EA%B7%B8%EC%97%90%EC%84%9C-gatsby%EB%A1%9C&quot; aria-label=&quot;네이버 블로그에서 gatsby로 permalink&quot; class=&quot;anchor-header before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;네이버 블로그에서 Gatsby로&lt;/h2&gt;
+&lt;h3 id=&quot;낮은-검색율&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EB%82%AE%EC%9D%80-%EA%B2%80%EC%83%89%EC%9C%A8&quot; aria-label=&quot;낮은 검색율 permalink&quot; class=&quot;anchor-header before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;낮은 검색율&lt;/h3&gt;
+&lt;p&gt;이번에 네이버 블로그에서 Gatsby로 옮기게 되었는데 그 이유는 &lt;strong&gt;우선 검색율이 현저히 떨어지기 때문이다.&lt;/strong&gt;&lt;br&gt;
+기술 내용을 주로 쓰는 나 같은 경우라면 네이버 블로그는 비추이다.&lt;br&gt;
+네이버 블로그는 전문적인 내용보다는 맛집과 같은 대중적인 내용의 글을 쓰는 사람에게 적합한 블로그이다.
+물론 내가 열심히 글을 쓰지 않은 면도 있지만... 그래도 기술 문서의 검색율은 정말 낮다.&lt;/p&gt;
+&lt;p&gt;나 또한 기술 문서나 관련 내용을 찾기 위해서 구글 검색을 이용하면서 이런 생각을 왜 못했는지 모르겠다. 후~&lt;/p&gt;
+&lt;h3 id=&quot;개발자로서-채우고-싶은-욕망&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EA%B0%9C%EB%B0%9C%EC%9E%90%EB%A1%9C%EC%84%9C-%EC%B1%84%EC%9A%B0%EA%B3%A0-%EC%8B%B6%EC%9D%80-%EC%9A%95%EB%A7%9D&quot; aria-label=&quot;개발자로서 채우고 싶은 욕망 permalink&quot; class=&quot;anchor-header before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;개발자로서 채우고 싶은 욕망&lt;/h3&gt;
+&lt;p&gt;Getsby를 써보면 아시겠지만 static 블로그를 만들기에는 상당히 잘 만들어진 프레임워크이다.
+React와 GraphQL에 대한 이해만 있다면 원하는 기능을 하나 하나 만들어 나갈 수 있다.
+심심하지 않게 개발하는 재미도 있다.&lt;/p&gt;
+&lt;p&gt;네이버 블로그는 정말 잘 만들어진 사이트이지만 PC의 경우 너무 오랫동안 개선이 되지 않고 있다. 너무 못 생겼다 ㅎ&lt;br&gt;
+사실 앞으로의 변화도 기대하기 어렵다고 판단된다.&lt;/p&gt;
+&lt;h3 id=&quot;생각만큼-유용하지-않은-사용자-접근성&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EC%83%9D%EA%B0%81%EB%A7%8C%ED%81%BC-%EC%9C%A0%EC%9A%A9%ED%95%98%EC%A7%80-%EC%95%8A%EC%9D%80-%EC%82%AC%EC%9A%A9%EC%9E%90-%EC%A0%91%EA%B7%BC%EC%84%B1&quot; aria-label=&quot;생각만큼 유용하지 않은 사용자 접근성 permalink&quot; class=&quot;anchor-header before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;생각만큼 유용하지 않은 사용자 접근성&lt;/h3&gt;
+&lt;p&gt;내가 글을 쓰는 경우는 따지고 보니 크게 2가지 였다.
+사생활 노출(?)이나 기술 문서. 또는 수필 아닌 수필 같은 장문의 글들? 또는 책 읽은 소감 등등등&lt;/p&gt;
+&lt;p&gt;처음에는 이 두 가지 욕구를 모두 네이버 블로그에서 다 풀어보려고 했다.&lt;br&gt;
+해본 소감으로는 &lt;strong&gt;👎&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;네이버 블로그는 태생부터 긴 글을 쓰는게 수월하게 구성되어 있다보니 각 잡고 긴글을 쓰는 용도가 아니라면 상당히 번잡스럽고 불편했다.
+간단한 사생활 노출(?) 용도로는 적합하지 않았다.&lt;/p&gt;
+&lt;p&gt;네이버 앱과 웹이 있지만 인스타그램이나 페이스북과 같은 SNS에 비할바가 못되었다.&lt;/p&gt;
+&lt;h2 id=&quot;결론&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EA%B2%B0%EB%A1%A0&quot; aria-label=&quot;결론 permalink&quot; class=&quot;anchor-header before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;결론&lt;/h2&gt;
+&lt;p&gt;그래서 내가 내린 이번 결론은&lt;/p&gt;
+&lt;p&gt;긴 글은 내가 마음대로 만들고 고칠 수 있는 친숙한 &lt;strong&gt;Getsby&lt;/strong&gt;로 바꾸고,&lt;br&gt;
+짧은 내 사생활 노출(?) 글은 인스타그램이나 페이스북과 같은 &lt;strong&gt;SNS&lt;/strong&gt;를 쓰기로 했다.&lt;/p&gt;
+&lt;p&gt;그래서 네이버 블로그는 그대로 방치해두고 이번에 Gatsby로 바꾸고 마이그레이션도 했다. (개 노.가.대)&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 388px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 100%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAUABQDASIAAhEBAxEB/8QAGAABAQEBAQAAAAAAAAAAAAAAAAMEAQX/xAAXAQADAQAAAAAAAAAAAAAAAAAAAQID/9oADAMBAAIQAxAAAAGEaaSvObGmV7A+Bz//xAAcEAACAgIDAAAAAAAAAAAAAAABAgARAxMQEiL/2gAIAQEAAQUC1gxsbA+oTcrsusxFHP8A/8QAFxEBAAMAAAAAAAAAAAAAAAAAEQEgIf/aAAgBAwEBPwEg2n//xAAWEQADAAAAAAAAAAAAAAAAAAABEBH/2gAIAQIBAT8BpqC//8QAGxAAAQQDAAAAAAAAAAAAAAAAAAEQETEhUaH/2gAIAQEABj8CsgwraUrpL//EABwQAQACAgMBAAAAAAAAAAAAAAEAESFREEFhMf/aAAgBAQABPyHvZMzqI6YPli01ctifR7gH27simUtef//aAAwDAQACAAMAAAAQ2NAA/8QAGBEBAQADAAAAAAAAAAAAAAAAAQAQITH/2gAIAQMBAT8QHXDbnH//xAAXEQEAAwAAAAAAAAAAAAAAAAABESAx/9oACAECAQE/EABGUf/EABwQAQEBAAIDAQAAAAAAAAAAAAERACFBYXGRgf/aAAgBAQABPxBS1GAWT9z5cyvyxCP6caynYolDRFoRCR4wMfshv3AXCteZ6wcXvKrzv//Z&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;dog&quot;
+        title=&quot;dog&quot;
+        src=&quot;/static/bb2f8745740213141e68a86209569433/c3c84/dog.jpg&quot;
+        srcset=&quot;/static/bb2f8745740213141e68a86209569433/d2f63/dog.jpg 163w,
+/static/bb2f8745740213141e68a86209569433/c989d/dog.jpg 325w,
+/static/bb2f8745740213141e68a86209569433/c3c84/dog.jpg 388w&quot;
+        sizes=&quot;(max-width: 388px) 100vw, 388px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;웹에 퍼진 검색링크가 깨지면 어떠하리...&lt;br&gt;
+내가 광고로 돈 벌것도 아니고&lt;br&gt;
+심심할 때 개발하고&lt;br&gt;
+필요할 때 글쓰기만 하면 되는데 쳇.&lt;/p&gt;
 &lt;style class=&quot;grvsc-styles&quot;&gt;
   .grvsc-container {
     overflow: auto;
@@ -911,17 +1091,20 @@ https://tv.naver.com/v/16970015 발표한 행사 정보 2020.11.26 Deview2020 ht
     opacity: 0.7;
   }
   
-&lt;/style&gt;</content:encoded></item><item><title><![CDATA[이 블로그는 이제 사용하지 않습니다. 네이버 블로그로 이전합니다.]]></title><description><![CDATA[언제부터인가 블로깅을 하는게 쉽지 않은 일이 되어 버렸다. 마크다운은 편하지만 바로바로 글을 쓰기에는 상당한 진입장벽이다. git…]]></description><link>https://sculove.github.io/post/moveTo/</link><guid isPermaLink="false">https://sculove.github.io/post/moveTo/</guid><pubDate>Wed, 30 Sep 2020 02:45:32 GMT</pubDate><content:encoded>&lt;p&gt;언제부터인가 블로깅을 하는게 쉽지 않은 일이 되어 버렸다.&lt;/p&gt;
-&lt;p&gt;마크다운은 편하지만 바로바로 글을 쓰기에는 상당한 진입장벽이다.&lt;/p&gt;
-&lt;p&gt;git으로 올리고 배포해야하고... 모바일은 더욱 더 못하고...&lt;/p&gt;
-&lt;p&gt;어차피 광고를 올릴 것도 아니고 그래서 개발하고 있는 서비스인 &lt;code&gt;네이버 블로그&lt;/code&gt;로 아예 옮기기로 했다.
-(PC는 구리지만... 차차 나아지겠지 ㅎ)&lt;/p&gt;
-&lt;p&gt;안녕~!&lt;/p&gt;
-&lt;p&gt;아내와 아들 그리고 딸밖에 모르는 개발자 네이버 블로그&lt;/p&gt;
+&lt;/style&gt;</content:encoded></item><item><title><![CDATA[이 블로그는 이제 사용하지 않습니다. 네이버 블로그로 이전합니다.]]></title><description><![CDATA[언제부터인가 블로깅을 하는게 쉽지 않은 일이 되어 버렸다. 마크다운은 편하지만 바로바로 글을 쓰기에는 상당한 진입장벽이다. git…]]></description><link>https://sculove.github.io/post/moveTo/</link><guid isPermaLink="false">https://sculove.github.io/post/moveTo/</guid><pubDate>Wed, 30 Sep 2020 02:45:32 GMT</pubDate><content:encoded>&lt;p&gt;&lt;del&gt;언제부터인가 블로깅을 하는게 쉽지 않은 일이 되어 버렸다.&lt;/del&gt;&lt;/p&gt;
+&lt;p&gt;&lt;del&gt;마크다운은 편하지만 바로바로 글을 쓰기에는 상당한 진입장벽이다.&lt;/del&gt;&lt;/p&gt;
+&lt;p&gt;&lt;del&gt;git으로 올리고 배포해야하고... 모바일은 더욱 더 못하고...&lt;/del&gt;&lt;/p&gt;
+&lt;p&gt;&lt;del&gt;어차피 광고를 올릴 것도 아니고 그래서 개발하고 있는 서비스인 &lt;code&gt;네이버 블로그&lt;/code&gt;로 아예 옮기기로 했다.&lt;/del&gt;
+&lt;del&gt;(PC는 구리지만... 차차 나아지겠지 ㅎ)&lt;/del&gt;&lt;/p&gt;
+&lt;p&gt;&lt;del&gt;안녕~!&lt;/del&gt;&lt;/p&gt;
+&lt;p&gt;&lt;del&gt;아내와 아들 그리고 딸밖에 모르는 개발자 네이버 블로그&lt;/del&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;https://m.blog.naver.com/crazymonlong&quot;&gt;https://m.blog.naver.com/crazymonlong&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://blog.naver.com/crazymonlong&quot;&gt;https://blog.naver.com/crazymonlong&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;다시... &lt;a href=&quot;https://sculove.github.io&quot;&gt;https://sculove.github.io&lt;/a&gt; 로 옮겨왔습니다 - 2021.07.17&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;style class=&quot;grvsc-styles&quot;&gt;
   .grvsc-container {
     overflow: auto;
