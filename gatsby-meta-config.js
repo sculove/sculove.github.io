@@ -8,7 +8,7 @@ module.exports = {
   links: {
     github: 'https://github.com/sculove', // Your github repository
   },
-  icon: 'src/images/icon.png', //  Favicon Path
+  icon: 'src/images/favicon.png', //  Favicon Path
   ga: 'UA-37362821-12',
   sponsor: {
     buyMeACoffeeId: 'Tob0c39',
