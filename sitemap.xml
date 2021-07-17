@@ -80,9 +80,6 @@
 <url> <loc>https://sculove.github.io/post/manager-book/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://sculove.github.io/post/donot-speak-book/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://sculove.github.io/post/building-rich/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://sculove.github.io/category/life/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://sculove.github.io/category/presentation/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://sculove.github.io/category/tech/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://sculove.github.io/tag/book/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://sculove.github.io/tag/rxjs/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://sculove.github.io/tag/angular/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
@@ -205,6 +202,9 @@
 <url> <loc>https://sculove.github.io/tag/자기계발/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://sculove.github.io/tag/피터-드러커/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://sculove.github.io/tag/의사소통/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://sculove.github.io/category/life/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://sculove.github.io/category/presentation/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://sculove.github.io/category/tech/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://sculove.github.io/about/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://sculove.github.io/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 </urlset>
