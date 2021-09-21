@@ -333,15 +333,25 @@ Front-End 뿐만 아니라, Android에서는 Rx가 필수 유틸이 될 정도�
 <p>비교에 앞서 캐로셀(flicking) 기능 구현을 위해 필요한 핵심 로직만 좀 살펴보자.</p>
 <ol>
 <li>touchstart(mousedown) 발생 시</li>
+</ol>
+<ul>
 <li>동작하고 있다는 표시(playing)을 한다. 그리고, 현재 선택 한 좌표(start)를 저장한다.</li>
+</ul>
+<ol start="2">
 <li>touchmove(mousemove) 발생 시</li>
+</ol>
+<ul>
 <li>playing 시에만 이벤트가 발생하고, touchstart(mousedown)에서 발생한 좌표를 기준으로 이동한 좌표(distance)를 구한다.</li>
 <li>이동한 좌표 만큼 패널을 움직인다.</li>
+</ul>
+<ol start="3">
 <li>touchend(mouseup) 발생 시</li>
+</ol>
+<ul>
 <li>touchstart(mousedown)에서 발생한 좌표를 기준으로 이동한 좌표(distance)를 구한다. 이동한 좌표에 따라 애니메이션으로 판을 움직일지를 결정한다.</li>
 <li>애니메이션으로 움직일 필요가 있을 경우, 애니메이션으로 판을 움직이고, playing 여부를 false로 지정한다.</li>
 <li>판이 다음이나, 전 판으로 이동시, 순환을 위해 판의 좌표를 변경한다.</li>
-</ol>
+</ul>
 <p>위에서 언급한 것처럼 간단한 기능이지만, 이벤트 흐름이 이렇게 동작할 거라고 이해를 해야만 개발을 할 수 있다. 또한 애니메이션 구현도 해야만 한다.</p>
 <h3 id="중요한-로직-비교" style="position:relative;"><a href="#%EC%A4%91%EC%9A%94%ED%95%9C-%EB%A1%9C%EC%A7%81-%EB%B9%84%EA%B5%90" aria-label="중요한 로직 비교 permalink" class="anchor-header before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>중요한 로직 비교</h3>
 <h4 id="touchstart---touchmove---touchend-이벤트-처리" style="position:relative;"><a href="#touchstart---touchmove---touchend-%EC%9D%B4%EB%B2%A4%ED%8A%B8-%EC%B2%98%EB%A6%AC" aria-label="touchstart   touchmove   touchend 이벤트 처리 permalink" class="anchor-header before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>touchstart - touchmove - touchend 이벤트 처리</h4>

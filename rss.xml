@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[아내와 아들 그리고 딸밖에 모르는 남편]]></title><description><![CDATA[FrontEnd 개발자. 아내와 아들 그리고 딸밖에 모르는 철부지 남편으로서 개발과 경제에 관심이 많은 평범한 직장인 개발자의 기술 경험 블로그]]></description><link>https://sculove.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Sat, 21 Aug 2021 02:25:14 GMT</lastBuildDate><item><title><![CDATA[No title]]></title><description><![CDATA[손찬욱 (warren) 아내와 아들 그리고 딸밖에 모르는 철부지 남편으로서 개발과 경제에 관심이 많은 평범한 직장인 개발자다. Linkedin: https://www.linkedin.com/in/chan-uk-son-8989ba56/ Github…]]></description><link>https://sculove.github.io/about/</link><guid isPermaLink="false">https://sculove.github.io/about/</guid><content:encoded>&lt;h1&gt;손찬욱 (warren)&lt;/h1&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[아내와 아들 그리고 딸밖에 모르는 남편]]></title><description><![CDATA[FrontEnd 개발자. 아내와 아들 그리고 딸밖에 모르는 철부지 남편으로서 개발과 경제에 관심이 많은 평범한 직장인 개발자의 기술 경험 블로그]]></description><link>https://sculove.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Tue, 21 Sep 2021 09:28:29 GMT</lastBuildDate><item><title><![CDATA[No title]]></title><description><![CDATA[손찬욱 (warren) 아내와 아들 그리고 딸밖에 모르는 철부지 남편으로서 개발과 경제에 관심이 많은 평범한 직장인 개발자다. Linkedin: https://www.linkedin.com/in/chan-uk-son-8989ba56/ Github…]]></description><link>https://sculove.github.io/about/</link><guid isPermaLink="false">https://sculove.github.io/about/</guid><content:encoded>&lt;h1&gt;손찬욱 (warren)&lt;/h1&gt;
 &lt;p&gt;아내와 아들 그리고 딸밖에 모르는 철부지 남편으로서 개발과 경제에 관심이 많은 평범한 직장인 개발자다.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Linkedin: &lt;a href=&quot;https://www.linkedin.com/in/chan-uk-son-8989ba56/&quot;&gt;https://www.linkedin.com/in/chan-uk-son-8989ba56/&lt;/a&gt;&lt;/li&gt;
@@ -125,7 +125,255 @@
     opacity: 0.7;
   }
   
-&lt;/style&gt;</content:encoded></item><item><title><![CDATA[No title]]></title><link>https://sculove.github.io/post/nextjs-with-pm2/</link><guid isPermaLink="false">https://sculove.github.io/post/nextjs-with-pm2/</guid><content:encoded>&lt;style class=&quot;grvsc-styles&quot;&gt;
+&lt;/style&gt;</content:encoded></item><item><title><![CDATA[Nginx Reverse Proxy 삽질]]></title><description><![CDATA[nginx proxy…]]></description><link>https://sculove.github.io/post/nginx-reverse-proxy/</link><guid isPermaLink="false">https://sculove.github.io/post/nginx-reverse-proxy/</guid><pubDate>Wed, 15 Sep 2021 02:25:00 GMT</pubDate><content:encoded>&lt;p&gt;nginx proxy 설정을 하다가 삽질한 경험을 공유한다.&lt;br&gt;
+알고보면 굉장히 간단한 내용이고 그 해결책은 근본을 벗어나지 않는 것이었지만&lt;br&gt;
+원래 삽질이라는 게 자신이 경험하지 않는 내용에 대해서는 그 본질을 깨닫기가 어렵다.&lt;/p&gt;
+&lt;p&gt;그래서 경력이 많든 적든 정도의 차이는 있지만 매번 겪게되는 과정이자 앞으로도 계속 겪게되는 과정이다.
+그저 이런 과정을 통해서 알고만 있었던 지식을 비로서 내 것으로 만들었다는 위안(?)으로 삼게된다.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 480px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 125.76687116564416%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAZABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAMEAQL/xAAVAQEBAAAAAAAAAAAAAAAAAAABAP/aAAwDAQACEAMQAAABf1A1LycGTLHVIMI//8QAHhAAAgEEAwEAAAAAAAAAAAAAAQIAAxESISIxMkH/2gAIAQEAAQUC4QVIHUjPejDRubEABmOMTz8bv//EABQRAQAAAAAAAAAAAAAAAAAAACD/2gAIAQMBAT8BH//EABQRAQAAAAAAAAAAAAAAAAAAACD/2gAIAQIBAT8BH//EABwQAAMAAgMBAAAAAAAAAAAAAAABEQIQEjEyQv/aAAgBAQAGPwJrjYqeJiWlY+j6KsUzzNLf/8QAHRAAAwACAgMAAAAAAAAAAAAAAAERITEQUWFxof/aAAgBAQABPyFxCgIbeFtFdAnWxcC0F0yIo23lQk+4qmkUXShB8guH/9oADAMBAAIAAwAAABBnxAH/xAAWEQEBAQAAAAAAAAAAAAAAAAAAERD/2gAIAQMBAT8QXI//xAAYEQEAAwEAAAAAAAAAAAAAAAABABARMf/aAAgBAgEBPxADOTINf//EAB4QAQACAgIDAQAAAAAAAAAAAAERIQBhMVEQQcFx/9oACAEBAAE/ED6MAsKae858MiKJd/cNFCd5VZiU1zvLxDAi8R3DiKCgEAaMnyEv1tH3C7BISJ+5ABdVfkLlz//Z&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;shove&quot;
+        title=&quot;shove&quot;
+        src=&quot;/static/84998ef00a74a6a9047e68baec8d136c/7cc5e/shove.jpg&quot;
+        srcset=&quot;/static/84998ef00a74a6a9047e68baec8d136c/d2f63/shove.jpg 163w,
+/static/84998ef00a74a6a9047e68baec8d136c/c989d/shove.jpg 325w,
+/static/84998ef00a74a6a9047e68baec8d136c/7cc5e/shove.jpg 480w&quot;
+        sizes=&quot;(max-width: 480px) 100vw, 480px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;nginx 에서 Reverse Proxy를 적용하는 일반적인 상황은 보통 내부 시스템을 감추어 &lt;code&gt;보안적인 이슈&lt;/code&gt;를 해결하기 위한 용도로 활용되거나.
+다른 서비스로의 연결을 통해 &lt;code&gt;동일 도메인의 장점&lt;/code&gt;을 활용하는 용도로 사용한다.&lt;br&gt;
+그 외에도 여러가지가 있겠지만 내가 경험한 것은 이 정도의 요구사항을 충족시키기 위해 사용하였다.&lt;/p&gt;
+&lt;p&gt;nginx proxy를 사용하기 위해서는 &lt;a href=&quot;http://nginx.org/en/docs/http/ngx_http_proxy_module.html&quot;&gt;ngx_http_proxy_module&lt;/a&gt;이 필요하다.
+이 모듈은 nginx 설치시에 이미 활성화된 모듈이기에 편하게 사용할 수 있다.&lt;/p&gt;
+&lt;h2 id=&quot;nginx-proxy-사용-전에-알아야할-nginx의-동작&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#nginx-proxy-%EC%82%AC%EC%9A%A9-%EC%A0%84%EC%97%90-%EC%95%8C%EC%95%84%EC%95%BC%ED%95%A0-nginx%EC%9D%98-%EB%8F%99%EC%9E%91&quot; aria-label=&quot;nginx proxy 사용 전에 알아야할 nginx의 동작 permalink&quot; class=&quot;anchor-header before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;nginx proxy 사용 전에 알아야할 nginx의 동작&lt;/h2&gt;
+&lt;p&gt;nginx reverse proxy를 적용하는 예를 보면 보통 다음과 같이 적용한다.&lt;/p&gt;
+&lt;pre class=&quot;grvsc-container github-light-theme grvsc-ps-t4tStz&quot; data-language=&quot;nginx&quot; data-index=&quot;0&quot;&gt;&lt;code class=&quot;grvsc-code&quot;&gt;&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;location / {&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;    proxy_pass http://127.0.0.1:3000;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;    proxy_set_header    Host                $host:$server_port;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;    proxy_set_header    X-Real-IP           $real_ip;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;    proxy_set_header    X-Forwarded-For     $proxy_add_x_forwarded_for;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;    proxy_set_header    X-Forwarded-Proto   $real_scheme;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;    proxy_set_header    X-Forwarded-Port    $server_port;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;    proxy_set_header    Connection &amp;quot;&amp;quot;;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;    proxy_http_version  1.1;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;}&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;이때 우리가 알아야할 nginx의 작동방식에 대해 살펴보자.&lt;/p&gt;
+&lt;h3 id=&quot;클라이언트로부터-전달된-내용이-proxy되는-대상으로-모두-전달-된다&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%ED%81%B4%EB%9D%BC%EC%9D%B4%EC%96%B8%ED%8A%B8%EB%A1%9C%EB%B6%80%ED%84%B0-%EC%A0%84%EB%8B%AC%EB%90%9C-%EB%82%B4%EC%9A%A9%EC%9D%B4-proxy%EB%90%98%EB%8A%94-%EB%8C%80%EC%83%81%EC%9C%BC%EB%A1%9C-%EB%AA%A8%EB%91%90-%EC%A0%84%EB%8B%AC-%EB%90%9C%EB%8B%A4&quot; aria-label=&quot;클라이언트로부터 전달된 내용이 proxy되는 대상으로 모두 전달 된다 permalink&quot; class=&quot;anchor-header before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;클라이언트로부터 전달된 내용이 proxy되는 대상으로 모두 전달 된다.&lt;/h3&gt;
+&lt;p&gt;이렇게 되는 이유는 &lt;a href=&quot;http://nginx.org/en/docs/http/ngx_http_proxy_module.html#proxy_pass_request_headers&quot;&gt;proxy_pass_request_headers&lt;/a&gt;와 &lt;a href=&quot;http://nginx.org/en/docs/http/ngx_http_proxy_module.html#proxy_pass_request_body&quot;&gt;proxy_pass_request_body&lt;/a&gt; 옵션의 기본값이 모두 &lt;code&gt;on&lt;/code&gt;이기 때문이다.
+위 두 개의 옵션은 전달된 request의 header와 body의 값을 그대로 proxy되는 대상으로 전달하는 역할을 한다.&lt;/p&gt;
+&lt;h3 id=&quot;전달되는-header-값-중-기본적으로-재정의되는-header가-있다&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EC%A0%84%EB%8B%AC%EB%90%98%EB%8A%94-header-%EA%B0%92-%EC%A4%91-%EA%B8%B0%EB%B3%B8%EC%A0%81%EC%9C%BC%EB%A1%9C-%EC%9E%AC%EC%A0%95%EC%9D%98%EB%90%98%EB%8A%94-header%EA%B0%80-%EC%9E%88%EB%8B%A4&quot; aria-label=&quot;전달되는 header 값 중 기본적으로 재정의되는 header가 있다 permalink&quot; class=&quot;anchor-header before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;전달되는 header 값 중 기본적으로 재정의되는 header가 있다.&lt;/h3&gt;
+&lt;p&gt;nginx는 기본적으로 proxy될 때 요청의 헤더 정보 중 &lt;code&gt;Host&lt;/code&gt;와 &lt;code&gt;Connection&lt;/code&gt;를 다음과 같이 재정의한다.&lt;/p&gt;
+&lt;pre class=&quot;grvsc-container github-light-theme grvsc-ps-t4tStz&quot; data-language=&quot;nginx&quot; data-index=&quot;1&quot;&gt;&lt;code class=&quot;grvsc-code&quot;&gt;&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;proxy_set_header Host       $proxy_host;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;proxy_set_header Connection close;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;그렇기 때문에 보통 &lt;a href=&quot;http://nginx.org/en/docs/http/ngx_http_proxy_module.html#proxy_set_header&quot;&gt;proxy_set_header&lt;/a&gt;를 통해 Host와 Connection을 재정의한다.&lt;/p&gt;
+&lt;h3 id=&quot;nginx에서-무시하는-헤더값들이-있다&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#nginx%EC%97%90%EC%84%9C-%EB%AC%B4%EC%8B%9C%ED%95%98%EB%8A%94-%ED%97%A4%EB%8D%94%EA%B0%92%EB%93%A4%EC%9D%B4-%EC%9E%88%EB%8B%A4&quot; aria-label=&quot;nginx에서 무시하는 헤더값들이 있다 permalink&quot; class=&quot;anchor-header before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;nginx에서 무시하는 헤더값들이 있다.&lt;/h3&gt;
+&lt;p&gt;이 내용은 proxy와는 다른 항목이지만 내가 겪은 proxy 삽질의 원인이 되는 내용이었다.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http://nginx.org/en/docs/http/ngx_http_core_module.html&quot;&gt;ngx_http_core_module&lt;/a&gt; 모듈에는 &lt;a href=&quot;http://nginx.org/en/docs/http/ngx_http_core_module.html#underscores_in_headers&quot;&gt;underscores_in_headers&lt;/a&gt;와 &lt;a href=&quot;http://nginx.org/en/docs/http/ngx_http_core_module.html#ignore_invalid_headers&quot;&gt;ignore_invalid_headers&lt;/a&gt; 옵션이 있다.&lt;/p&gt;
+&lt;p&gt;이 옵션은 header의 validation에 대한 옵션이다.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http://nginx.org/en/docs/http/ngx_http_core_module.html#ignore_invalid_headers&quot;&gt;ignore_invalid_headers&lt;/a&gt; 옵션이 기본적으로 &lt;code&gt;on&lt;/code&gt; 되어있기 때문에 nginx에서 파싱하는 header 명의 규칙은 다음의 규칙을 준수하지 않으면 유효하지 않는 헤더로 판단한다.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Valid names are composed of English letters, digits, hyphens&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;특이한 점이 있는데 &lt;a href=&quot;http://nginx.org/en/docs/http/ngx_http_core_module.html#underscores_in_headers&quot;&gt;underscores_in_headers&lt;/a&gt; 옵션의 기본값이 &lt;code&gt;off&lt;/code&gt; 이기 때문에 기본적으로 underscores 또한 헤더명으로 쓸 수 없다.&lt;/p&gt;
+&lt;p&gt;예를 들어 &lt;code&gt;nid_no&lt;/code&gt;와 같은 헤더명에는 underscore(_)가 있기 때문에 유효하지 않는 해더로 인지하여 request의 header 정보에서 제외된다.&lt;/p&gt;
+&lt;h2 id=&quot;삽질&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EC%82%BD%EC%A7%88&quot; aria-label=&quot;삽질 permalink&quot; class=&quot;anchor-header before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;삽질&lt;/h2&gt;
+&lt;p&gt;자~ 그럼 이제 내가 겪은 문제를 살펴봐보자.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 650px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 58.89570552147239%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAMCAYAAABiDJ37AAAACXBIWXMAABYlAAAWJQFJUiTwAAACIElEQVQoz3WT204TURSG+16+hRe+gTdeGBMvjL0jEaL1QoIgETVojDEEIwhRmzYZAtgKpYdAU1tKS2qLaFt6oJQ5dPbM5+5hCm1hX63Za+1/ffuftV1csWzbxu4G3dj51v/RrO9jiNZFnW0PxK6rxHDELifMGvXgHfyBKYK7PoxGuZ+ybKt/znUtUXtDFgqtgmnqneJaKUMq6iXz5SaR0ATBzI7MG45sl3AQW3Riq8fWSnuIbE3hjyclUZX2tjA1GkebRLeWCH++TTr8mEQxhS64IGxX9q/aaSbQE3HKK6+JrX8i7r1H8scY2/kCtWoTVRWozQbG4QdCG3P4vk1Q2noouzUGCUXuIwepRaLpNLWFZUpPn1GYecHJ1wmiG+9Q/NNkNx+RrRxzJm+qy2OaJFeTM5ipcWxTdQS7YOeZ9wSUeZTvkxT25smGtjmee8v6fTeZl69Q18f5tTnOsrJENjgJRkGq6gM/tSNoWVbPVjitFlF3x9hZe8JKwMvvyCLFNS/F6VnynufkFxYoh2dRf97COk123O54b5mDY2MKQbl+hqq1qJ/p/MkfUgk+IO67y/JejFxIkYR+zIP06Jhdss2lS2TTbPG3VOHNSoDC0bHsJjBMm5ZxzlE2xv6ahxPfDVATXRFLjAy145trdXUVt9uNpmnkczn0nid2ewaF1cMvSoNzUujynA4JOh5Wq1UURRl9ev3i7lTaQy/JeQjD6z9arX4GkIYEEQAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;problem&quot;
+        title=&quot;problem&quot;
+        src=&quot;/static/90699149c9b4fcaa85502d1432dbedc9/a6d36/problem.png&quot;
+        srcset=&quot;/static/90699149c9b4fcaa85502d1432dbedc9/222b7/problem.png 163w,
+/static/90699149c9b4fcaa85502d1432dbedc9/ff46a/problem.png 325w,
+/static/90699149c9b4fcaa85502d1432dbedc9/a6d36/problem.png 650w,
+/static/90699149c9b4fcaa85502d1432dbedc9/e548f/problem.png 975w,
+/static/90699149c9b4fcaa85502d1432dbedc9/3c492/problem.png 1300w,
+/static/90699149c9b4fcaa85502d1432dbedc9/963fa/problem.png 2666w&quot;
+        sizes=&quot;(max-width: 650px) 100vw, 650px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;앞 쪽에 nginx 두 개를 통해서 node.js로 클라이언트의 요청이 전달된다.
+문제는 첫 번째 nginx에서 인증 관련 해더 &lt;code&gt;nid_no&lt;/code&gt;가 생성되어 두 번째 nginx로 전달되고 다시 node.js로 전달된다.
+실제 확인을 해보니 두 번째 nginx로 &lt;code&gt;nid_no&lt;/code&gt;가 전달되지 않는 것이 문제였다.
+nginx proxy 설정은 위에서 기술한 것 처럼 설정을 하였다.&lt;/p&gt;
+&lt;p&gt;왜? &lt;code&gt;nid_no&lt;/code&gt; 헤더가 두번째 nginx로 전달이 되지 않았을까? (proxy1 부분)&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;nid_no&lt;/code&gt;에서와 같이 헤더명에 underscore(_)가 존재하였기 때문에 &lt;a href=&quot;http://nginx.org/en/docs/http/ngx_http_core_module.html#underscores_in_headers&quot;&gt;underscores_in_headers&lt;/a&gt; 옵션을 &lt;code&gt;on&lt;/code&gt;으로 설정하면 이 문제는 해결될 수 있을 것으로 판단되었다. 하지만 내 예상처럼 정상 동작하지 않았다.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http://nginx.org/en/docs/http/ngx_http_proxy_module.html#proxy_set_header&quot;&gt;proxy_set_header&lt;/a&gt;를 통해 강제로 설정해 보기도 하고,  &lt;a href=&quot;http://nginx.org/en/docs/http/ngx_http_proxy_module.html#proxy_pass_request_headers&quot;&gt;proxy_pass_request_headers&lt;/a&gt;와 &lt;a href=&quot;http://nginx.org/en/docs/http/ngx_http_proxy_module.html#proxy_pass_request_body&quot;&gt;proxy_pass_request_body&lt;/a&gt; 옵션을 강제로 지정하면서 해결되기를 기대해봤으나... 모두 예상과 같이 동작하지 않았다.&lt;/p&gt;
+&lt;p&gt;한참을 삽질 중에 공식 문서의 옵션을 찬찬히 읽어봤다.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http://nginx.org/en/docs/http/ngx_http_core_module.html#underscores_in_headers&quot;&gt;underscores_in_headers&lt;/a&gt; 옵션에서 결국 정답을 찾아서 해결하였다.
+해당 문구를 잘 읽어보자.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Enables or disables the use of underscores in client request header fields. When the use of underscores is disabled, request header fields whose names contain underscores are marked as invalid and become subject to the ignore_invalid_headers directive.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;내가 바로 놓친 부분은 바로 이 단어이다.&lt;br&gt;
+&lt;code&gt;in client request header fields.&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;내가 구성하려고 했던 부분 중 client에 해당하는 부분이 어느 곳인지를 먼저 아는게 가장 중요했다. &lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;첫번째 nginx의 클라이언트는 &lt;code&gt;사용자의 브라우저&lt;/code&gt;가 되고&lt;br&gt;
+두번째 nginx의 클라이언트는 &lt;code&gt;첫번째 nginx&lt;/code&gt;가 된다.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;즉, &lt;a href=&quot;http://nginx.org/en/docs/http/ngx_http_core_module.html#underscores_in_headers&quot;&gt;underscores_in_headers&lt;/a&gt; 옵션을 적용해야하는 nginx는 바로 두번째 nginx에 적용되어야만 했다.&lt;/p&gt;
+&lt;p&gt;하지만 난 첫번째 nginx에서 underscore 헤더를 다루기 때문에 첫번째 nginx에 설정을 하면서 안된다고 툴툴거리고 있었던 것이다.&lt;/p&gt;
+&lt;h2 id=&quot;결론&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EA%B2%B0%EB%A1%A0&quot; aria-label=&quot;결론 permalink&quot; class=&quot;anchor-header before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;결론&lt;/h2&gt;
+&lt;p&gt;암튼 다시한번 느끼는 것이지만&lt;/p&gt;
+&lt;p&gt;정답은 항상 가까운데 있고,&lt;br&gt;
+문제가 잘 안 풀릴 때에는 기존에 하던 것을 다 멈추고,&lt;br&gt;
+문제를 천천히 곱씹어 보면 해결할 수 있다는 것이다!  &lt;/p&gt;
+&lt;style class=&quot;grvsc-styles&quot;&gt;
+  .grvsc-container {
+    overflow: auto;
+    position: relative;
+    -webkit-overflow-scrolling: touch;
+    padding-top: 1rem;
+    padding-top: var(--grvsc-padding-top, var(--grvsc-padding-v, 1rem));
+    padding-bottom: 1rem;
+    padding-bottom: var(--grvsc-padding-bottom, var(--grvsc-padding-v, 1rem));
+    border-radius: 8px;
+    border-radius: var(--grvsc-border-radius, 8px);
+    font-feature-settings: normal;
+    line-height: 1.4;
+  }
+  
+  .grvsc-code {
+    display: table;
+  }
+  
+  .grvsc-line {
+    display: table-row;
+    box-sizing: border-box;
+    width: 100%;
+    position: relative;
+  }
+  
+  .grvsc-line &gt; * {
+    position: relative;
+  }
+  
+  .grvsc-gutter-pad {
+    display: table-cell;
+    padding-left: 0.75rem;
+    padding-left: calc(var(--grvsc-padding-left, var(--grvsc-padding-h, 1.5rem)) / 2);
+  }
+  
+  .grvsc-gutter {
+    display: table-cell;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+  }
+  
+  .grvsc-gutter::before {
+    content: attr(data-content);
+  }
+  
+  .grvsc-source {
+    display: table-cell;
+    padding-left: 1.5rem;
+    padding-left: var(--grvsc-padding-left, var(--grvsc-padding-h, 1.5rem));
+    padding-right: 1.5rem;
+    padding-right: var(--grvsc-padding-right, var(--grvsc-padding-h, 1.5rem));
+  }
+  
+  .grvsc-source:empty::after {
+    content: &apos; &apos;;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+  }
+  
+  .grvsc-gutter + .grvsc-source {
+    padding-left: 0.75rem;
+    padding-left: calc(var(--grvsc-padding-left, var(--grvsc-padding-h, 1.5rem)) / 2);
+  }
+  
+  /* Line transformer styles */
+  
+  .grvsc-has-line-highlighting &gt; .grvsc-code &gt; .grvsc-line::before {
+    content: &apos; &apos;;
+    position: absolute;
+    width: 100%;
+  }
+  
+  .grvsc-line-diff-add::before {
+    background-color: var(--grvsc-line-diff-add-background-color, rgba(0, 255, 60, 0.2));
+  }
+  
+  .grvsc-line-diff-del::before {
+    background-color: var(--grvsc-line-diff-del-background-color, rgba(255, 0, 20, 0.2));
+  }
+  
+  .grvsc-line-number {
+    padding: 0 2px;
+    text-align: right;
+    opacity: 0.7;
+  }
+  
+  .github-light-theme {
+    background-color: #ffffff;
+    color: #000000;
+  }
+  .github-light-theme .grvsc-line-highlighted::before {
+    background-color: var(--grvsc-line-highlighted-background-color, rgba(0, 0, 0, 0.05));
+    box-shadow: inset var(--grvsc-line-highlighted-border-width, 4px) 0 0 0 var(--grvsc-line-highlighted-border-color, rgba(0, 0, 0, 0.2));
+  }
+  body[data-theme=dark] .grvsc-ps-t4tStz { color: #ffffff; }
+  body[data-theme=dark] .grvsc-ps-t4tStz .grvsc-line-highlighted::before {
+    background-color: var(--grvsc-line-highlighted-background-color, rgba(0, 0, 0, 0.05));
+    box-shadow: inset var(--grvsc-line-highlighted-border-width, 4px) 0 0 0 var(--grvsc-line-highlighted-border-color, rgba(0, 0, 0, 0.2));
+  }
+&lt;/style&gt;</content:encoded></item><item><title><![CDATA[배포와 Next.Js 그리고 Pm2]]></title><description><![CDATA[Next.js 6.0을 보면서 "뭘 이런걸 쓰냐?" 라는 답답함과 함께 그냥 in-house로 개발해야겠다는 의지를 불태웠던 기억이 있다. 지금 Next.js 1…]]></description><link>https://sculove.github.io/draft/nextjs-with-pm2/</link><guid isPermaLink="false">https://sculove.github.io/draft/nextjs-with-pm2/</guid><pubDate>Sat, 21 Aug 2021 02:25:00 GMT</pubDate><content:encoded>&lt;p&gt;Next.js 6.0을 보면서 &quot;뭘 이런걸 쓰냐?&quot; 라는 답답함과 함께 그냥 in-house로 개발해야겠다는 의지를 불태웠던 기억이 있다.&lt;/p&gt;
+&lt;p&gt;지금 Next.js 11이 나온 걸 보면 예전에 경험했던 것과 다르게 정말 잘 되어있다는 것을 느낀다.&lt;br&gt;
+그래서 회고의 의미로 &lt;a href=&quot;https://deview.kr/2020/sessions/403&quot;&gt;Deview 2020 발표&lt;/a&gt;에서도 SSR 직접 구축할 바에는 &quot;그냥 Next.JS 쓰세요&quot; 라는 이야기를 한 적이 있다. &lt;/p&gt;
+&lt;p&gt;이런 회고를 했던 이유 중에 하나는 아마도 상황의 문제였을 것으로 보인다.&lt;/p&gt;
+&lt;p&gt;미성숙하고 아쉬운 점이 많이 띄는 오픈소스를 보면서 &lt;/p&gt;
+&lt;p&gt;조금 여력이 있는 회사에서 생각해볼 만한 프로세스의 전형적인 절차를
+몇번 지켜보고 경험하고 실제로 그렇게 의사결정을 해본 입장에서 &lt;/p&gt;
+&lt;p&gt;내가 새로 옮긴 곳에서는 다행인지 모르겠지만. Next.JS로 개발을 시작하고 있는 상황이었다.
+Next.js는 개발, 운영 준비를 위해 필요한 부분들이 잘 녹아들어가 있다.
+과연 이런게 오픈소스의 힘인가? 싶을 정도로 많은 면이 고려되어있다.&lt;/p&gt;
+&lt;p&gt;처음 접하는 거다보니 몇가지 &lt;/p&gt;
+&lt;p&gt;서비스를 운영 하다보면 꼭! 고민해야할 문제가 있다.
+바로 &lt;code&gt;배포&lt;/code&gt; 이다.&lt;/p&gt;
+&lt;p&gt;내 경험에 비추어봤을때 &lt;code&gt;배포 프로세스의 개선&lt;/code&gt;이 없다면 &lt;code&gt;업무 및 운영의 스트레스&lt;/code&gt;가 상당하다.&lt;br&gt;
+물론 서버스의 발전과 성장에도 많은 영향을 끼친다.&lt;br&gt;
+그렇기 때문에 많은 개발팀이 지속적인 통합(CI)과 지속적인 배포(CD)에 열을 내고 있는 것이다.&lt;/p&gt;
+&lt;p&gt;간단한 나비효과를 살펴보자.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;배포 하기가 힘들다. &lt;/li&gt;
+&lt;li&gt;배포가 부담스럽다. &lt;/li&gt;
+&lt;li&gt;서비스의 기능 추가가 늦어진다.&lt;/li&gt;
+&lt;li&gt;코드는 개선되지 않고 레거시가 쌓이기 시작한다.&lt;/li&gt;
+&lt;li&gt;구성원들의 이탈 및 교체가 발생한다.&lt;/li&gt;
+&lt;li&gt;코드 변경이 부담스러워진다.&lt;/li&gt;
+&lt;li&gt;장애 요소가 많아지고 더 배포가 힘들어진다.
+...&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;배포를 시작으로해서 좀 극단적인 이야기를 했지만 배포 프로세스의 파급력은 무시할 수 없다.
+배포 시간을 줄이고, 배포 절차를 간략히 해서 이 연결고리를 조금이라도 끊는 것이 무엇보다 중요하다.&lt;/p&gt;
+&lt;hr&gt;
+&lt;style class=&quot;grvsc-styles&quot;&gt;
   .grvsc-container {
     overflow: auto;
     position: relative;
@@ -6408,8 +6656,8 @@ DB로부터 조회한 사용자 목록 데이터가 입력값이라면 이 값�
 &lt;/ul&gt;
 &lt;p&gt;BMI 방식&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;남자 표준체중 = 키/100 _ 키/100 _ 22&lt;/li&gt;
-&lt;li&gt;여자 표준체중 = 키/100 _ 키/100 _ 21&lt;/li&gt;
+&lt;li&gt;남자 표준체중 = 키/100 &lt;em&gt; 키/100 &lt;/em&gt; 22&lt;/li&gt;
+&lt;li&gt;여자 표준체중 = 키/100 &lt;em&gt; 키/100 &lt;/em&gt; 21&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/blockquote&gt;
 &lt;/li&gt;
@@ -10879,15 +11127,25 @@ Front-End 뿐만 아니라, Android에서는 Rx가 필수 유틸이 될 정도�
 &lt;p&gt;비교에 앞서 캐로셀(flicking) 기능 구현을 위해 필요한 핵심 로직만 좀 살펴보자.&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;touchstart(mousedown) 발생 시&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
 &lt;li&gt;동작하고 있다는 표시(playing)을 한다. 그리고, 현재 선택 한 좌표(start)를 저장한다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol start=&quot;2&quot;&gt;
 &lt;li&gt;touchmove(mousemove) 발생 시&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
 &lt;li&gt;playing 시에만 이벤트가 발생하고, touchstart(mousedown)에서 발생한 좌표를 기준으로 이동한 좌표(distance)를 구한다.&lt;/li&gt;
 &lt;li&gt;이동한 좌표 만큼 패널을 움직인다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol start=&quot;3&quot;&gt;
 &lt;li&gt;touchend(mouseup) 발생 시&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
 &lt;li&gt;touchstart(mousedown)에서 발생한 좌표를 기준으로 이동한 좌표(distance)를 구한다. 이동한 좌표에 따라 애니메이션으로 판을 움직일지를 결정한다.&lt;/li&gt;
 &lt;li&gt;애니메이션으로 움직일 필요가 있을 경우, 애니메이션으로 판을 움직이고, playing 여부를 false로 지정한다.&lt;/li&gt;
 &lt;li&gt;판이 다음이나, 전 판으로 이동시, 순환을 위해 판의 좌표를 변경한다.&lt;/li&gt;
-&lt;/ol&gt;
+&lt;/ul&gt;
 &lt;p&gt;위에서 언급한 것처럼 간단한 기능이지만, 이벤트 흐름이 이렇게 동작할 거라고 이해를 해야만 개발을 할 수 있다. 또한 애니메이션 구현도 해야만 한다.&lt;/p&gt;
 &lt;h3 id=&quot;중요한-로직-비교&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EC%A4%91%EC%9A%94%ED%95%9C-%EB%A1%9C%EC%A7%81-%EB%B9%84%EA%B5%90&quot; aria-label=&quot;중요한 로직 비교 permalink&quot; class=&quot;anchor-header before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;중요한 로직 비교&lt;/h3&gt;
 &lt;h4 id=&quot;touchstart---touchmove---touchend-이벤트-처리&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#touchstart---touchmove---touchend-%EC%9D%B4%EB%B2%A4%ED%8A%B8-%EC%B2%98%EB%A6%AC&quot; aria-label=&quot;touchstart   touchmove   touchend 이벤트 처리 permalink&quot; class=&quot;anchor-header before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;touchstart - touchmove - touchend 이벤트 처리&lt;/h4&gt;
@@ -13840,11 +14098,13 @@ Debate은 &lt;code&gt;논쟁&lt;/code&gt;하는 것이고, Discuss는 &lt;code&g
 &lt;li&gt;&lt;code&gt;아이의 눈높이를 맞춰라&lt;/code&gt;는 미국식 교육은 아이가 어느정도 성장한 후에 적합하다. 그 전 까지는 아이가 부모의 눈높이를 맞추도록 하는게 바람직하다. &lt;code&gt;아이에게 공감하고, 아이의 의견을 듣는 것은 바람직하나, 아이에게 전적으로 결정을 맡기는 것은 어린나이에는 적합하지 않다.&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;어린아이에게 보상은 물질적인 보상. 즉, A하면 B를 준다는 보상이 오히려 더 적합하다. 하지만, 아이가 성장했을 때는 물리적인 보상보다는 내적인 보상을 하는게 좋다. 어렸을 때는 심부름을 했을 때 용돈을 주고, 초등학생 정도 되면, 심부름을 했을 때, &quot;우리 예준이는 심부름을 정말 잘하는 구나. 아빠가 예준이 덕에 많은 도움이 된다&quot;라고 내적으로 존중받는 느낌이 드는 보상을 해주는 게 좋다.&lt;/li&gt;
 &lt;li&gt;건강한 가장의 권위를 세우는 첫번째 일. &lt;code&gt;가족 리추얼 (Ritual)&lt;/code&gt; 리추얼은 식. 즉, 격식. 가장의 일은 &lt;code&gt;가족의 제사장&lt;/code&gt;.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
 &lt;li&gt;아빠 주관하에 주 1회 가족모임을 갖는다.&lt;/li&gt;
 &lt;li&gt;아빠 주관하에 1주일 한일, 1주일 할일을 순서대로 이야기한다.&lt;/li&gt;
 &lt;li&gt;행사 전에, 아빠 주관하에 청소를 한다. 청소의 검사는 아빠가 한다.&lt;/li&gt;
 &lt;li&gt;아빠가 용돈을 나눠준다. 이때, 청소상태 및 한주간의 결과에 따라 아빠가 판단하여 성과를 배분한다. 만약, 하지 않을시에는 단호히 추진한다.&lt;/li&gt;
-&lt;/ol&gt;
+&lt;/ul&gt;
 &lt;p&gt;&lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
       style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 650px; &quot;
