@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:mobile="http://www.google.com/schemas/sitemap-mobile/1.0" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
+<url> <loc>https://sculove.github.io/post/ux-ui-10-low-of-ux/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://sculove.github.io/post/nginx-reverse-proxy/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://sculove.github.io/post/changeblog/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://sculove.github.io/post/refactoring2-book/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
@@ -70,8 +71,8 @@
 <url> <loc>https://sculove.github.io/post/grunt-for-fe/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://sculove.github.io/post/Web-Animation-API/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://sculove.github.io/post/imporve-performance-using-html5/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://sculove.github.io/post/Apache2-settings-in-OSX/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://sculove.github.io/post/Ftp-settings-in-OSX/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://sculove.github.io/post/Apache2-settings-in-OSX/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://sculove.github.io/post/profile-vimrc-settings/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://sculove.github.io/post/angular1-for-performance/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://sculove.github.io/post/How-to-make-a-smooth-animation/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
@@ -116,6 +117,7 @@
 <url> <loc>https://sculove.github.io/tag/plugin/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://sculove.github.io/tag/animation/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://sculove.github.io/tag/osx/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://sculove.github.io/tag/ux/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://sculove.github.io/tag/nginx/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://sculove.github.io/tag/proxy/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://sculove.github.io/tag/underscores-in-headers/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
@@ -202,8 +204,8 @@
 <url> <loc>https://sculove.github.io/tag/angular-auto-validate/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://sculove.github.io/tag/grunt/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://sculove.github.io/tag/html-5/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://sculove.github.io/tag/apache-2/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://sculove.github.io/tag/ftp/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://sculove.github.io/tag/apache-2/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://sculove.github.io/tag/mobile/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://sculove.github.io/tag/es-5/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://sculove.github.io/tag/자기계발/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>

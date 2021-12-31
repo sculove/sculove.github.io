@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[아내와 아들 그리고 딸밖에 모르는 남편]]></title><description><![CDATA[FrontEnd 개발자. 아내와 아들 그리고 딸밖에 모르는 철부지 남편으로서 개발과 경제에 관심이 많은 평범한 직장인 개발자의 기술 경험 블로그]]></description><link>https://sculove.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Tue, 21 Sep 2021 09:34:47 GMT</lastBuildDate><item><title><![CDATA[No title]]></title><description><![CDATA[손찬욱 (warren) 아내와 아들 그리고 딸밖에 모르는 철부지 남편으로서 개발과 경제에 관심이 많은 평범한 직장인 개발자다. Linkedin: https://www.linkedin.com/in/chan-uk-son-8989ba56/ Github…]]></description><link>https://sculove.github.io/about/</link><guid isPermaLink="false">https://sculove.github.io/about/</guid><content:encoded>&lt;h1&gt;손찬욱 (warren)&lt;/h1&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[아내와 아들 그리고 딸밖에 모르는 남편]]></title><description><![CDATA[FrontEnd 개발자. 아내와 아들 그리고 딸밖에 모르는 철부지 남편으로서 개발과 경제에 관심이 많은 평범한 직장인 개발자의 기술 경험 블로그]]></description><link>https://sculove.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Fri, 31 Dec 2021 07:17:46 GMT</lastBuildDate><item><title><![CDATA[No title]]></title><description><![CDATA[손찬욱 (warren) 아내와 아들 그리고 딸밖에 모르는 철부지 남편으로서 개발과 경제에 관심이 많은 평범한 직장인 개발자다. Linkedin: https://www.linkedin.com/in/chan-uk-son-8989ba56/ Github…]]></description><link>https://sculove.github.io/about/</link><guid isPermaLink="false">https://sculove.github.io/about/</guid><content:encoded>&lt;h1&gt;손찬욱 (warren)&lt;/h1&gt;
 &lt;p&gt;아내와 아들 그리고 딸밖에 모르는 철부지 남편으로서 개발과 경제에 관심이 많은 평범한 직장인 개발자다.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Linkedin: &lt;a href=&quot;https://www.linkedin.com/in/chan-uk-son-8989ba56/&quot;&gt;https://www.linkedin.com/in/chan-uk-son-8989ba56/&lt;/a&gt;&lt;/li&gt;
@@ -36,6 +36,146 @@
 &lt;li&gt;&lt;a href=&quot;http://d2.naver.com/helloworld/211221&quot;&gt;[2012.11.23] JMC 스마트하게 사용하기&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;http://d2.naver.com/helloworld/89902&quot;&gt;[2012.07.05] JMC 스크롤 컴포넌트의 이해: jindo.m.Scroll&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
+&lt;style class=&quot;grvsc-styles&quot;&gt;
+  .grvsc-container {
+    overflow: auto;
+    position: relative;
+    -webkit-overflow-scrolling: touch;
+    padding-top: 1rem;
+    padding-top: var(--grvsc-padding-top, var(--grvsc-padding-v, 1rem));
+    padding-bottom: 1rem;
+    padding-bottom: var(--grvsc-padding-bottom, var(--grvsc-padding-v, 1rem));
+    border-radius: 8px;
+    border-radius: var(--grvsc-border-radius, 8px);
+    font-feature-settings: normal;
+    line-height: 1.4;
+  }
+  
+  .grvsc-code {
+    display: table;
+  }
+  
+  .grvsc-line {
+    display: table-row;
+    box-sizing: border-box;
+    width: 100%;
+    position: relative;
+  }
+  
+  .grvsc-line &gt; * {
+    position: relative;
+  }
+  
+  .grvsc-gutter-pad {
+    display: table-cell;
+    padding-left: 0.75rem;
+    padding-left: calc(var(--grvsc-padding-left, var(--grvsc-padding-h, 1.5rem)) / 2);
+  }
+  
+  .grvsc-gutter {
+    display: table-cell;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+  }
+  
+  .grvsc-gutter::before {
+    content: attr(data-content);
+  }
+  
+  .grvsc-source {
+    display: table-cell;
+    padding-left: 1.5rem;
+    padding-left: var(--grvsc-padding-left, var(--grvsc-padding-h, 1.5rem));
+    padding-right: 1.5rem;
+    padding-right: var(--grvsc-padding-right, var(--grvsc-padding-h, 1.5rem));
+  }
+  
+  .grvsc-source:empty::after {
+    content: &apos; &apos;;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+  }
+  
+  .grvsc-gutter + .grvsc-source {
+    padding-left: 0.75rem;
+    padding-left: calc(var(--grvsc-padding-left, var(--grvsc-padding-h, 1.5rem)) / 2);
+  }
+  
+  /* Line transformer styles */
+  
+  .grvsc-has-line-highlighting &gt; .grvsc-code &gt; .grvsc-line::before {
+    content: &apos; &apos;;
+    position: absolute;
+    width: 100%;
+  }
+  
+  .grvsc-line-diff-add::before {
+    background-color: var(--grvsc-line-diff-add-background-color, rgba(0, 255, 60, 0.2));
+  }
+  
+  .grvsc-line-diff-del::before {
+    background-color: var(--grvsc-line-diff-del-background-color, rgba(255, 0, 20, 0.2));
+  }
+  
+  .grvsc-line-number {
+    padding: 0 2px;
+    text-align: right;
+    opacity: 0.7;
+  }
+  
+&lt;/style&gt;</content:encoded></item><item><title><![CDATA[UX/UI의 10가지 심리학 법칙]]></title><description><![CDATA[요즘 개인적으로 관심이 가는 분야가 UX 쪽이다. 뭐 FrontEnd 개발자는 항상 UX에 관심을 가지고 UX를 접하고 있다. 그런데 왜 새삼 관심을 가지냐고? 대부분의 개발자가 그렇듯이 나 또한 기술영역에 관심이 많아서 사실 UX…]]></description><link>https://sculove.github.io/post/ux-ui-10-low-of-ux/</link><guid isPermaLink="false">https://sculove.github.io/post/ux-ui-10-low-of-ux/</guid><pubDate>Fri, 31 Dec 2021 08:00:00 GMT</pubDate><content:encoded>&lt;p&gt;요즘 개인적으로 관심이 가는 분야가 &lt;code&gt;UX&lt;/code&gt; 쪽이다.&lt;br&gt;
+뭐 FrontEnd 개발자는 항상 UX에 관심을 가지고 UX를 접하고 있다. 그런데 왜 새삼 관심을 가지냐고?&lt;br&gt;
+대부분의 개발자가 그렇듯이 나 또한 기술영역에 관심이 많아서 사실 UX의 편리함 보다는 &lt;code&gt;개발 생산성&lt;/code&gt;에 더 관심을 많이 두고 있다.&lt;br&gt;
+설계자나 디자이너쪽에서 제시하는 UX에 대해 &lt;code&gt;의문과 이견&lt;/code&gt;은 있을지 언정 전문가가 아니다 보니 대체로 받아들이는 입장이 더 컸다.&lt;/p&gt;
+&lt;p&gt;개인적으로 기술영역은 차근차근 쌓아왔고 쌓아가고 있다는 믿음이 있지만
+상대적으로 UX쪽은 뭔가 체계적으로 알아 본적이 별로 없었던 것 같아서 요즘 들어 책도 보고 아티클도 읽어 보고 있다.&lt;/p&gt;
+&lt;p&gt;예전에 동료로 부터 &lt;a href=&quot;https://lawsofux.com/&quot;&gt;Law of UX&lt;/a&gt; 사이트를 공유 받은 적이 있다.
+&lt;code&gt;오~ 디자인은 이런식으로 하는 구나&lt;/code&gt; 정도의 인사이트만 얻고 바로 창을 닫았던 기억이 있다.&lt;/p&gt;
+&lt;p&gt;이런 기억이 남아있었는지 이 사이트를 만든 저자분의 책을 골라서 읽어 봤다.
+책도 두껍지도 않고 내용도 어렵지 않아서 순식간에 읽었다.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 458px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 141.71779141104295%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAcABQDASIAAhEBAxEB/8QAGQAAAgMBAAAAAAAAAAAAAAAAAAIBAwQF/8QAFgEBAQEAAAAAAAAAAAAAAAAAAgAB/9oADAMBAAIQAxAAAAHrtSwtQgrNF4NkcZ//xAAeEAACAQMFAAAAAAAAAAAAAAABAgADESEQEhMxMv/aAAgBAQABBQIk35NCzBgzRMhuwJT8lc7BALT/xAAYEQACAwAAAAAAAAAAAAAAAAAAMQECEP/aAAgBAwEBPwF5dEH/xAAYEQEAAwEAAAAAAAAAAAAAAAABAAIREP/aAAgBAgEBPwFvkHYGvP/EABsQAAICAwEAAAAAAAAAAAAAAAEQADECITKR/9oACAEBAAY/AjOcvEZaMO1b/8QAIBAAAgIBAwUAAAAAAAAAAAAAAREAMSEQQXFRYZGh8P/aAAgBAQABPyENYrsZTQZC3wFUyCQXiFlbz1gAmZfI4lApaH3EFUNxpZeoBMssm4MSty5//9oADAMBAAIAAwAAABAjAv8A/8QAFxEAAwEAAAAAAAAAAAAAAAAAAAERIf/aAAgBAwEBPxBOh4JEawqaf//EABgRAQEAAwAAAAAAAAAAAAAAAAEAESFB/9oACAECAQE/EA4gGSBBgDRf/8QAHxABAQADAAICAwAAAAAAAAAAAREAITFRYUFxkaHw/9oACAEBAAE/EGzs1WE/OBhb6Nda+8Gg+cI4ek0HBYVX4DHwwGENiffnHRBK2VjHJLwOafpcBJAQQcvr+TFmhslRvvWAiNXQfJvjJKplU0+tTCBLRVvc/9k=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;ux&quot;
+        title=&quot;ux&quot;
+        src=&quot;/static/ac2539174d8d1b727a83af052c2f76b8/f7c3c/ux.jpg&quot;
+        srcset=&quot;/static/ac2539174d8d1b727a83af052c2f76b8/d2f63/ux.jpg 163w,
+/static/ac2539174d8d1b727a83af052c2f76b8/c989d/ux.jpg 325w,
+/static/ac2539174d8d1b727a83af052c2f76b8/f7c3c/ux.jpg 458w&quot;
+        sizes=&quot;(max-width: 458px) 100vw, 458px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;뭐 10가지 정도의 심리학 법칙을 소개하고 더불어 실제 사례들을 하나하나 소개해 준다.&lt;br&gt;
+그 내용은 솔직히 특별하지는 않았다.&lt;br&gt;
+현업에서 대다수 겪었던 내용이고 현업 디자이너들 또한 충실히 적용하고 있는 내용들이어서 새삼스럽지는 않았지만...
+그 근거에 대해서는 흥미로운 책이었다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;디자이너들은 왜 이렇게 Pull to Refresh를 꼭 넣으려고 하지?&lt;/li&gt;
+&lt;li&gt;그놈의 좋아요는 왜 그렇게 화려하고 임팩트 있게 하려고 할까?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;도데체 웹을 잘 이해는 하고 있는 걸까?&lt;br&gt;
+이런 편향적인 생각들을 그들 입장에서 조금은 이해할 수 있었던 책이었던 것 같다.&lt;/p&gt;
+&lt;p&gt;개발자는 아니... 엔지니어는 궁극적으로 데이터에 근거한 판단을 해야한다.
+하지만 그 근거를 만드는 게 쉬운 일이 아니다.&lt;/p&gt;
+&lt;p&gt;우리가 A/B 테스트로 UX를 검증하자고 하는 이유도 바로 이러한 이유이기 때문일 것이다.&lt;br&gt;
+하지만 만약 그 근거가 없는 상황이라면 어떻게 의사결정을 할 것인가?&lt;br&gt;
+저자는 이런 근거를 &lt;code&gt;심리학&lt;/code&gt;에서 찾아 설득하고자 하였다.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;인지편향을 가진 사람이 사용하는 서비스의 데이터&lt;/code&gt;는 결과일 뿐이고,
+그 원인이 되는 인간 심리를 잘 이해하는게
+문제를 잘 해결할 수 있는 것은 어찌보면 당연한 말인 것이다.&lt;/p&gt;
+&lt;p&gt;하지만 이 책을 읽기 전까지는 사실 그런 생각을 해본 적은 없었던 것 같다.&lt;br&gt;
+발표자료를 만들거나 다른 서비스들을 써볼 때 이런 관점에서 살펴보면 재미있을 것 같다. ㅎ&lt;/p&gt;
 &lt;style class=&quot;grvsc-styles&quot;&gt;
   .grvsc-container {
     overflow: auto;
@@ -15590,6 +15730,128 @@ grunt 파일을 task별로 쪼개서 관리할수 있는 플러그인&lt;/li&gt;
     opacity: 0.7;
   }
   
+&lt;/style&gt;</content:encoded></item><item><title><![CDATA[Anonymous FTP settings in OSX]]></title><description><![CDATA[익명 FTP 설정 설정파일 : /etc/ftpd.conf ftp 서비스 폴더 생성 (/Users/ftp 폴더 생성. 권한 755) ftpd.conf에 한 줄 추가 => chroot GUEST /Users/ftp 추가 ftp…]]></description><link>https://sculove.github.io/post/Ftp-settings-in-OSX/</link><guid isPermaLink="false">https://sculove.github.io/post/Ftp-settings-in-OSX/</guid><pubDate>Thu, 03 Sep 2015 08:00:00 GMT</pubDate><content:encoded>&lt;h2 id=&quot;익명-ftp-설정&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EC%9D%B5%EB%AA%85-ftp-%EC%84%A4%EC%A0%95&quot; aria-label=&quot;익명 ftp 설정 permalink&quot; class=&quot;anchor-header before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;익명 FTP 설정&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;설정파일 : /etc/ftpd.conf&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ol&gt;
+&lt;li&gt;ftp 서비스 폴더 생성 (/Users/ftp 폴더 생성. 권한 755)&lt;/li&gt;
+&lt;li&gt;ftpd.conf에 한 줄 추가 =&gt; chroot GUEST /Users/ftp 추가&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&quot;ftp-구동-쉘-스크립트&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#ftp-%EA%B5%AC%EB%8F%99-%EC%89%98-%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8&quot; aria-label=&quot;ftp 구동 쉘 스크립트 permalink&quot; class=&quot;anchor-header before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;ftp 구동 쉘 스크립트&lt;/h2&gt;
+&lt;h3 id=&quot;서버-open&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EC%84%9C%EB%B2%84-open&quot; aria-label=&quot;서버 open permalink&quot; class=&quot;anchor-header before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;서버 open&lt;/h3&gt;
+&lt;pre class=&quot;grvsc-container github-light-theme grvsc-ps-t4tStz&quot; data-language=&quot;bash&quot; data-index=&quot;0&quot;&gt;&lt;code class=&quot;grvsc-code&quot;&gt;&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;grvsc-tiszgT-1 grvsc-t4tStz-1&quot;&gt;sudo-slaunchctl unload-w/System/Library/LaunchDaemons/ftp.plist&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;grvsc-tiszgT-1 grvsc-t4tStz-1&quot;&gt;sudo-slaunchctl load-w/System/Library/LaunchDaemons/ftp.plist&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;grvsc-tiszgT-1 grvsc-t4tStz-1&quot;&gt;echo&lt;/span&gt;&lt;span class=&quot;grvsc-tiszgT-8 grvsc-t4tStz-10&quot;&gt;`ipconfig getifaddr en0`&lt;/span&gt;&lt;span class=&quot;grvsc-tiszgT-1 grvsc-t4tStz-1&quot;&gt;ftp server started&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&quot;서버-close&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EC%84%9C%EB%B2%84-close&quot; aria-label=&quot;서버 close permalink&quot; class=&quot;anchor-header before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;서버 close&lt;/h3&gt;
+&lt;pre class=&quot;grvsc-container github-light-theme grvsc-ps-t4tStz&quot; data-language=&quot;bash&quot; data-index=&quot;1&quot;&gt;&lt;code class=&quot;grvsc-code&quot;&gt;&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;grvsc-tiszgT-1 grvsc-t4tStz-1&quot;&gt;sudo-slaunchctl unload-w/System/Library/LaunchDaemons/ftp.plist&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;grvsc-tiszgT-1 grvsc-t4tStz-1&quot;&gt;echo&lt;/span&gt;&lt;span class=&quot;grvsc-tiszgT-8 grvsc-t4tStz-10&quot;&gt;`ipconfig getifaddr en0`&lt;/span&gt;&lt;span class=&quot;grvsc-tiszgT-1 grvsc-t4tStz-1&quot;&gt;ftp server closed&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;style class=&quot;grvsc-styles&quot;&gt;
+  .grvsc-container {
+    overflow: auto;
+    position: relative;
+    -webkit-overflow-scrolling: touch;
+    padding-top: 1rem;
+    padding-top: var(--grvsc-padding-top, var(--grvsc-padding-v, 1rem));
+    padding-bottom: 1rem;
+    padding-bottom: var(--grvsc-padding-bottom, var(--grvsc-padding-v, 1rem));
+    border-radius: 8px;
+    border-radius: var(--grvsc-border-radius, 8px);
+    font-feature-settings: normal;
+    line-height: 1.4;
+  }
+  
+  .grvsc-code {
+    display: table;
+  }
+  
+  .grvsc-line {
+    display: table-row;
+    box-sizing: border-box;
+    width: 100%;
+    position: relative;
+  }
+  
+  .grvsc-line &gt; * {
+    position: relative;
+  }
+  
+  .grvsc-gutter-pad {
+    display: table-cell;
+    padding-left: 0.75rem;
+    padding-left: calc(var(--grvsc-padding-left, var(--grvsc-padding-h, 1.5rem)) / 2);
+  }
+  
+  .grvsc-gutter {
+    display: table-cell;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+  }
+  
+  .grvsc-gutter::before {
+    content: attr(data-content);
+  }
+  
+  .grvsc-source {
+    display: table-cell;
+    padding-left: 1.5rem;
+    padding-left: var(--grvsc-padding-left, var(--grvsc-padding-h, 1.5rem));
+    padding-right: 1.5rem;
+    padding-right: var(--grvsc-padding-right, var(--grvsc-padding-h, 1.5rem));
+  }
+  
+  .grvsc-source:empty::after {
+    content: &apos; &apos;;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+  }
+  
+  .grvsc-gutter + .grvsc-source {
+    padding-left: 0.75rem;
+    padding-left: calc(var(--grvsc-padding-left, var(--grvsc-padding-h, 1.5rem)) / 2);
+  }
+  
+  /* Line transformer styles */
+  
+  .grvsc-has-line-highlighting &gt; .grvsc-code &gt; .grvsc-line::before {
+    content: &apos; &apos;;
+    position: absolute;
+    width: 100%;
+  }
+  
+  .grvsc-line-diff-add::before {
+    background-color: var(--grvsc-line-diff-add-background-color, rgba(0, 255, 60, 0.2));
+  }
+  
+  .grvsc-line-diff-del::before {
+    background-color: var(--grvsc-line-diff-del-background-color, rgba(255, 0, 20, 0.2));
+  }
+  
+  .grvsc-line-number {
+    padding: 0 2px;
+    text-align: right;
+    opacity: 0.7;
+  }
+  
+  .github-light-theme {
+    background-color: #ffffff;
+    color: #000000;
+  }
+  .github-light-theme .grvsc-tiszgT-1 { color: #000000; }
+  .github-light-theme .grvsc-tiszgT-8 { color: #032F62; }
+  .github-light-theme .grvsc-line-highlighted::before {
+    background-color: var(--grvsc-line-highlighted-background-color, rgba(0, 0, 0, 0.05));
+    box-shadow: inset var(--grvsc-line-highlighted-border-width, 4px) 0 0 0 var(--grvsc-line-highlighted-border-color, rgba(0, 0, 0, 0.2));
+  }
+  body[data-theme=dark] .grvsc-ps-t4tStz { color: #ffffff; }
+  body[data-theme=dark] .grvsc-ps-t4tStz .grvsc-t4tStz-1 { color: #FFFFFF; }
+  body[data-theme=dark] .grvsc-ps-t4tStz .grvsc-t4tStz-10 { color: #9DCDF5; }
+  body[data-theme=dark] .grvsc-ps-t4tStz .grvsc-line-highlighted::before {
+    background-color: var(--grvsc-line-highlighted-background-color, rgba(0, 0, 0, 0.05));
+    box-shadow: inset var(--grvsc-line-highlighted-border-width, 4px) 0 0 0 var(--grvsc-line-highlighted-border-color, rgba(0, 0, 0, 0.2));
+  }
 &lt;/style&gt;</content:encoded></item><item><title><![CDATA[Apache2 settings in OSX]]></title><description><![CDATA[docroot 폴더 전체 기본 docroot 폴더 : /Library/WebServer/Documents/ web url : / 사용자별 사용자 docroot 폴더 : /Users/사용자명/Sites/ web url : /~사용자명/ Mavericks…]]></description><link>https://sculove.github.io/post/Apache2-settings-in-OSX/</link><guid isPermaLink="false">https://sculove.github.io/post/Apache2-settings-in-OSX/</guid><pubDate>Thu, 03 Sep 2015 08:00:00 GMT</pubDate><content:encoded>&lt;p&gt;&lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
       style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 513px; &quot;
@@ -15757,128 +16019,6 @@ grunt 파일을 task별로 쪼개서 관리할수 있는 플러그인&lt;/li&gt;
   body[data-theme=dark] .grvsc-ps-t4tStz .grvsc-t4tStz-2 { color: #A19B8F; }
   body[data-theme=dark] .grvsc-ps-t4tStz .grvsc-t4tStz-9 { color: #EB7E81; }
   body[data-theme=dark] .grvsc-ps-t4tStz .grvsc-t4tStz-3 { color: #66B5F6; }
-  body[data-theme=dark] .grvsc-ps-t4tStz .grvsc-line-highlighted::before {
-    background-color: var(--grvsc-line-highlighted-background-color, rgba(0, 0, 0, 0.05));
-    box-shadow: inset var(--grvsc-line-highlighted-border-width, 4px) 0 0 0 var(--grvsc-line-highlighted-border-color, rgba(0, 0, 0, 0.2));
-  }
-&lt;/style&gt;</content:encoded></item><item><title><![CDATA[Anonymous FTP settings in OSX]]></title><description><![CDATA[익명 FTP 설정 설정파일 : /etc/ftpd.conf ftp 서비스 폴더 생성 (/Users/ftp 폴더 생성. 권한 755) ftpd.conf에 한 줄 추가 => chroot GUEST /Users/ftp 추가 ftp…]]></description><link>https://sculove.github.io/post/Ftp-settings-in-OSX/</link><guid isPermaLink="false">https://sculove.github.io/post/Ftp-settings-in-OSX/</guid><pubDate>Thu, 03 Sep 2015 08:00:00 GMT</pubDate><content:encoded>&lt;h2 id=&quot;익명-ftp-설정&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EC%9D%B5%EB%AA%85-ftp-%EC%84%A4%EC%A0%95&quot; aria-label=&quot;익명 ftp 설정 permalink&quot; class=&quot;anchor-header before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;익명 FTP 설정&lt;/h2&gt;
-&lt;blockquote&gt;
-&lt;p&gt;설정파일 : /etc/ftpd.conf&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;ol&gt;
-&lt;li&gt;ftp 서비스 폴더 생성 (/Users/ftp 폴더 생성. 권한 755)&lt;/li&gt;
-&lt;li&gt;ftpd.conf에 한 줄 추가 =&gt; chroot GUEST /Users/ftp 추가&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h2 id=&quot;ftp-구동-쉘-스크립트&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#ftp-%EA%B5%AC%EB%8F%99-%EC%89%98-%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8&quot; aria-label=&quot;ftp 구동 쉘 스크립트 permalink&quot; class=&quot;anchor-header before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;ftp 구동 쉘 스크립트&lt;/h2&gt;
-&lt;h3 id=&quot;서버-open&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EC%84%9C%EB%B2%84-open&quot; aria-label=&quot;서버 open permalink&quot; class=&quot;anchor-header before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;서버 open&lt;/h3&gt;
-&lt;pre class=&quot;grvsc-container github-light-theme grvsc-ps-t4tStz&quot; data-language=&quot;bash&quot; data-index=&quot;0&quot;&gt;&lt;code class=&quot;grvsc-code&quot;&gt;&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;grvsc-tiszgT-1 grvsc-t4tStz-1&quot;&gt;sudo-slaunchctl unload-w/System/Library/LaunchDaemons/ftp.plist&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
-&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;grvsc-tiszgT-1 grvsc-t4tStz-1&quot;&gt;sudo-slaunchctl load-w/System/Library/LaunchDaemons/ftp.plist&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
-&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;grvsc-tiszgT-1 grvsc-t4tStz-1&quot;&gt;echo&lt;/span&gt;&lt;span class=&quot;grvsc-tiszgT-8 grvsc-t4tStz-10&quot;&gt;`ipconfig getifaddr en0`&lt;/span&gt;&lt;span class=&quot;grvsc-tiszgT-1 grvsc-t4tStz-1&quot;&gt;ftp server started&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;h3 id=&quot;서버-close&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EC%84%9C%EB%B2%84-close&quot; aria-label=&quot;서버 close permalink&quot; class=&quot;anchor-header before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;서버 close&lt;/h3&gt;
-&lt;pre class=&quot;grvsc-container github-light-theme grvsc-ps-t4tStz&quot; data-language=&quot;bash&quot; data-index=&quot;1&quot;&gt;&lt;code class=&quot;grvsc-code&quot;&gt;&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;grvsc-tiszgT-1 grvsc-t4tStz-1&quot;&gt;sudo-slaunchctl unload-w/System/Library/LaunchDaemons/ftp.plist&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
-&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;grvsc-tiszgT-1 grvsc-t4tStz-1&quot;&gt;echo&lt;/span&gt;&lt;span class=&quot;grvsc-tiszgT-8 grvsc-t4tStz-10&quot;&gt;`ipconfig getifaddr en0`&lt;/span&gt;&lt;span class=&quot;grvsc-tiszgT-1 grvsc-t4tStz-1&quot;&gt;ftp server closed&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;style class=&quot;grvsc-styles&quot;&gt;
-  .grvsc-container {
-    overflow: auto;
-    position: relative;
-    -webkit-overflow-scrolling: touch;
-    padding-top: 1rem;
-    padding-top: var(--grvsc-padding-top, var(--grvsc-padding-v, 1rem));
-    padding-bottom: 1rem;
-    padding-bottom: var(--grvsc-padding-bottom, var(--grvsc-padding-v, 1rem));
-    border-radius: 8px;
-    border-radius: var(--grvsc-border-radius, 8px);
-    font-feature-settings: normal;
-    line-height: 1.4;
-  }
-  
-  .grvsc-code {
-    display: table;
-  }
-  
-  .grvsc-line {
-    display: table-row;
-    box-sizing: border-box;
-    width: 100%;
-    position: relative;
-  }
-  
-  .grvsc-line &gt; * {
-    position: relative;
-  }
-  
-  .grvsc-gutter-pad {
-    display: table-cell;
-    padding-left: 0.75rem;
-    padding-left: calc(var(--grvsc-padding-left, var(--grvsc-padding-h, 1.5rem)) / 2);
-  }
-  
-  .grvsc-gutter {
-    display: table-cell;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    user-select: none;
-  }
-  
-  .grvsc-gutter::before {
-    content: attr(data-content);
-  }
-  
-  .grvsc-source {
-    display: table-cell;
-    padding-left: 1.5rem;
-    padding-left: var(--grvsc-padding-left, var(--grvsc-padding-h, 1.5rem));
-    padding-right: 1.5rem;
-    padding-right: var(--grvsc-padding-right, var(--grvsc-padding-h, 1.5rem));
-  }
-  
-  .grvsc-source:empty::after {
-    content: &apos; &apos;;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    user-select: none;
-  }
-  
-  .grvsc-gutter + .grvsc-source {
-    padding-left: 0.75rem;
-    padding-left: calc(var(--grvsc-padding-left, var(--grvsc-padding-h, 1.5rem)) / 2);
-  }
-  
-  /* Line transformer styles */
-  
-  .grvsc-has-line-highlighting &gt; .grvsc-code &gt; .grvsc-line::before {
-    content: &apos; &apos;;
-    position: absolute;
-    width: 100%;
-  }
-  
-  .grvsc-line-diff-add::before {
-    background-color: var(--grvsc-line-diff-add-background-color, rgba(0, 255, 60, 0.2));
-  }
-  
-  .grvsc-line-diff-del::before {
-    background-color: var(--grvsc-line-diff-del-background-color, rgba(255, 0, 20, 0.2));
-  }
-  
-  .grvsc-line-number {
-    padding: 0 2px;
-    text-align: right;
-    opacity: 0.7;
-  }
-  
-  .github-light-theme {
-    background-color: #ffffff;
-    color: #000000;
-  }
-  .github-light-theme .grvsc-tiszgT-1 { color: #000000; }
-  .github-light-theme .grvsc-tiszgT-8 { color: #032F62; }
-  .github-light-theme .grvsc-line-highlighted::before {
-    background-color: var(--grvsc-line-highlighted-background-color, rgba(0, 0, 0, 0.05));
-    box-shadow: inset var(--grvsc-line-highlighted-border-width, 4px) 0 0 0 var(--grvsc-line-highlighted-border-color, rgba(0, 0, 0, 0.2));
-  }
-  body[data-theme=dark] .grvsc-ps-t4tStz { color: #ffffff; }
-  body[data-theme=dark] .grvsc-ps-t4tStz .grvsc-t4tStz-1 { color: #FFFFFF; }
-  body[data-theme=dark] .grvsc-ps-t4tStz .grvsc-t4tStz-10 { color: #9DCDF5; }
   body[data-theme=dark] .grvsc-ps-t4tStz .grvsc-line-highlighted::before {
     background-color: var(--grvsc-line-highlighted-background-color, rgba(0, 0, 0, 0.05));
     box-shadow: inset var(--grvsc-line-highlighted-border-width, 4px) 0 0 0 var(--grvsc-line-highlighted-border-color, rgba(0, 0, 0, 0.2));
